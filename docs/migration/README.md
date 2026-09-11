@@ -18,3 +18,5 @@ Véanse [los ajustes documentados](PLAN_ADJUSTMENTS.md), [la arquitectura actual
 No se ha declarado completa la migración. Las pruebas disponibles se ejecutan al cierre de cada fase preparada; las pruebas de producto y aislamiento Docker no se sustituyen por mocks ni por existencia de archivos.
 
 Estado posterior: P3.1/P3.2 aprobadas; [P3.3 base visual](P3_3.md) implementada para revisión. P3.4 no iniciada.
+
+P3.3 aprobada. [P3.4: interacciones](P3_4.md), entrega para revisión antes de P3.5.

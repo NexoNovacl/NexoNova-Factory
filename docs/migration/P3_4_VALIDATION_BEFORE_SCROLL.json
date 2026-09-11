@@ -1,0 +1,104 @@
+[
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "exit_code": 0,
+    "output": "\nadded 35 packages in 6s\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 typecheck\n> tsc --noEmit\n\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: public content has required renderable collections\nok 1 - public content has required renderable collections\n  ---\n  duration_ms: 2.857584\n  type: 'test'\n  ...\n# Subtest: public configuration contains no private factory contract\nok 2 - public configuration contains no private factory contract\n  ---\n  duration_ms: 0.269125\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 397.50826\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 build\n> next build\n\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 4.0s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/4) ...\n   Generating static pages (1/4) \n   Generating static pages (2/4) \n   Generating static pages (3/4) \n \u2713 Generating static pages (4/4)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                    5.17 kB         108 kB\n\u2514 \u25cb /_not-found                            997 B         104 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.93 kB\n\n\n\u25cb  (Static)  prerendered as static content\n\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "test:browser"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 test:browser\n> playwright test\n\n\nRunning 23 tests using 1 worker\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n  23 passed (15.2s)\n"
+  },
+  {
+    "pilot": "nexonova",
+    "command": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "exit_code": 0,
+    "output": "\nadded 35 packages in 6s\n"
+  },
+  {
+    "pilot": "nexonova",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 typecheck\n> tsc --noEmit\n\n"
+  },
+  {
+    "pilot": "nexonova",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: public content has required renderable collections\nok 1 - public content has required renderable collections\n  ---\n  duration_ms: 2.613133\n  type: 'test'\n  ...\n# Subtest: public configuration contains no private factory contract\nok 2 - public configuration contains no private factory contract\n  ---\n  duration_ms: 0.23686\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 499.623684\n"
+  },
+  {
+    "pilot": "nexonova",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 build\n> next build\n\n\u26a0 No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 8.9s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/4) ...\n   Generating static pages (1/4) \n   Generating static pages (2/4) \n   Generating static pages (3/4) \n \u2713 Generating static pages (4/4)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                    5.16 kB         108 kB\n\u2514 \u25cb /_not-found                            996 B         104 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.93 kB\n\n\n\u25cb  (Static)  prerendered as static content\n\n"
+  },
+  {
+    "pilot": "nexonova",
+    "command": [
+      "npm",
+      "run",
+      "test:browser"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 test:browser\n> playwright test\n\n\nRunning 23 tests using 1 worker\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n  23 passed (19.5s)\n"
+  }
+]

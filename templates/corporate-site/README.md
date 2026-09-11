@@ -12,7 +12,7 @@ NEXT_TELEMETRY_DISABLED=1 npm run build
 npm start
 ```
 
-start/dev escuchan solo en 127.0.0.1. La instalación es preparación con acceso al registro público; no forma parte del executor P2. No hay conexiones externas de negocio, formularios activos ni contratación. FAQ y navegación usan HTML nativo. Dominios, chatbot y consulta son solo composición visual con controles inactivos en P3.3.
+start/dev escuchan solo en 127.0.0.1. La instalación es preparación con acceso al registro público; no forma parte del executor P2. P3.4 añade interacciones locales conectadas por InquiryProvider: formato de dominio, selección de intereses, preparación/copia y chat determinista. No hay envío ni contratación. FAQ y navegación usan HTML nativo; el chat usa dialog modal con teclado/foco. CSP impide envíos nativos.
 
 Inter es referencia; sin archivo local autorizado se usa fallback del sistema mediante --font-sans. Los colores vienen de configuración. No se incluye ningún asset de procedencia pendiente. Esta base requiere revisión humana y no certifica fidelidad visual final, accesibilidad completa ni preparación productiva.
 
@@ -26,3 +26,5 @@ NEXT_TELEMETRY_DISABLED=1 npm run test:browser
 ```
 
 Puede configurarse TMPDIR y PLAYWRIGHT_BROWSERS_PATH a un directorio temporal propio con espacio suficiente. Playwright es solo dependencia de desarrollo. Su servidor usa 127.0.0.1:3183 y se detiene al terminar las pruebas. No se admite reutilizar un servidor ajeno para aprobar la prueba.
+
+La selección, campos e historial viven en memoria y se pierden al recargar. Copiar escribe explícitamente al portapapeles del sistema; si no está permitido, se ofrece selección manual. Cambiar campos/intereses invalida la vista previa. No se utiliza localStorage, API ni SDK. ChatService permite sustituir el servicio bajo una autorización futura; solo se incluye createLocalChat.

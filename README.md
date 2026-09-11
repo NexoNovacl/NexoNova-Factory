@@ -2,7 +2,7 @@
 
 Núcleo local en Python para evolucionar hacia una fábrica de software de NexoNova. **Estado actual: migración parcial y experimental. No genera todavía aplicaciones web ni está aprobado para producción.**
 
-P0 estableció la línea base y P1 eliminó la aceptación del bootstrap documental como trabajo real. P2 incorpora almacenamiento privado y un adaptador validado con Docker real: PASS_WITH_LIMITATIONS aprobado por el usuario. P3.1 y P3.2 incorporan entradas preservadas y contratos versionados; aprobados por el usuario; la base visual P3.3 está implementada para revisión. Consulte [el informe de cambios](REFACTOR_REPORT.md) y [el estado de las fases](docs/migration/README.md).
+P0 estableció la línea base y P1 eliminó la aceptación del bootstrap documental como trabajo real. P2 incorpora almacenamiento privado y un adaptador validado con Docker real: PASS_WITH_LIMITATIONS aprobado por el usuario. P3.1 y P3.2 incorporan entradas preservadas y contratos versionados; aprobados por el usuario; la base visual P3.3 está aprobada y P3.4 añade interacciones locales para revisión. Consulte [el informe de cambios](REFACTOR_REPORT.md) y [el estado de las fases](docs/migration/README.md).
 
 ## Requisitos
 
@@ -58,11 +58,11 @@ No se movieron ni eliminaron archivos legados. La ausencia de historial Git est�
 
 ## Próximo paso
 
-Revisar la base visual P3.3 antes de autorizar P3.4. Las fases posteriores permanecen fuera del alcance actual. No se han realizado despliegues, cambios de servicios externos ni migraciones de datos.
+Revisar las interacciones P3.4 antes de autorizar P3.5. Las fases posteriores permanecen fuera del alcance actual. No se han realizado despliegues, cambios de servicios externos ni migraciones de datos.
 
 ## Preparación P3: entradas y contratos
 
-La fábrica reside en nexonova-factory y la fuente preservada en la carpeta hermana nexonova-prototype. El registro config/sources.json usa rutas relativas al checkout. P2 está aprobado; P3.1/P3.2 están aprobadas y P3.3 incorpora templates/corporate-site. Todavía no existe nexonova-website ni se inicia P3.4.
+La fábrica reside en nexonova-factory y la fuente preservada en la carpeta hermana nexonova-prototype. El registro config/sources.json usa rutas relativas al checkout. P2 está aprobado; P3.1/P3.2 están aprobadas y P3.3 incorpora templates/corporate-site. Todavía no existe nexonova-website ni se inicia P3.5.
 
 Validar sin ejecutar el prototipo:
 
@@ -74,3 +74,5 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/validate_product_inputs.py --
 Añadir --require-ready exige que el material esté aprobado: actualmente devuelve código 2 por decisiones pendientes. Detalles y archivos en [P3](docs/migration/P3.md). Abrir la nueva carpeta en el IDE; no existe alias operativo con el nombre anterior.
 
 Base visual, instrucciones y límites: [P3.3](docs/migration/P3_3.md) y [README del template](templates/corporate-site/README.md).
+
+Flujo local integrado y límites: [P3.4](docs/migration/P3_4.md).

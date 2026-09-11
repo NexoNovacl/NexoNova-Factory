@@ -1,0 +1,53 @@
+[
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "exit_code": 0,
+    "output": "\nadded 35 packages in 1m\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 typecheck\n> tsc --noEmit\n\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: public content has required renderable collections\nok 1 - public content has required renderable collections\n  ---\n  duration_ms: 2.785998\n  type: 'test'\n  ...\n# Subtest: public configuration contains no private factory contract\nok 2 - public configuration contains no private factory contract\n  ---\n  duration_ms: 0.226616\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 197.407903\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_code": 0,
+    "output": "\n> corporate-site-base@0.1.0 build\n> next build\n\n\u26a0 No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 8.3s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/4) ...\n   Generating static pages (1/4) \n   Generating static pages (2/4) \n   Generating static pages (3/4) \n \u2713 Generating static pages (4/4)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                    4.94 kB         108 kB\n\u2514 \u25cb /_not-found                            997 B         104 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.93 kB\n\n\n\u25cb  (Static)  prerendered as static content\n\n"
+  },
+  {
+    "pilot": "synthetic",
+    "command": [
+      "npm",
+      "run",
+      "test:browser"
+    ],
+    "exit_code": 1,
+    "output": "\n> corporate-site-base@0.1.0 test:browser\n> playwright test\n\n\nRunning 22 tests using 1 worker\nFF\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\n  1) tests/browser/interactions.spec.ts:5:2 \u203a integrated local inquiry and chat 1440px \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n    Error: expect(received).toBe(expected) // Object.is equality\n\n    Expected: true\n    Received: false\n\n      57 |   await page.locator('#chat-message').fill('pregunta no contemplada');await page.keyboard.press('Enter');\n      58 |   await expect(page.getByRole('log')).toContainText('Solo puedo orientar');\n    > 59 |   for(let i=0;i<10;i++){await page.keyboard.press('Tab');expect(await page.evaluate(()=>!!document.activeElement?.closest('dialog'))).toBe(true);}\n         |                                                                                                                                       ^\n      60 |   await page.screenshot({path:`test-results/chat-${width}.png`,fullPage:false});\n      61 |   await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(launcher).toBeFocused();\n      62 |   await launcher.click();await expect(page.getByRole('log')).toContainText('pregunta no contemplada');\n        at /var/tmp/nexonova-p34-validation/synthetic/tests/browser/interactions.spec.ts:59:135\n\n    Error Context: test-results/interactions-integrated-local-inquiry-and-chat-1440px/error-context.md\n\n  2) tests/browser/interactions.spec.ts:5:2 \u203a integrated local inquiry and chat 390px \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\n    Error: expect(received).toBe(expected) // Object.is equality\n\n    Expected: true\n    Received: false\n\n      57 |   await page.locator('#chat-message').fill('pregunta no contemplada');await page.keyboard.press('Enter');\n      58 |   await expect(page.getByRole('log')).toContainText('Solo puedo orientar');\n    > 59 |   for(let i=0;i<10;i++){await page.keyboard.press('Tab');expect(await page.evaluate(()=>!!document.activeElement?.closest('dialog'))).toBe(true);}\n         |                                                                                                                                       ^\n      60 |   await page.screenshot({path:`test-results/chat-${width}.png`,fullPage:false});\n      61 |   await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(launcher).toBeFocused();\n      62 |   await launcher.click();await expect(page.getByRole('log')).toContainText('pregunta no contemplada');\n        at /var/tmp/nexonova-p34-validation/synthetic/tests/browser/interactions.spec.ts:59:135\n\n    Error Context: test-results/interactions-integrated-local-inquiry-and-chat-390px/error-context.md\n\n  2 failed\n    tests/browser/interactions.spec.ts:5:2 \u203a integrated local inquiry and chat 1440px \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n    tests/browser/interactions.spec.ts:5:2 \u203a integrated local inquiry and chat 390px \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  20 passed (23.7s)\n"
+  }
+]

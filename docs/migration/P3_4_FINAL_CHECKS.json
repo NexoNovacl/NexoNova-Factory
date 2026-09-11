@@ -1,0 +1,116 @@
+{
+  "phase": "P3.4",
+  "template_sha256": {
+    "templates/corporate-site/README.md": "687322649a72923c767bbc4b9f697dd558076f673af05a2d06e5512bef6bbeb8",
+    "templates/corporate-site/package-lock.json": "5c24d272fefcc467a7a918071fda7e9bd434d1755c1bc02bc6b822789f792828",
+    "templates/corporate-site/playwright.config.ts": "aef5a8e70d884cbc354e172561d817e6e20775cfa7258a09aa4d995156440124",
+    "templates/corporate-site/.gitignore": "b52a9b1ceec6e900e6f30cb7feca69b0bb892769e2d02bdaced1e6036b992134",
+    "templates/corporate-site/package.json": "c59131d5b68152323058455ae93e0d1dcf30c81169049a4ea709d64d7c624b90",
+    "templates/corporate-site/next.config.ts": "2b6343f109c636cf8bdee2c011a4817056930e6d8fb09407d73deb37b553dcac",
+    "templates/corporate-site/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+    "templates/corporate-site/tsconfig.json": "788fe1cecadd2e6f12879900b8adc6c49b8cdf30e1c78999f9d791d3e86251e5",
+    "templates/corporate-site/tests/content.test.mjs": "37fa2540a8fdad4832d053288c178476c3c39df92562271f0eacb2905830fb15",
+    "templates/corporate-site/src/content/types.ts": "701fbac97359f652d58c5073273440484025f10d496d095d94f768590dc04526",
+    "templates/corporate-site/src/content/index.ts": "51a72c33d7bd8324c3dc382088d28ba68214e20203df3c994e61424fd54188c0",
+    "templates/corporate-site/src/content/site.json": "9613cf89052c5493b40108d5873e6b619123e8a84747fe4d472bacc91317e6e6",
+    "templates/corporate-site/src/services/interactions.ts": "711d4e241b51beb53668b98ed34d318c526f1299d997fb04f6ceefcdfe9581da",
+    "templates/corporate-site/src/styles/globals.css": "d2013254cb6b9035b38a83adf75cbaedd598deece955b0c64a2bc7ce1d78350f",
+    "templates/corporate-site/src/styles/tokens.css": "5defb59338e858de153ecb9b59de234f51b4f30d4a2ea3c0665c03d6a8e93cd8",
+    "templates/corporate-site/src/app/page.tsx": "78b6c24cc1b7af609c676e4e8ee787664e1169a0657e11df65e59d3f56a1fe56",
+    "templates/corporate-site/src/app/layout.tsx": "7e823308b9648b3d95a39993d711c9591899c335755e1dc5c0170644c800f323",
+    "templates/corporate-site/src/components/ContactForm.tsx": "5449067d8e1efe6a2532a868d3a7133ab24dacdec321b2e2b4fccfe23fc7fd46",
+    "templates/corporate-site/src/components/Inquiry.tsx": "a935e8033f06db727ff4a5f7cd8ca0dcd2405646a2992e9ecbd9d659e4313aff",
+    "templates/corporate-site/src/components/Site.module.css": "3ffe871b3a1a50ed351d7838ccde8fe4080a672d8443b66b5c108dcb7025d926",
+    "templates/corporate-site/src/components/DomainSearch.tsx": "65a803aae18d5e49505000edf9b65cdc7102fff0e12cfff1de3b7199b8dc24b3",
+    "templates/corporate-site/src/components/Sections.tsx": "ade309f2937bc941a2d12146edeed6204b0890da83c1dafd4904d250748abf8b",
+    "templates/corporate-site/src/components/CorporateSite.tsx": "0e9d0f331e09c86cb36d37d7b9e5183e8c000fec6b158971ec19858f86ba27f6",
+    "templates/corporate-site/src/components/SelectionButtons.tsx": "7f9aa3196a2bdbc40c25e6140336ced08f2cef98f7e1abada8f98f2625d47918",
+    "templates/corporate-site/src/components/InquiryState.tsx": "3fa8de1ca88050d76e27bba5e38e5f683f65f2ba110e91bfdf0069d90f5fc760",
+    "templates/corporate-site/src/components/DemoChat.tsx": "c5cac7ae4bfc9a908d65210be3bb4c805824fdc9b91a1839830e3b00d6a461c4",
+    "templates/corporate-site/src/components/Navigation.tsx": "f03a1936f3ea76c4f556ec3d07999ecdb98d0ee439ca44953fe3dfea16c1d709",
+    "templates/corporate-site/tests/browser/visual.spec.ts": "1410061bf416d204d679d6a2448a553b77c25408ed925400f4948320bd152cc4",
+    "templates/corporate-site/tests/browser/services.spec.ts": "fe8a2fd72315500de9056783c518744d66f883c6c82e7e5894714965c8f44f4c",
+    "templates/corporate-site/tests/browser/interactions.spec.ts": "6255e888e423dd95c39d9729fbf9c4b2e87b68b8dd3fed48386bffda9bf5e71f"
+  },
+  "created": [
+    "templates/corporate-site/src/services/interactions.ts",
+    "templates/corporate-site/src/components/ContactForm.tsx",
+    "templates/corporate-site/src/components/Inquiry.tsx",
+    "templates/corporate-site/src/components/DomainSearch.tsx",
+    "templates/corporate-site/src/components/SelectionButtons.tsx",
+    "templates/corporate-site/src/components/InquiryState.tsx",
+    "templates/corporate-site/src/components/DemoChat.tsx",
+    "templates/corporate-site/tests/browser/services.spec.ts",
+    "templates/corporate-site/tests/browser/interactions.spec.ts"
+  ],
+  "modified": [
+    "templates/corporate-site/README.md",
+    "templates/corporate-site/next.config.ts",
+    "templates/corporate-site/src/components/Site.module.css",
+    "templates/corporate-site/src/components/Sections.tsx",
+    "templates/corporate-site/src/components/CorporateSite.tsx",
+    "templates/corporate-site/tests/browser/visual.spec.ts"
+  ],
+  "removed": [
+    "templates/corporate-site/src/components/DemoPanels.tsx"
+  ],
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--tb=short"
+      ],
+      "exit_code": 0,
+      "output": "........................................................................ [ 52%]\n................................................................         [100%]\n136 passed in 17.97s\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "factory.cli",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: python -m factory.cli [-h]\n                             {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run} ...\n\nNexoNova Factory \u2014 n\u00facleo local; bootstrap legado bloqueado\n\npositional arguments:\n  {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run}\n\noptions:\n  -h, --help            show this help message and exit\n"
+    },
+    {
+      "command": [
+        "docker",
+        "--host",
+        "unix:///var/run/docker.sock",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=nexonova-test-"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "p3_5_started": false,
+  "product_generated": false,
+  "preview_port_3183_listening": false
+}

@@ -20,10 +20,10 @@ for (const width of [1440, 390, 320]) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const anchors = await page.locator('a[href^="#"]').evaluateAll(elements => elements.map(e => e.getAttribute('href')!.slice(1)));
     for (const id of anchors) await expect(page.locator(`[id="${id}"]`)).toHaveCount(1);
-    await expect(page.locator('#domain')).toBeDisabled();
-    await expect(page.locator('#chat-message')).toBeDisabled();
-    await expect(page.locator('form')).toHaveCount(0);
-    await expect(page.getByText('No se ha enviado ninguna consulta.', { exact: true })).toBeVisible();
+    await expect(page.locator('#domain')).toBeEnabled();
+    await expect(page.getByRole('dialog')).not.toBeVisible();
+    await expect(page.locator('form[action]')).toHaveCount(0);
+    await expect(page.getByText('No se ha enviado ninguna consulta. La información permanece solo en esta página hasta recargarla.', { exact: true })).toBeVisible();
     await page.locator('#preguntas summary').first().focus();
     await page.keyboard.press('Enter');
     await expect(page.locator('#preguntas details').first()).toHaveAttribute('open', '');
