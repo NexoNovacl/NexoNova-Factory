@@ -1,0 +1,20 @@
+{
+  "constraints": {
+    "deployment": "denied",
+    "destination": "new-only",
+    "external_services": "denied",
+    "scope": "P3.6-internal-pilot"
+  },
+  "format": "nexonova.product-work-order.v2",
+  "inputs": {
+    "public_config": "sha256:888eb156a9b5297210913e8ebd483beabff8fefa9da49ce26931ad0a338daa32",
+    "selection": "sha256:b87add3aee02fae39946aafe4d3abea3cec917e9bba82bbf2d7440d0f9d29ef9",
+    "source_manifest": "sha256:cb06679f52a4195dc05a15eca1dd2c420384b4532a816dc7ea568c5235e23717",
+    "spec": "sha256:4def1ca346a72688df5eab13a6fef5981e4d3bf31cc3a61d15b03877e1642cc4",
+    "template": "sha256:7493f1115625cd0bea55216d1372e7dc6e59173783583fd9b88073b3a5abd0d6"
+  },
+  "operation": "generate-project",
+  "product_type": "corporate-site",
+  "project_id": "synthetic-website",
+  "template_version": "0.1.0"
+}

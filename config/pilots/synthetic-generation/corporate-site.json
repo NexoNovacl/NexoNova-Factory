@@ -1,0 +1,106 @@
+{
+  "acceptance": [
+    "Original source hashes unchanged",
+    "Only route /; no independent ventas/desarrollo pages",
+    "No external business-service requests",
+    "Domains never claim availability",
+    "Chat is explicitly local demonstration",
+    "Inquiry never creates an order or sends a message",
+    "Keyboard/mobile/reduced-motion behavior validated",
+    "Build/typecheck/tests required before product acceptance",
+    "Second synthetic configuration has no NexoNova identity leakage",
+    "Independent product without factory runtime or private metadata"
+  ],
+  "assets": [],
+  "behaviors": {
+    "chat": "local-scripted",
+    "contact": "prepare-copy-not-sent",
+    "domains": "local-format-only",
+    "external_requests": "disabled",
+    "inquiry": "interest-summary",
+    "persistence": "memory-only"
+  },
+  "brand": {
+    "colors": {
+      "blue": "#80502c",
+      "cyan": "#d2bb87",
+      "navy": "#30251c"
+    },
+    "font_approval": "pending",
+    "font_family": "Inter",
+    "name": "Taller Sint\u00e9tico Arcilla"
+  },
+  "format": "nexonova.corporate-site.v0.1.0",
+  "locale": "es-CL",
+  "pending_decisions": [
+    "Select exact logo/hero/icon assets and substantiate provenance; no shared assets approved by inference.",
+    "Decide recover/replace/remove for missing referenced resources.",
+    "Approve local Inter distribution and license evidence.",
+    "Approve final editorial content; commercial values remain provisional."
+  ],
+  "plans": [],
+  "project_id": "synthetic-website",
+  "route": "/",
+  "sections": [
+    {
+      "enabled": true,
+      "id": "header",
+      "title": "Navegaci\u00f3n"
+    },
+    {
+      "enabled": true,
+      "id": "hero",
+      "title": "Presentaci\u00f3n de Empresa Sint\u00e9tica"
+    },
+    {
+      "enabled": true,
+      "id": "domains",
+      "title": "Consulta de dominios \u2014 demostraci\u00f3n"
+    },
+    {
+      "enabled": true,
+      "id": "about",
+      "title": "Sobre Empresa Sint\u00e9tica"
+    },
+    {
+      "enabled": true,
+      "id": "plans",
+      "title": "Planes de ejemplo"
+    },
+    {
+      "enabled": true,
+      "id": "services",
+      "title": "Servicios"
+    },
+    {
+      "enabled": true,
+      "id": "faq",
+      "title": "Preguntas frecuentes"
+    },
+    {
+      "enabled": true,
+      "id": "contact",
+      "title": "Preparar consulta \u2014 no enviada"
+    },
+    {
+      "enabled": true,
+      "id": "footer",
+      "title": "Informaci\u00f3n y cr\u00e9ditos"
+    },
+    {
+      "enabled": true,
+      "id": "chat",
+      "title": "Asistente de demostraci\u00f3n"
+    },
+    {
+      "enabled": true,
+      "id": "inquiry",
+      "title": "Tu consulta"
+    }
+  ],
+  "services": [
+    "Taller de modelado",
+    "Dise\u00f1o de piezas"
+  ],
+  "source_id": "synthetic-brief"
+}

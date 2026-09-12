@@ -1,0 +1,21 @@
+{
+  "authorization": "Synthetic test fixture, not customer data",
+  "entries": [
+    {
+      "action": "KEEP",
+      "approval": "approved",
+      "bytes": 61,
+      "path": "brief.txt",
+      "reason": "Synthetic contract fixture",
+      "sha256": "sha256:590e89b65a2e15ef1a7790f32821590b2a867c0b8a66dc03b06b2a7c570e6e9d",
+      "target": ""
+    }
+  ],
+  "format": "nexonova.source-manifest.v1",
+  "missing": [],
+  "pending_decisions": [
+    "No product generation authorized at P3.2"
+  ],
+  "source_id": "synthetic-brief",
+  "tree_hash": "sha256:acec88e61f91b2aa8eab02d003cdb02b4b4814d49e5d281903e57f135968e883"
+}

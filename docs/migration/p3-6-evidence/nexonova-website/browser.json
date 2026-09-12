@@ -1,0 +1,62 @@
+[
+  {
+    "width": 1440,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 81
+    },
+    "tokens": [
+      "#00143f",
+      "#075dff",
+      "#00a4d6"
+    ],
+    "plans": 3,
+    "chatExpected": "$4.990",
+    "preparedMessage": "Consulta para NexoNova\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Landing page\nServicio: Landing page\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 390,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 390,
+      "height": 81
+    },
+    "tokens": [
+      "#00143f",
+      "#075dff",
+      "#00a4d6"
+    ],
+    "plans": 3,
+    "chatExpected": "$4.990",
+    "preparedMessage": "Consulta para NexoNova\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Landing page\nServicio: Landing page\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 320,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 320,
+      "height": 122.34375
+    },
+    "tokens": [
+      "#00143f",
+      "#075dff",
+      "#00a4d6"
+    ],
+    "plans": 3,
+    "chatExpected": "$4.990",
+    "preparedMessage": "Consulta para NexoNova\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Landing page\nServicio: Landing page\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  }
+]

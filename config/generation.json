@@ -1,0 +1,14 @@
+{
+  "authorization_basis": "User approved P3.5 NexoNova pilot and explicitly authorized P3.6 synthetic generality pilot on 2026-09-12. Exact order hashes only; internal local generation, no assets copied, no business integrations, deployment or P3.7.",
+  "authorized_orders": [
+    "sha256:bf6f74c0bd39db9fd880dc792d9136646a735063765738cad5620f2d791d6ab4",
+    "sha256:e9a92724440ec4dc8f5d34fdac5bfab7777458e89a17af3711978fe67c709cf8"
+  ],
+  "format": "nexonova.generation-policy.v1",
+  "output_root": "..",
+  "protected_roots": [
+    ".",
+    "../nexonova-prototype"
+  ],
+  "staging_root": "../.nexonova-staging"
+}

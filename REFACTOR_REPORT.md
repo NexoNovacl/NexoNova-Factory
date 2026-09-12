@@ -1,3 +1,17 @@
+# Estado consolidado al cierre técnico P3 — 2026-09-12
+
+**P3 PASS_WITH_LIMITATIONS; aprobación humana de P3.7 pendiente.** P3.1–P3.6 aprobadas. corporate-site es capacidad de piloto validada de uso interno/controlado, no production-ready. [Informe final y matriz](docs/migration/P3_FINAL_REPORT.md), [uso](docs/corporate-site-operator.md), [baseline](docs/migration/P3_BASELINE.json).
+
+P3.7 reutiliza sin cambios template, generador y ambos productos. Añade comprobación real de autonomía en Docker sin Python/material privado, guía operativa, baseline de 105 archivos y test de preservación. Actualiza README/arquitectura/estado. No reemplaza ni elimina fuentes; no modifica prototipo ni añade funcionalidades de producto. Limitaciones y decisiones de publicación consolidadas en el informe final. P4–P7 no iniciadas.
+
+Los registros siguientes son historia de entregas anteriores; sus estados pendientes no sustituyen este encabezado.
+
+Estado vigente: P3.5 aprobado formalmente; P3.6 demuestra el segundo producto synthetic-website y queda para revisión humana. [Registro P3.6](docs/migration/P3_6.md). P3.7 no iniciada. Los estados siguientes son históricos.
+
+Revisión puntual 2026-09-12: header correcto en producto y template; evidencia fullPage histórica afectada por scroll previo. [Causa y capturas limpias](docs/migration/P3_5_HEADER_REVIEW.md). Sin modificaciones de código ni avance a P3.6.
+
+Estado vigente P3.5 (2026-09-11): P3.1–P3.4 aprobadas. Generador determinista implementado y `../nexonova-website` materializado; evidencia y límites en [P3.5](docs/migration/P3_5.md). P3.6 no iniciada. Las entregas anteriores que se conservan abajo son históricas.
+
 # REFACTOR_REPORT — Entrega incremental parcial
 
 Inicio: 2026-09-06. Actualización: 2026-09-11. **P2 PASS_WITH_LIMITATIONS aprobado por el usuario.** Carpetas normalizadas; P3.1 y P3.2 aprobadas. P3.3 aprobada. Interacciones locales P3.4 implementadas para revisión; P3.5 no iniciada. No se ha generado nexonova-website ni completado P3.

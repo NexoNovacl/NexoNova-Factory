@@ -1,0 +1,128 @@
+{
+  "phase": "P3.5",
+  "scope": "generation-materialization; human review pending; P3.6 not started",
+  "suite": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--tb=short"
+    ],
+    "exit_code": 0,
+    "output": "........................................................................ [ 42%]\n........................................................................ [ 84%]\n...........................                                              [100%]\n171 passed in 19.81s\n"
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "factory.cli",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: python -m factory.cli [-h]\n                             {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run} ...\n\nNexoNova Factory \u2014 n\u00facleo local; bootstrap legado bloqueado\n\npositional arguments:\n  {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run}\n\noptions:\n  -h, --help            show this help message and exit\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/generate_corporate_site.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: generate_corporate_site.py [-h] [--pilot PILOT] [--run RUN]\n                                  [--diff-hash DIFF_HASH]\n                                  {stage,review,materialize,discard}\n\npositional arguments:\n  {stage,review,materialize,discard}\n\noptions:\n  -h, --help            show this help message and exit\n  --pilot PILOT\n  --run RUN\n  --diff-hash DIFF_HASH\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/validate_generated_web.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: validate_generated_web.py [-h] --run RUN [--materialized]\n\noptions:\n  -h, --help      show this help message and exit\n  --run RUN\n  --materialized\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "docker",
+        "--host",
+        "unix:///var/run/docker.sock",
+        "ps",
+        "-a",
+        "--filter",
+        "name=nexonova-web-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "docker",
+        "--host",
+        "unix:///var/run/docker.sock",
+        "ps",
+        "-a",
+        "--filter",
+        "name=nexonova-test-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "ss",
+        "-ltnp",
+        "sport = :3183"
+      ],
+      "exit_code": 0,
+      "output": "State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\n"
+    }
+  ],
+  "product_integrity": {
+    "status": "complete",
+    "sourceFiles": 31,
+    "frameworkManagedChanges": [
+      "next-env.d.ts"
+    ],
+    "derivedDirectoriesOrFiles": [
+      ".next",
+      "node_modules",
+      "test-results",
+      "tsconfig.tsbuildinfo"
+    ],
+    "privatePathsDetected": false,
+    "secretHeuristicMatches": false,
+    "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+  },
+  "temporary_web_copies": [],
+  "prototype_verified_files": 99,
+  "metadata_restored": true
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assets": {
+      "items": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 0,
+      "type": "array"
+    },
+    "content": {
+      "enum": [
+        "approved-internal-pilot-provisional"
+      ],
+      "type": "string"
+    },
+    "font": {
+      "enum": [
+        "Inter-system-fallback-no-file"
+      ],
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "nexonova.generation-selection.v1"
+      ],
+      "type": "string"
+    },
+    "omitted_paths": {
+      "items": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "resolved_for_scope": {
+      "items": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source_mode": {
+      "enum": [
+        "reference-only-no-copy"
+      ],
+      "type": "string"
+    },
+    "source_tree_hash": {
+      "pattern": "sha256:[a-f0-9]{64}",
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "source_tree_hash",
+    "assets",
+    "source_mode",
+    "font",
+    "content",
+    "omitted_paths",
+    "resolved_for_scope"
+  ],
+  "type": "object"
+}

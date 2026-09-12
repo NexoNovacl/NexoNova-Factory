@@ -1,0 +1,17 @@
+[
+  {
+    "action": "template-build",
+    "exit_code": 0,
+    "output": "   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 11.1s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/4) ...\n   Generating static pages (1/4) \n   Generating static pages (2/4) \n   Generating static pages (3/4) \n \u2713 Generating static pages (4/4)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                     5.2 kB         108 kB\n\u2514 \u25cb /_not-found                            993 B         103 kB\n+ First Load JS shared by all             102 kB\n  \u251c chunks/275ae44f-97cacaf3233e1121.js  54.2 kB\n  \u251c chunks/519-b378ecc643a3f4bf.js       46.3 kB\n  \u2514 other shared chunks (total)          1.93 kB\n\n\n\u25cb  (Static)  prerendered as static content\n\n"
+  },
+  {
+    "action": "product-browser",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "action": "template-browser",
+    "exit_code": 0,
+    "output": ""
+  }
+]

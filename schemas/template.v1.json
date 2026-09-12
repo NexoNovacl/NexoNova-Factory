@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "files": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "bytes": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "path": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "sha256:[a-f0-9]{64}",
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "bytes"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "format": {
+      "enum": [
+        "nexonova.template.v1"
+      ],
+      "type": "string"
+    },
+    "template_id": {
+      "enum": [
+        "corporate-site"
+      ],
+      "type": "string"
+    },
+    "version": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "template_id",
+    "version",
+    "files"
+  ],
+  "type": "object"
+}

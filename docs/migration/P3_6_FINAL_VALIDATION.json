@@ -1,0 +1,132 @@
+{
+  "branchScanScope": "Literal condition scan and manual review of generator and template TS/TSX; not a proof over arbitrary dynamic programs.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "factory.cli",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: python3 -m factory.cli [-h]\n                              {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run} ...\n\nNexoNova Factory \u2014 n\u00facleo local; bootstrap legado bloqueado\n\npositional arguments:\n  {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run}\n\noptions:\n  -h, --help            show this help message and exit\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/synthetic"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "docker",
+        "--host",
+        "unix:///var/run/docker.sock",
+        "ps",
+        "-a",
+        "--filter",
+        "name=nexonova-web-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "docker",
+        "--host",
+        "unix:///var/run/docker.sock",
+        "ps",
+        "-a",
+        "--filter",
+        "name=nexonova-test-",
+        "--format",
+        "{{.Names}}"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "ss",
+        "-ltnp",
+        "sport = :3185"
+      ],
+      "exit_code": 0,
+      "output": "State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\n"
+    },
+    {
+      "command": [
+        "ss",
+        "-ltnp",
+        "sport = :3183"
+      ],
+      "exit_code": 0,
+      "output": "State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\n"
+    }
+  ],
+  "clientLiteralBranches": [],
+  "products": {
+    "nexonova-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    },
+    "synthetic-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    }
+  },
+  "templateUnchanged": true,
+  "temporaryWebCopies": []
+}

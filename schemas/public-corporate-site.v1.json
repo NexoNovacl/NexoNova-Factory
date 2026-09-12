@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "about": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description"
+      ],
+      "type": "object"
+    },
+    "brand": {
+      "additionalProperties": false,
+      "properties": {
+        "blue": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "cyan": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "navy": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "navy",
+        "blue",
+        "cyan"
+      ],
+      "type": "object"
+    },
+    "faq": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "answer": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          },
+          "question": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "question",
+          "answer"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "format": {
+      "enum": [
+        "corporate-site.visual.v1"
+      ],
+      "type": "string"
+    },
+    "hero": {
+      "additionalProperties": false,
+      "properties": {
+        "accent": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "accent",
+        "description"
+      ],
+      "type": "object"
+    },
+    "plans": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "price",
+          "description"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "services": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": {
+            "maxLength": 4096,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "format",
+    "brand",
+    "hero",
+    "about",
+    "services",
+    "plans",
+    "faq"
+  ],
+  "type": "object"
+}

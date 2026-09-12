@@ -1,0 +1,193 @@
+{
+  "destination": "synthetic-website",
+  "destinationExists": false,
+  "files": [
+    {
+      "after": "sha256:b52a9b1ceec6e900e6f30cb7feca69b0bb892769e2d02bdaced1e6036b992134",
+      "before": null,
+      "change": "A",
+      "path": ".gitignore"
+    },
+    {
+      "after": "sha256:c28546c650342596394f3c38f91ad48322f9f7847bb204f8c9c826aad800a651",
+      "before": null,
+      "change": "A",
+      "path": ".nexonova/project.json"
+    },
+    {
+      "after": "sha256:687322649a72923c767bbc4b9f697dd558076f673af05a2d06e5512bef6bbeb8",
+      "before": null,
+      "change": "A",
+      "path": "README.md"
+    },
+    {
+      "after": "sha256:879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+      "before": null,
+      "change": "A",
+      "path": "next-env.d.ts"
+    },
+    {
+      "after": "sha256:2b6343f109c636cf8bdee2c011a4817056930e6d8fb09407d73deb37b553dcac",
+      "before": null,
+      "change": "A",
+      "path": "next.config.ts"
+    },
+    {
+      "after": "sha256:5a1357cf0aa22cca729bc2893f86842ec8c56e457213354b5fcbf942ccd6fd95",
+      "before": null,
+      "change": "A",
+      "path": "package-lock.json"
+    },
+    {
+      "after": "sha256:1570ec55563749b74a425159a471266e216b3d7b6377f8dc781d9652129db572",
+      "before": null,
+      "change": "A",
+      "path": "package.json"
+    },
+    {
+      "after": "sha256:aef5a8e70d884cbc354e172561d817e6e20775cfa7258a09aa4d995156440124",
+      "before": null,
+      "change": "A",
+      "path": "playwright.config.ts"
+    },
+    {
+      "after": "sha256:7e823308b9648b3d95a39993d711c9591899c335755e1dc5c0170644c800f323",
+      "before": null,
+      "change": "A",
+      "path": "src/app/layout.tsx"
+    },
+    {
+      "after": "sha256:78b6c24cc1b7af609c676e4e8ee787664e1169a0657e11df65e59d3f56a1fe56",
+      "before": null,
+      "change": "A",
+      "path": "src/app/page.tsx"
+    },
+    {
+      "after": "sha256:5449067d8e1efe6a2532a868d3a7133ab24dacdec321b2e2b4fccfe23fc7fd46",
+      "before": null,
+      "change": "A",
+      "path": "src/components/ContactForm.tsx"
+    },
+    {
+      "after": "sha256:0e9d0f331e09c86cb36d37d7b9e5183e8c000fec6b158971ec19858f86ba27f6",
+      "before": null,
+      "change": "A",
+      "path": "src/components/CorporateSite.tsx"
+    },
+    {
+      "after": "sha256:c5cac7ae4bfc9a908d65210be3bb4c805824fdc9b91a1839830e3b00d6a461c4",
+      "before": null,
+      "change": "A",
+      "path": "src/components/DemoChat.tsx"
+    },
+    {
+      "after": "sha256:65a803aae18d5e49505000edf9b65cdc7102fff0e12cfff1de3b7199b8dc24b3",
+      "before": null,
+      "change": "A",
+      "path": "src/components/DomainSearch.tsx"
+    },
+    {
+      "after": "sha256:a935e8033f06db727ff4a5f7cd8ca0dcd2405646a2992e9ecbd9d659e4313aff",
+      "before": null,
+      "change": "A",
+      "path": "src/components/Inquiry.tsx"
+    },
+    {
+      "after": "sha256:3fa8de1ca88050d76e27bba5e38e5f683f65f2ba110e91bfdf0069d90f5fc760",
+      "before": null,
+      "change": "A",
+      "path": "src/components/InquiryState.tsx"
+    },
+    {
+      "after": "sha256:f03a1936f3ea76c4f556ec3d07999ecdb98d0ee439ca44953fe3dfea16c1d709",
+      "before": null,
+      "change": "A",
+      "path": "src/components/Navigation.tsx"
+    },
+    {
+      "after": "sha256:ade309f2937bc941a2d12146edeed6204b0890da83c1dafd4904d250748abf8b",
+      "before": null,
+      "change": "A",
+      "path": "src/components/Sections.tsx"
+    },
+    {
+      "after": "sha256:7f9aa3196a2bdbc40c25e6140336ced08f2cef98f7e1abada8f98f2625d47918",
+      "before": null,
+      "change": "A",
+      "path": "src/components/SelectionButtons.tsx"
+    },
+    {
+      "after": "sha256:3ffe871b3a1a50ed351d7838ccde8fe4080a672d8443b66b5c108dcb7025d926",
+      "before": null,
+      "change": "A",
+      "path": "src/components/Site.module.css"
+    },
+    {
+      "after": "sha256:51a72c33d7bd8324c3dc382088d28ba68214e20203df3c994e61424fd54188c0",
+      "before": null,
+      "change": "A",
+      "path": "src/content/index.ts"
+    },
+    {
+      "after": "sha256:f7387fea16d0b3f8ddb3b954b0526f2c4fc4b1c207820771d16212cb207bb6d6",
+      "before": null,
+      "change": "A",
+      "path": "src/content/site.json"
+    },
+    {
+      "after": "sha256:701fbac97359f652d58c5073273440484025f10d496d095d94f768590dc04526",
+      "before": null,
+      "change": "A",
+      "path": "src/content/types.ts"
+    },
+    {
+      "after": "sha256:711d4e241b51beb53668b98ed34d318c526f1299d997fb04f6ceefcdfe9581da",
+      "before": null,
+      "change": "A",
+      "path": "src/services/interactions.ts"
+    },
+    {
+      "after": "sha256:d2013254cb6b9035b38a83adf75cbaedd598deece955b0c64a2bc7ce1d78350f",
+      "before": null,
+      "change": "A",
+      "path": "src/styles/globals.css"
+    },
+    {
+      "after": "sha256:5defb59338e858de153ecb9b59de234f51b4f30d4a2ea3c0665c03d6a8e93cd8",
+      "before": null,
+      "change": "A",
+      "path": "src/styles/tokens.css"
+    },
+    {
+      "after": "sha256:6255e888e423dd95c39d9729fbf9c4b2e87b68b8dd3fed48386bffda9bf5e71f",
+      "before": null,
+      "change": "A",
+      "path": "tests/browser/interactions.spec.ts"
+    },
+    {
+      "after": "sha256:fe8a2fd72315500de9056783c518744d66f883c6c82e7e5894714965c8f44f4c",
+      "before": null,
+      "change": "A",
+      "path": "tests/browser/services.spec.ts"
+    },
+    {
+      "after": "sha256:1410061bf416d204d679d6a2448a553b77c25408ed925400f4948320bd152cc4",
+      "before": null,
+      "change": "A",
+      "path": "tests/browser/visual.spec.ts"
+    },
+    {
+      "after": "sha256:37fa2540a8fdad4832d053288c178476c3c39df92562271f0eacb2905830fb15",
+      "before": null,
+      "change": "A",
+      "path": "tests/content.test.mjs"
+    },
+    {
+      "after": "sha256:788fe1cecadd2e6f12879900b8adc6c49b8cdf30e1c78999f9d791d3e86251e5",
+      "before": null,
+      "change": "A",
+      "path": "tsconfig.json"
+    }
+  ],
+  "format": "nexonova.creation-diff.v1"
+}

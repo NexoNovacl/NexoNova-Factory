@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "sourceFiles": 31,
+  "frameworkManagedChanges": [
+    "next-env.d.ts"
+  ],
+  "derivedDirectoriesOrFiles": [
+    ".next",
+    "node_modules",
+    "test-results",
+    "tsconfig.tsbuildinfo"
+  ],
+  "privatePathsDetected": false,
+  "secretHeuristicMatches": false,
+  "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+}

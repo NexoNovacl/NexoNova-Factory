@@ -1,0 +1,39 @@
+{
+  "about": {
+    "description": "Empresa ficticia dedicada a demostraciones de cer\u00e1mica. Todos los contenidos son datos de prueba.",
+    "title": "Aprender a dar forma."
+  },
+  "brand": {
+    "blue": "#80502c",
+    "cyan": "#d2bb87",
+    "name": "Taller Sint\u00e9tico Arcilla",
+    "navy": "#30251c"
+  },
+  "faq": [
+    {
+      "answer": "No. Este piloto solo prepara una consulta local sin enviarla.",
+      "question": "\u00bfPuedo reservar un taller?"
+    },
+    {
+      "answer": "No hay inventario real ni ventas en esta empresa ficticia.",
+      "question": "\u00bfLas piezas est\u00e1n a la venta?"
+    }
+  ],
+  "format": "corporate-site.visual.v1",
+  "hero": {
+    "accent": "Un taller ficticio de cer\u00e1mica.",
+    "description": "Escenario sint\u00e9tico para explorar talleres y piezas de arcilla, sin reservas ni actividad comercial real.",
+    "title": "Crear con las manos."
+  },
+  "plans": [],
+  "services": [
+    {
+      "description": "Exploraci\u00f3n sint\u00e9tica de t\u00e9cnicas manuales con arcilla.",
+      "title": "Taller de modelado"
+    },
+    {
+      "description": "Preparaci\u00f3n local de un inter\u00e9s por piezas decorativas ficticias.",
+      "title": "Dise\u00f1o de piezas"
+    }
+  ]
+}

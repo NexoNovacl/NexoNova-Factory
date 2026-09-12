@@ -1,81 +1,27 @@
-# Arquitectura implementada — NexoNova Factory 0.1.0 experimental
+# Arquitectura vigente — cierre técnico P3
 
-Fecha inicial: 2026-09-06. Actualización P3.4: 2026-09-11. P2 aprobado con limitaciones; P3.1–P3.3 aprobadas y P3.4 implementada para revisión. Este documento describe código existente; no presenta TARGET_ARCHITECTURE como implementación terminada.
+corporate-site es la primera capacidad funcional de piloto validada para uso interno/controlado. P3.1–P3.6 aprobadas; cierre P3.7 PASS_WITH_LIMITATIONS pendiente de aprobación humana. No production-ready. [Matriz/evidencia](migration/P3_FINAL_REPORT.md).
 
-## Límites
+## Núcleo y fronteras
 
-La fábrica es un paquete Python local sin dependencias runtime externas. Los productos web todavía no se generan. Se preserva la separación conceptual entre fábrica y producto, y se exige una raíz de trabajo fuera del checkout para nuevos estados.
+Un paquete Python conserva contratos, políticas y almacenamiento privado por cliente/run. Los agentes académicos permanecen desactivados. El executor experimental P2 controla procesos Python en Docker local; WorkOrders, permisos y evidencia están separados del producto. La memoria automática sigue desactivada. Recuperación/checkpoints no significan replay seguro tras SIGKILL.
 
-Los agentes académicos siguen presentes para mantener referencias y permitir revisión, pero registry los marca legacy y HarnessRunner bloquea su ejecución. No hay llamadas a modelos, prompts activos, memoria automática ni despliegue.
+## Capacidad corporate-site
 
-## Flujo de diagnóstico legado
+Entradas: fuente preservada + especificación + selección explícita + configuración pública + template congelado, enlazados por WorkOrder v2 y hash autorizado por operador. Los contratos v1 de preparación no conceden generación. Configuración se mantiene fuera de componentes y no contiene condiciones por cliente.
 
-CLI → OrchestratorGraph → HarnessRunner → rechazo explícito del agente legado → reports.finalize_run.
+Flujo: validación semántica y fuente → staging externo identificado → manifiesto/diff → validación Node en copia descartable → materialización atómica sin reemplazo. generation.py no ejecuta código web; web_tools.py expone acciones acotadas y mantiene instalación separada de checks/build. No se incorporan herramientas arbitrarias desde el brief. product_integrity.py verifica fuentes/metadata/referencias; generality.py contrasta contenido de los dos pilotos.
 
-El cierre contiene estado real, trazabilidad de ciclos ejecutados, resultado, decisiones pendientes y manifiesto de hashes. CLI devuelve un código no cero. verify_run es lectura y verifica formato, identidad, hashes, outcomes y registros esperados. No convierte reportes históricos en pruebas válidas ni protege frente a un atacante que reescriba todo el almacén.
+El producto Next/React/TypeScript/CSS Modules tiene una landing, selección en memoria, dominios sintácticos, chat local sustituible y contacto preparado/copiado sin envío. No hay backend persistente, auth, BD o integraciones. Los dos productos comparten componentes y difieren por JSON público, nombre de paquete y metadata portable.
 
-## Flujo experimental de herramientas
+## Estado y autonomía
 
-CLI → ProjectStore + FactoryConfig → ToolExecutor → aprobación host vinculada → snapshot filtrado → Docker local → resultado y estado de ejecución.
+Productos fuera del checkout: nexonova-website y synthetic-website. La aplicación no consume .nexonova/project.json. Fábrica, prototipo, WorkOrders, staging, permisos y Python no se montaron durante el arranque autónomo Docker final. Solo instalación preparatoria accede al registro npm; runtime local sin red externa ni puertos publicados.
 
-Solo existe python.unittest. No hay shell libre, pull automático ni proveedor externo. La falta de Docker/imagen produce un bloqueo verificable. El adaptador se validó con contenedores reales y datos sintéticos; la aprobación humana para uso con proyectos de clientes sigue pendiente.
+Los registros de staging materializado se preservan como evidencia intencional. Fuentes generadas son deterministas; builds/cachés no lo son por contrato. La regeneración exacta conocida de next-env.d.ts se informa aparte. No hay actualización automática de productos aceptados.
 
-El snapshot excluye metadata Git y cachés; rechaza archivos de credenciales conocidos, entradas binarias y contenido con señales de secretos. Se comprueba que su hash coincida con el contenido aprobado. Docker recibe ese snapshot de solo lectura, no el workspace original ni aprobaciones/estado. La detección de secretos es heurística y no sustituye una revisión de datos de entrada.
+## Versionado y evolución
 
-## Grafo de módulos
+Factory y template 0.1.0; generator identificado por hash dentro de factory, sin semver independiente. Schemas y metadata versionados; [baseline final](migration/P3_BASELINE.json) y test detectan cambios en archivos fijados. No es firma criptográfica. P4/P5 deben revisar y autorizar nuevos baselines, no silenciar diferencias.
 
-```mermaid
-flowchart TD
-    CLI[cli] --> O[orchestrator]
-    O --> H[harness]
-    O --> R[reports]
-    H --> REG[registry legado]
-    H --> V[validators y schemas]
-    H --> C[context]
-    H --> M[memory desactivada]
-    CLI --> E[executor experimental]
-    CLI --> S[storage]
-    E --> S
-    E --> CFG[config]
-    E --> D[Docker local requerido]
-    S --> U[utils]
-    R --> S
-    R --> U
-```
-
-Ningún componente fue movido para ajustar visualmente el árbol. reports se extrajo porque comparte el contrato de cierre con CLI. storage centraliza las raíces y aprobaciones; utils concentra escritura atómica. config y executor no dependen de los agentes académicos.
-
-## Contratos actuales
-
-- WorkOrder/CycleState/AgentResult legados: interfaces conservadas, con comprobaciones de números finitos, presupuestos no negativos e IDs usados en rutas. No constituyen una implementación completa de JSON Schema.
-- nexonova.run.v1: cierre de diagnóstico y manifiesto de artefactos. No implica aplicación lista.
-- nexonova.tool-run.v1 / nexonova.tool-result.v1: lifecycle y resultados del adaptador. `complete` describe un proceso terminado con tests reportados, no certificación de calidad del producto ni aprobación humana. `executed=null` puede indicar incertidumbre tras timeout del cliente de contenedor.
-- Aprobación host: acción, cliente/proyecto, hash de fuentes y política de ejecución, actor, caducidad y consumo único. El almacén confía en el operador Unix, no autentica identidades por un servicio externo.
-
-## Almacenamiento
-
-```text
-<root privado>/<client-id>/<project-id>/
-├── workspace/                 fuentes del futuro proyecto
-├── temporary/                 snapshots efímeros propios de cada operación
-├── runs/RUN-<uuid>/            estado y ToolResult
-├── approvals/                 consentimiento del operador; fuera del contenedor
-└── .writer.lock               exclusión de escritor mediante flock
-```
-
-Los IDs son slugs acotados. Se rechazan rutas no canónicas, escapes, enlaces y archivos especiales. Escrituras atómicas reemplazan el archivo completo con fsync; un lock cooperativo limita a un escritor. P2 incorpora checkpoints con salida parcial redactada y recuperación explícita de cierre sin repetir herramientas. El importador de referencias versionadas conserva nombres relativos y hashes del legado, sin copiar contenido ni validar sus claims. No hay reanudación automática ni política de retención. WorkOrders de test pueden restringir alcance, entradas, dry-run y latencia sin ampliar permisos globales; su contenido queda vinculado a la aprobación. Un actor host con la misma cuenta y escritura en toda la raíz puede vulnerar estas fronteras; ese escenario no queda resuelto por comprobaciones de Path.
-
-Los snapshots de contexto requieren un directorio de ciclo nuevo. Hashes corresponden al contenido consumido. Fuentes pueden suministrarse explícitamente; la lista académica predeterminada se conserva para compatibilidad sin inventar sus siete archivos faltantes.
-
-## Estado de seguridad y evolución
-
-Pruebas Docker de aislamiento, recursos y limpieza ejecutadas; véase [la validación P2](migration/P2_FINAL_VALIDATION.md). Revisión humana pendiente de imágenes, operación tras crash, información sensible y modelo de permisos. Los tests de comandos, control de salida y rutas no acreditan aislamiento del kernel. Consulte [security.md](security.md) y [migration/P2.md](migration/P2.md).
-
-P3 está detenido hasta recibir el brief concreto y cerrar P2. No existen templates, módulos web, actualización de productos, agentes con IA, CI de producto ni recetas de despliegue. La evolución propuesta permanece en [TARGET_ARCHITECTURE.md](../TARGET_ARCHITECTURE.md) y [MIGRATION_PLAN.md](../MIGRATION_PLAN.md).
-
-
-## Base e interacciones corporate-site (P3.3/P3.4)
-
-La plantilla Next.js en templates/corporate-site es independiente del runtime Python y recibe configuración pública. InquiryProvider conserva plan, servicios y dominio en memoria; DomainSearch, botones de selección, Inquiry y ContactForm comparten ese estado. La vista previa se invalida cuando cambia su contenido. ChatService separa el diálogo accesible de respuestas locales deterministas. No se incorporan APIs, persistencia ni proveedores externos; CSP y controles de hidratación impiden envíos nativos.
-
-Contratos/fuentes P3.2 permanecen separados de los props públicos del sitio. No hay generador ni adaptador Node habilitado en el executor; las pruebas web son validación manual autorizada en staging independiente. Detalle, límites y evidencia: [P3.4](migration/P3_4.md). P3.5 no iniciada.
+[Guía operativa](corporate-site-operator.md) y [límites del cierre](migration/P3_FINAL_REPORT.md). Linux/mismo filesystem, host confiable, recuperación manual, dos configuraciones y acentos compartidos permanecen como límites. Procedencia/Git, aprobación editorial/visual y preparación operativa impiden declarar publicación lista. P4–P7 no iniciadas.

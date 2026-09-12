@@ -1,0 +1,15 @@
+{
+  "issues": [],
+  "legitimate_shared_exceptions": [
+    {
+      "colors": [
+        "#00143f"
+      ],
+      "kind": "unchanged-shared-template-css",
+      "path": "src/components/Site.module.css",
+      "sha256": "sha256:3ffe871b3a1a50ed351d7838ccde8fe4080a672d8443b66b5c108dcb7025d926"
+    }
+  ],
+  "scope": "Generated source only. Public configuration exact; factory schema namespaces legitimate; shared CSS exceptions require exact template bytes. Runtime checks recorded separately.",
+  "status": "complete"
+}

@@ -1,0 +1,73 @@
+{
+  "template_matches_authorized_manifest": true,
+  "product_integrity": {
+    "status": "complete",
+    "sourceFiles": 31,
+    "frameworkManagedChanges": [
+      "next-env.d.ts"
+    ],
+    "derivedDirectoriesOrFiles": [
+      ".next",
+      "node_modules",
+      "test-results",
+      "tsconfig.tsbuildinfo"
+    ],
+    "privatePathsDetected": false,
+    "secretHeuristicMatches": false,
+    "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+  },
+  "same_clean_scroll_reset_geometry": true,
+  "source_comparison": {
+    "src/components/Navigation.tsx": {
+      "identical": true,
+      "sha256": "f03a1936f3ea76c4f556ec3d07999ecdb98d0ee439ca44953fe3dfea16c1d709"
+    },
+    "src/components/Site.module.css": {
+      "identical": true,
+      "sha256": "3ffe871b3a1a50ed351d7838ccde8fe4080a672d8443b66b5c108dcb7025d926"
+    },
+    "src/styles/globals.css": {
+      "identical": true,
+      "sha256": "d2013254cb6b9035b38a83adf75cbaedd598deece955b0c64a2bc7ce1d78350f"
+    },
+    "src/app/layout.tsx": {
+      "identical": true,
+      "sha256": "7e823308b9648b3d95a39993d711c9591899c335755e1dc5c0170644c800f323"
+    },
+    "tests/browser/visual.spec.ts": {
+      "identical": true,
+      "sha256": "1410061bf416d204d679d6a2448a553b77c25408ed925400f4948320bd152cc4"
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "ss",
+        "-ltnp",
+        "sport = :3185"
+      ],
+      "exit_code": 0,
+      "output": "State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    }
+  ]
+}

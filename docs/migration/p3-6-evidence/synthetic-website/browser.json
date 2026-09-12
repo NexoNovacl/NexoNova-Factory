@@ -1,0 +1,62 @@
+[
+  {
+    "width": 1440,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 1440,
+      "height": 81
+    },
+    "tokens": [
+      "#30251c",
+      "#80502c",
+      "#d2bb87"
+    ],
+    "plans": 0,
+    "chatExpected": "Esta configuración no incluye planes de ejemplo.",
+    "preparedMessage": "Consulta para Taller Sintético Arcilla\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Taller de modelado\nServicio: Taller de modelado\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 390,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 390,
+      "height": 122.34375
+    },
+    "tokens": [
+      "#30251c",
+      "#80502c",
+      "#d2bb87"
+    ],
+    "plans": 0,
+    "chatExpected": "Esta configuración no incluye planes de ejemplo.",
+    "preparedMessage": "Consulta para Taller Sintético Arcilla\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Taller de modelado\nServicio: Taller de modelado\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 320,
+    "geometry": {
+      "y": 0,
+      "top": 0,
+      "left": 0,
+      "width": 320,
+      "height": 118.4375
+    },
+    "tokens": [
+      "#30251c",
+      "#80502c",
+      "#d2bb87"
+    ],
+    "plans": 0,
+    "chatExpected": "Esta configuración no incluye planes de ejemplo.",
+    "preparedMessage": "Consulta para Taller Sintético Arcilla\nNombre: Persona Sintética\nMedio de contacto: persona@example.invalid\nInterés: Taller de modelado\nServicio: Taller de modelado\nMensaje: Solicitud ficticia para revisión local.\nLa consulta se ha preparado; no se ha enviado.",
+    "errors": [],
+    "external": []
+  }
+]

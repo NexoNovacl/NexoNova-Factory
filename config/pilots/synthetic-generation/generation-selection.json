@@ -1,0 +1,18 @@
+{
+  "assets": [],
+  "content": "approved-internal-pilot-provisional",
+  "font": "Inter-system-fallback-no-file",
+  "format": "nexonova.generation-selection.v1",
+  "omitted_paths": [
+    "brief.txt"
+  ],
+  "resolved_for_scope": [
+    "Approve final editorial content; commercial values remain provisional.",
+    "Approve local Inter distribution and license evidence.",
+    "Decide recover/replace/remove for missing referenced resources.",
+    "No product generation authorized at P3.2",
+    "Select exact logo/hero/icon assets and substantiate provenance; no shared assets approved by inference."
+  ],
+  "source_mode": "reference-only-no-copy",
+  "source_tree_hash": "sha256:acec88e61f91b2aa8eab02d003cdb02b4b4814d49e5d281903e57f135968e883"
+}

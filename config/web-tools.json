@@ -1,0 +1,9 @@
+{
+  "approved_content_hashes": [
+    "sha256:0d33ced424bd97aeb765173bd663a515554536938586eda6ec991ccba4660c4e",
+    "sha256:2d32345349c151222da4b4cceb54a6a684e9a9b661c542d5d1b1b613dc3825d5"
+  ],
+  "authorization_basis": "User P3.5 authorization to prepare and validate this exact generated internal pilot; installation preparation alone has network, lifecycle scripts disabled. No external business services. User approved P3.6 validation of the synthetic product; same bounded preparation and offline checks.",
+  "format": "nexonova.web-policy.v1",
+  "image": "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5"
+}

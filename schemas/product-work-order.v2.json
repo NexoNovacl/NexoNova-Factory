@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "constraints": {
+      "additionalProperties": false,
+      "properties": {
+        "deployment": {
+          "enum": [
+            "denied"
+          ],
+          "type": "string"
+        },
+        "destination": {
+          "enum": [
+            "new-only"
+          ],
+          "type": "string"
+        },
+        "external_services": {
+          "enum": [
+            "denied"
+          ],
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "P3.5-internal-pilot",
+            "P3.6-internal-pilot"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "destination",
+        "external_services",
+        "deployment",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "format": {
+      "enum": [
+        "nexonova.product-work-order.v2"
+      ],
+      "type": "string"
+    },
+    "inputs": {
+      "additionalProperties": false,
+      "properties": {
+        "public_config": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "selection": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "source_manifest": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "spec": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "template": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        }
+      },
+      "required": [
+        "spec",
+        "source_manifest",
+        "public_config",
+        "selection",
+        "template"
+      ],
+      "type": "object"
+    },
+    "operation": {
+      "enum": [
+        "generate-project"
+      ],
+      "type": "string"
+    },
+    "product_type": {
+      "enum": [
+        "corporate-site"
+      ],
+      "type": "string"
+    },
+    "project_id": {
+      "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+      "type": "string"
+    },
+    "template_version": {
+      "maxLength": 4096,
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "operation",
+    "project_id",
+    "product_type",
+    "template_version",
+    "inputs",
+    "constraints"
+  ],
+  "type": "object"
+}
