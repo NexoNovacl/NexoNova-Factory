@@ -1,0 +1,270 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "conflicts": {
+      "items": {
+        "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "core": {
+      "enum": [
+        "0.1.0"
+      ],
+      "type": "string"
+    },
+    "dependencies": {
+      "items": {
+        "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "fields": {
+      "enum": [
+        [
+          {
+            "constraints": {
+              "format": "opaque"
+            },
+            "name": "id",
+            "nullable": false,
+            "source": "server",
+            "type": "identifier"
+          },
+          {
+            "constraints": {
+              "maxLength": 120,
+              "minLength": 1
+            },
+            "name": "title",
+            "nullable": false,
+            "source": "input",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "maxLength": 2000,
+              "minLength": 0
+            },
+            "name": "description",
+            "nullable": false,
+            "source": "input",
+            "type": "string"
+          },
+          {
+            "constraints": {
+              "values": [
+                "open",
+                "closed"
+              ]
+            },
+            "name": "status",
+            "nullable": false,
+            "source": "validated-command",
+            "type": "enum"
+          },
+          {
+            "constraints": {
+              "reassignment": false
+            },
+            "name": "ownerId",
+            "nullable": false,
+            "source": "session",
+            "type": "user-reference"
+          },
+          {
+            "constraints": {
+              "clock": "runtime"
+            },
+            "name": "createdAt",
+            "nullable": false,
+            "source": "server",
+            "type": "datetime"
+          },
+          {
+            "constraints": {
+              "clock": "runtime"
+            },
+            "name": "updatedAt",
+            "nullable": false,
+            "source": "server",
+            "type": "datetime"
+          },
+          {
+            "constraints": {
+              "physicalDelete": false
+            },
+            "name": "archivedAt",
+            "nullable": true,
+            "source": "validated-command",
+            "type": "datetime"
+          },
+          {
+            "constraints": {
+              "minimum": 1,
+              "write": "compare-and-increment"
+            },
+            "name": "version",
+            "nullable": false,
+            "source": "server",
+            "type": "integer"
+          }
+        ]
+      ]
+    },
+    "files": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "file",
+              "directory"
+            ],
+            "type": "string"
+          },
+          "owner": {
+            "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+            "type": "string"
+          },
+          "path": {
+            "maxLength": 200,
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "owner",
+          "kind"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "format": {
+      "enum": [
+        "nexonova.business-module.v1"
+      ],
+      "type": "string"
+    },
+    "id": {
+      "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+      "type": "string"
+    },
+    "implementation": {
+      "enum": [
+        "NOT_IMPLEMENTED"
+      ],
+      "type": "string"
+    },
+    "migrations": {
+      "enum": [
+        {
+          "files": [],
+          "intent": "initial-internal-request-model",
+          "status": "NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    "models": {
+      "items": {
+        "pattern": "[A-Za-z][A-Za-z0-9]*",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "permissions": {
+      "enum": [
+        {
+          "admin": "all-in-product",
+          "archive": "archivedAt",
+          "clientOwnerId": "forbidden",
+          "concurrency": "expected-version-or-409",
+          "enforcement": "NOT_IMPLEMENTED",
+          "foreignResource": "uniform-404",
+          "member": "own-only",
+          "owner": "session-derived",
+          "physicalDelete": "forbidden",
+          "reassignment": "forbidden",
+          "roleEditing": "forbidden",
+          "roles": [
+            "admin",
+            "member"
+          ],
+          "states": [
+            "open",
+            "closed"
+          ]
+        }
+      ]
+    },
+    "requiredGates": {
+      "enum": [
+        [
+          "compatibility",
+          "database-migrations",
+          "authentication",
+          "resource-authorization",
+          "module-crud",
+          "generation",
+          "build-tests",
+          "autonomy",
+          "cleanup"
+        ]
+      ]
+    },
+    "routes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "methods": {
+            "items": {
+              "enum": [
+                "GET",
+                "POST",
+                "PATCH"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "path": {
+            "maxLength": 160,
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "methods"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "version": {
+      "enum": [
+        "0.1.0"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "id",
+    "version",
+    "core",
+    "dependencies",
+    "conflicts",
+    "routes",
+    "files",
+    "models",
+    "fields",
+    "permissions",
+    "migrations",
+    "requiredGates",
+    "implementation"
+  ],
+  "type": "object"
+}

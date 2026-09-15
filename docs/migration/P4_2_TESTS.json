@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short"
+  ],
+  "dockerOptIn": false,
+  "exit_code": 0,
+  "output": "........................................................................ [ 30%]\n..............................................ssssssssss................ [ 60%]\n........................................................................ [ 91%]\n.....................                                                    [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_p2_docker.py:86: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [3] tests/test_p2_docker.py:142: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [2] tests/test_p2_docker.py:177: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [4] tests/test_p2_docker.py:240: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\n227 passed, 10 skipped in 7.28s\n"
+}

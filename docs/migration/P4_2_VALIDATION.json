@@ -1,0 +1,152 @@
+{
+  "baselineFiles": 105,
+  "baselineSha256": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c",
+  "changedBaselineFiles": [],
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_business_contracts.py",
+        "tests/test_p3_baseline.py",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "output": "..........................................................               [100%]\n58 passed in 0.36s\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_business_contracts.py"
+      ],
+      "exit_code": 0,
+      "output": "contracts=valid; planHash=sha256:6dd2027e5b74d65f3b1afe0eb1378ff6744112b8ff9bc789003fb852631d21cc; execution=BLOCKED; futureGates=NOT_IMPLEMENTED\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    }
+  ],
+  "executionReadiness": "BLOCKED",
+  "futureGates": [
+    {
+      "id": "compatibility",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "database-migrations",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "authentication",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "resource-authorization",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "module-crud",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "generation",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "build-tests",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "autonomy",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "cleanup",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    }
+  ],
+  "inputs": {
+    "catalog": "sha256:3dd4c2567243f43603afc936fb049c98c8d5c0c74b6297bd2186c0af39eb17a7",
+    "environment": "sha256:c19660e6af583e1aaf5b41a26460c7cd3a2a46b70471ea39d2a6bd91c6fcb7a2",
+    "order": "sha256:f6c5c445d0833a8259f038005e51cea1009ba5e28bc82816c5719353ee159015",
+    "spec": "sha256:98bf4de413f5ae89b398a460375ef8e993b3b422aeeb68682755e2fec74339cc"
+  },
+  "newImplementationHashes": {
+    "factory/business_contracts.py": "c56a3bba9fc00098e1dfa6481259597a47e0e2e28913d717fe1a6232e5305ec8",
+    "schemas/business-environment.v1.json": "0c3f114747cf09f6edc11e2f5f0badaf6d61e1d3c46ea41a49bd08c4cf286b20",
+    "schemas/business-module.v1.json": "df9933b3e8c596794a70035237e1261b431ca3328b10da379d704ca4b1e29d25",
+    "schemas/business-plan.v1.json": "9b70aa85f19f22ca994e917246ce6811844b446f5fb78a5f7c828f1420482c30",
+    "schemas/business-platform.v0.1.0.json": "cbd0a0be75aad9ab3831f005c7c915197108e4fe572198438418f2594cde55c6",
+    "schemas/business-work-order.v1.json": "13f98dfbee536843b37f5de6f1269858c09d5986258befc0e3857867983f098c",
+    "scripts/validate_business_contracts.py": "54dfde8f65599e39c852075f70e0759056b59b26ea6416fe8acfdb6cde9f6b8c",
+    "tests/test_business_contracts.py": "3e53f52cc056471ef77567c68ad3752c83c883e55cfb3f9e4a227e6d6e4e25a2"
+  },
+  "phase": "P4.2",
+  "planHash": "sha256:6dd2027e5b74d65f3b1afe0eb1378ff6744112b8ff9bc789003fb852631d21cc",
+  "products": {
+    "nexonova-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    },
+    "synthetic-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    }
+  },
+  "samePlanBytes": true,
+  "scope": "contracts-only"
+}

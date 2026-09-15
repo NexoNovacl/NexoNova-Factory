@@ -1,0 +1,385 @@
+{
+  "coreRoutes": [
+    "/sign-in",
+    "/api/auth/[...all]"
+  ],
+  "coreVersion": "0.1.0",
+  "deferredContracts": [
+    "generation-manifest",
+    "product-metadata-v2",
+    "execution-validation-receipt"
+  ],
+  "environment": {
+    "format": "nexonova.business-environment.v1",
+    "requirements": [
+      {
+        "classification": "secret",
+        "consumers": [
+          "app"
+        ],
+        "name": "DATABASE_URL",
+        "required": true,
+        "valuePolicy": "operator-supplied-not-stored"
+      },
+      {
+        "classification": "secret",
+        "consumers": [
+          "migration-tool"
+        ],
+        "name": "MIGRATION_DATABASE_URL",
+        "required": true,
+        "valuePolicy": "operator-supplied-not-stored"
+      },
+      {
+        "classification": "secret",
+        "consumers": [
+          "app"
+        ],
+        "name": "BETTER_AUTH_SECRET",
+        "required": true,
+        "valuePolicy": "operator-supplied-not-stored"
+      },
+      {
+        "classification": "public-configurable",
+        "consumers": [
+          "app"
+        ],
+        "name": "BETTER_AUTH_URL",
+        "required": true,
+        "valuePolicy": "operator-supplied-not-stored"
+      },
+      {
+        "classification": "private-runtime",
+        "consumers": [
+          "app",
+          "migration-tool"
+        ],
+        "name": "NODE_ENV",
+        "required": true,
+        "valuePolicy": "operator-supplied-not-stored"
+      }
+    ]
+  },
+  "format": "nexonova.business-plan.v1",
+  "gates": [
+    {
+      "id": "compatibility",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "database-migrations",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "authentication",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "resource-authorization",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "module-crud",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "generation",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "build-tests",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "autonomy",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "cleanup",
+      "required": true,
+      "status": "NOT_IMPLEMENTED"
+    }
+  ],
+  "inputs": {
+    "catalog": "sha256:3dd4c2567243f43603afc936fb049c98c8d5c0c74b6297bd2186c0af39eb17a7",
+    "environment": "sha256:c19660e6af583e1aaf5b41a26460c7cd3a2a46b70471ea39d2a6bd91c6fcb7a2",
+    "order": "sha256:f6c5c445d0833a8259f038005e51cea1009ba5e28bc82816c5719353ee159015",
+    "spec": "sha256:98bf4de413f5ae89b398a460375ef8e993b3b422aeeb68682755e2fec74339cc"
+  },
+  "modules": [
+    {
+      "conflicts": [],
+      "core": "0.1.0",
+      "dependencies": [],
+      "fields": [
+        {
+          "constraints": {
+            "format": "opaque"
+          },
+          "name": "id",
+          "nullable": false,
+          "source": "server",
+          "type": "identifier"
+        },
+        {
+          "constraints": {
+            "maxLength": 120,
+            "minLength": 1
+          },
+          "name": "title",
+          "nullable": false,
+          "source": "input",
+          "type": "string"
+        },
+        {
+          "constraints": {
+            "maxLength": 2000,
+            "minLength": 0
+          },
+          "name": "description",
+          "nullable": false,
+          "source": "input",
+          "type": "string"
+        },
+        {
+          "constraints": {
+            "values": [
+              "open",
+              "closed"
+            ]
+          },
+          "name": "status",
+          "nullable": false,
+          "source": "validated-command",
+          "type": "enum"
+        },
+        {
+          "constraints": {
+            "reassignment": false
+          },
+          "name": "ownerId",
+          "nullable": false,
+          "source": "session",
+          "type": "user-reference"
+        },
+        {
+          "constraints": {
+            "clock": "runtime"
+          },
+          "name": "createdAt",
+          "nullable": false,
+          "source": "server",
+          "type": "datetime"
+        },
+        {
+          "constraints": {
+            "clock": "runtime"
+          },
+          "name": "updatedAt",
+          "nullable": false,
+          "source": "server",
+          "type": "datetime"
+        },
+        {
+          "constraints": {
+            "physicalDelete": false
+          },
+          "name": "archivedAt",
+          "nullable": true,
+          "source": "validated-command",
+          "type": "datetime"
+        },
+        {
+          "constraints": {
+            "minimum": 1,
+            "write": "compare-and-increment"
+          },
+          "name": "version",
+          "nullable": false,
+          "source": "server",
+          "type": "integer"
+        }
+      ],
+      "files": [
+        {
+          "kind": "directory",
+          "owner": "internal-requests",
+          "path": "src/modules/internal-requests"
+        },
+        {
+          "kind": "file",
+          "owner": "internal-requests",
+          "path": "prisma/modules/internal-requests.prisma"
+        }
+      ],
+      "format": "nexonova.business-module.v1",
+      "id": "internal-requests",
+      "implementation": "NOT_IMPLEMENTED",
+      "migrations": {
+        "files": [],
+        "intent": "initial-internal-request-model",
+        "status": "NOT_IMPLEMENTED"
+      },
+      "models": [
+        "InternalRequest"
+      ],
+      "permissions": {
+        "admin": "all-in-product",
+        "archive": "archivedAt",
+        "clientOwnerId": "forbidden",
+        "concurrency": "expected-version-or-409",
+        "enforcement": "NOT_IMPLEMENTED",
+        "foreignResource": "uniform-404",
+        "member": "own-only",
+        "owner": "session-derived",
+        "physicalDelete": "forbidden",
+        "reassignment": "forbidden",
+        "roleEditing": "forbidden",
+        "roles": [
+          "admin",
+          "member"
+        ],
+        "states": [
+          "open",
+          "closed"
+        ]
+      },
+      "requiredGates": [
+        "compatibility",
+        "database-migrations",
+        "authentication",
+        "resource-authorization",
+        "module-crud",
+        "generation",
+        "build-tests",
+        "autonomy",
+        "cleanup"
+      ],
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/requests"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/requests/[id]"
+        },
+        {
+          "methods": [
+            "GET",
+            "POST"
+          ],
+          "path": "/api/requests"
+        },
+        {
+          "methods": [
+            "GET",
+            "PATCH"
+          ],
+          "path": "/api/requests/[id]"
+        }
+      ],
+      "version": "0.1.0"
+    }
+  ],
+  "outputsWritten": [],
+  "productId": "internal-requests-pilot",
+  "readiness": "BLOCKED",
+  "reason": "P4.3-and-later-not-implemented",
+  "specification": {
+    "auth": {
+      "bootstrap": "offline-only",
+      "defaultPassword": "forbidden",
+      "emailProvider": false,
+      "enforcement": "NOT_IMPLEMENTED",
+      "logout": "revoke",
+      "method": "email-password",
+      "mfa": false,
+      "oauth": false,
+      "provider": "better-auth",
+      "publicSignup": "closed",
+      "recoveryEmail": false,
+      "rememberMe": false,
+      "sessionMaxSeconds": 28800
+    },
+    "capability": "business-platform",
+    "coreVersion": "0.1.0",
+    "format": "nexonova.business-platform.v0.1.0",
+    "modules": [
+      {
+        "id": "internal-requests",
+        "version": "0.1.0"
+      }
+    ],
+    "persistence": {
+      "credentials": "runtime-migrator-separated",
+      "engine": "postgresql",
+      "implementation": "NOT_IMPLEMENTED",
+      "isolation": "database-network-volume-secret-session-per-product",
+      "major": 16,
+      "migrationTool": "prisma-migrate",
+      "orm": "prisma",
+      "ormMajor": 7,
+      "runtimeDDL": "forbidden"
+    },
+    "policy": {
+      "admin": "all-in-product",
+      "archive": "archivedAt",
+      "clientOwnerId": "forbidden",
+      "concurrency": "expected-version-or-409",
+      "enforcement": "NOT_IMPLEMENTED",
+      "foreignResource": "uniform-404",
+      "member": "own-only",
+      "owner": "session-derived",
+      "physicalDelete": "forbidden",
+      "reassignment": "forbidden",
+      "roleEditing": "forbidden",
+      "roles": [
+        "admin",
+        "member"
+      ],
+      "states": [
+        "open",
+        "closed"
+      ]
+    },
+    "productId": "internal-requests-pilot",
+    "public": {
+      "name": "Equipo interno ficticio",
+      "primaryColor": "#24506a",
+      "title": "Solicitudes internas"
+    },
+    "restrictions": {
+      "bootstrap": "forbidden",
+      "data": "synthetic-only",
+      "deployment": "forbidden",
+      "externalProviders": "forbidden",
+      "generation": "forbidden",
+      "infrastructure": "forbidden",
+      "migrations": "forbidden",
+      "organization": "one-per-product"
+    },
+    "targets": {
+      "api": "route-handlers-domain-services",
+      "auth": "better-auth",
+      "database": "postgresql-16",
+      "exactCompatibility": "PENDING_P4.3",
+      "language": "typescript",
+      "next": "app-router",
+      "orm": "prisma-7",
+      "ui": "react-css-modules"
+    }
+  }
+}

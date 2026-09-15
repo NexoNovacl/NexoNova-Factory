@@ -1,0 +1,666 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "coreRoutes": {
+      "enum": [
+        [
+          "/sign-in",
+          "/api/auth/[...all]"
+        ]
+      ]
+    },
+    "coreVersion": {
+      "enum": [
+        "0.1.0"
+      ],
+      "type": "string"
+    },
+    "deferredContracts": {
+      "enum": [
+        [
+          "generation-manifest",
+          "product-metadata-v2",
+          "execution-validation-receipt"
+        ]
+      ]
+    },
+    "environment": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "enum": [
+            "nexonova.business-environment.v1"
+          ],
+          "type": "string"
+        },
+        "requirements": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "classification": {
+                "enum": [
+                  "secret",
+                  "private-runtime",
+                  "public-configurable"
+                ],
+                "type": "string"
+              },
+              "consumers": {
+                "items": {
+                  "enum": [
+                    "app",
+                    "migration-tool"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "name": {
+                "pattern": "[A-Z][A-Z0-9_]*",
+                "type": "string"
+              },
+              "required": {
+                "enum": [
+                  true
+                ]
+              },
+              "valuePolicy": {
+                "enum": [
+                  "operator-supplied-not-stored"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "classification",
+              "consumers",
+              "required",
+              "valuePolicy"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "format",
+        "requirements"
+      ],
+      "type": "object"
+    },
+    "format": {
+      "enum": [
+        "nexonova.business-plan.v1"
+      ],
+      "type": "string"
+    },
+    "gates": {
+      "enum": [
+        [
+          {
+            "id": "compatibility",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "database-migrations",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "authentication",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "resource-authorization",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "module-crud",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "generation",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "build-tests",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "autonomy",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          },
+          {
+            "id": "cleanup",
+            "required": true,
+            "status": "NOT_IMPLEMENTED"
+          }
+        ]
+      ]
+    },
+    "inputs": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "environment": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "order": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "spec": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        }
+      },
+      "required": [
+        "spec",
+        "catalog",
+        "environment",
+        "order"
+      ],
+      "type": "object"
+    },
+    "modules": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "conflicts": {
+            "items": {
+              "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "core": {
+            "enum": [
+              "0.1.0"
+            ],
+            "type": "string"
+          },
+          "dependencies": {
+            "items": {
+              "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "fields": {
+            "enum": [
+              [
+                {
+                  "constraints": {
+                    "format": "opaque"
+                  },
+                  "name": "id",
+                  "nullable": false,
+                  "source": "server",
+                  "type": "identifier"
+                },
+                {
+                  "constraints": {
+                    "maxLength": 120,
+                    "minLength": 1
+                  },
+                  "name": "title",
+                  "nullable": false,
+                  "source": "input",
+                  "type": "string"
+                },
+                {
+                  "constraints": {
+                    "maxLength": 2000,
+                    "minLength": 0
+                  },
+                  "name": "description",
+                  "nullable": false,
+                  "source": "input",
+                  "type": "string"
+                },
+                {
+                  "constraints": {
+                    "values": [
+                      "open",
+                      "closed"
+                    ]
+                  },
+                  "name": "status",
+                  "nullable": false,
+                  "source": "validated-command",
+                  "type": "enum"
+                },
+                {
+                  "constraints": {
+                    "reassignment": false
+                  },
+                  "name": "ownerId",
+                  "nullable": false,
+                  "source": "session",
+                  "type": "user-reference"
+                },
+                {
+                  "constraints": {
+                    "clock": "runtime"
+                  },
+                  "name": "createdAt",
+                  "nullable": false,
+                  "source": "server",
+                  "type": "datetime"
+                },
+                {
+                  "constraints": {
+                    "clock": "runtime"
+                  },
+                  "name": "updatedAt",
+                  "nullable": false,
+                  "source": "server",
+                  "type": "datetime"
+                },
+                {
+                  "constraints": {
+                    "physicalDelete": false
+                  },
+                  "name": "archivedAt",
+                  "nullable": true,
+                  "source": "validated-command",
+                  "type": "datetime"
+                },
+                {
+                  "constraints": {
+                    "minimum": 1,
+                    "write": "compare-and-increment"
+                  },
+                  "name": "version",
+                  "nullable": false,
+                  "source": "server",
+                  "type": "integer"
+                }
+              ]
+            ]
+          },
+          "files": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "file",
+                    "directory"
+                  ],
+                  "type": "string"
+                },
+                "owner": {
+                  "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+                  "type": "string"
+                },
+                "path": {
+                  "maxLength": 200,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "owner",
+                "kind"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "format": {
+            "enum": [
+              "nexonova.business-module.v1"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+            "type": "string"
+          },
+          "implementation": {
+            "enum": [
+              "NOT_IMPLEMENTED"
+            ],
+            "type": "string"
+          },
+          "migrations": {
+            "enum": [
+              {
+                "files": [],
+                "intent": "initial-internal-request-model",
+                "status": "NOT_IMPLEMENTED"
+              }
+            ]
+          },
+          "models": {
+            "items": {
+              "pattern": "[A-Za-z][A-Za-z0-9]*",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "permissions": {
+            "enum": [
+              {
+                "admin": "all-in-product",
+                "archive": "archivedAt",
+                "clientOwnerId": "forbidden",
+                "concurrency": "expected-version-or-409",
+                "enforcement": "NOT_IMPLEMENTED",
+                "foreignResource": "uniform-404",
+                "member": "own-only",
+                "owner": "session-derived",
+                "physicalDelete": "forbidden",
+                "reassignment": "forbidden",
+                "roleEditing": "forbidden",
+                "roles": [
+                  "admin",
+                  "member"
+                ],
+                "states": [
+                  "open",
+                  "closed"
+                ]
+              }
+            ]
+          },
+          "requiredGates": {
+            "enum": [
+              [
+                "compatibility",
+                "database-migrations",
+                "authentication",
+                "resource-authorization",
+                "module-crud",
+                "generation",
+                "build-tests",
+                "autonomy",
+                "cleanup"
+              ]
+            ]
+          },
+          "routes": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "methods": {
+                  "items": {
+                    "enum": [
+                      "GET",
+                      "POST",
+                      "PATCH"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "path": {
+                  "maxLength": 160,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "methods"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "version": {
+            "enum": [
+              "0.1.0"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "format",
+          "id",
+          "version",
+          "core",
+          "dependencies",
+          "conflicts",
+          "routes",
+          "files",
+          "models",
+          "fields",
+          "permissions",
+          "migrations",
+          "requiredGates",
+          "implementation"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "outputsWritten": {
+      "enum": [
+        []
+      ]
+    },
+    "productId": {
+      "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+      "type": "string"
+    },
+    "readiness": {
+      "enum": [
+        "BLOCKED"
+      ],
+      "type": "string"
+    },
+    "reason": {
+      "enum": [
+        "P4.3-and-later-not-implemented"
+      ],
+      "type": "string"
+    },
+    "specification": {
+      "additionalProperties": false,
+      "properties": {
+        "auth": {
+          "enum": [
+            {
+              "bootstrap": "offline-only",
+              "defaultPassword": "forbidden",
+              "emailProvider": false,
+              "enforcement": "NOT_IMPLEMENTED",
+              "logout": "revoke",
+              "method": "email-password",
+              "mfa": false,
+              "oauth": false,
+              "provider": "better-auth",
+              "publicSignup": "closed",
+              "recoveryEmail": false,
+              "rememberMe": false,
+              "sessionMaxSeconds": 28800
+            }
+          ]
+        },
+        "capability": {
+          "enum": [
+            "business-platform"
+          ],
+          "type": "string"
+        },
+        "coreVersion": {
+          "enum": [
+            "0.1.0"
+          ],
+          "type": "string"
+        },
+        "format": {
+          "enum": [
+            "nexonova.business-platform.v0.1.0"
+          ],
+          "type": "string"
+        },
+        "modules": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+                "type": "string"
+              },
+              "version": {
+                "enum": [
+                  "0.1.0"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "version"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "persistence": {
+          "enum": [
+            {
+              "credentials": "runtime-migrator-separated",
+              "engine": "postgresql",
+              "implementation": "NOT_IMPLEMENTED",
+              "isolation": "database-network-volume-secret-session-per-product",
+              "major": 16,
+              "migrationTool": "prisma-migrate",
+              "orm": "prisma",
+              "ormMajor": 7,
+              "runtimeDDL": "forbidden"
+            }
+          ]
+        },
+        "policy": {
+          "enum": [
+            {
+              "admin": "all-in-product",
+              "archive": "archivedAt",
+              "clientOwnerId": "forbidden",
+              "concurrency": "expected-version-or-409",
+              "enforcement": "NOT_IMPLEMENTED",
+              "foreignResource": "uniform-404",
+              "member": "own-only",
+              "owner": "session-derived",
+              "physicalDelete": "forbidden",
+              "reassignment": "forbidden",
+              "roleEditing": "forbidden",
+              "roles": [
+                "admin",
+                "member"
+              ],
+              "states": [
+                "open",
+                "closed"
+              ]
+            }
+          ]
+        },
+        "productId": {
+          "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+          "type": "string"
+        },
+        "public": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "[A-Za-z\u00c0-\u00ff0-9 .-]+",
+              "type": "string"
+            },
+            "primaryColor": {
+              "pattern": "#[a-fA-F0-9]{6}",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "[A-Za-z\u00c0-\u00ff0-9 .-]+",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "title",
+            "primaryColor"
+          ],
+          "type": "object"
+        },
+        "restrictions": {
+          "enum": [
+            {
+              "bootstrap": "forbidden",
+              "data": "synthetic-only",
+              "deployment": "forbidden",
+              "externalProviders": "forbidden",
+              "generation": "forbidden",
+              "infrastructure": "forbidden",
+              "migrations": "forbidden",
+              "organization": "one-per-product"
+            }
+          ]
+        },
+        "targets": {
+          "enum": [
+            {
+              "api": "route-handlers-domain-services",
+              "auth": "better-auth",
+              "database": "postgresql-16",
+              "exactCompatibility": "PENDING_P4.3",
+              "language": "typescript",
+              "next": "app-router",
+              "orm": "prisma-7",
+              "ui": "react-css-modules"
+            }
+          ]
+        }
+      },
+      "required": [
+        "format",
+        "productId",
+        "capability",
+        "coreVersion",
+        "modules",
+        "public",
+        "auth",
+        "policy",
+        "persistence",
+        "targets",
+        "restrictions"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "format",
+    "productId",
+    "coreVersion",
+    "inputs",
+    "specification",
+    "modules",
+    "environment",
+    "coreRoutes",
+    "gates",
+    "readiness",
+    "reason",
+    "outputsWritten",
+    "deferredContracts"
+  ],
+  "type": "object"
+}

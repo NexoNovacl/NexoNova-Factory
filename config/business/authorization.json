@@ -1,0 +1,7 @@
+{
+  "authorizedOrders": [
+    "sha256:f6c5c445d0833a8259f038005e51cea1009ba5e28bc82816c5719353ee159015"
+  ],
+  "basis": "User explicitly approved P4.1 and authorized only P4.2 contract preparation and validation; no execution, generation, infrastructure, migrations or bootstrap.",
+  "format": "nexonova.business-contract-authorization.v1"
+}

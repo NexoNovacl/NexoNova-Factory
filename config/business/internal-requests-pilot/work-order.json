@@ -1,0 +1,15 @@
+{
+  "actions": [
+    "validate-contracts",
+    "plan-contracts"
+  ],
+  "execution": "forbidden",
+  "format": "nexonova.business-work-order.v1",
+  "inputs": {
+    "catalog": "sha256:3dd4c2567243f43603afc936fb049c98c8d5c0c74b6297bd2186c0af39eb17a7",
+    "environment": "sha256:c19660e6af583e1aaf5b41a26460c7cd3a2a46b70471ea39d2a6bd91c6fcb7a2",
+    "spec": "sha256:98bf4de413f5ae89b398a460375ef8e993b3b422aeeb68682755e2fec74339cc"
+  },
+  "productId": "internal-requests-pilot",
+  "scope": "P4.2-contracts-only"
+}

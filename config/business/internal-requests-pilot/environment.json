@@ -1,0 +1,51 @@
+{
+  "format": "nexonova.business-environment.v1",
+  "requirements": [
+    {
+      "classification": "secret",
+      "consumers": [
+        "app"
+      ],
+      "name": "DATABASE_URL",
+      "required": true,
+      "valuePolicy": "operator-supplied-not-stored"
+    },
+    {
+      "classification": "secret",
+      "consumers": [
+        "migration-tool"
+      ],
+      "name": "MIGRATION_DATABASE_URL",
+      "required": true,
+      "valuePolicy": "operator-supplied-not-stored"
+    },
+    {
+      "classification": "secret",
+      "consumers": [
+        "app"
+      ],
+      "name": "BETTER_AUTH_SECRET",
+      "required": true,
+      "valuePolicy": "operator-supplied-not-stored"
+    },
+    {
+      "classification": "public-configurable",
+      "consumers": [
+        "app"
+      ],
+      "name": "BETTER_AUTH_URL",
+      "required": true,
+      "valuePolicy": "operator-supplied-not-stored"
+    },
+    {
+      "classification": "private-runtime",
+      "consumers": [
+        "app",
+        "migration-tool"
+      ],
+      "name": "NODE_ENV",
+      "required": true,
+      "valuePolicy": "operator-supplied-not-stored"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "enum": [
+        "nexonova.business-environment.v1"
+      ],
+      "type": "string"
+    },
+    "requirements": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "classification": {
+            "enum": [
+              "secret",
+              "private-runtime",
+              "public-configurable"
+            ],
+            "type": "string"
+          },
+          "consumers": {
+            "items": {
+              "enum": [
+                "app",
+                "migration-tool"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "name": {
+            "pattern": "[A-Z][A-Z0-9_]*",
+            "type": "string"
+          },
+          "required": {
+            "enum": [
+              true
+            ]
+          },
+          "valuePolicy": {
+            "enum": [
+              "operator-supplied-not-stored"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "classification",
+          "consumers",
+          "required",
+          "valuePolicy"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "format",
+    "requirements"
+  ],
+  "type": "object"
+}

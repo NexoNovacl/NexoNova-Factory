@@ -1,6 +1,6 @@
 # NexoNova Factory
 
-Fábrica local experimental en Python. **corporate-site es una capacidad de piloto validada para uso interno/controlado.** P3.1–P3.7 y el cierre **P3 PASS_WITH_LIMITATIONS** están aprobados formalmente. No está aprobada para producción pública. P4.1 está autorizada solo para requisitos/arquitectura; P4.2 y fases posteriores no iniciadas.
+Fábrica local experimental en Python. **corporate-site es una capacidad de piloto validada para uso interno/controlado.** P3.1–P3.7 y el cierre **P3 PASS_WITH_LIMITATIONS** están aprobados formalmente. No está aprobada para producción pública. P4.1 está aprobada; P4.2 incorpora contratos declarativos para revisión, sin aplicación business ni inicio de P4.3.
 
 Productos independientes materializados como carpetas hermanas: `../nexonova-website` y `../synthetic-website`. Comparten template/generador y usan configuraciones distintas; no necesitan Python, prototipo, WorkOrders ni runtime de la fábrica para funcionar.
 
@@ -45,4 +45,4 @@ Los 13 agentes académicos no se reactivaron. Los comandos heredados de orquesta
 
 Pendientes: procedencia/Git y derechos de material derivado, contenido comercial y revisión visual final, Inter local, preparación de publicación y mantenimiento operativo. No hay actualización automática, deployment, auth/BD ni integraciones reales. Dominios/chat/contacto son demostraciones locales explícitas; ninguna consulta se envía.
 
-Revisar la [propuesta P4.1](docs/business-platform/P4_1_PROPOSAL.md) antes de autorizar P4.2. Este repositorio no autoriza crear servicios externos, desplegar, usar secretos reales o avanzar automáticamente a otras fases.
+Revisar los [contratos P4.2](docs/business-platform/P4_2_CONTRACTS.md) antes de autorizar P4.3. Este repositorio no autoriza crear servicios externos, desplegar, usar secretos reales o avanzar automáticamente a otras fases.

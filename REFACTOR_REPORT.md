@@ -1,3 +1,7 @@
+# Estado vigente — P4.2 contractual
+
+P4.1 aprobada. P4.2 implementa únicamente contratos, catálogo cerrado, validadores y plan determinista para internal-requests; [informe](docs/business-platform/P4_2_CONTRACTS.md). Readiness BLOCKED y gates NOT_IMPLEMENTED: no aplicación business ni infraestructura. P4.3 no iniciada. Baseline P3 original y productos preservados; ningún hash protegido actualizado. Los estados anteriores se conservan como historial.
+
 # Estado vigente — P4.1 documental, 2026-09-15
 
 P3.7 y P3 cerrados y aprobados formalmente PASS_WITH_LIMITATIONS para uso interno/controlado. Baseline P3 original preservado sin actualizar hashes. Solo P4.1 autorizada: [auditoría y arquitectura propuesta business-platform](docs/business-platform/P4_1_PROPOSAL.md), [registro/validación](docs/migration/P4.md). No hay implementación P4 ni inicio P4.2. Derechos, publicación, deployment y material pendiente no aprobados por este cambio de fase.

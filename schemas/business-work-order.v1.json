@@ -1,0 +1,67 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "actions": {
+      "enum": [
+        [
+          "validate-contracts",
+          "plan-contracts"
+        ]
+      ]
+    },
+    "execution": {
+      "enum": [
+        "forbidden"
+      ],
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "nexonova.business-work-order.v1"
+      ],
+      "type": "string"
+    },
+    "inputs": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "environment": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        },
+        "spec": {
+          "pattern": "sha256:[a-f0-9]{64}",
+          "type": "string"
+        }
+      },
+      "required": [
+        "spec",
+        "catalog",
+        "environment"
+      ],
+      "type": "object"
+    },
+    "productId": {
+      "pattern": "[a-z0-9][a-z0-9-]{0,62}",
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "P4.2-contracts-only"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "productId",
+    "scope",
+    "actions",
+    "inputs",
+    "execution"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,180 @@
+[
+  {
+    "conflicts": [],
+    "core": "0.1.0",
+    "dependencies": [],
+    "fields": [
+      {
+        "constraints": {
+          "format": "opaque"
+        },
+        "name": "id",
+        "nullable": false,
+        "source": "server",
+        "type": "identifier"
+      },
+      {
+        "constraints": {
+          "maxLength": 120,
+          "minLength": 1
+        },
+        "name": "title",
+        "nullable": false,
+        "source": "input",
+        "type": "string"
+      },
+      {
+        "constraints": {
+          "maxLength": 2000,
+          "minLength": 0
+        },
+        "name": "description",
+        "nullable": false,
+        "source": "input",
+        "type": "string"
+      },
+      {
+        "constraints": {
+          "values": [
+            "open",
+            "closed"
+          ]
+        },
+        "name": "status",
+        "nullable": false,
+        "source": "validated-command",
+        "type": "enum"
+      },
+      {
+        "constraints": {
+          "reassignment": false
+        },
+        "name": "ownerId",
+        "nullable": false,
+        "source": "session",
+        "type": "user-reference"
+      },
+      {
+        "constraints": {
+          "clock": "runtime"
+        },
+        "name": "createdAt",
+        "nullable": false,
+        "source": "server",
+        "type": "datetime"
+      },
+      {
+        "constraints": {
+          "clock": "runtime"
+        },
+        "name": "updatedAt",
+        "nullable": false,
+        "source": "server",
+        "type": "datetime"
+      },
+      {
+        "constraints": {
+          "physicalDelete": false
+        },
+        "name": "archivedAt",
+        "nullable": true,
+        "source": "validated-command",
+        "type": "datetime"
+      },
+      {
+        "constraints": {
+          "minimum": 1,
+          "write": "compare-and-increment"
+        },
+        "name": "version",
+        "nullable": false,
+        "source": "server",
+        "type": "integer"
+      }
+    ],
+    "files": [
+      {
+        "kind": "directory",
+        "owner": "internal-requests",
+        "path": "src/modules/internal-requests"
+      },
+      {
+        "kind": "file",
+        "owner": "internal-requests",
+        "path": "prisma/modules/internal-requests.prisma"
+      }
+    ],
+    "format": "nexonova.business-module.v1",
+    "id": "internal-requests",
+    "implementation": "NOT_IMPLEMENTED",
+    "migrations": {
+      "files": [],
+      "intent": "initial-internal-request-model",
+      "status": "NOT_IMPLEMENTED"
+    },
+    "models": [
+      "InternalRequest"
+    ],
+    "permissions": {
+      "admin": "all-in-product",
+      "archive": "archivedAt",
+      "clientOwnerId": "forbidden",
+      "concurrency": "expected-version-or-409",
+      "enforcement": "NOT_IMPLEMENTED",
+      "foreignResource": "uniform-404",
+      "member": "own-only",
+      "owner": "session-derived",
+      "physicalDelete": "forbidden",
+      "reassignment": "forbidden",
+      "roleEditing": "forbidden",
+      "roles": [
+        "admin",
+        "member"
+      ],
+      "states": [
+        "open",
+        "closed"
+      ]
+    },
+    "requiredGates": [
+      "compatibility",
+      "database-migrations",
+      "authentication",
+      "resource-authorization",
+      "module-crud",
+      "generation",
+      "build-tests",
+      "autonomy",
+      "cleanup"
+    ],
+    "routes": [
+      {
+        "methods": [
+          "GET"
+        ],
+        "path": "/requests"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "path": "/requests/[id]"
+      },
+      {
+        "methods": [
+          "GET",
+          "POST"
+        ],
+        "path": "/api/requests"
+      },
+      {
+        "methods": [
+          "GET",
+          "PATCH"
+        ],
+        "path": "/api/requests/[id]"
+      }
+    ],
+    "version": "0.1.0"
+  }
+]

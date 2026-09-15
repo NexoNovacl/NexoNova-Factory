@@ -1,0 +1,84 @@
+{
+  "auth": {
+    "bootstrap": "offline-only",
+    "defaultPassword": "forbidden",
+    "emailProvider": false,
+    "enforcement": "NOT_IMPLEMENTED",
+    "logout": "revoke",
+    "method": "email-password",
+    "mfa": false,
+    "oauth": false,
+    "provider": "better-auth",
+    "publicSignup": "closed",
+    "recoveryEmail": false,
+    "rememberMe": false,
+    "sessionMaxSeconds": 28800
+  },
+  "capability": "business-platform",
+  "coreVersion": "0.1.0",
+  "format": "nexonova.business-platform.v0.1.0",
+  "modules": [
+    {
+      "id": "internal-requests",
+      "version": "0.1.0"
+    }
+  ],
+  "persistence": {
+    "credentials": "runtime-migrator-separated",
+    "engine": "postgresql",
+    "implementation": "NOT_IMPLEMENTED",
+    "isolation": "database-network-volume-secret-session-per-product",
+    "major": 16,
+    "migrationTool": "prisma-migrate",
+    "orm": "prisma",
+    "ormMajor": 7,
+    "runtimeDDL": "forbidden"
+  },
+  "policy": {
+    "admin": "all-in-product",
+    "archive": "archivedAt",
+    "clientOwnerId": "forbidden",
+    "concurrency": "expected-version-or-409",
+    "enforcement": "NOT_IMPLEMENTED",
+    "foreignResource": "uniform-404",
+    "member": "own-only",
+    "owner": "session-derived",
+    "physicalDelete": "forbidden",
+    "reassignment": "forbidden",
+    "roleEditing": "forbidden",
+    "roles": [
+      "admin",
+      "member"
+    ],
+    "states": [
+      "open",
+      "closed"
+    ]
+  },
+  "productId": "internal-requests-pilot",
+  "public": {
+    "name": "Equipo interno ficticio",
+    "primaryColor": "#24506a",
+    "title": "Solicitudes internas"
+  },
+  "restrictions": {
+    "bootstrap": "forbidden",
+    "data": "synthetic-only",
+    "deployment": "forbidden",
+    "externalProviders": "forbidden",
+    "generation": "forbidden",
+    "infrastructure": "forbidden",
+    "migrations": "forbidden",
+    "organization": "one-per-product"
+  },
+  "targets": {
+    "api": "route-handlers-domain-services",
+    "auth": "better-auth",
+    "database": "postgresql-16",
+    "exactCompatibility": "PENDING_P4.3",
+    "language": "typescript",
+    "next": "app-router",
+    "orm": "prisma-7",
+    "ui": "react-css-modules"
+  }
+}
