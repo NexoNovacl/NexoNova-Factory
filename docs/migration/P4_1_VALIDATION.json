@@ -1,0 +1,96 @@
+{
+  "baselineFiles": 105,
+  "baselineSha256After": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c",
+  "baselineSha256Before": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c",
+  "changedBaselineFiles": [],
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_p3_baseline.py",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "output": ".                                                                        [100%]\n1 passed in 0.02s\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/synthetic"
+      ],
+      "exit_code": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    }
+  ],
+  "notExecuted": [
+    "dependency installation",
+    "Docker/PostgreSQL startup",
+    "Prisma/Better Auth implementation",
+    "new product generation",
+    "deployment",
+    "full product/build/browser suite: no code change"
+  ],
+  "phase": "P4.1",
+  "products": {
+    "nexonova-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    },
+    "synthetic-website": {
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline.",
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "sourceFiles": 31,
+      "status": "complete"
+    }
+  },
+  "scope": "documentation and preservation only"
+}

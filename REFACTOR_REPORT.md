@@ -1,3 +1,9 @@
+# Estado vigente — P4.1 documental, 2026-09-15
+
+P3.7 y P3 cerrados y aprobados formalmente PASS_WITH_LIMITATIONS para uso interno/controlado. Baseline P3 original preservado sin actualizar hashes. Solo P4.1 autorizada: [auditoría y arquitectura propuesta business-platform](docs/business-platform/P4_1_PROPOSAL.md), [registro/validación](docs/migration/P4.md). No hay implementación P4 ni inicio P4.2. Derechos, publicación, deployment y material pendiente no aprobados por este cambio de fase.
+
+Los encabezados siguientes conservan el historial de entregas; su estado de aprobación previo no sustituye este registro.
+
 # Estado consolidado al cierre técnico P3 — 2026-09-12
 
 **P3 PASS_WITH_LIMITATIONS; aprobación humana de P3.7 pendiente.** P3.1–P3.6 aprobadas. corporate-site es capacidad de piloto validada de uso interno/controlado, no production-ready. [Informe final y matriz](docs/migration/P3_FINAL_REPORT.md), [uso](docs/corporate-site-operator.md), [baseline](docs/migration/P3_BASELINE.json).
