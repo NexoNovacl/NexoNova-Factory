@@ -1,0 +1,103 @@
+{
+  "scope": "Host P4.4-B inventory; unrelated resources untouched",
+  "temporaryDirectories": [
+    {
+      "path": "/var/tmp/nexonova-p44b-continuation-g17j71d3",
+      "uid": 1000,
+      "files": 21197,
+      "bytes": 1731749519,
+      "symlinks": 11,
+      "topLevel": [
+        "client",
+        "env-73b1c6ec543549789cb00bc073389f57",
+        "work"
+      ]
+    },
+    {
+      "path": "/var/tmp/nexonova-p44b-image",
+      "uid": 1000,
+      "files": 30,
+      "bytes": 355663370,
+      "symlinks": 0,
+      "topLevel": [
+        "attempt-1",
+        "build-1.json",
+        "build-1.log",
+        "build-2.json",
+        "build-2.log",
+        "ca-certificates_20250419~deb12u1_all.deb",
+        "context",
+        "download.json",
+        "image-1.tar",
+        "image-2.tar",
+        "libssl3_3.0.20-1~deb12u2_amd64.deb",
+        "openssl_3.0.20-1~deb12u2_amd64.deb",
+        "packages.json",
+        "packages.metadata",
+        "reproducibility.json",
+        "resolution-initial.json",
+        "resolution.json",
+        "snapshot.debian.org_archive_debian-security_20260921T000000Z_dists_bookworm-security_InRelease",
+        "snapshot.debian.org_archive_debian_20260921T000000Z_dists_bookworm_InRelease"
+      ]
+    },
+    {
+      "path": "/var/tmp/p44b-auth-compat-qgpgn1sx",
+      "uid": 1000,
+      "files": 21159,
+      "bytes": 1513795806,
+      "symlinks": 11,
+      "topLevel": [
+        ".dockerignore",
+        ".gitignore",
+        ".npm-cache",
+        "README.md",
+        "build-checks",
+        "client",
+        "compile.log",
+        "engine.log",
+        "generate.log",
+        "install-retry.log",
+        "install.log",
+        "next-env.d.ts",
+        "next.config.ts",
+        "node_modules",
+        "package-lock.json",
+        "package.json",
+        "prisma",
+        "prisma.config.ts",
+        "scripts",
+        "src",
+        "tsconfig.checks.json",
+        "tsconfig.json",
+        "tsconfig.tsbuildinfo",
+        "typecheck.log",
+        "validation"
+      ]
+    }
+  ],
+  "matchingProcesses": [],
+  "docker": {
+    "containers": {
+      "exitCode": 0,
+      "items": [
+        "p44bc-92ad5e384d4c427d-setup-build\tUp 6 seconds",
+        "dazzling_moore\tExited (0) 2 weeks ago",
+        "xenodochial_mendeleev\tExited (0) 2 weeks ago"
+      ]
+    },
+    "networks": {
+      "exitCode": 0,
+      "items": [
+        "bridge",
+        "host",
+        "none"
+      ]
+    },
+    "volumes": {
+      "exitCode": 0,
+      "items": []
+    }
+  },
+  "validatorSha256": "f590f5ed4a3ff5c1474f543e20b2f605712752dad753953520aecf2a7ead45cf"
+}

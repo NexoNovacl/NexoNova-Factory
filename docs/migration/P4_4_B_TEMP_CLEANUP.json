@@ -1,0 +1,37 @@
+{
+  "scope": "Recovered P4.4-B image/build/npm staging only",
+  "status": "PASS",
+  "directories": [
+    {
+      "path": "/var/tmp/nexonova-p44b-image",
+      "existed": true,
+      "verifiedMarkers": {
+        "context/Dockerfile": "8f0e0a59f8af564f4f938a733ecc1da90c59d7271bfd27b6f05b8f4891cbf07a",
+        "context/SHA256SUMS": "bcec025ac9f79db5a6f98d4b963b349a20d611b1502249fe8bb75468426a4406",
+        "reproducibility.json": "8aa5dc40a6572bd38f043bd471a871609117de1564a200270efd6b1bc9563e91",
+        "build-1.json": "3c5b1df58df4ce0ddd7f8dd14b79491d341de6859f8cb0e79bdd30d77f1b0945",
+        "build-2.json": "ab82bdcaf8362f0d78b9dd731c5417b08098a3ed8a49b3d2c1fedbe0724ea465"
+      },
+      "removedOrAbsent": true
+    },
+    {
+      "path": "/var/tmp/p44b-auth-compat-qgpgn1sx",
+      "existed": true,
+      "verifiedMarkers": {
+        "package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "compile.log": "123b899aa243dd1e510adce9a1df78067a071b31a2d76ad59a6f8145f91e5724",
+        "generate.log": "6a649acf66d388ade1faff6e7f1e071a7d3025f73a2e1ce8c93b0d5a387b9ccc",
+        "engine.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "removedOrAbsent": true
+    }
+  ],
+  "preserved": [
+    "installed pinned Docker images",
+    "shared Playwright browser installation",
+    "all historical repository receipts",
+    "unrelated containers and files"
+  ],
+  "validatorSha256": "9d2f9d8ce94ef32425e4ef209b061f6d8a6c709be99473181d0ec2f007328401"
+}

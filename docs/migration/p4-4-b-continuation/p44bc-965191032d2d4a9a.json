@@ -1,0 +1,792 @@
+{
+  "phase": "P4.4-B",
+  "status": "FAIL",
+  "readiness": "BLOCKED",
+  "sourceHashes": {
+    "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+    "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+    "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+    "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+    "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+    "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+    "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+    "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+    "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+    "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+    "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+    "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+    "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+    "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+    "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+    "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+    "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+    "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+    "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+    "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+    "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+    "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+    "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+    "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+    "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+    "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+    "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+    "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+    "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+    "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+    "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+    "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+    "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+    "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+    "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+    "scripts/validate_business_auth_continuation.py": "d1411985ccd711bf5938f23f95db1223e18719c418bbb85aa655bda95132b8c3",
+    "scripts/check_business_auth_continuation.mjs": "19a27a90b6b531224edec1ce9bd21484439ac4d726b87a19bec6447383d9359a",
+    "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+    "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+    "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27"
+  },
+  "images": {
+    "node": "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "postgres": "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67"
+  },
+  "recoveryCheckpoint": {
+    "path": "docs/migration/P4_4_B_RECOVERY_AUDIT.json",
+    "sha256": "2b6814e53f56fd425f98b984184c4341d834e8892acb507406d135f3a79a6b90"
+  },
+  "setupReason": "Rebuild disposable app and databases to execute missing subcases; recovered 160-check runner is not invoked.",
+  "browser": [
+    {
+      "mode": "negative-login",
+      "checks": [
+        "login-401-0",
+        "no-session-1",
+        "login-401-1",
+        "no-session-2",
+        "same-generic-message",
+        "no-external-requests",
+        "no-javascript-errors"
+      ],
+      "externalRequests": 0,
+      "javaScriptErrors": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "session",
+      "checks": [
+        "server-api-status",
+        "get-session-status",
+        "session-presence",
+        "protected-page",
+        "no-external-requests",
+        "no-javascript-errors"
+      ],
+      "externalRequests": 0,
+      "javaScriptErrors": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "session",
+      "checks": [
+        "server-api-status",
+        "get-session-status",
+        "session-presence",
+        "protected-page",
+        "no-external-requests",
+        "no-javascript-errors"
+      ],
+      "externalRequests": 0,
+      "javaScriptErrors": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "session",
+      "checks": [
+        "server-api-status",
+        "get-session-status",
+        "session-presence",
+        "protected-page",
+        "no-external-requests",
+        "no-javascript-errors"
+      ],
+      "externalRequests": 0,
+      "javaScriptErrors": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "session",
+      "checks": [
+        "server-api-status",
+        "get-session-status",
+        "session-presence",
+        "protected-page",
+        "no-external-requests",
+        "no-javascript-errors"
+      ],
+      "externalRequests": 0,
+      "javaScriptErrors": 0,
+      "status": "PASS"
+    }
+  ],
+  "runId": "p44bc-965191032d2d4a9a",
+  "schemaTables": [
+    "Account",
+    "Session",
+    "User",
+    "Verification",
+    "_prisma_migrations"
+  ],
+  "timingReview": {
+    "milliseconds": {
+      "wrong": [
+        428.01,
+        116.13,
+        488.02
+      ],
+      "unknown": [
+        109.45,
+        250.87,
+        108.8
+      ]
+    },
+    "medianMilliseconds": {
+      "wrong": 428.01,
+      "unknown": 109.45
+    },
+    "scope": "Three alternating pairs; cold-start/order noise and small sample. No formal indistinguishability claim."
+  },
+  "error": "InfrastructureError: Step failed: B10-encoded-closed-4",
+  "rawLogScan": [
+    {
+      "name": "p44bc-965191032d2d4a9a-continuationa-db",
+      "passed": true
+    },
+    {
+      "name": "p44bc-965191032d2d4a9a-local-test-app",
+      "passed": true
+    }
+  ],
+  "hostRelaysClosed": true,
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-local-test-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-partial-existing",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-member-existing",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-member-fixture",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-short-password",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-different-email",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-repeat-new-password",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-same-email-2",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-same-email-1",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-continuationa-migrate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-continuationa-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-continuationa-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p44bc-965191032d2d4a9a-continuationa-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p44bc-965191032d2d4a9a-continuationa-net",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-setup-build",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-setup-compile",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-setup-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-setup-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44bc-965191032d2d4a9a-setup-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "steps": [
+    {
+      "name": "setup-install",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\nadded 168 packages in 18s\n"
+    },
+    {
+      "name": "setup-engine",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "setup-generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\n\n✔ Generated Prisma Client (7.5.0) to ./src/generated/auth in 116ms\n\n"
+    },
+    {
+      "name": "setup-compile",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 compile:checks\n> tsc -p tsconfig.checks.json\n\n"
+    },
+    {
+      "name": "setup-build",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.25\n   - Experiments (use with caution):\n     · cpus: 2\n\n   Creating an optimized production build ...\n ✓ Compiled successfully in 12.6s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/5) ...\n   Generating static pages (1/5) \n   Generating static pages (2/5) \n   Generating static pages (3/5) \n ✓ Generating static pages (5/5)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n┌ ○ /                                    3.45 kB         106 kB\n├ ○ /_not-found                            993 B         104 kB\n├ ƒ /admin-check                           475 B         103 kB\n├ ƒ /api/admin-check                       130 B         103 kB\n├ ƒ /api/auth-check                        130 B         103 kB\n├ ƒ /api/auth/[...all]                     130 B         103 kB\n├ ƒ /auth-check                            475 B         103 kB\n└ ○ /login                                 836 B         103 kB\n+ First Load JS shared by all             103 kB\n  ├ chunks/255-37e0f0325134c4d7.js       46.4 kB\n  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  └ other shared chunks (total)          1.93 kB\n\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n"
+    },
+    {
+      "name": "continuationa-volume-init",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "continuationa-db-start",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "2c8b6bbe9c0264c497e21fc755e093a4f4c96680759d5e59d8981583ab102c18\n"
+    },
+    {
+      "name": "continuationa-roles",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n"
+    },
+    {
+      "name": "continuationa-migrate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 migrate\n> node scripts/migrate-check.mjs\n\nLoaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_continuationa\", schemas \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nApplying migration `00000000000000_auth_initial`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  └─ 00000000000000_auth_initial/\n    └─ migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "continuationa-runtime-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "continuationa-bootstrap-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nGRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "B02-exact-live-table-inventory",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B04-same-email-concurrent-outcomes",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B04-same-email-one-admin-account-no-session",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "repeat-new-password",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "ALREADY_INITIALIZED\n"
+    },
+    {
+      "name": "B04-repeat-all-state-unchanged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "different-email",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "passed": true,
+      "output": "BOOTSTRAP_REJECTED\n"
+    },
+    {
+      "name": "B04-other-all-state-unchanged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "short-password",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "passed": true,
+      "output": "BOOTSTRAP_REJECTED\n"
+    },
+    {
+      "name": "B04-invalid-all-state-unchanged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "member-fixture",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "SYNTHETIC_MEMBER_CREATED\n"
+    },
+    {
+      "name": "member-existing",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "passed": true,
+      "output": "BOOTSTRAP_REJECTED\n"
+    },
+    {
+      "name": "B04-member-no-promotion-state-unchanged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "partial-fixture",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "INSERT 0 1\n"
+    },
+    {
+      "name": "partial-existing",
+      "exitCode": 1,
+      "expected": "nonzero",
+      "passed": true,
+      "output": "BOOTSTRAP_REJECTED\n"
+    },
+    {
+      "name": "B04-partial-full-state-unchanged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "start-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "267c83d0d6bdd717e4627a60241d3fd42ed48744ec007224216ccae11217e8f0\n"
+    },
+    {
+      "name": "browser-negative-login-",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"mode\":\"negative-login\",\"checks\":[\"login-401-0\",\"no-session-1\",\"login-401-1\",\"no-session-2\",\"same-generic-message\",\"no-external-requests\",\"no-javascript-errors\"],\"externalRequests\":0,\"javaScriptErrors\":0,\"status\":\"PASS\"}\n"
+    },
+    {
+      "name": "browser-result-negative-login-",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B05-timing-generic-wrong-0",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B05-timing-generic-unknown-0",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B05-timing-generic-unknown-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B05-timing-generic-wrong-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B05-timing-generic-wrong-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B05-timing-generic-unknown-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B04-original-password-retained",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "browser-session-valid",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"mode\":\"session\",\"checks\":[\"server-api-status\",\"get-session-status\",\"session-presence\",\"protected-page\",\"no-external-requests\",\"no-javascript-errors\"],\"externalRequests\":0,\"javaScriptErrors\":0,\"status\":\"PASS\"}\n"
+    },
+    {
+      "name": "browser-result-session-valid",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "browser-session-absent",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"mode\":\"session\",\"checks\":[\"server-api-status\",\"get-session-status\",\"session-presence\",\"protected-page\",\"no-external-requests\",\"no-javascript-errors\"],\"externalRequests\":0,\"javaScriptErrors\":0,\"status\":\"PASS\"}\n"
+    },
+    {
+      "name": "browser-result-session-absent",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "browser-session-forged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"mode\":\"session\",\"checks\":[\"server-api-status\",\"get-session-status\",\"session-presence\",\"protected-page\",\"no-external-requests\",\"no-javascript-errors\"],\"externalRequests\":0,\"javaScriptErrors\":0,\"status\":\"PASS\"}\n"
+    },
+    {
+      "name": "browser-result-session-forged",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B07-before-boundary-fixture",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "UPDATE 1\n"
+    },
+    {
+      "name": "B07-before-eight-hours-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B07-before-eight-hours-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B07-no-refresh-near-boundary",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B07-boundary-fixture",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "UPDATE 1\n"
+    },
+    {
+      "name": "B07-at-or-after-eight-hours-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B07-at-or-after-eight-hours-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "browser-session-expired",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"mode\":\"session\",\"checks\":[\"server-api-status\",\"get-session-status\",\"session-presence\",\"protected-page\",\"no-external-requests\",\"no-javascript-errors\"],\"externalRequests\":0,\"javaScriptErrors\":0,\"status\":\"PASS\"}\n"
+    },
+    {
+      "name": "browser-result-session-expired",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B12-expired-after-restart-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B12-expired-after-restart-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B08-new-session-different",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B08-fixation-rejected",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B08-forged-still-invalid-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B08-forged-still-invalid-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B08-logout-new",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p44bc-965191032d2d4a9a-local-test-app\n"
+    },
+    {
+      "name": "B12-revoked-after-restart-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B12-revoked-after-restart-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B12-live-control-after-restart-probe",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B12-live-control-after-restart-better-auth",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B10-encoded-closed-0",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B10-encoded-closed-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B10-encoded-closed-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B10-encoded-closed-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "B10-encoded-closed-4",
+      "exitCode": 1,
+      "expected": 0,
+      "passed": false,
+      "output": "condition not satisfied"
+    }
+  ],
+  "cleanupPassed": true,
+  "sourceUnchanged": true,
+  "receiptSecretScan": {
+    "passed": true,
+    "method": "Exact synthetic secrets/DB URLs/session tokens/password hashes in memory, against full serialized receipt before persistence; no secret values retained."
+  },
+  "temporaryDirectoryRemoved": true
+}

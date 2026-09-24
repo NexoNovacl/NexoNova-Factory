@@ -1,0 +1,27 @@
+{
+  "scope": "Host P4.4-B inventory; unrelated resources untouched",
+  "temporaryDirectories": [],
+  "matchingProcesses": [],
+  "docker": {
+    "containers": {
+      "exitCode": 0,
+      "items": [
+        "dazzling_moore\tExited (0) 2 weeks ago",
+        "xenodochial_mendeleev\tExited (0) 2 weeks ago"
+      ]
+    },
+    "networks": {
+      "exitCode": 0,
+      "items": [
+        "bridge",
+        "host",
+        "none"
+      ]
+    },
+    "volumes": {
+      "exitCode": 0,
+      "items": []
+    }
+  },
+  "validatorSha256": "ab7128b88bec4b4a92438695c8def8ac556731991b2cc619dcdcd7ca432a8f53"
+}

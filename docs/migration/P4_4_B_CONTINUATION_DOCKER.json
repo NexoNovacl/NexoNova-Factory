@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Actual container/network inspection during final continuation block; no env inspection retained",
+  "containers": [
+    {
+      "name": "p44bc-7fc75bbecaab43f4-local-test-app",
+      "imageId": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+      "user": "1000:1000",
+      "readonlyRootfs": true,
+      "capDrop": [
+        "ALL"
+      ],
+      "securityOpt": [
+        "no-new-privileges"
+      ],
+      "memory": 1073741824,
+      "nanoCpus": 2000000000,
+      "pidsLimit": 256,
+      "ports": {},
+      "networks": [
+        {
+          "name": "p44bc-7fc75bbecaab43f4-continuationa-net",
+          "internal": true
+        }
+      ],
+      "dockerSocketMounted": false
+    },
+    {
+      "name": "p44bc-7fc75bbecaab43f4-continuationa-db",
+      "imageId": "sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67",
+      "user": "999:999",
+      "readonlyRootfs": true,
+      "capDrop": [
+        "ALL"
+      ],
+      "securityOpt": [
+        "no-new-privileges"
+      ],
+      "memory": 536870912,
+      "nanoCpus": 1000000000,
+      "pidsLimit": 128,
+      "ports": {},
+      "networks": [
+        {
+          "name": "p44bc-7fc75bbecaab43f4-continuationa-net",
+          "internal": true
+        }
+      ],
+      "dockerSocketMounted": false
+    }
+  ]
+}

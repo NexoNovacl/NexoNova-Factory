@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "scope": "Persisted continuation receipts plus final JSON/report/evidence; no raw matches emitted",
+  "method": "Secondary patterns for credential URLs, private keys, auth headers, session cookies and sensitive JSON values; complements exact in-memory synthetic-value scans in each run",
+  "limitations": "Heuristic scan is not an exhaustive secret audit; no HAR or credential screenshots were created",
+  "validatorSha256": "581856b0cdb276a1bb166b14bdef17eac5c112bb47290f0fe56097667bad52fe",
+  "files": [
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+      "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+      "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-267055cd7ca7429b.json",
+      "sha256": "d0b4961770d89f7ae0977f6d5513f8ff1e30f6b3b8667a4ef7a237e9183037dc",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+      "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_FINAL_RECEIPT.json",
+      "sha256": "8aafe45a32dc3b3597ee4eabe171c83b7752d68b5c373317af4e256100e41716",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_FINAL_REPORT.md",
+      "sha256": "e3f08b13e6ed04ee621beaa8ef98eb156849e9281dbcb5dfd64618cb74df5145",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_CONTINUATION_PRESERVATION.json",
+      "sha256": "cc976af89cba3d4490b5499fc5d4972bdaf3e4f7d3dd666c94b4018774e9e7e9",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_CONTINUATION_DOCKER.json",
+      "sha256": "933bd3bede118937c2d2ce4f7e53e515d21cb62b0ac2040385d99146645a0233",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_HOST_INITIAL.json",
+      "sha256": "71cdc4ae76f7d7b773826c94ee38eb77a0def2b5b4d4e2f3d53f4c6209eef6a4",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_HOST_FINAL.json",
+      "sha256": "5e15232d37588c72f232d8443a5c4d8cc639fed6e04ee8346c273a1a7093df1b",
+      "matches": 0
+    },
+    {
+      "path": "docs/migration/P4_4_B_TEMP_CLEANUP.json",
+      "sha256": "cad0b016aac6ffadea29e9de9e64a79f084540961dee2f1ff947de2f0c331286",
+      "matches": 0
+    }
+  ]
+}

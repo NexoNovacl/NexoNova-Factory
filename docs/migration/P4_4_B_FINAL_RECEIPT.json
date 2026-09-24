@@ -1,0 +1,2491 @@
+{
+  "format": "nexonova.p44b.granular-receipt.v1",
+  "phase": "P4.4-B",
+  "status": "PASS_WITH_LIMITATIONS",
+  "readiness": "BLOCKED",
+  "humanReview": "PENDING",
+  "recoveryCheckpoint": {
+    "path": "docs/migration/P4_4_B_RECOVERY_AUDIT.json",
+    "sha256": "2b6814e53f56fd425f98b984184c4341d834e8892acb507406d135f3a79a6b90"
+  },
+  "matrix": [
+    {
+      "id": "B01",
+      "scope": "Fixed OpenSSL image/dependencies, actual install and Prisma generation",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "install",
+          "index": 0
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "engine",
+          "index": 1
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "exact-versions",
+          "index": 3
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "openssl",
+          "index": 4
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "generate",
+          "index": 5
+        },
+        {
+          "path": "docs/migration/P4_4_B_IMAGE.json",
+          "sha256": "8ceef4a1de3269e853fad7ffee0425f994d374f80d5a8680cc892027f243f4ce"
+        },
+        {
+          "path": "docs/migration/P4_4_B_IMAGE_REBUILD.json",
+          "sha256": "182f6e62ab61c149691ca8c33f55d9f71f1fcf82f116d8d569b8140c3fb1bf7f"
+        },
+        {
+          "path": "docs/migration/P4_4_B_BASE_MATRIX.json",
+          "sha256": "67e3039cb5495c3ba5b79de4932fb15795cf23899cc8ceeebace0b5afb2a7c53"
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B02",
+      "scope": "Migration/reapplication and exact live schema inventory",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "migrate",
+          "index": 17
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "migrate-repeat",
+          "index": 18
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "migration-stable",
+          "index": 19
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "reviewed-migration-identical",
+          "index": 11
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B02-exact-live-table-inventory",
+          "index": 11
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B03",
+      "scope": "Offline admin bootstrap, real credential hash/login",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap",
+          "index": 29
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "single-admin",
+          "index": 31
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-concurrent-atomic",
+          "index": 38
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "login-True",
+          "index": 48
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B04",
+      "scope": "Concurrency, idempotency, rollback and unchanged full state",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-repeat",
+          "index": 30
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-concurrent-outcomes",
+          "index": 37
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-concurrent-atomic",
+          "index": 38
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-rollback-no-orphan",
+          "index": 27
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "partial-not-repaired",
+          "index": 42
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-same-email-concurrent-outcomes",
+          "index": 12
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-same-email-one-admin-account-no-session",
+          "index": 13
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-repeat-all-state-unchanged",
+          "index": 15
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-other-all-state-unchanged",
+          "index": 17
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-invalid-all-state-unchanged",
+          "index": 19
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-member-no-promotion-state-unchanged",
+          "index": 22
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-partial-full-state-unchanged",
+          "index": 25
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B04-original-password-retained",
+          "index": 40
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B05",
+      "scope": "Generic login failures in HTTP/browser; observational timing",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "generic-login-rejection",
+          "index": 94
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "browser-negative-login-",
+          "index": 27
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-wrong-0",
+          "index": 31
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-unknown-0",
+          "index": 32
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-wrong-1",
+          "index": 35
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-unknown-1",
+          "index": 34
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-wrong-2",
+          "index": 37
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B05-timing-generic-unknown-2",
+          "index": 38
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance.",
+        "Three alternating timing pairs include cold-start noise; observed medians differ. No statistical or formal timing indistinguishability demonstrated."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B06",
+      "scope": "DB lifetime and real browser valid/absent/forged/expired session",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "login-True",
+          "index": 48
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "session-True",
+          "index": 49
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "absolute-eight-hours-True",
+          "index": 52
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cookie-policy-True",
+          "index": 53
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "login-False",
+          "index": 54
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "session-False",
+          "index": 55
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "absolute-eight-hours-False",
+          "index": 58
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cookie-policy-False",
+          "index": 59
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "login-omitted",
+          "index": 60
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "session-omitted",
+          "index": 61
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "absolute-eight-hours-omitted",
+          "index": 64
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cookie-policy-omitted",
+          "index": 65
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "anonymous-api",
+          "index": 46
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "forged-session",
+          "index": 47
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "expired-get-session",
+          "index": 91
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "expired-protected",
+          "index": 92
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "browser-session-valid",
+          "index": 41
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "browser-session-absent",
+          "index": 43
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "browser-session-forged",
+          "index": 45
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "browser-session-expired",
+          "index": 54
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B07",
+      "scope": "Coherent DB timestamps at either side of absolute 8h; no refresh",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "no-session-refresh",
+          "index": 66
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B07-before-eight-hours-probe",
+          "index": 48
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B07-before-eight-hours-better-auth",
+          "index": 49
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B07-no-refresh-near-boundary",
+          "index": 50
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B07-at-or-after-eight-hours-probe",
+          "index": 52
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B07-at-or-after-eight-hours-better-auth",
+          "index": 53
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance.",
+        "Boundary uses coherent fixture timestamps (8h lifetime), not eight hours of wall-clock waiting; production constants unchanged."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B08",
+      "scope": "Logout replay and fresh token/fixation rejection",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "logout",
+          "index": 87
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "logout-database-row-removed",
+          "index": 88
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "revoked-replay",
+          "index": 89
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B08-new-session-different",
+          "index": 59
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B08-fixation-rejected",
+          "index": 60
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B08-forged-still-invalid-probe",
+          "index": 61
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B08-forged-still-invalid-better-auth",
+          "index": 62
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B09",
+      "scope": "Session/role probes only; no resource authorization",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "anonymous-api",
+          "index": 46
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "admin-probe",
+          "index": 67
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "member-authenticated",
+          "index": 73
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "member-admin-denied",
+          "index": 74
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser",
+          "index": 115
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B10",
+      "scope": "Client role spoofing, enum rejection, direct and encoded closed routes",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "closed-email",
+          "index": 76
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "closed-update-user",
+          "index": 77
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "closed-set-role",
+          "index": 78
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "role-body-rejected",
+          "index": 79
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "spoofed-role-header",
+          "index": 75
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "spoofed-role-query",
+          "index": 83
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "spoofed-role-cookie",
+          "index": 84
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B10-encoded-closed-0",
+          "index": 69
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B10-encoded-closed-1",
+          "index": 70
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B10-encoded-closed-2",
+          "index": 71
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B10-encoded-closed-3",
+          "index": 72
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B10-encoded-closed-4",
+          "index": 20
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B10-encoded-closed-5",
+          "index": 22
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B10-encoded-no-state-change",
+          "index": 23
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B10-unknown-role-database-rejected",
+          "index": 24
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B10-unknown-role-input-rejected",
+          "index": 25
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B11",
+      "scope": "Real PostgreSQL least privilege and credential separation",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-0",
+          "index": 99
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-1",
+          "index": 100
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-2",
+          "index": 101
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-3",
+          "index": 102
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-4",
+          "index": 103
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-5",
+          "index": 104
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "privilege-6",
+          "index": 105
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "runtime-direct-migrate-permission-error",
+          "index": 23
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "migrator-url-swapped",
+          "index": 21
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-runtime-denied",
+          "index": 106
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-migrator-denied",
+          "index": 107
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "config-swapped-runtime",
+          "index": 113
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B12",
+      "scope": "Valid session survives restart; expired/revoked sessions do not revive",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "session-after-restart",
+          "index": 71
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "database-restarted-session-valid",
+          "index": 125
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-expired-after-restart-probe",
+          "index": 57
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-expired-after-restart-better-auth",
+          "index": 58
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-revoked-after-restart-probe",
+          "index": 65
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-revoked-after-restart-better-auth",
+          "index": 66
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-live-control-after-restart-probe",
+          "index": 67
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "step": "B12-live-control-after-restart-better-auth",
+          "index": 68
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B13",
+      "scope": "Database/permission outage fail closed and transactional rollback",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "insufficient-permissions",
+          "index": 119
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "database-down",
+          "index": 122
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-database-down",
+          "index": 123
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-insufficient-permission",
+          "index": 26
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "bootstrap-rollback-no-orphan",
+          "index": 27
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B14",
+      "scope": "Browser Secure cookies, origin/forwards and independent products/databases",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "origin-rejected",
+          "index": 80
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "missing-origin-rejected",
+          "index": 81
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "null-origin-rejected",
+          "index": 85
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cross-site-get-rejected",
+          "index": 82
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "redirect-rejected",
+          "index": 86
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "secure-login",
+          "index": 134
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "secure-session",
+          "index": 135
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cookie-namespace-isolation",
+          "index": 137
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "cookie-signing-secret-isolation",
+          "index": 138
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser-https",
+          "index": 139
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B14-forwarded-origin-cannot-bypass",
+          "index": 26
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B14-forwarded-host-cookie-policy",
+          "index": 28
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-source-control-valid",
+          "index": 32
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-product-a-valid-probe",
+          "index": 33
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-product-b-cookie-a-rejected-probe",
+          "index": 35
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-product-b-cookie-a-rejected-better-auth",
+          "index": 36
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-product-b-renamed-cookie-rejected-probe",
+          "index": 37
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-product-b-renamed-cookie-rejected-better-auth",
+          "index": 38
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-independent-database-empty-session",
+          "index": 39
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B14-distinct-networks-volumes",
+          "index": 42
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "browser-secure-login-",
+          "index": 40
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance.",
+        "Ephemeral self-signed local HTTPS tests Secure transport; not a production TLS/proxy deployment."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B15",
+      "scope": "Concurrent throttling, Retry-After and real window recovery",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "rate-limit",
+          "index": 95
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "concurrent-rate-limit",
+          "index": 97
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-budget-0",
+          "index": 16
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-budget-1",
+          "index": 17
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-budget-2",
+          "index": 18
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-budget-3",
+          "index": 19
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-budget-4",
+          "index": 20
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-429-retry-after",
+          "index": 21
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "step": "B15-recovery-without-restart",
+          "index": 22
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance.",
+        "Global in-memory single-instance budget resets on process restart; no distributed persistence."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B16",
+      "scope": "Fail-closed configuration and integrated Unicode password maximum",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "unit",
+          "index": 8
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "config-missing",
+          "index": 110
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "config-production-http",
+          "index": 111
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "config-short-secret",
+          "index": 112
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "config-swapped-runtime",
+          "index": 113
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "member-login",
+          "index": 72
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B16-overlong-integrated-0",
+          "index": 29
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B16-overlong-integrated-1",
+          "index": 32
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B16-overlong-bootstrap-state-0",
+          "index": 31
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "step": "B16-overlong-bootstrap-state-1",
+          "index": 34
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B17",
+      "scope": "Known synthetic secret scans and constrained runtime/browser egress",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "ssr-no-secrets",
+          "index": 68
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "app-logs-no-known-secrets",
+          "index": 98
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "final-log-scan-app",
+          "index": 129
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "final-log-scan-db",
+          "index": 130
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser",
+          "index": 115
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser-https",
+          "index": 139
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-267055cd7ca7429b.json",
+          "sha256": "d0b4961770d89f7ae0977f6d5513f8ff1e30f6b3b8667a4ef7a237e9183037dc",
+          "fields": [
+            "receiptSecretScan",
+            "rawLogScan"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "fields": [
+            "receiptSecretScan",
+            "rawLogScan"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "fields": [
+            "receiptSecretScan",
+            "rawLogScan"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "fields": [
+            "receiptSecretScan",
+            "rawLogScan"
+          ]
+        },
+        {
+          "path": "docs/migration/P4_4_B_CONTINUATION_DOCKER.json",
+          "sha256": "933bd3bede118937c2d2ce4f7e53e515d21cb62b0ac2040385d99146645a0233"
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance.",
+        "Exact scans cover known synthetic values; secondary final-artifact scan is heuristic. Browser observes no external requests; internal Docker networks prevent successful server egress. No packet-level proof of absence of attempted egress."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B18",
+      "scope": "Owned-resource cleanup, negative cleanup and foreign sentinel",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "ordinary-process-cleaned",
+          "index": 141
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "timeout-process-cleaned",
+          "index": 142
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "foreign-resource-preserved",
+          "index": 145
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "sentinel-absent",
+          "index": 147
+        }
+      ],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-267055cd7ca7429b.json",
+          "sha256": "d0b4961770d89f7ae0977f6d5513f8ff1e30f6b3b8667a4ef7a237e9183037dc",
+          "fields": [
+            "cleanup",
+            "cleanupPassed",
+            "hostRelaysClosed",
+            "temporaryDirectoryRemoved"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+          "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+          "fields": [
+            "cleanup",
+            "cleanupPassed",
+            "hostRelaysClosed",
+            "temporaryDirectoryRemoved"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+          "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+          "fields": [
+            "cleanup",
+            "cleanupPassed",
+            "hostRelaysClosed",
+            "temporaryDirectoryRemoved"
+          ]
+        },
+        {
+          "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+          "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+          "fields": [
+            "cleanup",
+            "cleanupPassed",
+            "hostRelaysClosed",
+            "temporaryDirectoryRemoved"
+          ]
+        },
+        {
+          "path": "docs/migration/P4_4_B_HOST_FINAL.json",
+          "sha256": "5e15232d37588c72f232d8443a5c4d8cc639fed6e04ee8346c273a1a7093df1b"
+        },
+        {
+          "path": "docs/migration/P4_4_B_TEMP_CLEANUP.json",
+          "sha256": "cad0b016aac6ffadea29e9de9e64a79f084540961dee2f1ff947de2f0c331286"
+        }
+      ],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B19",
+      "scope": "Actual web build/start, keyboard browser flows and no-store",
+      "status": "PASS",
+      "recoveredEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "typecheck",
+          "index": 7
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "unit",
+          "index": 8
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "build",
+          "index": 9
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "start-auth-app",
+          "index": 45
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser",
+          "index": 115
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "browser-https",
+          "index": 139
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "private-page-no-store",
+          "index": 69
+        },
+        {
+          "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+          "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+          "step": "private-api-no-store-True",
+          "index": 51
+        }
+      ],
+      "continuationEvidence": [],
+      "limitations": [
+        "Historical auth receipt has no run-time source hash. Reused named checks remain historical; unchanged recovery hashes do not establish retroactive provenance."
+      ],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    },
+    {
+      "id": "B20",
+      "scope": "Historical hashes, products/prototype and targeted regression",
+      "status": "PASS",
+      "recoveredEvidence": [],
+      "continuationEvidence": [
+        {
+          "path": "docs/migration/P4_4_B_CONTINUATION_PRESERVATION.json",
+          "sha256": "cc976af89cba3d4490b5499fc5d4972bdaf3e4f7d3dd666c94b4018774e9e7e9"
+        }
+      ],
+      "limitations": [],
+      "relevantSourceHashes": {
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+      }
+    }
+  ],
+  "gates": {
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED",
+    "compatibility": "PASS",
+    "database-migrations": "PASS",
+    "authentication": "PASS",
+    "auth-role-probes": "PASS",
+    "build-tests": "PASS",
+    "cleanup": "PASS"
+  },
+  "gateRequirements": {
+    "compatibility": [
+      "B01",
+      "B19"
+    ],
+    "database-migrations": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12",
+      "B13"
+    ],
+    "authentication": [
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B10",
+      "B14",
+      "B15",
+      "B16",
+      "B17"
+    ],
+    "auth-role-probes": [
+      "B09",
+      "B10",
+      "B11"
+    ],
+    "build-tests": [
+      "B19"
+    ],
+    "cleanup": [
+      "B18"
+    ]
+  },
+  "authRoleProbeScope": "Session and admin/member probes only; InternalRequest ownership is NOT_IMPLEMENTED",
+  "missingEvidence": [],
+  "validatorArchives": "docs/migration/p4-4-b-continuation/validators: SHA256 verified against each run",
+  "continuationRuns": [
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-267055cd7ca7429b.json",
+      "sha256": "d0b4961770d89f7ae0977f6d5513f8ff1e30f6b3b8667a4ef7a237e9183037dc",
+      "status": "FAIL",
+      "error": "UnboundLocalError: details withheld",
+      "sourceHashes": {
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "scripts/validate_business_auth_continuation.py": "aca0dc6d0794008cabc9c7e5a33780bb60ac91082da4d60563a73d5bfddebc27",
+        "scripts/check_business_auth_continuation.mjs": "19a27a90b6b531224edec1ce9bd21484439ac4d726b87a19bec6447383d9359a",
+        "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+        "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27"
+      }
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-7fc75bbecaab43f4.json",
+      "sha256": "40dcb7d150969682a01dd7fdff118e4cc1b00f7fd79a0a21631f3448f2aa5892",
+      "status": "PASS",
+      "error": null,
+      "sourceHashes": {
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "scripts/validate_business_auth_continuation.py": "27035cbc8c372fc14a4300b5cab47b6766cd13af8bfdc7ef1f1ead6582076324",
+        "scripts/check_business_auth_continuation.mjs": "19a27a90b6b531224edec1ce9bd21484439ac4d726b87a19bec6447383d9359a",
+        "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+        "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27"
+      }
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-92ad5e384d4c427d.json",
+      "sha256": "ecab53ef37d978896867a3856c8f79c432874aba2b30bb9708845fd0a4ce9395",
+      "status": "FAIL",
+      "error": "UnboundLocalError: details withheld",
+      "sourceHashes": {
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "scripts/validate_business_auth_continuation.py": "9875c873466f8134242b8bb46867b9053b29adf7a8dded046b258fb2af2fa689",
+        "scripts/check_business_auth_continuation.mjs": "19a27a90b6b531224edec1ce9bd21484439ac4d726b87a19bec6447383d9359a",
+        "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+        "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27"
+      }
+    },
+    {
+      "path": "docs/migration/p4-4-b-continuation/p44bc-965191032d2d4a9a.json",
+      "sha256": "9be68f29bbca47c32fde2672df4997642e7c64ebe9d26a0251cb2dcdebd8fe70",
+      "status": "FAIL",
+      "error": "InfrastructureError: Step failed: B10-encoded-closed-4",
+      "sourceHashes": {
+        "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+        "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+        "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+        "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+        "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+        "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+        "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+        "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+        "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+        "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+        "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+        "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+        "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+        "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+        "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+        "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+        "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+        "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+        "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+        "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+        "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+        "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+        "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+        "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+        "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+        "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+        "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+        "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+        "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+        "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+        "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+        "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+        "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+        "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+        "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+        "scripts/validate_business_auth_continuation.py": "d1411985ccd711bf5938f23f95db1223e18719c418bbb85aa655bda95132b8c3",
+        "scripts/check_business_auth_continuation.mjs": "19a27a90b6b531224edec1ce9bd21484439ac4d726b87a19bec6447383d9359a",
+        "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+        "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+        "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27"
+      }
+    }
+  ],
+  "preservation": {
+    "path": "docs/migration/P4_4_B_CONTINUATION_PRESERVATION.json",
+    "sha256": "cc976af89cba3d4490b5499fc5d4972bdaf3e4f7d3dd666c94b4018774e9e7e9"
+  },
+  "hostCleanup": [
+    {
+      "path": "docs/migration/P4_4_B_HOST_FINAL.json",
+      "sha256": "5e15232d37588c72f232d8443a5c4d8cc639fed6e04ee8346c273a1a7093df1b"
+    },
+    {
+      "path": "docs/migration/P4_4_B_TEMP_CLEANUP.json",
+      "sha256": "cad0b016aac6ffadea29e9de9e64a79f084540961dee2f1ff947de2f0c331286"
+    }
+  ],
+  "versions": {
+    "node": "v22.23.2",
+    "next": "15.5.25",
+    "react": "19.2.8",
+    "typescript": "5.9.3",
+    "prisma": "7.5.0",
+    "client": "7.5.0",
+    "adapter": "7.5.0",
+    "pg": "8.16.3",
+    "betterAuth": "1.7.5"
+  },
+  "postgresVersion": "16.15 (Debian 16.15-1.pgdg12+2)",
+  "imageLock": {
+    "format": "nexonova.node-openssl-image.v1",
+    "base": "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5",
+    "sourceDateEpoch": 1789948800,
+    "platform": "linux/amd64",
+    "packages": [
+      {
+        "file": "ca-certificates_20250419~deb12u1_all.deb",
+        "sha256": "62b08a77d985d4253894b1f69aebda5925034ca4e294add364167fad8cb64a44",
+        "Package": "ca-certificates",
+        "Version": "20250419~deb12u1",
+        "Architecture": "all",
+        "Depends": "openssl (>= 1.1.1), debconf (>= 0.5) | debconf-2.0",
+        "Filename": "pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb",
+        "url": "https://snapshot.debian.org/archive/debian-security/20260921T000000Z/pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb"
+      },
+      {
+        "file": "libssl3_3.0.20-1~deb12u2_amd64.deb",
+        "sha256": "89be24b41bff568ee6e7caf5680a3d808e80315ed92e407056ce0fa7a5bda025",
+        "Package": "libssl3",
+        "Version": "3.0.20-1~deb12u2",
+        "Architecture": "amd64",
+        "Depends": "libc6 (>= 2.34)",
+        "Filename": "pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb",
+        "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb"
+      },
+      {
+        "file": "openssl_3.0.20-1~deb12u2_amd64.deb",
+        "sha256": "4d218561dc838de081de97f54584c4a29e77e26c7ed9fe3440d776d8e6071bf9",
+        "Package": "openssl",
+        "Version": "3.0.20-1~deb12u2",
+        "Architecture": "amd64",
+        "Depends": "libc6 (>= 2.34), libssl3 (>= 3.0.9)",
+        "Filename": "pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb",
+        "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb"
+      }
+    ],
+    "executionReference": "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "manifestDigest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "recipeSha256": "8f0e0a59f8af564f4f938a733ecc1da90c59d7271bfd27b6f05b8f4891cbf07a",
+    "reproducibility": "two-no-cache-builds-identical-manifest-and-config",
+    "buildxVersion": "0.37.1",
+    "dockerfileFrontendVersion": "1.27.0",
+    "configDigest": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a"
+  },
+  "finalizerSha256": "e31e8ed671298bc060153e20364ecc2aaf59bbdd54e9cfeabe01e6be38406aea",
+  "historicalReceiptsModified": false,
+  "productImplementationChanged": false,
+  "intermediateFailures": [
+    {
+      "runId": "p44bc-267055cd7ca7429b",
+      "error": "UnboundLocalError: details withheld",
+      "disposition": "Validator normalization expectation / resume variable corrected; passing checks reused individually; original FAIL retained."
+    },
+    {
+      "runId": "p44bc-92ad5e384d4c427d",
+      "error": "UnboundLocalError: details withheld",
+      "disposition": "Validator normalization expectation / resume variable corrected; passing checks reused individually; original FAIL retained."
+    },
+    {
+      "runId": "p44bc-965191032d2d4a9a",
+      "error": "InfrastructureError: Step failed: B10-encoded-closed-4",
+      "disposition": "Validator normalization expectation / resume variable corrected; passing checks reused individually; original FAIL retained."
+    }
+  ],
+  "limitations": [
+    "Historical auth provenance cannot be reconstructed retrospectively.",
+    "Controlled single-instance pilot; host and Docker daemon trusted; Linux/amd64 only.",
+    "Offline bootstrap recovery after total manual deletion and automatic crash recovery are not implemented.",
+    "Production vulnerability/security review remains pending; no deployment or external integration.",
+    "Rate limit memory only; no account recovery, external email/OAuth, resource authorization, CRUD, generation or autonomy."
+  ],
+  "finalReceiptScan": {
+    "status": "PASS",
+    "matches": 0,
+    "method": "Secondary credential/cookie/private-key patterns over final JSON; exact synthetic-value scans live in each referenced continuation run receipt."
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "phase": "P4.4-B",
+  "kind": "recovery-audit-not-final-acceptance",
+  "status": "BLOCKED",
+  "readiness": "BLOCKED",
+  "reason": "User-required stop on ambiguous partial state: previous aggregate PASS overstates B01-B20 coverage. No implementation or test rerun performed.",
+  "git": {
+    "head": "a53035950d9789fe8214171117cf344503cbbc9d",
+    "initialWorkingTree": "clean",
+    "partialWork": "Already committed in HEAD; commit title does not imply B completion"
+  },
+  "recoveredReceipt": {
+    "path": "docs/migration/P4_4_B_AUTH_PROGRESS.json",
+    "sha256": "b7a48a8c63d774ac1165716b746756d1871444733b8e36c16cf3f896230691ff",
+    "runId": "p44b-99d650cc361c49fb",
+    "reportedStatus": "PASS",
+    "recordedSteps": 160,
+    "failedRecordedSteps": [],
+    "archiveIdentical": true,
+    "limitation": "Auth receipt lacks source/validator hashes; current source inventory is recovery-time only, not retroactive run provenance."
+  },
+  "preservation": {
+    "reference": "docs/migration/P4_4_A_VALIDATION.json#protectedHashesAfter",
+    "checked": 148,
+    "changed": [],
+    "historicalBaselinesModified": false,
+    "productsAndPrototype": "Historical B preservation receipt exists; fresh independent comparison NOT_EXECUTED"
+  },
+  "resources": {
+    "dockerInventoryExecuted": true,
+    "containers": [
+      {
+        "name": "dazzling_moore",
+        "state": "exited",
+        "action": "untouched"
+      },
+      {
+        "name": "xenodochial_mendeleev",
+        "state": "exited",
+        "action": "untouched"
+      }
+    ],
+    "networks": [
+      "bridge",
+      "host",
+      "none"
+    ],
+    "volumes": [],
+    "p44DockerRemnants": [],
+    "processInventoryScope": "Sandbox PID namespace only; not a host-wide process inventory",
+    "hostTemporaryDirectories": "NOT_EXECUTED: /var/tmp inventory pending"
+  },
+  "matrixStatusMeaning": "PASS means recovered evidence for the stated case; NOT_EXECUTED means at least one required subcase lacks execution evidence, not that all subcases are absent. No final gate acceptance.",
+  "matrix": [
+    {
+      "id": "B01",
+      "status": "PASS",
+      "assessment": "Recovered install, exact versions, OpenSSL, generate; image/base receipts exist."
+    },
+    {
+      "id": "B02",
+      "status": "NOT_EXECUTED",
+      "assessment": "Migration/reapplication passed; explicit live table inventory excluding TechnicalSmoke/InternalRequest not recorded."
+    },
+    {
+      "id": "B03",
+      "status": "PASS",
+      "assessment": "Recovered bootstrap, single-admin, real login and concurrency counts."
+    },
+    {
+      "id": "B04",
+      "status": "NOT_EXECUTED",
+      "assessment": "Different-email race, sequential repeat, partial identity and short password covered; same-email concurrent case and full unchanged-state assertions missing."
+    },
+    {
+      "id": "B05",
+      "status": "NOT_EXECUTED",
+      "assessment": "HTTP generic wrong/unknown login covered; negative browser flows and timing review missing."
+    },
+    {
+      "id": "B06",
+      "status": "NOT_EXECUTED",
+      "assessment": "HTTP/DB lifetime, forged and expired checks covered; required negative browser cases missing."
+    },
+    {
+      "id": "B07",
+      "status": "NOT_EXECUTED",
+      "assessment": "Immediate no-refresh comparison only; no controlled eight-hour boundary test."
+    },
+    {
+      "id": "B08",
+      "status": "NOT_EXECUTED",
+      "assessment": "Browser logout and HTTP replay covered; new-session fixation/non-reuse assertion missing."
+    },
+    {
+      "id": "B09",
+      "status": "PASS",
+      "assessment": "Recovered API and browser admin/member/anonymous probes."
+    },
+    {
+      "id": "B10",
+      "status": "NOT_EXECUTED",
+      "assessment": "Body/query/header/cookie and closed routes covered; unknown role and encoded-path cases missing."
+    },
+    {
+      "id": "B11",
+      "status": "PASS",
+      "assessment": "Recovered PostgreSQL 42501 checks and swapped credentials rejection."
+    },
+    {
+      "id": "B12",
+      "status": "NOT_EXECUTED",
+      "assessment": "Valid session survives restart; revoked/expired sessions after restart not asserted."
+    },
+    {
+      "id": "B13",
+      "status": "PASS",
+      "assessment": "Recovered unavailable DB, revoked SELECT, bootstrap failure and rollback checks."
+    },
+    {
+      "id": "B14",
+      "status": "NOT_EXECUTED",
+      "assessment": "HTTP cookie attributes and HTTPS flow covered; browser Secure assertion, malicious forwards and independent-product DB isolation not fully demonstrated."
+    },
+    {
+      "id": "B15",
+      "status": "NOT_EXECUTED",
+      "assessment": "Sixth attempt and concurrent 429 covered; retry-header assertion/recovery after window missing."
+    },
+    {
+      "id": "B16",
+      "status": "NOT_EXECUTED",
+      "assessment": "Config/unit password bounds and real Unicode member covered; integration maximum-length rejection missing."
+    },
+    {
+      "id": "B17",
+      "status": "NOT_EXECUTED",
+      "assessment": "Raw log/SSR scans and browser external-request checks covered; final receipt scan not explicitly asserted."
+    },
+    {
+      "id": "B18",
+      "status": "PASS",
+      "assessment": "Recovered success/failure/timeout/sentinel cleanup; current Docker inventory has no owned remnants."
+    },
+    {
+      "id": "B19",
+      "status": "PASS",
+      "assessment": "Recovered typecheck, four unit tests, build, real start, keyboard login/logout and no-store checks."
+    },
+    {
+      "id": "B20",
+      "status": "BLOCKED",
+      "assessment": "Protected source hashes rechecked; final independent products/prototype comparison remains pending."
+    }
+  ],
+  "gates": {
+    "compatibility": "BLOCKED",
+    "database-migrations": "BLOCKED",
+    "authentication": "BLOCKED",
+    "auth-role-probes": "BLOCKED",
+    "build-tests": "BLOCKED",
+    "cleanup": "BLOCKED",
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED"
+  },
+  "nextActions": [
+    "Resolve aggregate receipt versus matrix ambiguity before resuming, per user stop instruction.",
+    "Preserve all historical receipts; add granular test/evidence mapping and source hashes in a new receipt.",
+    "Complete only missing subcases; rerun shared setup only where necessary for consistency.",
+    "Complete host temporary-resource inventory and final products/prototype preservation."
+  ],
+  "currentImplementationHashes": {
+    "infrastructure/images/node-openssl/Dockerfile": "8f0e0a59f8af564f4f938a733ecc1da90c59d7271bfd27b6f05b8f4891cbf07a",
+    "infrastructure/images/node-openssl/README.md": "df65b7495e740992d8ddd40ce6217236e69e8300520f15f01520453d5194fb22",
+    "infrastructure/images/node-openssl/SHA256SUMS": "bcec025ac9f79db5a6f98d4b963b349a20d611b1502249fe8bb75468426a4406",
+    "infrastructure/images/node-openssl/image-lock.json": "69ab69bf3ad269c0bf492bea550f10d93f4aa60d66e55f9e681f0af0c1091a27",
+    "scripts/check_business_auth_browser.mjs": "05cdfae03c2fe88da96dfd9ccf128938b3f1c797ce6b23c1c2e206b92debaf99",
+    "scripts/prepare_auth_image.py": "612a32e007b102dc358c1a61fb913b074e19ce6af6cd7b92d2679bbc61499622",
+    "scripts/validate_auth_base.py": "4ae87680d616c97dbb15ac157dec6e2d605521071e2765f0651926010ab986a3",
+    "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+    "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+    "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+    "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+    "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+    "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+    "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+    "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+    "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+    "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+    "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+    "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+    "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+    "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+    "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+    "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+    "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+    "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+    "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+    "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+    "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+    "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+    "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+    "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+    "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+    "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+    "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+    "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+    "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+    "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+    "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+    "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+    "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+    "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+    "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+    "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+  }
+}
