@@ -1,0 +1,169 @@
+{
+  "phase": "P4.4-B",
+  "status": "FAIL",
+  "readiness": "BLOCKED",
+  "steps": [
+    {
+      "name": "install",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\nadded 168 packages in 23s\n"
+    },
+    {
+      "name": "engine",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/auth in 66ms\n\n"
+    },
+    {
+      "name": "compile",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 compile:checks\n> tsc -p tsconfig.checks.json\n\n"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 typecheck\n> tsc --noEmit\n\n"
+    },
+    {
+      "name": "unit",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: local profile is explicit; production requires HTTPS\nok 1 - local profile is explicit; production requires HTTPS\n  ---\n  duration_ms: 2.766451\n  type: 'test'\n  ...\n# Subtest: required environment and role fail closed\nok 2 - required environment and role fail closed\n  ---\n  duration_ms: 0.516129\n  type: 'test'\n  ...\n# Subtest: session clamp never extends shorter expiry and caps 24h\nok 3 - session clamp never extends shorter expiry and caps 24h\n  ---\n  duration_ms: 0.2236\n  type: 'test'\n  ...\n# Subtest: password bounds match JavaScript UTF-16 semantics without trimming\nok 4 - password bounds match JavaScript UTF-16 semantics without trimming\n  ---\n  duration_ms: 0.167663\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 78.172717\n"
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 build\n> next build\n\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 12.2s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/5) ...\n   Generating static pages (1/5) \n   Generating static pages (2/5) \n   Generating static pages (3/5) \n \u2713 Generating static pages (5/5)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                    3.45 kB         106 kB\n\u251c \u25cb /_not-found                            993 B         104 kB\n\u251c \u0192 /admin-check                           475 B         103 kB\n\u251c \u0192 /api/admin-check                       130 B         103 kB\n\u251c \u0192 /api/auth-check                        130 B         103 kB\n\u251c \u0192 /api/auth/[...all]                     130 B         103 kB\n\u251c \u0192 /auth-check                            475 B         103 kB\n\u2514 \u25cb /login                                 836 B         103 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.93 kB\n\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n"
+    },
+    {
+      "name": "migration-sql",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "MIGRATION_CANDIDATE_WRITTEN\n"
+    },
+    {
+      "name": "auth-volume-init",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "auth-db-start",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "894c8b6c3bf771db499420a80c6b1c97b47dcdd28832519597dab50594073e72\n"
+    },
+    {
+      "name": "auth-roles",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n"
+    },
+    {
+      "name": "migrate",
+      "exitCode": 1,
+      "expected": 0,
+      "passed": false,
+      "output": "\n> business-platform-auth-core@0.1.0 migrate\n> node scripts/migrate-check.mjs\n\nLoaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_auth\", schema \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nApplying migration `00000000000000_auth_initial`\nError: P3018\n\nA migration failed to apply. New migrations cannot be applied before the error is recovered from. Read more about how to resolve migration issues in a production database: https://pris.ly/d/migrate-resolve\n\nMigration name: 00000000000000_auth_initial\n\nDatabase error code: 42501\n\nDatabase error:\nERROR: permission denied for database db_auth\n\nDbError { severity: \"ERROR\", parsed_severity: Some(Error), code: SqlState(E42501), message: \"permission denied for database db_auth\", detail: None, hint: None, position: None, where_: None, schema: None, table: None, column: None, datatype: None, constraint: None, file: Some(\"aclchk.c\"), line: Some(2812), routine: Some(\"aclcheck_error\") }\n\n\n"
+    }
+  ],
+  "runId": "p44b-2763bebf93984511",
+  "migrationSql": "-- CreateSchema\nCREATE SCHEMA IF NOT EXISTS \"public\";\n\n-- CreateEnum\nCREATE TYPE \"AppRole\" AS ENUM ('admin', 'member');\n\n-- CreateTable\nCREATE TABLE \"User\" (\n    \"id\" TEXT NOT NULL,\n    \"name\" TEXT NOT NULL,\n    \"email\" TEXT NOT NULL,\n    \"emailVerified\" BOOLEAN NOT NULL DEFAULT false,\n    \"image\" TEXT,\n    \"role\" \"AppRole\" NOT NULL DEFAULT 'member',\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"User_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"Session\" (\n    \"id\" TEXT NOT NULL,\n    \"token\" TEXT NOT NULL,\n    \"userId\" TEXT NOT NULL,\n    \"expiresAt\" TIMESTAMP(3) NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n    \"ipAddress\" TEXT,\n    \"userAgent\" TEXT,\n\n    CONSTRAINT \"Session_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"Account\" (\n    \"id\" TEXT NOT NULL,\n    \"userId\" TEXT NOT NULL,\n    \"providerId\" TEXT NOT NULL,\n    \"accountId\" TEXT NOT NULL,\n    \"password\" TEXT,\n    \"accessToken\" TEXT,\n    \"refreshToken\" TEXT,\n    \"idToken\" TEXT,\n    \"accessTokenExpiresAt\" TIMESTAMP(3),\n    \"refreshTokenExpiresAt\" TIMESTAMP(3),\n    \"scope\" TEXT,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"Account_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"Verification\" (\n    \"id\" TEXT NOT NULL,\n    \"identifier\" TEXT NOT NULL,\n    \"value\" TEXT NOT NULL,\n    \"expiresAt\" TIMESTAMP(3) NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"Verification_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"User_email_key\" ON \"User\"(\"email\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Session_token_key\" ON \"Session\"(\"token\");\n\n-- CreateIndex\nCREATE INDEX \"Session_userId_idx\" ON \"Session\"(\"userId\");\n\n-- CreateIndex\nCREATE INDEX \"Account_userId_idx\" ON \"Account\"(\"userId\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Account_providerId_accountId_key\" ON \"Account\"(\"providerId\", \"accountId\");\n\n-- CreateIndex\nCREATE INDEX \"Verification_identifier_idx\" ON \"Verification\"(\"identifier\");\n\n-- AddForeignKey\nALTER TABLE \"Session\" ADD CONSTRAINT \"Session_userId_fkey\" FOREIGN KEY (\"userId\") REFERENCES \"User\"(\"id\") ON DELETE CASCADE ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Account\" ADD CONSTRAINT \"Account_userId_fkey\" FOREIGN KEY (\"userId\") REFERENCES \"User\"(\"id\") ON DELETE CASCADE ON UPDATE CASCADE;\n\n",
+  "error": "InfrastructureError: validation stopped; sensitive details withheld",
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-migrate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-auth-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-auth-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p44b-2763bebf93984511-auth-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p44b-2763bebf93984511-auth-net",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-migration-sql",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-build",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-unit",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-typecheck",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-compile",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-2763bebf93984511-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true,
+  "gates": {
+    "authentication": "NOT_IMPLEMENTED",
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED"
+  }
+}

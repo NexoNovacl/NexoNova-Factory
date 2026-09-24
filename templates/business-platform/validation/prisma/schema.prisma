@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client"
+  output = "../../src/generated/prisma"
+  moduleFormat = "esm"
+  importFileExtension = "js"
+}
+datasource db {
+  provider = "postgresql"
+}
+// Technical fixture only; never a business entity or public API.
+model TechnicalSmoke {
+  id String @id
+  marker String
+}

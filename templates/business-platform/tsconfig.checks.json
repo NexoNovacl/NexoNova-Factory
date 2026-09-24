@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "outDir": "build-checks",
+    "rootDir": "."
+  },
+  "include": [
+    "scripts/db-check.ts",
+    "src/server/db.ts",
+    "src/generated/**/*.ts"
+  ]
+}

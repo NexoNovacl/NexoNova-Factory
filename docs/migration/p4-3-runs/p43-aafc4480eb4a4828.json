@@ -1,0 +1,112 @@
+{
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-versions",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-prepare-prisma-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "ephemeralSecretMatches": false,
+  "error": "InfrastructureError: Step failed: versions",
+  "format": "nexonova.business-infrastructure-receipt.v1",
+  "gates": {
+    "authentication": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "autonomy": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "build-tests": {
+      "scope": "technical-core-only",
+      "status": "FAIL"
+    },
+    "cleanup": {
+      "status": "PASS"
+    },
+    "compatibility": {
+      "scope": "P4.3-only; Better Auth NOT_IMPLEMENTED",
+      "status": "FAIL"
+    },
+    "database-migrations": {
+      "status": "FAIL"
+    },
+    "generation": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "module-crud": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "resource-authorization": {
+      "status": "NOT_IMPLEMENTED"
+    }
+  },
+  "originalCoreUnchanged": true,
+  "readiness": "BLOCKED",
+  "resources": [
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-install"
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-prepare-prisma-engine"
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-generate"
+    },
+    {
+      "kind": "container",
+      "name": "p43-aafc4480eb4a4828-versions"
+    }
+  ],
+  "runId": "p43-aafc4480eb4a4828",
+  "scope": "P4.3-technical-core-only",
+  "status": "FAIL",
+  "steps": [
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "install",
+      "output": "\nadded 147 packages in 1m\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2\nnpm notice To update run: npm install -g npm@12.0.2\nnpm notice\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "prepare-prisma-engine",
+      "output": "prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "generate",
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nPrisma schema loaded from validation/prisma/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/prisma in 37ms\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": 0,
+      "name": "versions",
+      "output": "node:internal/modules/cjs/loader:671\n      throw e;\n      ^\n\nError [ERR_PACKAGE_PATH_NOT_EXPORTED]: Package subpath './package.json' is not defined by \"exports\" in /work/node_modules/@prisma/adapter-pg/package.json\n    at exportsNotFound (node:internal/modules/esm/resolve:314:10)\n    at packageExportsResolve (node:internal/modules/esm/resolve:661:9)\n    at resolveExports (node:internal/modules/cjs/loader:664:36)\n    at Function._findPath (node:internal/modules/cjs/loader:731:31)\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1415:27)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)\n    at Function._load (node:internal/modules/cjs/loader:1216:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Module.require (node:internal/modules/cjs/loader:1527:12) {\n  code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'\n}\n\nNode.js v22.23.2\n",
+      "passed": false
+    }
+  ],
+  "temporaryDirectoryRemoved": true
+}

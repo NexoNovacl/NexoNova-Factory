@@ -1,0 +1,553 @@
+{
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compose-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compose-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-read-after-app-restart",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-restart-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-start-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-write",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-db-unavailable",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-migrate-direct",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migration-swapped",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-swapped",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-env-missing",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-ddl",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migrate-again",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migrate-first",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-b-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-b-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p43-c51ac15cd00c4dd1-b-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p43-c51ac15cd00c4dd1-b-net",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-a-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-a-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p43-c51ac15cd00c4dd1-a-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p43-c51ac15cd00c4dd1-a-net",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-build",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compile-checks",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-unit",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-typecheck",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-versions",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-prepare-prisma-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "ephemeralSecretMatches": false,
+  "error": "InfrastructureError: Step failed: compose-up",
+  "format": "nexonova.business-infrastructure-receipt.v1",
+  "gates": {
+    "authentication": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "autonomy": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "build-tests": {
+      "scope": "technical-core-only",
+      "status": "FAIL"
+    },
+    "cleanup": {
+      "status": "PASS"
+    },
+    "compatibility": {
+      "scope": "P4.3-only; Better Auth NOT_IMPLEMENTED",
+      "status": "FAIL"
+    },
+    "database-migrations": {
+      "status": "FAIL"
+    },
+    "generation": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "module-crud": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "resource-authorization": {
+      "status": "NOT_IMPLEMENTED"
+    }
+  },
+  "originalCoreUnchanged": true,
+  "postgresVersion": "16.15 (Debian 16.15-1.pgdg12+2)",
+  "readiness": "BLOCKED",
+  "resources": [
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-install"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-prepare-prisma-engine"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-generate"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-versions"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-typecheck"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-unit"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compile-checks"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-build"
+    },
+    {
+      "kind": "network",
+      "name": "p43-c51ac15cd00c4dd1-a-net"
+    },
+    {
+      "kind": "volume",
+      "name": "p43-c51ac15cd00c4dd1-a-data"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-a-db-volume-init"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-a-db"
+    },
+    {
+      "kind": "network",
+      "name": "p43-c51ac15cd00c4dd1-b-net"
+    },
+    {
+      "kind": "volume",
+      "name": "p43-c51ac15cd00c4dd1-b-data"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-b-db-volume-init"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-b-db"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migrate-first"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migrate-again"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-ddl"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-env-missing"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-swapped"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-migration-swapped"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-runtime-migrate-direct"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-db-unavailable"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-write"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-start-app"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-restart-app"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-read-after-app-restart"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compose-db"
+    },
+    {
+      "kind": "container",
+      "name": "p43-c51ac15cd00c4dd1-compose-app"
+    }
+  ],
+  "runId": "p43-c51ac15cd00c4dd1",
+  "scope": "P4.3-technical-core-only",
+  "status": "FAIL",
+  "steps": [
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "install",
+      "output": "\nadded 147 packages in 1m\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2\nnpm notice To update run: npm install -g npm@12.0.2\nnpm notice\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "prepare-prisma-engine",
+      "output": "prisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "generate",
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nPrisma schema loaded from validation/prisma/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/prisma in 30ms\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "versions",
+      "output": "{\"node\":\"v22.23.2\",\"next\":\"15.5.25\",\"react\":\"19.2.8\",\"typescript\":\"5.9.3\",\"prisma\":\"7.5.0\",\"client\":\"7.5.0\",\"adapter\":\"7.5.0\",\"pg\":\"8.16.3\"}\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "typecheck",
+      "output": "\n> business-platform-core@0.1.0 typecheck\n> tsc --noEmit\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "unit",
+      "output": "\n> business-platform-core@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: technical schema has no auth or business model\nok 1 - technical schema has no auth or business model\n  ---\n  duration_ms: 1.465559\n  type: 'test'\n  ...\n# Subtest: initial migration is fixed and contains no role credentials\nok 2 - initial migration is fixed and contains no role credentials\n  ---\n  duration_ms: 0.319663\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 82.919514\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "compile-checks",
+      "output": "\n> business-platform-core@0.1.0 compile:checks\n> tsc -p tsconfig.checks.json\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "build",
+      "output": "\n> business-platform-core@0.1.0 build\n> next build\n\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 6.2s\n   Linting and checking validity of types ...\n\n   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.\n   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:\n\n   \t- allowJs was set to true\n   \t- incremental was set to true\n\n   The following mandatory changes were made to your tsconfig.json:\n\n   \t- isolatedModules was set to true (requirement for SWC / Babel)\n\n   Collecting page data ...\n   Generating static pages (0/4) ...\n   Generating static pages (1/4) \n   Generating static pages (2/4) \n   Generating static pages (3/4) \n \u2713 Generating static pages (4/4)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                      199 B         103 kB\n\u2514 \u25cb /_not-found                            993 B         104 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.91 kB\n\n\n\u25cb  (Static)  prerendered as static content\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "a-volume-init",
+      "output": "",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "a-db-start",
+      "output": "23a681eec79278814518f58c052dddb1e092bd2d8c8c80d249035ced40df6de0\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "a-roles",
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "b-volume-init",
+      "output": "",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "b-db-start",
+      "output": "7a42117a7ff59267b42525449c94774e0ca23f838665fe2b463a4a216a224da6\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "b-roles",
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "postgres-version",
+      "output": "16.15 (Debian 16.15-1.pgdg12+2)\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "empty-db",
+      "output": "0\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "migrate-first",
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nPrisma schema loaded from validation/prisma/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_a\", schema \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nApplying migration `00000000000000_technical_smoke`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000000_technical_smoke/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "migrate-again",
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nPrisma schema loaded from validation/prisma/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_a\", schema \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\n\nNo pending migrations to apply.\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "migration-stable",
+      "output": "one stable completed migration",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "runtime-grants",
+      "output": "GRANT\nGRANT\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "runtime-ddl",
+      "output": "DDL_DENIED_42501\n",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": "nonzero",
+      "name": "env-missing",
+      "output": "DB_CHECK_FAILED; details withheld\n",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": "nonzero",
+      "name": "runtime-swapped",
+      "output": "DB_CHECK_FAILED; details withheld\n",
+      "passed": true
+    },
+    {
+      "exitCode": 2,
+      "expected": "nonzero",
+      "name": "migration-swapped",
+      "output": "MIGRATION_ENV_REJECTED; values withheld\n",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": "nonzero",
+      "name": "runtime-migrate-direct",
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nprisma:warn Prisma failed to detect the libssl/openssl version to use, and may not work as expected. Defaulting to \"openssl-1.1.x\".\nPlease manually install OpenSSL via `apt-get update -y && apt-get install -y openssl` and try installing Prisma again. If you're running Prisma on Docker, add this command to your Dockerfile, or switch to an image that already has OpenSSL installed.\nPrisma schema loaded from validation/prisma/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_b\", schema \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nError: ERROR: no schema has been selected to create in\n   0: sql_schema_connector::sql_migration_persistence::initialize\n           with namespaces=None filters=SchemaFilter { external_tables: [], external_enums: [] }\n             at schema-engine/connectors/sql-schema-connector/src/sql_migration_persistence.rs:17\n   1: schema_core::state::ApplyMigrations\n             at schema-engine/core/src/state.rs:255\n\n",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": "nonzero",
+      "name": "db-unavailable",
+      "output": "DB_CHECK_FAILED; details withheld\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "write",
+      "output": "{\"status\":\"PASS\",\"operation\":\"write\",\"role\":\"bpruntime\"}\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "start-app",
+      "output": "CORE_HTTP_PASS\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "restart-app",
+      "output": "CORE_HTTP_PASS\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "read-after-app-restart",
+      "output": "{\"status\":\"PASS\",\"operation\":\"read\",\"role\":\"bpruntime\"}\n",
+      "passed": true
+    },
+    {
+      "exitCode": 0,
+      "expected": 0,
+      "name": "compose-config",
+      "output": "",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "expected": 0,
+      "name": "compose-up",
+      "output": " Container p43-c51ac15cd00c4dd1-compose-db Creating \n Container p43-c51ac15cd00c4dd1-compose-db Created \n Container p43-c51ac15cd00c4dd1-compose-app Creating \n service:app:1 Error response from daemon: invalid mount path: 'size=128m' mount path must be absolute \nError response from daemon: invalid mount path: 'size=128m' mount path must be absolute\n",
+      "passed": false
+    }
+  ],
+  "temporaryDirectoryRemoved": true,
+  "versions": {
+    "adapter": "7.5.0",
+    "client": "7.5.0",
+    "next": "15.5.25",
+    "node": "v22.23.2",
+    "pg": "8.16.3",
+    "prisma": "7.5.0",
+    "react": "19.2.8",
+    "typescript": "5.9.3"
+  }
+}

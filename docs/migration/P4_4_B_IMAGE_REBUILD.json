@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "scope": "image-reproduction-only",
+  "manifestDigest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+  "configDigest": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a",
+  "builds": [
+    {
+      "buildx.build.provenance": {
+        "builder": {
+          "id": ""
+        },
+        "buildType": "https://mobyproject.org/buildkit@v1",
+        "materials": [
+          {
+            "uri": "pkg:docker/node?digest=sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5&platform=linux%2Famd64",
+            "digest": {
+              "sha256": "83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5"
+            }
+          }
+        ],
+        "invocation": {
+          "configSource": {
+            "entryPoint": "Dockerfile"
+          },
+          "parameters": {
+            "frontend": "dockerfile.v0",
+            "args": {
+              "build-arg:SOURCE_DATE_EPOCH": "1789948800",
+              "force-network-mode": "none",
+              "no-cache": ""
+            },
+            "locals": [
+              {
+                "name": "context"
+              },
+              {
+                "name": "dockerfile"
+              }
+            ],
+            "root": {
+              "configSource": {
+                "path": "Dockerfile"
+              },
+              "request": {
+                "args": {
+                  "build-arg:SOURCE_DATE_EPOCH": "1789948800",
+                  "force-network-mode": "none",
+                  "no-cache": ""
+                }
+              }
+            },
+            "compatibilityVersion": 30
+          },
+          "environment": {
+            "dockerfileVersion": "1.27.0",
+            "platform": "linux/amd64"
+          }
+        }
+      },
+      "buildx.build.ref": "default/default/1mxoqr5f0fgv5ipzeoyh24y55",
+      "containerimage.config.digest": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a",
+      "containerimage.descriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+        "size": 1798,
+        "annotations": {
+          "org.opencontainers.image.created": "2026-09-21T00:00:00Z"
+        },
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      },
+      "containerimage.digest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+      "image.name": "docker.io/library/nexonova-p44b-node-openssl:0.1.0"
+    },
+    {
+      "buildx.build.provenance": {
+        "builder": {
+          "id": ""
+        },
+        "buildType": "https://mobyproject.org/buildkit@v1",
+        "materials": [
+          {
+            "uri": "pkg:docker/node?digest=sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5&platform=linux%2Famd64",
+            "digest": {
+              "sha256": "83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5"
+            }
+          }
+        ],
+        "invocation": {
+          "configSource": {
+            "entryPoint": "Dockerfile"
+          },
+          "parameters": {
+            "frontend": "dockerfile.v0",
+            "args": {
+              "build-arg:SOURCE_DATE_EPOCH": "1789948800",
+              "force-network-mode": "none",
+              "no-cache": ""
+            },
+            "locals": [
+              {
+                "name": "context"
+              },
+              {
+                "name": "dockerfile"
+              }
+            ],
+            "root": {
+              "configSource": {
+                "path": "Dockerfile"
+              },
+              "request": {
+                "args": {
+                  "build-arg:SOURCE_DATE_EPOCH": "1789948800",
+                  "force-network-mode": "none",
+                  "no-cache": ""
+                }
+              }
+            },
+            "compatibilityVersion": 30
+          },
+          "environment": {
+            "dockerfileVersion": "1.27.0",
+            "platform": "linux/amd64"
+          }
+        }
+      },
+      "buildx.build.ref": "default/default/fxcvxwtg2cts23wuq36mnyotb",
+      "containerimage.config.digest": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a",
+      "containerimage.descriptor": {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "digest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+        "size": 1798,
+        "annotations": {
+          "org.opencontainers.image.created": "2026-09-21T00:00:00Z"
+        },
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      },
+      "containerimage.digest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+      "image.name": "docker.io/library/nexonova-p44b-node-openssl:0.1.0"
+    }
+  ],
+  "publicPackagesChecked": 3
+}

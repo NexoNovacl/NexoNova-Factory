@@ -1,0 +1,1 @@
+:root { --brand-primary: #24506a; --ink: #172033; --surface: #f8fafc; } * { box-sizing: border-box; } body { margin: 0; font-family: system-ui, sans-serif; color: var(--ink); background: var(--surface); }

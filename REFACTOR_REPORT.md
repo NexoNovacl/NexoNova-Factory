@@ -1,3 +1,7 @@
+# Estado vigente — P4.3 técnica, para revisión humana
+
+P4.2 aprobada formalmente. P4.3 implementa el core business separado y demuestra Next/Prisma7/PostgreSQL16/Compose, migraciones estables, runtime sin DDL, persistencia, negativos y cleanup. **P4.3 PASS_WITH_LIMITATIONS; readiness business global BLOCKED.** [Informe y evidencia](docs/migration/P4_3.md). 250 pruebas de Factory aprobadas sin skips y 2 del core web; typecheck/build/arranque reales. P3 (105 hashes), P4.2, prototipo y productos conservados. Better Auth/auth/usuarios de aplicación/InternalRequest/generación/autonomía no implementados. P4.4 no iniciada; requiere aprobación humana. Advertencia OpenSSL, defaults de build y límites de Compose documentados. Los encabezados siguientes conservan historia, no el estado actual.
+
 # Estado vigente — P4.2 contractual
 
 P4.1 aprobada. P4.2 implementa únicamente contratos, catálogo cerrado, validadores y plan determinista para internal-requests; [informe](docs/business-platform/P4_2_CONTRACTS.md). Readiness BLOCKED y gates NOT_IMPLEMENTED: no aplicación business ni infraestructura. P4.3 no iniciada. Baseline P3 original y productos preservados; ningún hash protegido actualizado. Los estados anteriores se conservan como historial.

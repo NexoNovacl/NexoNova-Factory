@@ -1,0 +1,191 @@
+{
+  "runId": "p43-48423467e3424fa8",
+  "reason": "Copied Compose labels retained P4.3 key; exact recorded resources checked against run ownership before removal",
+  "resources": [
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-invalid-migration",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-second-db-no-first-data",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-second-db-migrate",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-no-other-volume",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-cross-network",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-compose-persistence",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-compose-http",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-compose-app",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-compose-db",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-read-after-app-restart",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-restart-app",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-start-app",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-write",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-db-unavailable",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-runtime-migrate-direct",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-migration-swapped",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-runtime-swapped",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-env-missing",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-runtime-ddl",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-migrate-again",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-migrate-first",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-b-db",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-b-db-volume-init",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p43-48423467e3424fa8-b-data",
+      "absent": true
+    },
+    {
+      "kind": "network",
+      "name": "p43-48423467e3424fa8-b-net",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-a-db",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-a-db-volume-init",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p43-48423467e3424fa8-a-data",
+      "absent": true
+    },
+    {
+      "kind": "network",
+      "name": "p43-48423467e3424fa8-a-net",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-build",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-compile-checks",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-unit",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-typecheck",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-versions",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-generate",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-prepare-prisma-engine",
+      "absent": true
+    },
+    {
+      "kind": "container",
+      "name": "p43-48423467e3424fa8-install",
+      "absent": true
+    }
+  ]
+}

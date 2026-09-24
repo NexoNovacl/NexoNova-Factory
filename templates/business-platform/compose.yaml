@@ -1,0 +1,82 @@
+# Local technical core only. Dependencies/client/build must be prepared explicitly.
+services:
+  app:
+    image: node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5
+    pull_policy: never
+    container_name: ${COMPOSE_PROJECT_NAME:?}-app
+    labels:
+      nexonova.p43.run: ${VALIDATION_RUN_ID:-manual}
+    user: "${APP_UID:?}:${APP_GID:?}"
+    working_dir: /app
+    entrypoint: [node]
+    command: [node_modules/next/dist/bin/next, start, --hostname, 0.0.0.0, --port, "3000"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?}
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+        read_only: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+    cpus: 2
+    pids_limit: 256
+    tmpfs: ["/tmp:rw,nosuid,nodev,size=128m"]
+    networks: [private]
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67
+    pull_policy: never
+    container_name: ${COMPOSE_PROJECT_NAME:?}-db
+    labels:
+      nexonova.p43.run: ${VALIDATION_RUN_ID:-manual}
+    user: "999:999"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ${POSTGRES_DB:?}
+      POSTGRES_PASSWORD: ${POSTGRES_ADMIN_PASSWORD:?}
+      POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256 --auth-local=trust
+      PGDATA: /var/lib/postgresql/data/pgdata
+    command: [-c, log_statement=none, -c, log_min_error_statement=panic]
+    volumes: [database:/var/lib/postgresql/data]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    cpus: 1
+    pids_limit: 128
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=64m
+      - /var/run/postgresql:rw,nosuid,nodev,uid=999,gid=999,size=16m
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -h 127.0.0.1 -U postgres -d "$$POSTGRES_DB"']
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks: [private]
+  volume-init:
+    profiles: [prepare]
+    image: postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67
+    pull_policy: never
+    user: "0:0"
+    entrypoint: [chown, "999:999", /data]
+    volumes: [database:/data]
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    cap_add: [CHOWN]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    cpus: 1
+    pids_limit: 32
+networks:
+  private:
+    internal: true
+volumes:
+  database:

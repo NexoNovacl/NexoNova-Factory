@@ -1,0 +1,215 @@
+{
+  "format": "nexonova.business-infrastructure-receipt.v1",
+  "scope": "P4.4-B OpenSSL base matrix, without Better Auth",
+  "status": "FAIL",
+  "readiness": "BLOCKED",
+  "steps": [
+    {
+      "name": "install",
+      "exitCode": 125,
+      "expected": 0,
+      "passed": false,
+      "output": "docker: Error response from daemon: No such image: sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a\n\nRun 'docker run --help' for more information\n"
+    }
+  ],
+  "runId": "p43-813c8c8fe1f64a90",
+  "coreFiles": [
+    {
+      "path": ".dockerignore",
+      "sha256": "sha256:0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "sha256:19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2"
+    },
+    {
+      "path": "README.md",
+      "sha256": "sha256:b2f214238c1e27199950bfa2a7067e5d6ee0df627244e0378a93679ffe11717b"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "sha256:c39c9ad7eb4fea2a2f8566f11b6ae851956fa4b4a4c119f54d0b18163b2f6510"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha256": "sha256:879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "sha256:6f5e4007bcda6a30528428cf185f6151ef97a6b190e044be3640d8d694fd04d2"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "sha256:1cbdd3a0caff587fdb2b6f7f214f68538f01d1854026ef29d54a9b371ebedf1c"
+    },
+    {
+      "path": "package.json",
+      "sha256": "sha256:b4477f6e448ee18da41750a358eed6aba63d9c63200cbb99781710f9f9783cf8"
+    },
+    {
+      "path": "prisma.config.ts",
+      "sha256": "sha256:896fe966df5231b20e038d2f05e58d9c2f87330a5f52577efc1fff856dbf79e8"
+    },
+    {
+      "path": "scripts/db-check.ts",
+      "sha256": "sha256:074a0219c053346708c0351e3baf9d4dde1da6697e585ae098e814542aca6b58"
+    },
+    {
+      "path": "scripts/migrate-check.mjs",
+      "sha256": "sha256:8ed56e3348db76253c9d9fa3e978cf23ed77a59ad22c7cc3b2ad586f3360603c"
+    },
+    {
+      "path": "scripts/start-check.mjs",
+      "sha256": "sha256:9b989dfd2d028a8cf8e1511cb3969200b2564867a0c6c4222b33767acf73fec0"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "sha256:db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "sha256:015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35"
+    },
+    {
+      "path": "src/app/page.module.css",
+      "sha256": "sha256:e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "sha256:1b298225093a29aa934baabd53e82b283b8807a48ba12bc5d4ceebf76132ee47"
+    },
+    {
+      "path": "src/server/db.ts",
+      "sha256": "sha256:4de3dd6441646c6cfb78b508ea7f9837352f000a0783c2461dbb6831556bb2fa"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "sha256:43b7eab9ad46b4a1a6ea75470c63c6e95f3e16e8e55dc219b3829cabaecc127f"
+    },
+    {
+      "path": "tsconfig.checks.json",
+      "sha256": "sha256:645301b012a283919abc114aeb88d4b0bfc0291c4204df5e59580ad93768bd65"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "sha256:2712a20253c200712f6f6488c9c7970b839336a25c50de2c73dd817a57673687"
+    },
+    {
+      "path": "validation/prisma/migrations/00000000000000_technical_smoke/migration.sql",
+      "sha256": "sha256:4d939412f56aa5f1a0fb07a8fd8f3ae2b2cb3293ed1d02cd5e56384bcfdacc49"
+    },
+    {
+      "path": "validation/prisma/migrations/migration_lock.toml",
+      "sha256": "sha256:1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "validation/prisma/schema.prisma",
+      "sha256": "sha256:2846edb96c4594e24f481425ccf762358047ffa15616d3fcbc699903c7533a2a"
+    },
+    {
+      "path": "validation/runtime-grants.sql",
+      "sha256": "sha256:7c5a9698797ab7b9fd6d47011ca0923ba7963eedc4b857a4de0b514e634628c1"
+    }
+  ],
+  "validatorSha256": "sha256:4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1",
+  "images": {
+    "node": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a",
+    "postgres": "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67"
+  },
+  "error": "InfrastructureError: Step failed: install",
+  "interrupted": false,
+  "resources": [
+    {
+      "kind": "container",
+      "name": "p43-813c8c8fe1f64a90-install"
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p43-813c8c8fe1f64a90-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "gates": {
+    "compatibility": {
+      "status": "FAIL",
+      "scope": "P4.3-only; Better Auth NOT_IMPLEMENTED"
+    },
+    "database-migrations": {
+      "status": "FAIL"
+    },
+    "build-tests": {
+      "status": "FAIL",
+      "scope": "technical-core-only"
+    },
+    "cleanup": {
+      "status": "PASS"
+    },
+    "authentication": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "resource-authorization": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "module-crud": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "generation": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "autonomy": {
+      "status": "NOT_IMPLEMENTED"
+    }
+  },
+  "originalCoreUnchanged": true,
+  "ephemeralSecretMatches": false,
+  "temporaryDirectoryRemoved": true,
+  "imageLock": {
+    "format": "nexonova.node-openssl-image.v1",
+    "base": "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5",
+    "sourceDateEpoch": 1789948800,
+    "platform": "linux/amd64",
+    "packages": [
+      {
+        "file": "ca-certificates_20250419~deb12u1_all.deb",
+        "sha256": "62b08a77d985d4253894b1f69aebda5925034ca4e294add364167fad8cb64a44",
+        "Package": "ca-certificates",
+        "Version": "20250419~deb12u1",
+        "Architecture": "all",
+        "Depends": "openssl (>= 1.1.1), debconf (>= 0.5) | debconf-2.0",
+        "Filename": "pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb",
+        "url": "https://snapshot.debian.org/archive/debian-security/20260921T000000Z/pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb"
+      },
+      {
+        "file": "libssl3_3.0.20-1~deb12u2_amd64.deb",
+        "sha256": "89be24b41bff568ee6e7caf5680a3d808e80315ed92e407056ce0fa7a5bda025",
+        "Package": "libssl3",
+        "Version": "3.0.20-1~deb12u2",
+        "Architecture": "amd64",
+        "Depends": "libc6 (>= 2.34)",
+        "Filename": "pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb",
+        "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb"
+      },
+      {
+        "file": "openssl_3.0.20-1~deb12u2_amd64.deb",
+        "sha256": "4d218561dc838de081de97f54584c4a29e77e26c7ed9fe3440d776d8e6071bf9",
+        "Package": "openssl",
+        "Version": "3.0.20-1~deb12u2",
+        "Architecture": "amd64",
+        "Depends": "libc6 (>= 2.34), libssl3 (>= 3.0.9)",
+        "Filename": "pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb",
+        "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb"
+      }
+    ],
+    "executionReference": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a",
+    "manifestDigest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "recipeSha256": "8f0e0a59f8af564f4f938a733ecc1da90c59d7271bfd27b6f05b8f4891cbf07a",
+    "reproducibility": "two-no-cache-builds-identical-manifest-and-config",
+    "buildxVersion": "0.37.1",
+    "dockerfileFrontendVersion": "1.27.0"
+  },
+  "wrapperSha256": "b37357faf4e9ab9cdca84d250b97195a5466a1418ce4c0e9b039daf3f1ef5e7b",
+  "historicalReceiptsModified": false,
+  "opensslDetectionWarning": false
+}

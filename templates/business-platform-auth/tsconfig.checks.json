@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "outDir": "build-checks",
+    "rootDir": "."
+  },
+  "include": [
+    "scripts/bootstrap-admin.ts",
+    "src/server/policy.ts",
+    "src/generated/**/*.ts",
+    "validation/create-member.ts"
+  ]
+}

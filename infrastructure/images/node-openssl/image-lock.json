@@ -1,0 +1,45 @@
+{
+  "format": "nexonova.node-openssl-image.v1",
+  "base": "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5",
+  "sourceDateEpoch": 1789948800,
+  "platform": "linux/amd64",
+  "packages": [
+    {
+      "file": "ca-certificates_20250419~deb12u1_all.deb",
+      "sha256": "62b08a77d985d4253894b1f69aebda5925034ca4e294add364167fad8cb64a44",
+      "Package": "ca-certificates",
+      "Version": "20250419~deb12u1",
+      "Architecture": "all",
+      "Depends": "openssl (>= 1.1.1), debconf (>= 0.5) | debconf-2.0",
+      "Filename": "pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb",
+      "url": "https://snapshot.debian.org/archive/debian-security/20260921T000000Z/pool/updates/main/c/ca-certificates/ca-certificates_20250419~deb12u1_all.deb"
+    },
+    {
+      "file": "libssl3_3.0.20-1~deb12u2_amd64.deb",
+      "sha256": "89be24b41bff568ee6e7caf5680a3d808e80315ed92e407056ce0fa7a5bda025",
+      "Package": "libssl3",
+      "Version": "3.0.20-1~deb12u2",
+      "Architecture": "amd64",
+      "Depends": "libc6 (>= 2.34)",
+      "Filename": "pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb",
+      "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/libssl3_3.0.20-1~deb12u2_amd64.deb"
+    },
+    {
+      "file": "openssl_3.0.20-1~deb12u2_amd64.deb",
+      "sha256": "4d218561dc838de081de97f54584c4a29e77e26c7ed9fe3440d776d8e6071bf9",
+      "Package": "openssl",
+      "Version": "3.0.20-1~deb12u2",
+      "Architecture": "amd64",
+      "Depends": "libc6 (>= 2.34), libssl3 (>= 3.0.9)",
+      "Filename": "pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb",
+      "url": "https://snapshot.debian.org/archive/debian/20260921T000000Z/pool/main/o/openssl/openssl_3.0.20-1~deb12u2_amd64.deb"
+    }
+  ],
+  "executionReference": "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+  "manifestDigest": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+  "recipeSha256": "8f0e0a59f8af564f4f938a733ecc1da90c59d7271bfd27b6f05b8f4891cbf07a",
+  "reproducibility": "two-no-cache-builds-identical-manifest-and-config",
+  "buildxVersion": "0.37.1",
+  "dockerfileFrontendVersion": "1.27.0",
+  "configDigest": "sha256:fac91b89cb39d1090f9afe0730810e05bb1d43686096e71b79f3fbabbffd338a"
+}

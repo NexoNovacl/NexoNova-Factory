@@ -1,0 +1,30 @@
+{
+  "runId": "p44b-4b8730c834f943f2",
+  "status": "INTERRUPTED",
+  "reason": "Runner no longer present after turn interruption; no completed receipt. Prior streamed checks are not a final PASS.",
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p44b-4b8730c834f943f2-app",
+      "removed": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-4b8730c834f943f2-auth-db",
+      "removed": true
+    },
+    {
+      "kind": "network",
+      "name": "p44b-4b8730c834f943f2-auth-net",
+      "removed": true
+    },
+    {
+      "kind": "volume",
+      "name": "p44b-4b8730c834f943f2-auth-data",
+      "removed": true
+    }
+  ],
+  "temporaryDirectoriesRemoved": 1,
+  "authentication": "NOT_VALIDATED",
+  "readiness": "BLOCKED"
+}

@@ -1,0 +1,124 @@
+{
+  "phase": "P4.3",
+  "readiness": "BLOCKED",
+  "baselineSha256": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c",
+  "baselineFiles": 105,
+  "changedBaselineFiles": [],
+  "changedP42Implementation": [],
+  "products": {
+    "nexonova-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    },
+    "synthetic-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exitCode": 0,
+      "output": "structural_validation=complete\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_business_contracts.py"
+      ],
+      "exitCode": 0,
+      "output": "contracts=valid; planHash=sha256:6dd2027e5b74d65f3b1afe0eb1378ff6744112b8ff9bc789003fb852631d21cc; execution=BLOCKED; futureGates=NOT_IMPLEMENTED\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_product_inputs.py",
+        "--pilot",
+        "config/pilots/nexonova"
+      ],
+      "exitCode": 0,
+      "output": "product_inputs=valid; source=verified; generation=not-authorized\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "factory.cli",
+        "--help"
+      ],
+      "exitCode": 0,
+      "output": "usage: python3 -m factory.cli [-h]\n                              {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run} ...\n\nNexoNova Factory — núcleo local; bootstrap legado bloqueado\n\npositional arguments:\n  {init-project,run,verify,list,init-workspace,approve-tool,run-tool,import-legacy-reference,recover-run}\n\noptions:\n  -h, --help            show this help message and exit\n"
+    }
+  ],
+  "prototypeFiles": 99,
+  "changedPrototypeFiles": [],
+  "fullSuite": {
+    "command": "NEXONOVA_TEST_DOCKER=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider",
+    "exitCode": 0,
+    "result": "250 passed in 23.07s",
+    "skipped": 0,
+    "source": "Captured terminal result of this P4.3 session"
+  },
+  "environment": {
+    "socket": "unix:///var/run/docker.sock",
+    "remoteDocker": false,
+    "dockerVersion": "29.8.0 / 29.8.0",
+    "composeVersion": "5.5.1",
+    "platform": "linux/x86_64",
+    "remainingRunResources": {
+      "container": [],
+      "network": [],
+      "volume": []
+    },
+    "images": {
+      "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5": {
+        "imageId": "sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5",
+        "architecture": "amd64",
+        "os": "linux",
+        "repoDigests": [
+          "node@sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5"
+        ]
+      },
+      "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67": {
+        "imageId": "sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67",
+        "architecture": "amd64",
+        "os": "linux",
+        "repoDigests": [
+          "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67"
+        ]
+      }
+    }
+  },
+  "preparationDirectoryRemoved": true
+}

@@ -1,0 +1,91 @@
+{
+  "phase": "P4.4-B",
+  "status": "FAIL",
+  "readiness": "BLOCKED",
+  "steps": [
+    {
+      "name": "install",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\nadded 168 packages in 20s\n"
+    },
+    {
+      "name": "engine",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/auth in 105ms\n\n"
+    },
+    {
+      "name": "compile",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 compile:checks\n> tsc -p tsconfig.checks.json\n\n"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 typecheck\n> tsc --noEmit\n\n"
+    },
+    {
+      "name": "build",
+      "exitCode": 1,
+      "expected": 0,
+      "passed": false,
+      "output": "\n> business-platform-auth-core@0.1.0 build\n> next build\n\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\nFailed to compile.\n\n./src/server/auth.ts\nModule not found: Can't resolve '../generated/auth/client.js'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\nImport trace for requested module:\n./src/app/admin-check/page.tsx\n\n./src/server/auth.ts\nModule not found: Can't resolve './policy.js'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\nImport trace for requested module:\n./src/app/admin-check/page.tsx\n\n./src/server/http.ts\nModule not found: Can't resolve './auth.js'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\nImport trace for requested module:\n./src/app/api/auth-check/route.ts\n\n./src/server/http.ts\nModule not found: Can't resolve './policy.js'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\nImport trace for requested module:\n./src/app/api/auth-check/route.ts\n\n\n> Build failed because of webpack errors\n"
+    }
+  ],
+  "runId": "p44b-cf0cfef0c0a241d3",
+  "error": "InfrastructureError: validation stopped; sensitive details withheld",
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-build",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-typecheck",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-compile",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p44b-cf0cfef0c0a241d3-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true,
+  "gates": {
+    "authentication": "NOT_IMPLEMENTED",
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED"
+  }
+}

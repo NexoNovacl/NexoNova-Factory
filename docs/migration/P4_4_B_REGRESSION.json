@@ -1,0 +1,36 @@
+{
+  "scope": "Factory regression; historical P2 Docker evidence intentionally not rewritten",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exitCode": 0,
+      "output": "........................................................................ [ 28%]\n...........................................................ssssssssss... [ 57%]\n........................................................................ [ 86%]\n..................................                                       [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_p2_docker.py:86: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [3] tests/test_p2_docker.py:142: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [2] tests/test_p2_docker.py:177: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\nSKIPPED [4] tests/test_p2_docker.py:240: NOT_EXECUTED: opt in to real local Docker using NEXONOVA_TEST_DOCKER=1\n240 passed, 10 skipped in 8.21s\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_business_contracts.py"
+      ],
+      "exitCode": 0,
+      "output": "contracts=valid; planHash=sha256:6dd2027e5b74d65f3b1afe0eb1378ff6744112b8ff9bc789003fb852631d21cc; execution=BLOCKED; futureGates=NOT_IMPLEMENTED\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/validate_repository.py"
+      ],
+      "exitCode": 0,
+      "output": "structural_validation=complete\n"
+    }
+  ]
+}

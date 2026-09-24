@@ -1,0 +1,118 @@
+{
+  "format": "nexonova.business-core-inventory.v1",
+  "scope": "P4.3 technical fixture, not complete business capability",
+  "coreVersion": "0.1.0",
+  "receiptFormat": "nexonova.business-infrastructure-receipt.v1",
+  "runId": "p43-ece557fdd75e4404",
+  "files": [
+    {
+      "path": "factory/business_infrastructure.py",
+      "sha256": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1"
+    },
+    {
+      "path": "scripts/validate_business_infrastructure.py",
+      "sha256": "75e5162c96547a19eb651fd43ab1447d531c2c7eedcd8695982a062740f436bf"
+    },
+    {
+      "path": "templates/business-platform/.dockerignore",
+      "sha256": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37"
+    },
+    {
+      "path": "templates/business-platform/.gitignore",
+      "sha256": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2"
+    },
+    {
+      "path": "templates/business-platform/README.md",
+      "sha256": "b2f214238c1e27199950bfa2a7067e5d6ee0df627244e0378a93679ffe11717b"
+    },
+    {
+      "path": "templates/business-platform/compose.yaml",
+      "sha256": "637fc09335fcc228e4e4bf1f70aaace3763774393b36503de168e21e02c1e581"
+    },
+    {
+      "path": "templates/business-platform/next-env.d.ts",
+      "sha256": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc"
+    },
+    {
+      "path": "templates/business-platform/next.config.ts",
+      "sha256": "6f5e4007bcda6a30528428cf185f6151ef97a6b190e044be3640d8d694fd04d2"
+    },
+    {
+      "path": "templates/business-platform/package-lock.json",
+      "sha256": "1cbdd3a0caff587fdb2b6f7f214f68538f01d1854026ef29d54a9b371ebedf1c"
+    },
+    {
+      "path": "templates/business-platform/package.json",
+      "sha256": "b4477f6e448ee18da41750a358eed6aba63d9c63200cbb99781710f9f9783cf8"
+    },
+    {
+      "path": "templates/business-platform/prisma.config.ts",
+      "sha256": "896fe966df5231b20e038d2f05e58d9c2f87330a5f52577efc1fff856dbf79e8"
+    },
+    {
+      "path": "templates/business-platform/scripts/db-check.ts",
+      "sha256": "074a0219c053346708c0351e3baf9d4dde1da6697e585ae098e814542aca6b58"
+    },
+    {
+      "path": "templates/business-platform/scripts/migrate-check.mjs",
+      "sha256": "8ed56e3348db76253c9d9fa3e978cf23ed77a59ad22c7cc3b2ad586f3360603c"
+    },
+    {
+      "path": "templates/business-platform/scripts/start-check.mjs",
+      "sha256": "9b989dfd2d028a8cf8e1511cb3969200b2564867a0c6c4222b33767acf73fec0"
+    },
+    {
+      "path": "templates/business-platform/src/app/globals.css",
+      "sha256": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19"
+    },
+    {
+      "path": "templates/business-platform/src/app/layout.tsx",
+      "sha256": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35"
+    },
+    {
+      "path": "templates/business-platform/src/app/page.module.css",
+      "sha256": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1"
+    },
+    {
+      "path": "templates/business-platform/src/app/page.tsx",
+      "sha256": "1b298225093a29aa934baabd53e82b283b8807a48ba12bc5d4ceebf76132ee47"
+    },
+    {
+      "path": "templates/business-platform/src/server/db.ts",
+      "sha256": "4de3dd6441646c6cfb78b508ea7f9837352f000a0783c2461dbb6831556bb2fa"
+    },
+    {
+      "path": "templates/business-platform/tests/core.test.mjs",
+      "sha256": "43b7eab9ad46b4a1a6ea75470c63c6e95f3e16e8e55dc219b3829cabaecc127f"
+    },
+    {
+      "path": "templates/business-platform/tsconfig.checks.json",
+      "sha256": "645301b012a283919abc114aeb88d4b0bfc0291c4204df5e59580ad93768bd65"
+    },
+    {
+      "path": "templates/business-platform/tsconfig.json",
+      "sha256": "2712a20253c200712f6f6488c9c7970b839336a25c50de2c73dd817a57673687"
+    },
+    {
+      "path": "templates/business-platform/validation/prisma/migrations/00000000000000_technical_smoke/migration.sql",
+      "sha256": "4d939412f56aa5f1a0fb07a8fd8f3ae2b2cb3293ed1d02cd5e56384bcfdacc49"
+    },
+    {
+      "path": "templates/business-platform/validation/prisma/migrations/migration_lock.toml",
+      "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "templates/business-platform/validation/prisma/schema.prisma",
+      "sha256": "2846edb96c4594e24f481425ccf762358047ffa15616d3fcbc699903c7533a2a"
+    },
+    {
+      "path": "templates/business-platform/validation/runtime-grants.sql",
+      "sha256": "7c5a9698797ab7b9fd6d47011ca0923ba7963eedc4b857a4de0b514e634628c1"
+    },
+    {
+      "path": "tests/test_business_infrastructure.py",
+      "sha256": "51272fec03baf66d378b85a8b459c50fe5af35fd35d18ddacac87a096fcd7363"
+    }
+  ],
+  "P3BaselineUnchanged": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c"
+}
