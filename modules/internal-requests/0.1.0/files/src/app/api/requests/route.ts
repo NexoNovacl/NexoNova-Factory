@@ -1,0 +1,10 @@
+import {handle} from "../../../modules/internal-requests/http.js";
+export const dynamic="force-dynamic";
+export const runtime="nodejs";
+export const GET=(request: Request)=>handle(request);
+export const POST=(request: Request)=>handle(request);
+export const PATCH=(request: Request)=>handle(request);
+export const PUT=(request: Request)=>handle(request);
+export const DELETE=(request: Request)=>handle(request);
+export const HEAD=(request: Request)=>handle(request);
+export const OPTIONS=(request: Request)=>handle(request);

@@ -1,0 +1,70 @@
+{
+  "phase": "P4.5-B",
+  "scope": "Final entry/historical/product preservation at mandatory D02 stop",
+  "steps": [
+    {
+      "name": "C37-entry-hashes",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-nexonova-website",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-synthetic-website",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-prototype-exact-set-hashes",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-88-tests",
+      "passed": true,
+      "exitCode": 0
+    }
+  ],
+  "entryDifferences": [],
+  "entryFilesCompared": 412,
+  "products": {
+    "nexonova-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    },
+    "synthetic-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    }
+  },
+  "prototypeFiles": 99,
+  "testsReceiptSha256": "8dbdf9c4416826691d1916c568e9352044a060959a7577d8f58414ad2214d8bf",
+  "status": "PASS"
+}

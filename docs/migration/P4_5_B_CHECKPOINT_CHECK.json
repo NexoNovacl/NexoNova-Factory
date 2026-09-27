@@ -1,0 +1,16 @@
+{
+  "phase": "P4.5-B",
+  "status": "PASS",
+  "scope": "Final serialized documents/run JSON heuristic scan, source/evidence consumer verification",
+  "filesScanned": 34,
+  "matches": [],
+  "knownValuesScanReceipts": [
+    "p45b-3d044de39b4d4ba1.json",
+    "p45b-24984b962cb0466e.json"
+  ],
+  "limitations": "Heuristic scan complements live-fixture exact known-value scans; not exhaustive audit.",
+  "finalReceiptSha256": "81a3f4cb62f1828b582f1f43ff29e554941a443532a2d4579b8ff367c4f3745b",
+  "finalReportSha256": "0d08d797f578bcf2c96156c12440072c735adbd10ce0030f9f02f0f990df6f0f",
+  "allCasesPass": true,
+  "allRequiredGatesPass": true
+}

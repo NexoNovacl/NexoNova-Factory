@@ -1,0 +1,841 @@
+{
+  "phase": "P4.5-A",
+  "date": "2026-09-26",
+  "scope": "design-only; complete proposed handoff after approved D01",
+  "status": "DESIGN_COMPLETE",
+  "recommendation": "READY_WITH_LIMITATIONS",
+  "designHumanReview": "PENDING",
+  "humanInput": {
+    "P4.4-B": "PASS_WITH_LIMITATIONS / APPROVED",
+    "P4.5-A": "design-only authorized",
+    "source": "explicit user instruction in this session; historical receipts unchanged"
+  },
+  "decisions": [
+    {
+      "id": "D01",
+      "status": "RESOLVED",
+      "approval": "APPROVED",
+      "source": "Explicit human confirmation in this conversation",
+      "decision": "Literal open/closed everywhere; initial open; archive only archivedAt != null; uppercase labels conceptual; P4.2 unchanged without new version"
+    }
+  ],
+  "checkpointHistory": [
+    {
+      "state": "BLOCKED",
+      "reason": "Prompt uppercase vs P4.2 lowercase",
+      "proposalSha256": "f62355fac96b605a198a5f38a447d622939acf62308109f2237cf46903e5fdc6",
+      "resolution": "Human D01 approved; current A documentation updated as explicitly requested"
+    }
+  ],
+  "proposedDecisionsPendingDesignReview": [
+    "Strict DTO + commands edit/close/reopen/archive via existing PATCH route",
+    "Archived resources terminal and invisible to all API actors",
+    "Keyset limit20 max100, createdAt/id ordering, scoped cursor",
+    "Atomic scoped version/state CAS; uniform404 vs scoped409",
+    "Scalar ownerId Prisma plus real reviewed SQL FK RESTRICT, no User inverse or auth changes",
+    "Explicit isolated module overlay and composite migration history for validation only",
+    "Column grants for runtime, no DELETE/owner mutation or bootstrap module access"
+  ],
+  "sources": {
+    "AGENTS.md": "6e2f53edc7e89fb8138493c8cdca057f7d87a198ce20f0be76a95bd7c918b97b",
+    "MIGRATION_PLAN.md": "6db6e8ff74cef4c65e1d9f00ebd5636ea5c89397a77dfa04ee9d2692e6a06de6",
+    "config/business/internal-requests-pilot/catalog.json": "d3842a7bfdef2558b22adaf8bdf593daf8fa58a14dde59243907ba8ec3610124",
+    "config/business/internal-requests-pilot/environment.json": "0ebaec266ee22a0bce3be2eef8c92d3490b96d7d4d6824571e0bf1e6513e405c",
+    "config/business/internal-requests-pilot/work-order.json": "aa712bc96ac19f86b33ca5a4150c14795845c5c1d45654a38d6f7ae7c4d7cd86",
+    "config/business/internal-requests-pilot/spec.json": "21afb2d7d62442e71ce619c540c2cff4fd754df0cedbbbff1f450cf1ba52c21f",
+    "schemas/business-module.v1.json": "df9933b3e8c596794a70035237e1261b431ca3328b10da379d704ca4b1e29d25",
+    "schemas/business-platform.v0.1.0.json": "cbd0a0be75aad9ab3831f005c7c915197108e4fe572198438418f2594cde55c6",
+    "factory/business_contracts.py": "c56a3bba9fc00098e1dfa6481259597a47e0e2e28913d717fe1a6232e5305ec8",
+    "docs/migration/P4_4_B_FINAL_REPORT.md": "e3f08b13e6ed04ee621beaa8ef98eb156849e9281dbcb5dfd64618cb74df5145",
+    "docs/migration/P4_4_B_FINAL_RECEIPT.json": "8aafe45a32dc3b3597ee4eabe171c83b7752d68b5c373317af4e256100e41716",
+    "docs/business-platform/P4_1_PROPOSAL.md": "2aa9a95c9b54488e87802962e4e41fff3ff068b44cf3e456d1b3e15d93006fe6",
+    "docs/business-platform/P4_2_CONTRACTS.md": "721d4e81afab3b1edca1da0ebd8c115b9b10dd33e1592f93d64e6165fabd86ac",
+    "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+    "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+    "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+    "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+    "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345"
+  },
+  "preservationReferences": {
+    "docs/migration/P3_BASELINE.json": "0fc81cdf304a6a08a238ba607edfe7478bf22f4ddba1eec9e2334c8bacf6581c",
+    "docs/migration/P3_5_GENERATION_MANIFEST.json": "31f3aaa8a0242a7bbe3952f4117f991485f4266e2be2ad2e5170e96938c6cedb",
+    "docs/migration/P3_6_GENERATION_MANIFEST.json": "2c166d14655f55407b5eb01fd8525ed88fb516c952dd496289c262e8b9d66b67",
+    "config/pilots/nexonova/source-manifest.json": "a2ed45b2437327db305ce3a479fadaea361d97983a48b901f07c75b7d767a37e",
+    "docs/migration/P4_2_PLAN.json": "cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2",
+    "docs/migration/P4_2_VALIDATION.json": "2a3e27afd524515c1c60ae17051b68ef890ebe856a2a4298c0c962bcffb8cbfd",
+    "docs/migration/P4_3_CORE_INVENTORY.json": "75fcec4c1314d415610937ea03e1e95309bbdefa418d3938512a229821ef0e08",
+    "docs/migration/P4_3_INFRASTRUCTURE.json": "5dde765a0dca41c98112e53281180c37aeb3f485890c0b59a190c40bd05ab587",
+    "docs/migration/P4_3_VALIDATION.json": "110d565360855f8cdcec2af03f6d6e0ebeecc80f592517171446e308e30d7e7d",
+    "docs/business-platform/P4_4_A_PROPOSAL.md": "f3378ca10dacc76b7e64af0cde8660ad4d5bacbc465f64d07feb7a4a2a2d1eeb",
+    "docs/migration/P4_4_A_RESEARCH.json": "ffdece085db1003964c99c988bab38beb6d909a0701a106dc27ec4ca98cc1adb",
+    "docs/migration/P4_4_A_VALIDATION.json": "5b45b2652516c54acfe37491aaf0633afd561eea64169f6c21299e46c74352b3",
+    "docs/migration/P4_4_B_RECOVERY_AUDIT.json": "2b6814e53f56fd425f98b984184c4341d834e8892acb507406d135f3a79a6b90",
+    "docs/migration/P4_4_B_FINAL_ARTIFACT_SCAN.json": "42db5bb974273e08490b57e134f395b5bc5be5fe7085e62cb18d72718688e497",
+    "docs/migration/P4_4_B_FINAL_REPORT.md": "e3f08b13e6ed04ee621beaa8ef98eb156849e9281dbcb5dfd64618cb74df5145",
+    "docs/migration/P4_4_B_FINAL_RECEIPT.json": "8aafe45a32dc3b3597ee4eabe171c83b7752d68b5c373317af4e256100e41716",
+    "docs/migration/P4_4_B_CONTINUATION_PRESERVATION.json": "cc976af89cba3d4490b5499fc5d4972bdaf3e4f7d3dd666c94b4018774e9e7e9"
+  },
+  "proposalSha256": "eb853d0d548b633046c37ce298aaa63c9b96c98cb4a83659e6447fc85992e6fc",
+  "sourceResearch": [
+    {
+      "url": "https://www.postgresql.org/docs/16/transaction-iso.html",
+      "usedFor": "Read Committed UPDATE predicate re-evaluation; proposed CAS rationale, not executed evidence"
+    },
+    {
+      "url": "https://www.postgresql.org/docs/16/ddl-constraints.html",
+      "usedFor": "FK/check/RESTRICT design rationale"
+    },
+    {
+      "url": "https://docs.prisma.io/docs/orm/v7/prisma-client/queries/transactions",
+      "usedFor": "Official search excerpt for transactions/updateMany; full-page tool fetch failed markdown content; exact 7.5.0 API to validate in B"
+    },
+    {
+      "url": "https://docs.prisma.io/docs/orm/prisma-migrate/workflows/unsupported-database-features",
+      "usedFor": "Official documentation of custom SQL migrations; scalar FK omission is a deliberate design, not claim that Prisma lacks FK support"
+    }
+  ],
+  "analysisChecks": [
+    {
+      "name": "D01 recorded approved; literals preserved",
+      "status": "PASS",
+      "scope": "document-only"
+    },
+    {
+      "name": "40 unique contiguous Cxx cases with all required attributes and NOT_EXECUTED",
+      "status": "PASS",
+      "scope": "document-only"
+    },
+    {
+      "name": "Markdown matrix matches receipt IDs exactly",
+      "status": "PASS",
+      "scope": "document-only"
+    },
+    {
+      "name": "All preservation reference files exist; hashes recorded without baseline replacement",
+      "status": "PASS",
+      "scope": "read-only metadata"
+    },
+    {
+      "name": "Initial consulted-source hashes unchanged",
+      "status": "PASS",
+      "scope": "SHA256"
+    },
+    {
+      "name": "Previously tracked file hashes unchanged",
+      "status": "PASS",
+      "scope": "SHA256"
+    }
+  ],
+  "preservation": {
+    "method": "Compare pre-existing tracked-file SHA256 snapshot before/after design documentation only; no baseline recalculated",
+    "trackedFilesChecked": 410,
+    "changed": [],
+    "initialSourcesChanged": [],
+    "historicalReceiptsModified": false,
+    "productOrAuthImplementationModified": false
+  },
+  "entryGates": {
+    "compatibility": "PASS",
+    "database-migrations": "PASS",
+    "authentication": "PASS",
+    "auth-role-probes": "PASS",
+    "build-tests": "PASS",
+    "cleanup": "PASS",
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED"
+  },
+  "gateScope": "PASS entry gates are approved P4.4-B evidence only; no P4.5 implementation is certified",
+  "currentModuleGates": {
+    "resource-authorization": "NOT_IMPLEMENTED",
+    "module-crud": "NOT_IMPLEMENTED",
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED"
+  },
+  "readiness": "BLOCKED",
+  "futureValidationMatrix": [
+    {
+      "id": "C01",
+      "objective": "Migración y coexistencia",
+      "setup": "DB vacía, app provisionado; historial combinado",
+      "actor": "migrator",
+      "operation": "migrate deploy; inventario tablas/columnas/enum/constraints/índices",
+      "expected": "Auth + InternalRequest + historial, nueve columnas nuevas, FK/CHECK/índices exactos; sin TechnicalSmoke ni drops auth",
+      "evidence": "SQL revisado + checksum; salida CLI; pg_catalog saneado",
+      "gates": [
+        "DM",
+        "CP"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C02",
+      "objective": "Upgrade/reaplicación estable",
+      "setup": "Una DB vacía y otra con auth+usuarios/sesiones previos",
+      "actor": "migrator",
+      "operation": "Aplicar combinado a ambas y reaplicar",
+      "expected": "Una migración adicional; checksums auth y datos/sesiones iguales; segunda aplicación cero cambios",
+      "evidence": "Historial antes/después y comparación en memoria; versiones",
+      "gates": [
+        "DM",
+        "CP"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C03",
+      "objective": "Privilegio mínimo runtime",
+      "setup": "F con grants por columna",
+      "actor": "bpruntime",
+      "operation": "SELECT/INSERT/PATCH positivos; DDL, DELETE, TRUNCATE, UPDATE ownerId/id/createdAt e historial negativos",
+      "expected": "Operaciones permitidas funcionan; negativas 42501 sin efectos",
+      "evidence": "SQL real por conexión runtime, privilegios efectivos; snapshots",
+      "gates": [
+        "DM",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C04",
+      "objective": "Bootstrap/FK separación",
+      "setup": "F con request incluso archivado y usuario dueño",
+      "actor": "bpbootstrap y fixture técnica",
+      "operation": "Intentar acceso módulo; insertar owner inexistente; borrar/cambiar ID User referenciado",
+      "expected": "Bootstrap 42501; FK 23503 y rollback; sin huérfanos ni ampliación auth",
+      "evidence": "pg_constraint y fallos PostgreSQL reales; comparar datos",
+      "gates": [
+        "DM",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C05",
+      "objective": "Creación y defaults",
+      "setup": "F, sesión A y admin",
+      "actor": "member A; admin",
+      "operation": "POST title/description válidos, leer tras commit",
+      "expected": "201; UUID distinto, owner sesión, open, version1, archivo null, fechas servidor; admin crea propia",
+      "evidence": "HTTP saneado + SELECT DB; DTO sin auth",
+      "gates": [
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C06",
+      "objective": "Rollback create y FK",
+      "setup": "F; fixture fuerza dueño inexistente solo desde integración técnica",
+      "actor": "repositorio técnico",
+      "operation": "INSERT inválido y repetir conteo",
+      "expected": "FK real bloquea toda fila, sin escritura parcial; no cambia User",
+      "evidence": "Error FK saneado y snapshot cero efectos",
+      "gates": [
+        "DM",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C07",
+      "objective": "Spoofing y mass assignment",
+      "setup": "F; snapshot de todos los owners/roles/recursos",
+      "actor": "A; admin",
+      "operation": "Create/PATCH con ownerId,userId,role,status,archivedAt,id,createdAt,version,objetos anidados; headers falsos",
+      "expected": "Campos body desconocidos 400; headers no confieren actor; estado entero intacto",
+      "evidence": "Requests/resultados por variante y comparación DB sin secretos",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C08",
+      "objective": "Listado owner",
+      "setup": "F RA/RB/RX; varios elementos",
+      "actor": "A; B",
+      "operation": "GET list y recorrer todas las páginas",
+      "expected": "Solo propias activas; cero RB para A; cero archived; sin count global",
+      "evidence": "IDs esperados vs DTO de cada página y DB fixture",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C09",
+      "objective": "Listado y detail admin",
+      "setup": "F con owners distintos",
+      "actor": "admin",
+      "operation": "GET list y detail RA/RB",
+      "expected": "Todas las activas, nunca RX; ownership original intacto",
+      "evidence": "HTTP/API + assertions browser y DB",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C10",
+      "objective": "Edit/close propios",
+      "setup": "F RA open y luego closed",
+      "actor": "A",
+      "operation": "PATCH edit; close con versión vigente; edit closed",
+      "expected": "200; texto/estado esperado; cada éxito +1; owner/id/createdAt inmutables",
+      "evidence": "DTO/DB antes-después de cada operación",
+      "gates": [
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C11",
+      "objective": "Reopen/transiciones inválidas",
+      "setup": "F RA open/closed",
+      "actor": "A; admin",
+      "operation": "close closed, reopen open, reopen closed con versiones actuales",
+      "expected": "Inválidas 409 sin cambios; válida200 closed→open +1",
+      "evidence": "HTTP y snapshot de todas las columnas",
+      "gates": [
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C12",
+      "objective": "Archive desde ambos estados",
+      "setup": "F dos recursos propios open/closed",
+      "actor": "A; admin",
+      "operation": "PATCH archive con expectedVersion actual",
+      "expected": "204; fila retenida, status conservado, archivedAt=updatedAt servidor y version+1",
+      "evidence": "API + SELECT de fixture técnica, no endpoint nuevo",
+      "gates": [
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C13",
+      "objective": "Versión inválida/obsoleta/overflow",
+      "setup": "F recurso visible en versión3/4 y fixture maxInt",
+      "actor": "A; admin",
+      "operation": "Todos los PATCH con versión faltante/no entero/cadena/obsoleta/maxInt",
+      "expected": "Forma400; obsoleta/overflow409; cero cambios; no wrap ni retry implícito",
+      "evidence": "Variantes por acción, DB snapshots",
+      "gates": [
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C14",
+      "objective": "Archivo terminal",
+      "setup": "F RX propio/ajeno",
+      "actor": "A; B; admin",
+      "operation": "List/detail/edit/close/reopen/archive de RX",
+      "expected": "No aparece; detail/mutaciones404 uniforme, incluso admin y repetición; DB conserva fila",
+      "evidence": "API/browser y snapshot DB postintentos",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C15",
+      "objective": "Detail/edición owner",
+      "setup": "F RA y sesión válida",
+      "actor": "A",
+      "operation": "GET detail y PATCH edit directamente sin UI",
+      "expected": "200, versión aplicada, solo DTO nueve campos; no Session/User joins expuestos",
+      "evidence": "API, DB y HTML mínimo",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C16",
+      "objective": "Admin sobre ajeno",
+      "setup": "F RB activo, sesión admin",
+      "actor": "admin",
+      "operation": "Detail/edit/close/reopen/archive RB en secuencia versionada",
+      "expected": "Permitido con mismas reglas/versiones; ownerId B nunca cambia",
+      "evidence": "HTTP por operación + DB state graph",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C17",
+      "objective": "Lectura horizontal",
+      "setup": "F RB y ID0, mismos inputs",
+      "actor": "A",
+      "operation": "GET detail RB y ID0; listar tras manipular cursor/header",
+      "expected": "404 idéntico para detail, lista sigue own-only",
+      "evidence": "Comparación status/body/headers estáticos; no metadata de owner",
+      "gates": [
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C18",
+      "objective": "Edición horizontal",
+      "setup": "F RB, versiones actual/obsoleta",
+      "actor": "A",
+      "operation": "PATCH edit con ambas versiones y rol/owner de header falsos",
+      "expected": "404 en ambas, jamás409; RB y User intactos",
+      "evidence": "HTTP y comparación DB completa",
+      "gates": [
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C19",
+      "objective": "Acciones horizontales",
+      "setup": "F RB open/closed/archivado; ID0",
+      "actor": "A",
+      "operation": "PATCH close/reopen/archive en cada fixture con versiones varias",
+      "expected": "404 uniforme ajeno/inexistente/archivo; ninguna transición ni incremento",
+      "evidence": "Matriz request-respuesta y snapshots DB",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C20",
+      "objective": "Anónimo y sesiones inválidas",
+      "setup": "F, sin cookie/forjada/expirada/revocada",
+      "actor": "visitante",
+      "operation": "Todas las APIs GET/POST/PATCH y páginas directas",
+      "expected": "API401; páginas login; cero lectura/escritura empresarial; no fallback permitido",
+      "evidence": "HTTP, navegador y DB; sesiones reales expiradas/revocadas por fixture",
+      "gates": [
+        "AT",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C21",
+      "objective": "Rol desconocido",
+      "setup": "F + enum real; prueba pura de actor inválido",
+      "actor": "actor desconocido de fixture",
+      "operation": "Intentar persistir rol inválido y llamar guard/servicios con actor fuera de enum",
+      "expected": "PG rechaza; guard/servicio deny-default. No debilitar enum para fabricar integración",
+      "evidence": "Error real DB + prueba unitaria marcada como tal; auth aprobado preservado",
+      "gates": [
+        "AT",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C22",
+      "objective": "ID/404 uniforme",
+      "setup": "F RA/RB/RX/ID0 y IDs inválidos",
+      "actor": "A; admin",
+      "operation": "Detail y cada PATCH con sintaxis válida o IDs malformados/encoded",
+      "expected": "404 para no visibles; malformado404 tras auth; sin SQL/metadata; no timing formal",
+      "evidence": "Comparación body/status/headers por acción; muestras de timing descriptivas",
+      "gates": [
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C23",
+      "objective": "Carrera real misma versión",
+      "setup": "F RA versión n; dos conexiones/procesos con barrera",
+      "actor": "A + A; A + admin",
+      "operation": "Dos edit simultáneos con expectedVersion n y payload distinto",
+      "expected": "Exactamente un200 y un409; version n+1; un payload ganador íntegro, no mezcla",
+      "evidence": "Tiempos/barrera/IDs de workers; resultados HTTP + DB final; repetir varios ensayos",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C24",
+      "objective": "Carreras de ciclo de vida",
+      "setup": "F nuevo por ensayo; barrera real",
+      "actor": "A/admin; B no-owner",
+      "operation": "edit vs close; close vs archive; reopen vs archive; mutación owner vs B",
+      "expected": "Máximo un éxito por versión; perdedor409 si visible o404 tras archivo; nunca resurrección; B sin efecto",
+      "evidence": "Casos concurrentes por combinación, snapshots/versión final",
+      "gates": [
+        "RA",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C25",
+      "objective": "Paginación y orden",
+      "setup": "F >100 registros sintéticos; empates createdAt y dos owners",
+      "actor": "A; admin",
+      "operation": "limit default/1/100, recorrer cursores, empty/final",
+      "expected": "Orden (createdAt,id) asc estable en dataset quieto; sin omisiones/duplicados; nextCursor correcto; owner scope",
+      "evidence": "Lista esperada DB vs todas las páginas; no secretos en cursor",
+      "gates": [
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C26",
+      "objective": "Abuso/manipulación cursor",
+      "setup": "F, cursor ajeno/fabricado y límites extremos",
+      "actor": "A",
+      "operation": "Cursor alterado, query desconocida/duplicada, tamaño>256, limit0/101/float; paginar con archive concurrente",
+      "expected": "Inválidos400; cursor bien formado nunca elimina scope; respuestas acotadas; cambios entre páginas documentados",
+      "evidence": "HTTP por variante y controles de visibilidad/tamaño",
+      "gates": [
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C27",
+      "objective": "Validación/XSS/entrada",
+      "setup": "F",
+      "actor": "A",
+      "operation": "Límites Unicode título1/120/121, description0/2000/2001; whitespace, null, surrogate, NUL, body>16KiB, HTML y SQL-like",
+      "expected": "Válidos conservan texto; inválidos400/413/415; HTML escapado; sin inyección/overposting",
+      "evidence": "Unitarios + HTTP/DB + DOM real para texto hostil",
+      "gates": [
+        "MC",
+        "RA",
+        "BT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C28",
+      "objective": "CSRF/métodos/cache",
+      "setup": "F con cookies",
+      "actor": "A; atacante cross-site",
+      "operation": "POST/PATCH Origin ausente/null/ajeno; forwards; GET mutante; DELETE/PUT; private GET",
+      "expected": "403 origen;405 métodos; GET no muta; no-store y Vary Cookie en éxito/error/páginas",
+      "evidence": "HTTP headers sanitizados y DB snapshots; browser cross-site cuando corresponda",
+      "gates": [
+        "RA",
+        "BT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C29",
+      "objective": "Persistencia/restart",
+      "setup": "F recursos open/closed/archivados y sesiones",
+      "actor": "A; admin",
+      "operation": "Reiniciar app y DB separadamente; repetir lectura permitida/denegada",
+      "expected": "Datos/versiones/owner persisten; archivo sigue invisible; sesión válida sigue política auth",
+      "evidence": "Inventario persistente y HTTP antes/después de ambos reinicios",
+      "gates": [
+        "MC",
+        "DM",
+        "AT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C30",
+      "objective": "DB/permisos no disponibles",
+      "setup": "F",
+      "actor": "A; runtime",
+      "operation": "Detener DB o retirar grants SELECT/UPDATE/INSERT durante operaciones",
+      "expected": "503 saneado y fail-closed; no escrituras parciales; restaurar confirma integridad; escritura de resultado incierto documentada",
+      "evidence": "Fallos reales y snapshots después de recuperar; logs escaneados",
+      "gates": [
+        "MC",
+        "RA",
+        "DM"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C31",
+      "objective": "Aislamiento productos",
+      "setup": "Dos F con DB/red/volumen/secreto/prefijo distintos",
+      "actor": "A de producto1",
+      "operation": "Cookie/ID/cursor de1 contra2; control válido en cada producto",
+      "expected": "Sesión cruzada rechazada; con sesión2 ID1 inexistente404; ninguna fila contaminada",
+      "evidence": "SQL por ambas DB, HTTP y restricciones Docker; no compartir fixtures de datos",
+      "gates": [
+        "RA",
+        "DM"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C32",
+      "objective": "Reproducibilidad schema/FK manual",
+      "setup": "Copias nuevas del core+overlay",
+      "actor": "migrator/validador",
+      "operation": "Componer dos veces, generate/validate, inspeccionar diff/inventario",
+      "expected": "Auth model/migración idénticos; SQL personalizado exacto; solo FK/CHECKs documentados fuera de representación; ningún drop aplicado",
+      "evidence": "Hashes por input/output, diff revisado y pg_catalog independiente",
+      "gates": [
+        "DM",
+        "CP"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C33",
+      "objective": "Tipos/tests/build/start",
+      "setup": "Workspace compuesto F",
+      "actor": "validador",
+      "operation": "npm ci fijo, auth y business generate, typecheck, unitarios, build y arranque",
+      "expected": "Sin errores; mismas dependencias; rutas disponibles; imports server no terminan en bundle cliente",
+      "evidence": "Comandos/exit/salidas/versiones y hashes, sin claims de navegador por unitarios",
+      "gates": [
+        "CP",
+        "BT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C34",
+      "objective": "Flujo navegador empresarial",
+      "setup": "F en desktop/mobile",
+      "actor": "A; B; admin",
+      "operation": "Teclado create/list/detail/edit/close/reopen/archive; tabs con conflicto; ID ajeno directo",
+      "expected": "Flujo completo; foco/errores; borrador conservado409; B denegado; admin permitido; archivo invisible",
+      "evidence": "Playwright real, assertions DOM/API; sin HAR/token ni screenshots con secretos",
+      "gates": [
+        "BT",
+        "MC",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C35",
+      "objective": "Regresión auth integrada",
+      "setup": "Core+overlay y baseline auth conservado",
+      "actor": "A; admin; visitante",
+      "operation": "Login genérico, signup cerrado, logout/replay, borde8h/no refresh, cookies HTTP/HTTPS, probes, bootstrap no cambios",
+      "expected": "Controles P4.4-B permanecen; nueva FK no rompe flujos permitidos; no ampliar grants User/Account",
+      "evidence": "Subchecks B relevantes reejecutados contra nueva composición con hashes; resto recuperado identificado",
+      "gates": [
+        "AT",
+        "CP",
+        "RA"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C36",
+      "objective": "Secretos/DTO/logs/egress",
+      "setup": "F, valores sintéticos conocidos solo en memoria",
+      "actor": "validador",
+      "operation": "Escanear DB/app/browser/SSR/receipts finales y bundles; observar browser y redes runtime",
+      "expected": "Cero valores secretos conocidos persistidos; DTO mínimo; telemetry desactivada; sin egress exitoso",
+      "evidence": "Scan antes/después serialización; métricas browser; inventario red; límites de heurístico explícitos",
+      "gates": [
+        "RA",
+        "BT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C37",
+      "objective": "Preservación histórica",
+      "setup": "Manifiestos enumerados en §17, snapshots entrada",
+      "actor": "validador",
+      "operation": "Comparar hashes/sets y tests P3/P4.2; productos/prototipo; P4.3/P4.4 receipts",
+      "expected": "Sin diferencias no autorizadas ni baselines recalculados; excepción next-env histórica separada",
+      "evidence": "Receipt hashes y comandos reales; cambios autorizados nuevos aislados",
+      "gates": [
+        "CP",
+        "BT"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C38",
+      "objective": "Cleanup normal/fallo/timeout",
+      "setup": "F y centinela de otro owner",
+      "actor": "validador",
+      "operation": "Éxito, fallo inducido, timeout; limpieza por label/ID",
+      "expected": "Ningún recurso propio residual ni secreto temporal; centinela intacto y luego cleanup por creador",
+      "evidence": "Inventarios antes/después contenedores/redes/volúmenes/procesos/paths; receipts incluso fallo",
+      "gates": [
+        "CL"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C39",
+      "objective": "Gates/evidencia fail-closed",
+      "setup": "Copias de receipts saneados",
+      "actor": "validador",
+      "operation": "Quitar prueba/hash, alterar fuente, inyectar FAIL/BLOCKED/NOT_EXECUTED",
+      "expected": "Ningún gate obligatorio pasa; no heredar PASS agregado; reporte conserva causas",
+      "evidence": "Pruebas de consumidor de evidencia y matriz de casos completa",
+      "gates": [
+        "CP",
+        "BT",
+        "CL"
+      ],
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "id": "C40",
+      "objective": "Consultas y recursos acotados",
+      "setup": "F dataset paginado mayor; pools auth+business",
+      "actor": "validador",
+      "operation": "Inspeccionar índices, planes de list/CAS y conexiones; repetir requests acotadas",
+      "expected": "Scope en SQL y límite real; índices disponibles; no crecimiento de pools por request; sin hard SLA ficticio",
+      "evidence": "EXPLAIN en fixture, conteo conexiones/controles Docker; límites y medición declarados",
+      "gates": [
+        "CP",
+        "MC"
+      ],
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "futureGateRequirements": {
+    "database-migrations": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C06",
+      "C29",
+      "C30",
+      "C31",
+      "C32"
+    ],
+    "resource-authorization": [
+      "C03",
+      "C04",
+      "C05",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C12",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C30",
+      "C31",
+      "C34",
+      "C35",
+      "C36"
+    ],
+    "module-crud": [
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C19",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C29",
+      "C30",
+      "C34",
+      "C40"
+    ],
+    "authentication": [
+      "C20",
+      "C21",
+      "C29",
+      "C35"
+    ],
+    "compatibility": [
+      "C01",
+      "C02",
+      "C32",
+      "C33",
+      "C35",
+      "C37",
+      "C39",
+      "C40"
+    ],
+    "build-tests": [
+      "C27",
+      "C28",
+      "C33",
+      "C34",
+      "C36",
+      "C37",
+      "C39"
+    ],
+    "cleanup": [
+      "C38",
+      "C39"
+    ]
+  },
+  "futureAcceptance": "All C01-C40 required; gate dependencies must pass; FAIL/BLOCKED/NOT_EXECUTED never waived as a limitation; module-crud also requires database-migrations",
+  "implementationTests": "NOT_EXECUTED",
+  "notExecuted": [
+    "InternalRequest implementation and production schema/migration",
+    "Docker/PostgreSQL/browser validation of C01-C40",
+    "dependency installation",
+    "auth/bootstrap/session/role modifications",
+    "P4.5-B",
+    "P4.6",
+    "P4.7"
+  ],
+  "limitations": [
+    "Historical auth provenance incomplete; not retrospectively repaired",
+    "No formal timing indistinguishability; observed auth timing differences remain",
+    "Single-instance in-memory auth rate limiting; no distributed business limiter",
+    "Trusted local host/daemon, linux/amd64, local self-signed TLS, manual crash recovery",
+    "Known-value/heuristic scans non-exhaustive; no packet capture guarantee about attempted egress",
+    "SQL-owned FK absent from ORM relation graph requires explicit constraint checks and reviewed drift",
+    "No RLS, no archived restore/view, no exactly-once mutation guarantee, no paginated snapshot",
+    "Production vulnerability/security review remains pending"
+  ],
+  "modifiedFiles": [
+    "docs/business-platform/P4_5_A_PROPOSAL.md",
+    "docs/migration/P4_5_A_VALIDATION.json"
+  ],
+  "createdImplementationFiles": []
+}

@@ -1,0 +1,173 @@
+{
+  "phase": "P4.5-B",
+  "case": "C38",
+  "status": "PASS",
+  "scenarios": [
+    {
+      "mode": "success",
+      "runId": "p45b-6b1e753409e44ec1",
+      "cleanup": [
+        {
+          "kind": "container",
+          "name": "p45b-6b1e753409e44ec1-success",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "volume",
+          "name": "p45b-6b1e753409e44ec1-volume",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "network",
+          "name": "p45b-6b1e753409e44ec1-network",
+          "removedOrAbsent": true
+        }
+      ],
+      "steps": [
+        {
+          "name": "success-network",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "449810ea643577b06f463a59dc36b35ebb6b68d7c4f829353313ee886f7ed9d6\n"
+        },
+        {
+          "name": "success-volume",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "p45b-6b1e753409e44ec1-volume\n"
+        },
+        {
+          "name": "foreign-removal-denied",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "verified"
+        },
+        {
+          "name": "success",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "ok\n"
+        }
+      ],
+      "cleanupPassed": true,
+      "sentinelIntact": true,
+      "environmentFilesAbsent": true
+    },
+    {
+      "mode": "failure",
+      "runId": "p45b-ca29ffc72a8546e7",
+      "inducedFailureObserved": true,
+      "cleanup": [
+        {
+          "kind": "container",
+          "name": "p45b-ca29ffc72a8546e7-failure",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "volume",
+          "name": "p45b-ca29ffc72a8546e7-volume",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "network",
+          "name": "p45b-ca29ffc72a8546e7-network",
+          "removedOrAbsent": true
+        }
+      ],
+      "steps": [
+        {
+          "name": "failure-network",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "fcbe9369adff3c5dd2241f3a20dfa6758436238f02520ba80f3332a90ce02d70\n"
+        },
+        {
+          "name": "failure-volume",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "p45b-ca29ffc72a8546e7-volume\n"
+        },
+        {
+          "name": "foreign-removal-denied",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "verified"
+        },
+        {
+          "name": "failure",
+          "exitCode": 7,
+          "expected": 0,
+          "passed": false,
+          "output": ""
+        }
+      ],
+      "cleanupPassed": true,
+      "sentinelIntact": true,
+      "environmentFilesAbsent": true
+    },
+    {
+      "mode": "timeout",
+      "runId": "p45b-ac005da5199644f2",
+      "inducedTimeoutObserved": true,
+      "cleanup": [
+        {
+          "kind": "container",
+          "name": "p45b-ac005da5199644f2-timeout",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "volume",
+          "name": "p45b-ac005da5199644f2-volume",
+          "removedOrAbsent": true
+        },
+        {
+          "kind": "network",
+          "name": "p45b-ac005da5199644f2-network",
+          "removedOrAbsent": true
+        }
+      ],
+      "steps": [
+        {
+          "name": "timeout-network",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "85ffbe698e165048d6d57684c1b9256e217c6f7e38ac4700550e3609725cf45f\n"
+        },
+        {
+          "name": "timeout-volume",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "p45b-ac005da5199644f2-volume\n"
+        },
+        {
+          "name": "foreign-removal-denied",
+          "exitCode": 0,
+          "expected": 0,
+          "passed": true,
+          "output": "verified"
+        }
+      ],
+      "cleanupPassed": true,
+      "sentinelIntact": true,
+      "environmentFilesAbsent": true
+    }
+  ],
+  "validatorSha256": "856ff27de8853f46c02ccb58aca2c790c39de8ec92bf11be534220088a8c007f",
+  "sentinelCleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-sentinel-dbc49338b8cc44cd-container",
+      "removedOrAbsent": true
+    }
+  ],
+  "temporaryDirectoryRemoved": true
+}

@@ -1,0 +1,21 @@
+enum InternalRequestStatus {
+  open
+  closed
+  @@schema("app")
+}
+// ownerId is deliberately scalar; the reviewed SQL migration owns its real FK.
+model InternalRequest {
+  id String @id
+  title String
+  description String
+  status InternalRequestStatus @default(open)
+  ownerId String
+  createdAt DateTime
+  updatedAt DateTime
+  archivedAt DateTime?
+  version Int @default(1)
+  @@index([ownerId])
+  @@index([ownerId, archivedAt, createdAt, id])
+  @@index([archivedAt, createdAt, id])
+  @@schema("app")
+}

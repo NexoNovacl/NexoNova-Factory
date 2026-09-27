@@ -1,0 +1,113 @@
+{
+  "phase": "P4.6 planning only",
+  "status": "BLOCKED_FOR_CONTRACT_CLARIFICATION",
+  "implementationStarted": false,
+  "P4_5_BHumanApproval": {
+    "status": "HUMAN_APPROVED",
+    "result": "PASS_WITH_LIMITATIONS",
+    "basis": "Explicit user instruction in current conversation; historical P4.5-B documents unchanged"
+  },
+  "originalPurpose": "Generation/generality: two fictitious configs and new products, manifests/diffs/metadata and reproducibility",
+  "P4_7Purpose": "Autonomy/regression, independent runtime, baseline and manual",
+  "decision": {
+    "id": "G01",
+    "status": "PENDING_HUMAN_REVIEW",
+    "question": "How should future generation adapt P4.2 coreRoutes /sign-in to approved /login runtime?",
+    "alternatives": [
+      "A: new execution inventory of real routes without adding alias, with explicit handling of historical reservation",
+      "B: new inventory with both routes and separately approved generated compatibility alias"
+    ],
+    "selected": null
+  },
+  "sourceHashes": {
+    "AGENTS.md": "6e2f53edc7e89fb8138493c8cdca057f7d87a198ce20f0be76a95bd7c918b97b",
+    "MIGRATION_PLAN.md": "6db6e8ff74cef4c65e1d9f00ebd5636ea5c89397a77dfa04ee9d2692e6a06de6",
+    "docs/business-platform/P4_1_PROPOSAL.md": "2aa9a95c9b54488e87802962e4e41fff3ff068b44cf3e456d1b3e15d93006fe6",
+    "docs/migration/P4_2_PLAN.json": "cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2",
+    "schemas/business-plan.v1.json": "9b70aa85f19f22ca994e917246ce6811844b446f5fb78a5f7c828f1420482c30",
+    "schemas/business-work-order.v1.json": "13f98dfbee536843b37f5de6f1269858c09d5986258befc0e3857867983f098c",
+    "factory/business_contracts.py": "c56a3bba9fc00098e1dfa6481259597a47e0e2e28913d717fe1a6232e5305ec8",
+    "config/business/authorization.json": "67895a57df8b835660d0040ca5cf3be9fe8cfcbcb8f9a3edfff5b4bc59f2553b",
+    "config/business/internal-requests-pilot/spec.json": "21afb2d7d62442e71ce619c540c2cff4fd754df0cedbbbff1f450cf1ba52c21f",
+    "config/business/internal-requests-pilot/catalog.json": "d3842a7bfdef2558b22adaf8bdf593daf8fa58a14dde59243907ba8ec3610124",
+    "docs/business-platform/P4_4_A_PROPOSAL.md": "f3378ca10dacc76b7e64af0cde8660ad4d5bacbc465f64d07feb7a4a2a2d1eeb",
+    "docs/business-platform/P4_5_A_PROPOSAL.md": "eb853d0d548b633046c37ce298aaa63c9b96c98cb4a83659e6447fc85992e6fc",
+    "docs/business-platform/P4_5_B_D02_RESOLUTION.md": "7d984cbcb7348351b344063d6ca401fd4a6c8b29b87b814cb7c579de7705f528",
+    "docs/migration/P4_5_B_FINAL_REPORT.md": "0d08d797f578bcf2c96156c12440072c735adbd10ce0030f9f02f0f990df6f0f",
+    "docs/migration/P4_5_B_FINAL_RECEIPT.json": "81a3f4cb62f1828b582f1f43ff29e554941a443532a2d4579b8ff367c4f3745b"
+  },
+  "proposalSha256": "80b1df4f57dde9a9d2b8b1043a24b830842bfb73aa399db5c2431c83ecb665ea",
+  "protectedFilesCompared": 483,
+  "preservationDifferences": [],
+  "futureCases": {
+    "G01": "NOT_EXECUTED",
+    "G02": "NOT_EXECUTED",
+    "G03": "NOT_EXECUTED",
+    "G04": "NOT_EXECUTED",
+    "G05": "NOT_EXECUTED",
+    "G06": "NOT_EXECUTED",
+    "G07": "NOT_EXECUTED",
+    "G08": "NOT_EXECUTED",
+    "G09": "NOT_EXECUTED",
+    "G10": "NOT_EXECUTED",
+    "G11": "NOT_EXECUTED",
+    "G12": "NOT_EXECUTED",
+    "G13": "NOT_EXECUTED",
+    "G14": "NOT_EXECUTED",
+    "G15": "NOT_EXECUTED",
+    "G16": "NOT_EXECUTED",
+    "G17": "NOT_EXECUTED",
+    "G18": "NOT_EXECUTED",
+    "G19": "NOT_EXECUTED",
+    "G20": "NOT_EXECUTED",
+    "G21": "NOT_EXECUTED",
+    "G22": "NOT_EXECUTED",
+    "G23": "NOT_EXECUTED",
+    "G24": "NOT_EXECUTED"
+  },
+  "entryGatesApproved": {
+    "database-migrations": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "resource-authorization": {
+      "status": "PASS",
+      "missingOrInvalidCases": [],
+      "scope": "InternalRequest server-side ownership/admin policy only; no generic global authorization implementation."
+    },
+    "module-crud": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "authentication": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "compatibility": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "build-tests": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "cleanup": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "auth-role-probes": {
+      "status": "PASS",
+      "scope": "Integrated unchanged P4.4-B session/role probes; C35."
+    },
+    "generation": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "autonomy": {
+      "status": "NOT_IMPLEMENTED"
+    }
+  },
+  "generation": "NOT_IMPLEMENTED",
+  "autonomy": "NOT_IMPLEMENTED",
+  "readiness": "BLOCKED",
+  "executed": "Read-only inspection, hashes and documentation consistency only. No build/Docker/DB/browser or implementation."
+}

@@ -1,0 +1,10 @@
+{
+  "phase": "P4.5-B",
+  "status": "PASS",
+  "scope": "Final report/receipt/checkpoint and run JSON heuristic scan; final source/evidence references and entry preservation assertions",
+  "filesScanned": 22,
+  "matches": [],
+  "limitations": "Heuristic scan does not complete C36; per-run known-value scans are separate. No browser/SSR/bundle scan executed.",
+  "finalReportSha256": "a1b5266224b39c74e5bbc349eea87cef32e40870895302d139a20c2364526a98",
+  "finalReceiptSha256": "89cc75751e0388a66e505ba4f69a4d9303da5a0501fa273d6b095701842e7b31"
+}

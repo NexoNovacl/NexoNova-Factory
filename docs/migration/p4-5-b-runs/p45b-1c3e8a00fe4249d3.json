@@ -1,0 +1,479 @@
+{
+  "phase": "P4.5-B",
+  "stage": "schema",
+  "status": "FAIL",
+  "readiness": "BLOCKED",
+  "cases": {
+    "C01": "NOT_EXECUTED",
+    "C02": "NOT_EXECUTED",
+    "C03": "NOT_EXECUTED",
+    "C04": "NOT_EXECUTED",
+    "C05": "NOT_EXECUTED",
+    "C06": "NOT_EXECUTED",
+    "C07": "NOT_EXECUTED",
+    "C08": "NOT_EXECUTED",
+    "C09": "NOT_EXECUTED",
+    "C10": "NOT_EXECUTED",
+    "C11": "NOT_EXECUTED",
+    "C12": "NOT_EXECUTED",
+    "C13": "NOT_EXECUTED",
+    "C14": "NOT_EXECUTED",
+    "C15": "NOT_EXECUTED",
+    "C16": "NOT_EXECUTED",
+    "C17": "NOT_EXECUTED",
+    "C18": "NOT_EXECUTED",
+    "C19": "NOT_EXECUTED",
+    "C20": "NOT_EXECUTED",
+    "C21": "NOT_EXECUTED",
+    "C22": "NOT_EXECUTED",
+    "C23": "NOT_EXECUTED",
+    "C24": "NOT_EXECUTED",
+    "C25": "NOT_EXECUTED",
+    "C26": "NOT_EXECUTED",
+    "C27": "NOT_EXECUTED",
+    "C28": "NOT_EXECUTED",
+    "C29": "NOT_EXECUTED",
+    "C30": "NOT_EXECUTED",
+    "C31": "NOT_EXECUTED",
+    "C32": "NOT_EXECUTED",
+    "C33": "NOT_EXECUTED",
+    "C34": "NOT_EXECUTED",
+    "C35": "NOT_EXECUTED",
+    "C36": "NOT_EXECUTED",
+    "C37": "NOT_EXECUTED",
+    "C38": "NOT_EXECUTED",
+    "C39": "NOT_EXECUTED",
+    "C40": "NOT_EXECUTED"
+  },
+  "runId": "p45b-1c3e8a00fe4249d3",
+  "sourceHashes": {
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "scripts/validate_business_requests.py": "89115774b4c65237af892266020e1cafca737b29a7d3bd9b0613da433bc2c0b5",
+    "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+    "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1"
+  },
+  "entrySha256": "1c88702ee25dbcebcf7d7b59549815b7a175250dc4175d7bf3c2bf011485aaaf",
+  "schemaSha256": "f1268b19b384f1769e7a7beafef95e4f85f5bf4e13dcc423c26a35370aa3372c",
+  "compositionDeterministic": true,
+  "tables": "Account\nInternalRequest\nSession\nUser\nVerification\n_prisma_migrations",
+  "columns": "id\ntitle\ndescription\nstatus\nownerId\ncreatedAt\nupdatedAt\narchivedAt\nversion",
+  "constraints": "InternalRequest_description_length:CHECK ((char_length(description) <= 2000))\nInternalRequest_ownerId_fkey:FOREIGN KEY (\"ownerId\") REFERENCES app.\"User\"(id) ON UPDATE RESTRICT ON DELETE RESTRICT\nInternalRequest_pkey:PRIMARY KEY (id)\nInternalRequest_title_length:CHECK (((char_length(title) >= 1) AND (char_length(title) <= 120)))\nInternalRequest_version_positive:CHECK ((version >= 1))",
+  "indexes": "InternalRequest_archivedAt_createdAt_id_idx\nInternalRequest_ownerId_archivedAt_createdAt_id_idx\nInternalRequest_ownerId_idx\nInternalRequest_pkey",
+  "knownDiff": "Loaded Prisma config from prisma.requests.config.ts.\n\n-- DropForeignKey\nALTER TABLE \"InternalRequest\" DROP CONSTRAINT \"InternalRequest_ownerId_fkey\";\n\n",
+  "error": "InfrastructureError: Step failed: C32-only-reviewed-fk-difference",
+  "steps": [
+    {
+      "name": "C32-composition-identical",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C32-core-byte-identical",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "setup-install",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\nadded 168 packages in 46s\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.1.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0\nnpm notice To update run: npm install -g npm@12.1.0\nnpm notice\n"
+    },
+    {
+      "name": "setup-engine",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "auth-generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/auth in 60ms\n\n"
+    },
+    {
+      "name": "module-validate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nThe schema at prisma/business/schema.prisma is valid \ud83d\ude80\n"
+    },
+    {
+      "name": "module-generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/requests in 87ms\n\n"
+    },
+    {
+      "name": "requests-volume-init",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "requests-db-start",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "13aca118535e26b2477163bb451318d62a12a7c6d3b3e0538789725a21bfbd13\n"
+    },
+    {
+      "name": "requests-roles",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n"
+    },
+    {
+      "name": "C01-deploy",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_requests\", schemas \"app\" at \"db:5432\"\n\n2 migrations found in prisma/migrations\n\nApplying migration `00000000000000_auth_initial`\nApplying migration `00000000000001_internal_requests`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000000_auth_initial/\n    \u2514\u2500 migration.sql\n  \u2514\u2500 00000000000001_internal_requests/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "C01-tables",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C01-columns",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C01-real-fk",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C01-indexes",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-reapply",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_requests\", schemas \"app\" at \"db:5432\"\n\n2 migrations found in prisma/migrations\n\n\nNo pending migrations to apply.\n"
+    },
+    {
+      "name": "C02-history-stable",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "fixture-user",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "INSERT 0 1\n"
+    },
+    {
+      "name": "runtime-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\nGRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "C03-insert",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "OK\n"
+    },
+    {
+      "name": "C03-select",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "OK\n"
+    },
+    {
+      "name": "C03-update",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "OK\n"
+    },
+    {
+      "name": "C03-denied-0",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-4",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-5",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C03-denied-6",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C04-orphan-denied",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_23503\n"
+    },
+    {
+      "name": "C04-user-delete-restricted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C04-user-update-restricted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "archive-fixture",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "UPDATE 1\n"
+    },
+    {
+      "name": "C04-archived-user-restricted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "bootstrap-role",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nGRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "C04-bootstrap-denied-0",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C04-bootstrap-denied-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EXPECTED_SQLSTATE_42501\n"
+    },
+    {
+      "name": "C04-no-orphans",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C32-diff",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\n-- DropForeignKey\nALTER TABLE \"InternalRequest\" DROP CONSTRAINT \"InternalRequest_ownerId_fkey\";\n\n"
+    },
+    {
+      "name": "C32-only-reviewed-fk-difference",
+      "exitCode": 1,
+      "expected": 0,
+      "passed": false,
+      "output": "condition not satisfied"
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C32-diff",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C04-bootstrap-denied-1",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C04-bootstrap-denied-0",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C04-orphan-denied",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-6",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-5",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-4",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-3",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-2",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-1",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-denied-0",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-update",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-select",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C03-insert",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C02-reapply",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-C01-deploy",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-requests-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-requests-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p45b-1c3e8a00fe4249d3-requests-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p45b-1c3e8a00fe4249d3-requests-net",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-module-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-module-validate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-auth-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-setup-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-1c3e8a00fe4249d3-setup-install",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true,
+  "secretScanPassed": true,
+  "temporaryDirectoryRemoved": true
+}

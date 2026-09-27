@@ -1,0 +1,215 @@
+{
+  "phase": "P4.5-B",
+  "stage": "final-preservation-cleanup",
+  "steps": [
+    {
+      "name": "C37-entry-hashes",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-nexonova-website",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-synthetic-website",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-prototype-exact-set",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-final-88-tests",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C37-prior-evidence-intact",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C28-no-next-patches",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C32-composition-current",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C32-auth-original-identical",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C33-version-matrix",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C33-openssl-present",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C33-image-node",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C33-image-postgres",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-final-helper-cleanup",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C33-final-versions",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "{\"node\":\"v22.23.2\",\"next\":\"15.5.25\",\"react\":\"19.2.8\",\"prisma\":\"7.5.0\",\"pg\":\"8.16.3\",\"typescript\":\"5.9.3\",\"betterAuth\":\"1.7.5\"}\n"
+    },
+    {
+      "name": "C33-openssl-version",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "OpenSSL 3.0.20 7 Apr 2026 (Library: OpenSSL 3.0.20 7 Apr 2026)\n"
+    },
+    {
+      "name": "C38-no-owned-container",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-no-owned-network",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-no-owned-volume",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-workspace-removed",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-no-owned-paths",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-success-failure-timeout-sentinel",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-final-directory-removed",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-no-validator-processes",
+      "passed": true,
+      "exitCode": 0
+    }
+  ],
+  "status": "PASS",
+  "sourceHashes": {
+    "scripts/finalize_business_requests_d02.py": "69345d8b3ff6b809f834eaa3c43492021747397d45699fdeb579b96d461cbeac"
+  },
+  "entryFileCount": 412,
+  "products": {
+    "nexonova-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    },
+    "synthetic-website": {
+      "status": "complete",
+      "sourceFiles": 31,
+      "frameworkManagedChanges": [
+        "next-env.d.ts"
+      ],
+      "derivedDirectoriesOrFiles": [
+        ".next",
+        "node_modules",
+        "test-results",
+        "tsconfig.tsbuildinfo"
+      ],
+      "privatePathsDetected": false,
+      "secretHeuristicMatches": false,
+      "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+    }
+  },
+  "prototypeFileCount": 99,
+  "preservationTestsSha256": "d6fd5bb4c6c13da5248eec547544d041eeb4c30ca785e90d35d78e716eca76c3",
+  "schemaSha256": "f1268b19b384f1769e7a7beafef95e4f85f5bf4e13dcc423c26a35370aa3372c",
+  "versions": {
+    "node": "v22.23.2",
+    "next": "15.5.25",
+    "react": "19.2.8",
+    "prisma": "7.5.0",
+    "pg": "8.16.3",
+    "typescript": "5.9.3",
+    "betterAuth": "1.7.5"
+  },
+  "openssl": "OpenSSL 3.0.20 7 Apr 2026 (Library: OpenSSL 3.0.20 7 Apr 2026)",
+  "imageReferences": {
+    "node": "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "postgres": "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67"
+  },
+  "imageIds": {
+    "node": "sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+    "postgres": "sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67"
+  },
+  "runnerCleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-0b9d8e783e5b4886-C33-openssl-version",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-0b9d8e783e5b4886-C33-final-versions",
+      "removedOrAbsent": true
+    }
+  ],
+  "inventory": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "unrelatedContainersUntouched": [
+    "dazzling_moore",
+    "xenodochial_mendeleev"
+  ],
+  "remainingOwnedPaths": [],
+  "cleanupScenariosSha256": "e5fd0053e648f20972a5fdbab76117b4fbb80ec5601e862087f8b29e64f27808",
+  "remainingValidatorNodePids": [],
+  "remainingPlaywrightBrowserPids": []
+}

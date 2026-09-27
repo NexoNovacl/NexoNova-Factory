@@ -1,0 +1,531 @@
+{
+  "phase": "P4.5-B",
+  "stage": "integration",
+  "runId": "p45b-f71fae0235be4d6d",
+  "status": "FAIL",
+  "cases": {
+    "C01": {
+      "status": "NOT_EXECUTED"
+    },
+    "C02": {
+      "status": "PASS",
+      "steps": [
+        "C02-existing-session-a",
+        "C02-existing-session-b",
+        "C02-existing-session-admin",
+        "C02-upgrade-session",
+        "C02-auth-data-byte-identical",
+        "C02-auth-history-preserved",
+        "C02-reapply-session",
+        "C02-reapply-stable"
+      ]
+    },
+    "C03": {
+      "status": "NOT_EXECUTED"
+    },
+    "C04": {
+      "status": "NOT_EXECUTED"
+    },
+    "C05": {
+      "status": "NOT_EXECUTED"
+    },
+    "C06": {
+      "status": "NOT_EXECUTED"
+    },
+    "C07": {
+      "status": "NOT_EXECUTED"
+    },
+    "C08": {
+      "status": "NOT_EXECUTED"
+    },
+    "C09": {
+      "status": "NOT_EXECUTED"
+    },
+    "C10": {
+      "status": "NOT_EXECUTED"
+    },
+    "C11": {
+      "status": "NOT_EXECUTED"
+    },
+    "C12": {
+      "status": "NOT_EXECUTED"
+    },
+    "C13": {
+      "status": "NOT_EXECUTED"
+    },
+    "C14": {
+      "status": "NOT_EXECUTED"
+    },
+    "C15": {
+      "status": "NOT_EXECUTED"
+    },
+    "C16": {
+      "status": "NOT_EXECUTED"
+    },
+    "C17": {
+      "status": "NOT_EXECUTED"
+    },
+    "C18": {
+      "status": "NOT_EXECUTED"
+    },
+    "C19": {
+      "status": "NOT_EXECUTED"
+    },
+    "C20": {
+      "status": "NOT_EXECUTED"
+    },
+    "C21": {
+      "status": "NOT_EXECUTED"
+    },
+    "C22": {
+      "status": "NOT_EXECUTED"
+    },
+    "C23": {
+      "status": "NOT_EXECUTED"
+    },
+    "C24": {
+      "status": "NOT_EXECUTED"
+    },
+    "C25": {
+      "status": "NOT_EXECUTED"
+    },
+    "C26": {
+      "status": "NOT_EXECUTED"
+    },
+    "C27": {
+      "status": "NOT_EXECUTED"
+    },
+    "C28": {
+      "status": "NOT_EXECUTED"
+    },
+    "C29": {
+      "status": "NOT_EXECUTED"
+    },
+    "C30": {
+      "status": "NOT_EXECUTED"
+    },
+    "C31": {
+      "status": "NOT_EXECUTED"
+    },
+    "C32": {
+      "status": "NOT_EXECUTED"
+    },
+    "C33": {
+      "status": "NOT_EXECUTED"
+    },
+    "C34": {
+      "status": "NOT_EXECUTED"
+    },
+    "C35": {
+      "status": "NOT_EXECUTED"
+    },
+    "C36": {
+      "status": "NOT_EXECUTED"
+    },
+    "C37": {
+      "status": "NOT_EXECUTED"
+    },
+    "C38": {
+      "status": "NOT_EXECUTED"
+    },
+    "C39": {
+      "status": "NOT_EXECUTED"
+    },
+    "C40": {
+      "status": "NOT_EXECUTED"
+    }
+  },
+  "sourceHashes": {
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/validation/requests-users.ts": "f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef",
+    "modules/internal-requests/0.1.0/files/tests/requests.test.mjs": "05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f",
+    "modules/internal-requests/0.1.0/files/src/middleware.ts": "6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60",
+    "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx": "a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593",
+    "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx": "c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae",
+    "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css": "6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d",
+    "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx": "ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts": "2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts": "2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts": "5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts": "94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts": "d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts": "1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts": "95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts": "29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts": "d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "scripts/validate_business_requests_integration.py": "9b9012ce5434736ecf986befbe78d537e773dd275c60c6ee20540da82b9053f1",
+    "scripts/validate_business_requests.py": "cf28f285bc677c33ee7074592d8427fee0249b4c3ce7d85a4bab09bc98c33eeb",
+    "scripts/validate_business_requests_extra.py": "263e9c02719a663ecfd111c8c8ec25d34c4503822bc06c6d02bbfe479044d331",
+    "scripts/check_business_requests.mjs": "2cc1b4e013f8a14ec06931195a1094f0bcf8ba9409768b620758c2a050c0c425",
+    "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+    "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1"
+  },
+  "catalog": "id|text|NO|\ntitle|text|NO|\ndescription|text|NO|\nstatus|USER-DEFINED|NO|'open'::app.\"InternalRequestStatus\"\nownerId|text|NO|\ncreatedAt|timestamp without time zone|NO|\nupdatedAt|timestamp without time zone|NO|\narchivedAt|timestamp without time zone|YES|\nversion|integer|NO|1\nopen\nclosed\nInternalRequest_description_length|t|f\nInternalRequest_ownerId_fkey|t|f\nInternalRequest_pkey|t|f\nInternalRequest_title_length|t|f\nInternalRequest_version_positive|t|f\n",
+  "grants": "bpruntime|INSERT|archivedAt\nbpruntime|INSERT|createdAt\nbpruntime|INSERT|description\nbpruntime|INSERT|id\nbpruntime|INSERT|ownerId\nbpruntime|INSERT|status\nbpruntime|INSERT|title\nbpruntime|INSERT|updatedAt\nbpruntime|INSERT|version\nbpruntime|SELECT|archivedAt\nbpruntime|SELECT|createdAt\nbpruntime|SELECT|description\nbpruntime|SELECT|id\nbpruntime|SELECT|ownerId\nbpruntime|SELECT|status\nbpruntime|SELECT|title\nbpruntime|SELECT|updatedAt\nbpruntime|SELECT|version\nbpruntime|UPDATE|archivedAt\nbpruntime|UPDATE|description\nbpruntime|UPDATE|status\nbpruntime|UPDATE|title\nbpruntime|UPDATE|updatedAt\nbpruntime|UPDATE|version\n",
+  "http": [
+    {
+      "case": "C05",
+      "actor": "a",
+      "method": "POST",
+      "pathKind": "collection",
+      "status": 201,
+      "expected": 201,
+      "elapsedMs": 95.86,
+      "error": null
+    },
+    {
+      "case": "C05",
+      "actor": "b",
+      "method": "POST",
+      "pathKind": "collection",
+      "status": 201,
+      "expected": 201,
+      "elapsedMs": 37.98,
+      "error": null
+    },
+    {
+      "case": "C05",
+      "actor": "admin",
+      "method": "POST",
+      "pathKind": "collection",
+      "status": 201,
+      "expected": 201,
+      "elapsedMs": 25.42,
+      "error": null
+    },
+    {
+      "case": "resume",
+      "actor": "b",
+      "method": "PATCH",
+      "pathKind": "detail",
+      "status": 204,
+      "expected": 204,
+      "elapsedMs": 51.73,
+      "error": null
+    }
+  ],
+  "pageHeaders": [
+    {
+      "status": 200,
+      "cache": "no-store",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+    }
+  ],
+  "error": "Step failed: C28-page-private",
+  "steps": [
+    {
+      "name": "primary-volume-init",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "primary-db-start",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "568db6e0772c6e1d2aed063d5d36dcbe300b99e022609e5164fb2b83c735c954\n"
+    },
+    {
+      "name": "primary-roles",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n"
+    },
+    {
+      "name": "auth-only",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_primary\", schemas \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nApplying migration `00000000000000_auth_initial`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000000_auth_initial/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "auth-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "bootstrap-role",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nGRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "bootstrap-admin",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 bootstrap-admin\n> node build-checks/scripts/bootstrap-admin.js\n\nCREATED\n"
+    },
+    {
+      "name": "fixture-a",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "SYNTHETIC_MEMBER_CREATED\n"
+    },
+    {
+      "name": "fixture-b",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "SYNTHETIC_MEMBER_CREATED\n"
+    },
+    {
+      "name": "start-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "d89af765b4326a5e9b10550aee6f1a09a7b7b3fd0d53cdecca3c8c5500daced3\n"
+    },
+    {
+      "name": "C02-existing-session-a",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-existing-session-b",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-existing-session-admin",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-upgrade-session",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_primary\", schemas \"app\" at \"db:5432\"\n\n2 migrations found in prisma/migrations\n\nApplying migration `00000000000001_internal_requests`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000001_internal_requests/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "C02-auth-data-byte-identical",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-auth-history-preserved",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C02-reapply-session",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_primary\", schemas \"app\" at \"db:5432\"\n\n2 migrations found in prisma/migrations\n\n\nNo pending migrations to apply.\n"
+    },
+    {
+      "name": "C02-reapply-stable",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "module-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "bootstrap-retired",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "ALTER ROLE\nREVOKE\nREVOKE\n"
+    },
+    {
+      "name": "C01-catalog",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-POST-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-cache-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-persisted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-POST-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-cache-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-persisted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-POST-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-cache-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-persisted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-defaults-a",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-defaults-b",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-defaults-admin",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "resume-PATCH-4",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "resume-cache-4",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C28-page-private",
+      "exitCode": 1,
+      "expected": 0,
+      "passed": false,
+      "output": "condition not satisfied"
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-C02-reapply-session",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-C02-upgrade-session",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-local-test-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-fixture-b",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-fixture-a",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-bootstrap-admin",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-auth-only",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-primary-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-f71fae0235be4d6d-primary-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p45b-f71fae0235be4d6d-primary-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p45b-f71fae0235be4d6d-primary-net",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true,
+  "secretScanPassed": true
+}

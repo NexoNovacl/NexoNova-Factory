@@ -1,0 +1,517 @@
+{
+  "phase": "P4.5-B",
+  "stage": "observability",
+  "runId": "p45b-24984b962cb0466e",
+  "status": "PASS",
+  "sourceHashes": {
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/validation/requests-users.ts": "f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef",
+    "modules/internal-requests/0.1.0/files/tests/requests-boundary.test.mjs": "7b7987c892600b4dfb85b1e9ed9e71612636956ee59cd3eea17a57ae9149653e",
+    "modules/internal-requests/0.1.0/files/tests/requests.test.mjs": "05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f",
+    "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs": "4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8",
+    "modules/internal-requests/0.1.0/files/scripts/requests-response-boundary.mjs": "de46a42b5bc3084d24de60ca9ae70946a217dbcb4876112b3e8aee0c8fee3b3d",
+    "modules/internal-requests/0.1.0/files/src/middleware.ts": "6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60",
+    "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx": "a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593",
+    "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx": "c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae",
+    "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css": "6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d",
+    "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx": "ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts": "2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts": "2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts": "5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts": "94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts": "d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts": "1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts": "95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts": "29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts": "d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "scripts/validate_business_requests_observability.py": "e750d7d9d4af705ec28b1973715b00eb50da50ebc2a7e0215381857c31347792",
+    "scripts/check_business_requests_headers.mjs": "d690cfeca8f64b86743cf062a0b02329a59e20e0f262aa0428c015ee142a89f3",
+    "scripts/business_requests_probe.py": "2a748b4c458bbdf6c4d29218aba46432654e34ec2d04ced6a5aadd8ac0aa7719",
+    "scripts/validate_business_requests_integration.py": "847e24c5a938d0234c2e3cd13f90e4cb8a48f39a9f5f556b57f3eb2b22f391e6"
+  },
+  "cases": {},
+  "http": [
+    {
+      "case": "C05",
+      "actor": "a",
+      "method": "POST",
+      "pathKind": "collection",
+      "status": 201,
+      "expected": 201,
+      "elapsedMs": 104.28,
+      "error": null
+    },
+    {
+      "case": "C40",
+      "actor": "a",
+      "method": "GET",
+      "pathKind": "collection",
+      "status": 200,
+      "expected": 200,
+      "elapsedMs": 40.07,
+      "error": null
+    },
+    {
+      "case": "C40",
+      "actor": "a",
+      "method": "PATCH",
+      "pathKind": "detail",
+      "status": 200,
+      "expected": 200,
+      "elapsedMs": 85.46,
+      "error": null
+    }
+  ],
+  "businessSql": [
+    "<unnamed>: INSERT INTO \"app\".\"InternalRequest\" (\"id\",\"title\",\"description\",\"status\",\"ownerId\",\"createdAt\",\"updatedAt\",\"archivedAt\",\"version\") VALUES ($1,$2,$3,CAST($4::text AS \"app\".\"InternalRequestStatus\"),$5,$6,$7,$8,$9) RETURNING \"app\".\"InternalRequest\".\"id\", \"app\".\"InternalRequest\".\"title\", \"app\".\"InternalRequest\".\"description\", \"app\".\"InternalRequest\".\"status\"::text, \"app\".\"InternalRequest\".\"ownerId\", \"app\".\"InternalRequest\".\"createdAt\", \"app\".\"InternalRequest\".\"updatedAt\", \"app\".\"InternalRequest\".\"archivedAt\", \"app\".\"InternalRequest\".\"version\"",
+    "<unnamed>: SELECT \"app\".\"InternalRequest\".\"id\", \"app\".\"InternalRequest\".\"title\", \"app\".\"InternalRequest\".\"description\", \"app\".\"InternalRequest\".\"status\"::text, \"app\".\"InternalRequest\".\"ownerId\", \"app\".\"InternalRequest\".\"createdAt\", \"app\".\"InternalRequest\".\"updatedAt\", \"app\".\"InternalRequest\".\"archivedAt\", \"app\".\"InternalRequest\".\"version\" FROM \"app\".\"InternalRequest\" WHERE (\"app\".\"InternalRequest\".\"archivedAt\" IS NULL AND \"app\".\"InternalRequest\".\"ownerId\" = $1) ORDER BY \"app\".\"InternalRequest\".\"createdAt\" ASC, \"app\".\"InternalRequest\".\"id\" ASC LIMIT $2 OFFSET $3",
+    "<unnamed>: UPDATE \"app\".\"InternalRequest\" SET \"title\" = $1, \"description\" = $2, \"version\" = (\"app\".\"InternalRequest\".\"version\" + $3), \"updatedAt\" = $4 WHERE (\"app\".\"InternalRequest\".\"id\" = $5 AND \"app\".\"InternalRequest\".\"archivedAt\" IS NULL AND \"app\".\"InternalRequest\".\"ownerId\" = $6 AND \"app\".\"InternalRequest\".\"version\" = $7 AND \"app\".\"InternalRequest\".\"version\" < $8)",
+    "<unnamed>: SELECT \"app\".\"InternalRequest\".\"id\", \"app\".\"InternalRequest\".\"title\", \"app\".\"InternalRequest\".\"description\", \"app\".\"InternalRequest\".\"status\"::text, \"app\".\"InternalRequest\".\"ownerId\", \"app\".\"InternalRequest\".\"createdAt\", \"app\".\"InternalRequest\".\"updatedAt\", \"app\".\"InternalRequest\".\"archivedAt\", \"app\".\"InternalRequest\".\"version\" FROM \"app\".\"InternalRequest\" WHERE (\"app\".\"InternalRequest\".\"id\" = $1 AND \"app\".\"InternalRequest\".\"archivedAt\" IS NULL AND \"app\".\"InternalRequest\".\"ownerId\" = $2) LIMIT $3 OFFSET $4"
+  ],
+  "browser": {
+    "status": "PASS",
+    "checks": [
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-browser-final-headers",
+      "C28-anonymous-redirect",
+      "C28-browser-responses-observed",
+      "C36-no-external-headers-probe"
+    ],
+    "responses": [
+      {
+        "actor": "a",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "a",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "a",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "a",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "a",
+        "status": 404,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "admin",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "admin",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "admin",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "admin",
+        "status": 200,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      },
+      {
+        "actor": "admin",
+        "status": 404,
+        "cacheControl": "no-store",
+        "vary": [
+          "rsc",
+          "next-router-state-tree",
+          "next-router-prefetch",
+          "next-router-segment-prefetch",
+          "accept-encoding",
+          "cookie"
+        ]
+      }
+    ],
+    "externalRequests": 0
+  },
+  "steps": [
+    {
+      "name": "observe-volume-init",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "observe-db-start",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "7f6f68650e99e827b4275aeb72c21650854b1523539ef731dc3c3f4bedccc529\n"
+    },
+    {
+      "name": "observe-roles",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nCREATE ROLE\nREVOKE\nGRANT\nREVOKE\nCREATE SCHEMA\n"
+    },
+    {
+      "name": "auth-only",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_observe\", schemas \"app\" at \"db:5432\"\n\n1 migration found in prisma/migrations\n\nApplying migration `00000000000000_auth_initial`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000000_auth_initial/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "auth-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "bootstrap-role",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "CREATE ROLE\nGRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "bootstrap-admin",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 bootstrap-admin\n> node build-checks/scripts/bootstrap-admin.js\n\nCREATED\n"
+    },
+    {
+      "name": "fixture-a",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "SYNTHETIC_MEMBER_CREATED\n"
+    },
+    {
+      "name": "fixture-b",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "SYNTHETIC_MEMBER_CREATED\n"
+    },
+    {
+      "name": "C01-observe-deploy",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\nDatasource \"db\": PostgreSQL database \"db_observe\", schemas \"app\" at \"db:5432\"\n\n2 migrations found in prisma/migrations\n\nApplying migration `00000000000001_internal_requests`\n\nThe following migration(s) have been applied:\n\nmigrations/\n  \u2514\u2500 00000000000001_internal_requests/\n    \u2514\u2500 migration.sql\n\nAll migrations have been successfully applied.\n"
+    },
+    {
+      "name": "runtime-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "GRANT\nGRANT\nGRANT\n"
+    },
+    {
+      "name": "C40-enable-fixture-query-log",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "ALTER ROLE\nALTER ROLE\nALTER ROLE\n"
+    },
+    {
+      "name": "start-requests-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "c36f0c891a0ecc0d9e709af604b452e38a8a4f5fb56df291b76cdf2122557c24\n"
+    },
+    {
+      "name": "login-a",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "login-admin",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-POST-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-cache-1",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-persisted",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-server-times",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C05-uuid",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-GET-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-cache-2",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-PATCH-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-cache-3",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C36-db-log-known-secret-scan",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-actual-list-sql",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-actual-cas-sql",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C40-restore-fixture-query-log",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "ALTER ROLE\nALTER ROLE\nALTER ROLE\n"
+    },
+    {
+      "name": "restart-auth-app",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "p45b-24984b962cb0466e-local-test-app\n"
+    },
+    {
+      "name": "C01-exact-column-types-defaults",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C03-exact-effective-column-grants",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C28-browser-header-navigation",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "verified"
+    },
+    {
+      "name": "C36-egress-denied",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "EGRESS_DENIED\n"
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-C36-egress-denied",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-local-test-app",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-C01-observe-deploy",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-fixture-b",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-fixture-a",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-bootstrap-admin",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-auth-only",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-observe-db",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-24984b962cb0466e-observe-db-volume-init",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "volume",
+      "name": "p45b-24984b962cb0466e-observe-data",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "network",
+      "name": "p45b-24984b962cb0466e-observe-net",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true,
+  "secretScanPassed": true
+}

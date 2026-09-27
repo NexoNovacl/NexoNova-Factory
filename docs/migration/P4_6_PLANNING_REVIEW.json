@@ -1,0 +1,197 @@
+{
+  "phase": "P4.6 planning only",
+  "status": "READY_FOR_DESIGN_REVIEW",
+  "implementationStarted": false,
+  "P4_5_BHumanApproval": {
+    "status": "HUMAN_APPROVED",
+    "result": "PASS_WITH_LIMITATIONS",
+    "basis": "Explicit user instruction in current conversation; historical P4.5-B documents unchanged"
+  },
+  "originalPurpose": "Generation/generality: two fictitious configs and new products, manifests/diffs/metadata and reproducibility",
+  "P4_7Purpose": "Autonomy/regression, independent runtime, baseline and manual",
+  "decision": {
+    "id": "G01",
+    "status": "HUMAN_APPROVED",
+    "selected": "ALTERNATIVE_A",
+    "record": "docs/migration/P4_6_G01_DECISION.json",
+    "sha256": "ef9330c7d9140eb8326e878649eabf5a615e2d9a43835c32c04e3d82d3bc9112",
+    "detailedDesignStatus": "PENDING_HUMAN_REVIEW"
+  },
+  "sourceHashes": {
+    "AGENTS.md": "6e2f53edc7e89fb8138493c8cdca057f7d87a198ce20f0be76a95bd7c918b97b",
+    "MIGRATION_PLAN.md": "6db6e8ff74cef4c65e1d9f00ebd5636ea5c89397a77dfa04ee9d2692e6a06de6",
+    "docs/business-platform/P4_1_PROPOSAL.md": "2aa9a95c9b54488e87802962e4e41fff3ff068b44cf3e456d1b3e15d93006fe6",
+    "docs/migration/P4_2_PLAN.json": "cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2",
+    "schemas/business-plan.v1.json": "9b70aa85f19f22ca994e917246ce6811844b446f5fb78a5f7c828f1420482c30",
+    "schemas/business-work-order.v1.json": "13f98dfbee536843b37f5de6f1269858c09d5986258befc0e3857867983f098c",
+    "factory/business_contracts.py": "c56a3bba9fc00098e1dfa6481259597a47e0e2e28913d717fe1a6232e5305ec8",
+    "config/business/authorization.json": "67895a57df8b835660d0040ca5cf3be9fe8cfcbcb8f9a3edfff5b4bc59f2553b",
+    "config/business/internal-requests-pilot/spec.json": "21afb2d7d62442e71ce619c540c2cff4fd754df0cedbbbff1f450cf1ba52c21f",
+    "config/business/internal-requests-pilot/catalog.json": "d3842a7bfdef2558b22adaf8bdf593daf8fa58a14dde59243907ba8ec3610124",
+    "docs/business-platform/P4_4_A_PROPOSAL.md": "f3378ca10dacc76b7e64af0cde8660ad4d5bacbc465f64d07feb7a4a2a2d1eeb",
+    "docs/business-platform/P4_5_A_PROPOSAL.md": "eb853d0d548b633046c37ce298aaa63c9b96c98cb4a83659e6447fc85992e6fc",
+    "docs/business-platform/P4_5_B_D02_RESOLUTION.md": "7d984cbcb7348351b344063d6ca401fd4a6c8b29b87b814cb7c579de7705f528",
+    "docs/migration/P4_5_B_FINAL_REPORT.md": "0d08d797f578bcf2c96156c12440072c735adbd10ce0030f9f02f0f990df6f0f",
+    "docs/migration/P4_5_B_FINAL_RECEIPT.json": "81a3f4cb62f1828b582f1f43ff29e554941a443532a2d4579b8ff367c4f3745b",
+    "templates/business-platform-auth/README.md": "e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5",
+    "templates/business-platform-auth/package-lock.json": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+    "templates/business-platform-auth/.gitignore": "19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2",
+    "templates/business-platform-auth/prisma.config.ts": "708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde",
+    "templates/business-platform-auth/tsconfig.checks.json": "017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf",
+    "templates/business-platform-auth/package.json": "f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345",
+    "templates/business-platform-auth/next.config.ts": "c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9",
+    "templates/business-platform-auth/.dockerignore": "0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37",
+    "templates/business-platform-auth/next-env.d.ts": "879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc",
+    "templates/business-platform-auth/tsconfig.json": "2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61",
+    "templates/business-platform-auth/validation/create-member.ts": "e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea",
+    "templates/business-platform-auth/validation/bootstrap-grants.sql": "a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58",
+    "templates/business-platform-auth/validation/runtime-grants.sql": "5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67",
+    "templates/business-platform-auth/tests/policy.test.mjs": "9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024",
+    "templates/business-platform-auth/scripts/bootstrap-admin.ts": "0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25",
+    "templates/business-platform-auth/scripts/start.mjs": "57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e",
+    "templates/business-platform-auth/scripts/migrate-check.mjs": "b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306",
+    "templates/business-platform-auth/src/server/policy.ts": "2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb",
+    "templates/business-platform-auth/src/server/http.ts": "f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec",
+    "templates/business-platform-auth/src/server/auth.ts": "e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593",
+    "templates/business-platform-auth/src/app/page.tsx": "74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33",
+    "templates/business-platform-auth/src/app/layout.tsx": "015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35",
+    "templates/business-platform-auth/src/app/logout.tsx": "b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac",
+    "templates/business-platform-auth/src/app/globals.css": "db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19",
+    "templates/business-platform-auth/src/app/page.module.css": "e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1",
+    "templates/business-platform-auth/src/app/admin-check/page.tsx": "0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6",
+    "templates/business-platform-auth/src/app/login/page.tsx": "1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10",
+    "templates/business-platform-auth/src/app/login/login.tsx": "de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7",
+    "templates/business-platform-auth/src/app/auth-check/page.tsx": "794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea",
+    "templates/business-platform-auth/src/app/api/admin-check/route.ts": "5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139",
+    "templates/business-platform-auth/src/app/api/auth-check/route.ts": "961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703",
+    "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts": "d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0",
+    "templates/business-platform-auth/prisma/auth/schema.prisma": "67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487",
+    "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210",
+    "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql": "e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e",
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/validation/requests-users.ts": "f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef",
+    "modules/internal-requests/0.1.0/files/tests/requests-boundary.test.mjs": "7b7987c892600b4dfb85b1e9ed9e71612636956ee59cd3eea17a57ae9149653e",
+    "modules/internal-requests/0.1.0/files/tests/requests.test.mjs": "05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f",
+    "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs": "4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8",
+    "modules/internal-requests/0.1.0/files/scripts/requests-response-boundary.mjs": "de46a42b5bc3084d24de60ca9ae70946a217dbcb4876112b3e8aee0c8fee3b3d",
+    "modules/internal-requests/0.1.0/files/src/middleware.ts": "6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60",
+    "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx": "a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593",
+    "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx": "c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae",
+    "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css": "6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d",
+    "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx": "ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts": "2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts": "2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts": "5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts": "94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts": "d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts": "1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts": "95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts": "29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts": "d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "docs/migration/P4_6_G01_DECISION.json": "ef9330c7d9140eb8326e878649eabf5a615e2d9a43835c32c04e3d82d3bc9112"
+  },
+  "proposalSha256": "47559f56844f90c0ffdbb51ed1932e38f1ccbb20aa5fd0bd0ced4acfd6b29efd",
+  "protectedFilesCompared": 486,
+  "preservationDifferences": [],
+  "futureCases": {
+    "G01": "HUMAN_APPROVED",
+    "G02": "NOT_EXECUTED",
+    "G03": "NOT_EXECUTED",
+    "G04": "NOT_EXECUTED",
+    "G05": "NOT_EXECUTED",
+    "G06": "NOT_EXECUTED",
+    "G07": "NOT_EXECUTED",
+    "G08": "NOT_EXECUTED",
+    "G09": "NOT_EXECUTED",
+    "G10": "NOT_EXECUTED",
+    "G11": "NOT_EXECUTED",
+    "G12": "NOT_EXECUTED",
+    "G13": "NOT_EXECUTED",
+    "G14": "NOT_EXECUTED",
+    "G15": "NOT_EXECUTED",
+    "G16": "NOT_EXECUTED",
+    "G17": "NOT_EXECUTED",
+    "G18": "NOT_EXECUTED",
+    "G19": "NOT_EXECUTED",
+    "G20": "NOT_EXECUTED",
+    "G21": "NOT_EXECUTED",
+    "G22": "NOT_EXECUTED",
+    "G23": "NOT_EXECUTED",
+    "G24": "NOT_EXECUTED"
+  },
+  "entryGatesApproved": {
+    "database-migrations": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "resource-authorization": {
+      "status": "PASS",
+      "missingOrInvalidCases": [],
+      "scope": "InternalRequest server-side ownership/admin policy only; no generic global authorization implementation."
+    },
+    "module-crud": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "authentication": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "compatibility": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "build-tests": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "cleanup": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    },
+    "auth-role-probes": {
+      "status": "PASS",
+      "scope": "Integrated unchanged P4.4-B session/role probes; C35."
+    },
+    "generation": {
+      "status": "NOT_IMPLEMENTED"
+    },
+    "autonomy": {
+      "status": "NOT_IMPLEMENTED"
+    }
+  },
+  "generation": "NOT_IMPLEMENTED",
+  "autonomy": "NOT_IMPLEMENTED",
+  "readiness": "BLOCKED",
+  "executed": "Read-only source/route inventory, byte hashes and JSON documentation consistency only; no generation, schema installation, runtime tests, products or infrastructure.",
+  "implementationAuthorized": false,
+  "inventoryDesign": {
+    "path": "docs/business-platform/P4_6_EXECUTION_INVENTORY_DESIGN.md",
+    "sha256": "26ad6a8676c8d2abfb6f2a944962eba0dc1c9204bb7acb19a917e7d9c595069b",
+    "formats": [
+      "nexonova.business-execution-inventory.v1",
+      "nexonova.business-route-adaptation.v1"
+    ],
+    "realRouteCount": 11,
+    "authOperationCount": 3,
+    "legacyReservationPolicy": "PROPOSED: /sign-in segment subtree, no materialization, no alias",
+    "exampleInventoryCanonicalSha256": "sha256:31bb01135d7d8da52720e112e9b10a6c6bd8bf0f5c7bbc2308724242d5f59eb5",
+    "schemaImplementationCreated": false
+  },
+  "priorPlanningArchive": {
+    "docs/migration/p4-6-planning-history/g01-pending/P4_6_PLANNING_REVIEW.json": "303eeaf459bfebde62898a9545c6b4625970e34cb26d19b842f4f3e848627514",
+    "docs/migration/p4-6-planning-history/g01-pending/P4_6_PROPOSAL.md": "80b1df4f57dde9a9d2b8b1043a24b830842bfb73aa399db5c2431c83ecb665ea"
+  },
+  "nextAction": "Human design review only; G01 does not authorize P4.6 execution.",
+  "documentationChecks": {
+    "jsonBlocksParsed": 5,
+    "completeExamplesStructurallyConsistent": true,
+    "canonicalExampleHashConsistent": true,
+    "discoveredRouteFiles": 11,
+    "sourceHashesMatch": true,
+    "checksScope": "In-memory checks of Markdown examples and current source files only; not future validator implementation or G02-G24 execution."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format": "nexonova.planning-human-decision.v1",
+  "phase": "P4.6 planning only",
+  "id": "G01",
+  "status": "HUMAN_APPROVED",
+  "selection": "ALTERNATIVE_A",
+  "basis": "Explicit current user instruction: G01 = ALTERNATIVE_A_APPROVED",
+  "approved": [
+    "New versioned generation/execution inventory based on approved real routes",
+    "Explicit /login representation",
+    "Explicit deterministic and fail-closed adaptation of historical /sign-in reservation",
+    "No /sign-in page, redirect, rewrite or alias",
+    "Keep historical contracts and artifacts intact",
+    "InternalRequest requires scripts/start-requests.mjs"
+  ],
+  "executionAuthorized": false,
+  "generatorImplementationAuthorized": false,
+  "detailedDesignApproval": "PENDING_HUMAN_REVIEW",
+  "historicalPhasesReopened": false
+}

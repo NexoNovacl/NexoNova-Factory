@@ -1,0 +1,69 @@
+{
+  "phase": "P4.5-B",
+  "decision": "D02",
+  "status": "BLOCKED_PENDING_HUMAN_REVIEW",
+  "caseStatus": {
+    "C28": "FAIL"
+  },
+  "expected": "no-store and Vary Cookie on success/errors/pages",
+  "actual": {
+    "pageStatus": 200,
+    "cacheControl": "no-store",
+    "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+  },
+  "evidence": [
+    "p45b-f71fae0235be4d6d.json",
+    "p45b-0a12a2069e164369.json"
+  ],
+  "diagnosis": "Next 15.5.25 app-page template calls res.setHeader(Vary, routeModule.getVaryHeader(...)), replacing middleware Vary Cookie. Raw get_all(Vary) confirms one header without Cookie; not dictionary flattening. API handlers retain Cookie.",
+  "controlPreserved": "No-store remains on pages; server identity and resource predicates remain. No claim that missing Vary enables a demonstrated leak.",
+  "humanReviewRequiredBy": "User execution rule 9: stop before required approved-core changes or weakening approved controls.",
+  "notApplied": [
+    "No Next patch/upgrade",
+    "No core/start/auth modification",
+    "No relaxation of C28",
+    "No replacement of FK or grants"
+  ],
+  "options": [
+    {
+      "id": "A",
+      "proposal": "Review a module-specific response boundary that appends Cookie after Next rendering while preserving framework Vary tokens and unchanged auth. Requires design/implementation approval and real regression tests; not implemented.",
+      "recommended": true
+    },
+    {
+      "id": "B",
+      "proposal": "Explicitly revise page cache acceptance to verified no-store without requiring Vary Cookie on RSC pages, retaining API Vary Cookie. This changes the approved C28 requirement; not applied."
+    }
+  ],
+  "nextVersion": "15.5.25",
+  "frameworkSources": [
+    {
+      "path": "node_modules/next/dist/build/templates/app-page.js",
+      "sha256": "6406f85a342ee647f08c7df9f7dc61d7cbdcab0303eda28cac8e1e684375f05e",
+      "matchingLines": [
+        {
+          "line": 292,
+          "text": "const varyHeader = routeModule.getVaryHeader(resolvedPathname, interceptionRoutePatterns);"
+        },
+        {
+          "line": 293,
+          "text": "res.setHeader('Vary', varyHeader);"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/next/dist/server/route-modules/app-page/module.js",
+      "sha256": "441a9e836e82f072cbc1996863f888a10373b9a901e5cf47c85f4926192d0f68",
+      "matchingLines": [
+        {
+          "line": 111,
+          "text": "getVaryHeader(resolvedPathname, interceptionRoutePatterns) {"
+        },
+        {
+          "line": 120,
+          "text": "return baseVaryHeader;"
+        }
+      ]
+    }
+  ]
+}

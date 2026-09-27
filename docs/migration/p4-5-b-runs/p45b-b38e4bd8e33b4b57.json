@@ -1,0 +1,133 @@
+{
+  "stage": "build",
+  "runId": "p45b-b38e4bd8e33b4b57",
+  "status": "PASS",
+  "sourceHashes": {
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/validation/requests-users.ts": "f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef",
+    "modules/internal-requests/0.1.0/files/tests/requests-boundary.test.mjs": "7b7987c892600b4dfb85b1e9ed9e71612636956ee59cd3eea17a57ae9149653e",
+    "modules/internal-requests/0.1.0/files/tests/requests.test.mjs": "05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f",
+    "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs": "4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8",
+    "modules/internal-requests/0.1.0/files/scripts/requests-response-boundary.mjs": "de46a42b5bc3084d24de60ca9ae70946a217dbcb4876112b3e8aee0c8fee3b3d",
+    "modules/internal-requests/0.1.0/files/src/middleware.ts": "6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60",
+    "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx": "a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593",
+    "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx": "c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae",
+    "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css": "6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d",
+    "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx": "ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts": "2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts": "2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts": "5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts": "94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts": "d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts": "1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts": "95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts": "29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts": "d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "scripts/validate_business_requests_build.py": "77a2722bf9e2a46e5ed0b2babfd42919c814ae1d94aae63c318853dc1e3aba59"
+  },
+  "workspace": "/var/tmp/nexonova-p45b-d02-work",
+  "steps": [
+    {
+      "name": "repair-prepared-symlinks",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "npm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.1.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0\nnpm notice To update run: npm install -g npm@12.1.0\nnpm notice\n\nadded 168 packages in 50s\n"
+    },
+    {
+      "name": "repair-engine",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "auth-generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.config.ts.\n\nPrisma schema loaded from prisma/auth/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/auth in 59ms\n\n"
+    },
+    {
+      "name": "requests-generate",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "Loaded Prisma config from prisma.requests.config.ts.\n\nPrisma schema loaded from prisma/business/schema.prisma.\n\n\u2714 Generated Prisma Client (7.5.0) to ./src/generated/requests in 96ms\n\n"
+    },
+    {
+      "name": "C33-compile",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 compile:checks\n> tsc -p tsconfig.checks.json\n\n"
+    },
+    {
+      "name": "C33-unit",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 test\n> node --test tests/*.test.mjs\n\nTAP version 13\n# Subtest: local profile is explicit; production requires HTTPS\nok 1 - local profile is explicit; production requires HTTPS\n  ---\n  duration_ms: 2.188658\n  type: 'test'\n  ...\n# Subtest: required environment and role fail closed\nok 2 - required environment and role fail closed\n  ---\n  duration_ms: 0.540263\n  type: 'test'\n  ...\n# Subtest: session clamp never extends shorter expiry and caps 24h\nok 3 - session clamp never extends shorter expiry and caps 24h\n  ---\n  duration_ms: 0.228161\n  type: 'test'\n  ...\n# Subtest: password bounds match JavaScript UTF-16 semantics without trimming\nok 4 - password bounds match JavaScript UTF-16 semantics without trimming\n  ---\n  duration_ms: 0.176469\n  type: 'test'\n  ...\n# Subtest: module boundary namespaces only\nok 5 - module boundary namespaces only\n  ---\n  duration_ms: 1.090727\n  type: 'test'\n  ...\n# Subtest: Vary union preserves framework tokens without duplicates\nok 6 - Vary union preserves framework tokens without duplicates\n  ---\n  duration_ms: 0.446112\n  type: 'test'\n  ...\n# Subtest: strict input and Unicode scalar limits\nok 7 - strict input and Unicode scalar limits\n  ---\n  duration_ms: 1.427489\n  type: 'test'\n  ...\n# Subtest: commands and versions are closed\nok 8 - commands and versions are closed\n  ---\n  duration_ms: 1.458821\n  type: 'test'\n  ...\n# Subtest: pagination and identifiers reject coercion\nok 9 - pagination and identifiers reject coercion\n  ---\n  duration_ms: 0.866581\n  type: 'test'\n  ...\n# Subtest: unknown and absent actors deny by default\nok 10 - unknown and absent actors deny by default\n  ---\n  duration_ms: 0.989253\n  type: 'test'\n  ...\n1..10\n# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 216.982872\n"
+    },
+    {
+      "name": "C33-typecheck",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 typecheck\n> tsc --noEmit\n\n"
+    },
+    {
+      "name": "C33-build",
+      "exitCode": 0,
+      "expected": 0,
+      "passed": true,
+      "output": "\n> business-platform-auth-core@0.1.0 build\n> next build\n\n   \u25b2 Next.js 15.5.25\n   - Experiments (use with caution):\n     \u00b7 cpus: 2\n\n   Creating an optimized production build ...\n \u2713 Compiled successfully in 15.9s\n   Linting and checking validity of types ...\n   Collecting page data ...\n   Generating static pages (0/5) ...\n   Generating static pages (1/5) \n   Generating static pages (2/5) \n   Generating static pages (3/5) \n \u2713 Generating static pages (5/5)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                      162 B         106 kB\n\u251c \u25cb /_not-found                            993 B         104 kB\n\u251c \u0192 /admin-check                           475 B         103 kB\n\u251c \u0192 /api/admin-check                       136 B         103 kB\n\u251c \u0192 /api/auth-check                        136 B         103 kB\n\u251c \u0192 /api/auth/[...all]                     136 B         103 kB\n\u251c \u0192 /api/requests                          136 B         103 kB\n\u251c \u0192 /api/requests/[id]                     136 B         103 kB\n\u251c \u0192 /auth-check                            475 B         103 kB\n\u251c \u25cb /login                                 836 B         103 kB\n\u251c \u0192 /requests                            1.44 kB         107 kB\n\u2514 \u0192 /requests/[id]                       1.44 kB         107 kB\n+ First Load JS shared by all             103 kB\n  \u251c chunks/255-37e0f0325134c4d7.js       46.4 kB\n  \u251c chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB\n  \u2514 other shared chunks (total)          1.94 kB\n\n\n\u0192 Middleware                               34 kB\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n"
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-C33-build",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-C33-typecheck",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-C33-unit",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-C33-compile",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-requests-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-auth-generate",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-repair-engine",
+      "removedOrAbsent": true
+    },
+    {
+      "kind": "container",
+      "name": "p45b-b38e4bd8e33b4b57-repair-prepared-symlinks",
+      "removedOrAbsent": true
+    }
+  ],
+  "cleanupPassed": true
+}

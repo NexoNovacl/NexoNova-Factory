@@ -1,0 +1,24 @@
+{
+  "phase": "P4.5-B",
+  "scope": "C37 final D02 regression",
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_p3_baseline.py",
+    "tests/test_business_contracts.py",
+    "tests/test_product_contracts.py",
+    "tests/test_product_integrity.py"
+  ],
+  "exitCode": 0,
+  "output": "........................................................................ [ 81%]\n................                                                         [100%]\n88 passed in 1.76s\n",
+  "status": "PASS",
+  "sourceHashes": {
+    "tests/test_p3_baseline.py": "d5c301f6f379977874edd2428de6e99cfcc0fff4897d9cfcd6f1f3706b9a842a",
+    "tests/test_business_contracts.py": "3e53f52cc056471ef77567c68ad3752c83c883e55cfb3f9e4a227e6d6e4e25a2",
+    "tests/test_product_contracts.py": "95b4bd593bd300604550ff39552b849a6a9e5c51eb069fc684b9f4241388ae26",
+    "tests/test_product_integrity.py": "814ce43db085aa84fb5e1b4ff70bb907b09a41b5f6f82e6c3c4cd4a1505582d6"
+  }
+}

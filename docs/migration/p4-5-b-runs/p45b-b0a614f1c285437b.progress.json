@@ -1,0 +1,164 @@
+{
+  "phase": "P4.5-B",
+  "stage": "integration",
+  "runId": "p45b-b0a614f1c285437b",
+  "status": "RUNNING",
+  "cases": {
+    "C01": {
+      "status": "NOT_EXECUTED"
+    },
+    "C02": {
+      "status": "PASS",
+      "steps": [
+        "C02-existing-session-a",
+        "C02-existing-session-b",
+        "C02-existing-session-admin",
+        "C02-upgrade-session",
+        "C02-auth-data-byte-identical",
+        "C02-auth-history-preserved",
+        "C02-reapply-session",
+        "C02-reapply-stable"
+      ]
+    },
+    "C03": {
+      "status": "NOT_EXECUTED"
+    },
+    "C04": {
+      "status": "NOT_EXECUTED"
+    },
+    "C05": {
+      "status": "NOT_EXECUTED"
+    },
+    "C06": {
+      "status": "NOT_EXECUTED"
+    },
+    "C07": {
+      "status": "NOT_EXECUTED"
+    },
+    "C08": {
+      "status": "NOT_EXECUTED"
+    },
+    "C09": {
+      "status": "NOT_EXECUTED"
+    },
+    "C10": {
+      "status": "NOT_EXECUTED"
+    },
+    "C11": {
+      "status": "NOT_EXECUTED"
+    },
+    "C12": {
+      "status": "NOT_EXECUTED"
+    },
+    "C13": {
+      "status": "NOT_EXECUTED"
+    },
+    "C14": {
+      "status": "NOT_EXECUTED"
+    },
+    "C15": {
+      "status": "NOT_EXECUTED"
+    },
+    "C16": {
+      "status": "NOT_EXECUTED"
+    },
+    "C17": {
+      "status": "NOT_EXECUTED"
+    },
+    "C18": {
+      "status": "NOT_EXECUTED"
+    },
+    "C19": {
+      "status": "NOT_EXECUTED"
+    },
+    "C20": {
+      "status": "NOT_EXECUTED"
+    },
+    "C21": {
+      "status": "NOT_EXECUTED"
+    },
+    "C22": {
+      "status": "NOT_EXECUTED"
+    },
+    "C23": {
+      "status": "NOT_EXECUTED"
+    },
+    "C24": {
+      "status": "NOT_EXECUTED"
+    },
+    "C25": {
+      "status": "NOT_EXECUTED"
+    },
+    "C26": {
+      "status": "NOT_EXECUTED"
+    },
+    "C27": {
+      "status": "NOT_EXECUTED"
+    },
+    "C28": {
+      "status": "NOT_EXECUTED"
+    },
+    "C29": {
+      "status": "NOT_EXECUTED"
+    },
+    "C30": {
+      "status": "NOT_EXECUTED"
+    },
+    "C31": {
+      "status": "NOT_EXECUTED"
+    },
+    "C32": {
+      "status": "NOT_EXECUTED"
+    },
+    "C33": {
+      "status": "NOT_EXECUTED"
+    },
+    "C34": {
+      "status": "NOT_EXECUTED"
+    },
+    "C35": {
+      "status": "NOT_EXECUTED"
+    },
+    "C36": {
+      "status": "NOT_EXECUTED"
+    },
+    "C37": {
+      "status": "NOT_EXECUTED"
+    },
+    "C38": {
+      "status": "NOT_EXECUTED"
+    },
+    "C39": {
+      "status": "NOT_EXECUTED"
+    },
+    "C40": {
+      "status": "NOT_EXECUTED"
+    }
+  },
+  "sourceHashes": {
+    "modules/internal-requests/0.1.0/files/prisma.requests.config.ts": "2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6",
+    "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql": "d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911",
+    "modules/internal-requests/0.1.0/files/validation/requests-users.ts": "f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef",
+    "modules/internal-requests/0.1.0/files/tests/requests.test.mjs": "05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f",
+    "modules/internal-requests/0.1.0/files/src/middleware.ts": "6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60",
+    "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx": "a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593",
+    "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx": "c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae",
+    "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css": "6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d",
+    "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx": "ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts": "2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016",
+    "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts": "2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts": "5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts": "94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts": "d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts": "1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts": "95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts": "29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8",
+    "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts": "d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e",
+    "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma": "2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e",
+    "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql": "72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396",
+    "scripts/validate_business_requests_integration.py": "03c577e67ca5e0015bfa931483960b0c275f9aba636ee6b65d1e6d39b4fc4f96",
+    "scripts/validate_business_requests.py": "cf28f285bc677c33ee7074592d8427fee0249b4c3ce7d85a4bab09bc98c33eeb",
+    "scripts/validate_business_auth.py": "5b37862d05f15b155194b77d67fedc172a203d9e6b2fdca9d40bc09e92f2db58",
+    "factory/business_infrastructure.py": "4d5f0d62e8d479d749c2dcbfe0da413654ea33424b414b5e620118a8206126d1"
+  }
+}

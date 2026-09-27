@@ -1,0 +1,134 @@
+{
+  "phase": "P4.5-B",
+  "status": "BLOCKED",
+  "blocker": "D02 \u2014 C28 pages Vary Cookie overridden by Next 15.5.25",
+  "humanReviewRequired": true,
+  "entry": "docs/migration/P4_5_B_ENTRY.json",
+  "receipt": "docs/migration/P4_5_B_FINAL_RECEIPT.json",
+  "report": "docs/migration/P4_5_B_FINAL_REPORT.md",
+  "cases": {
+    "C01": "PASS",
+    "C02": "PASS",
+    "C03": "PASS",
+    "C04": "PASS",
+    "C05": "PASS",
+    "C06": "PASS",
+    "C07": "PASS",
+    "C08": "PASS",
+    "C09": "NOT_EXECUTED",
+    "C10": "PASS",
+    "C11": "NOT_EXECUTED",
+    "C12": "PASS",
+    "C13": "NOT_EXECUTED",
+    "C14": "NOT_EXECUTED",
+    "C15": "NOT_EXECUTED",
+    "C16": "PASS",
+    "C17": "NOT_EXECUTED",
+    "C18": "PASS",
+    "C19": "NOT_EXECUTED",
+    "C20": "NOT_EXECUTED",
+    "C21": "NOT_EXECUTED",
+    "C22": "NOT_EXECUTED",
+    "C23": "PASS",
+    "C24": "PASS",
+    "C25": "PASS",
+    "C26": "PASS",
+    "C27": "NOT_EXECUTED",
+    "C28": "FAIL",
+    "C29": "NOT_EXECUTED",
+    "C30": "NOT_EXECUTED",
+    "C31": "NOT_EXECUTED",
+    "C32": "PASS",
+    "C33": "NOT_EXECUTED",
+    "C34": "NOT_EXECUTED",
+    "C35": "NOT_EXECUTED",
+    "C36": "NOT_EXECUTED",
+    "C37": "PASS",
+    "C38": "PASS",
+    "C39": "PASS",
+    "C40": "NOT_EXECUTED"
+  },
+  "gates": {
+    "database-migrations": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C29",
+        "C30",
+        "C31"
+      ]
+    },
+    "resource-authorization": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C09",
+        "C14",
+        "C15",
+        "C17",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C27",
+        "C28",
+        "C30",
+        "C31",
+        "C34",
+        "C35",
+        "C36"
+      ]
+    },
+    "module-crud": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C09",
+        "C11",
+        "C13",
+        "C14",
+        "C15",
+        "C19",
+        "C27",
+        "C29",
+        "C30",
+        "C34",
+        "C40"
+      ]
+    },
+    "authentication": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C20",
+        "C21",
+        "C29",
+        "C35"
+      ]
+    },
+    "compatibility": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C33",
+        "C35",
+        "C40"
+      ]
+    },
+    "build-tests": {
+      "status": "BLOCKED",
+      "missingOrInvalidCases": [
+        "C27",
+        "C28",
+        "C33",
+        "C34",
+        "C36"
+      ]
+    },
+    "cleanup": {
+      "status": "PASS",
+      "missingOrInvalidCases": []
+    }
+  },
+  "readiness": "BLOCKED",
+  "generation": "NOT_IMPLEMENTED",
+  "autonomy": "NOT_IMPLEMENTED",
+  "temporaryWorkspaceRemoved": true,
+  "historicalReceiptsUnchanged": true,
+  "nextAction": "Resolve D02 before implementation continuation. No P4.6/P4.7."
+}

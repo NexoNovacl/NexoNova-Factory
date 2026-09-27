@@ -1,0 +1,49 @@
+{
+  "phase": "P4.5-B",
+  "steps": [
+    {
+      "name": "C38-final-container",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-final-network",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-final-volume",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-prepared-workspace-removed",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-no-owned-temporary-paths",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "name": "C38-success-failure-timeout-sentinel",
+      "passed": true,
+      "exitCode": 0
+    }
+  ],
+  "inventory": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "preparedWorkspace": "/var/tmp/nexonova-p45b-prepared-p45b-ba2c6a6f1698418a",
+  "otherContainers": [
+    "dazzling_moore",
+    "xenodochial_mendeleev"
+  ],
+  "temporaryPaths": [],
+  "scenarioReceiptSha256": "238af775a041996b1ab2a21e2b565fc1e24d695893b757e3c1db48a7b0ca14af",
+  "status": "PASS",
+  "finalTemporaryDirectoryRemoved": true
+}
