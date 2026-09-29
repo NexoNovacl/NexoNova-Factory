@@ -1,0 +1,1804 @@
+{
+  "format": "nexonova.p46-vps-preflight-receipt.v1",
+  "phase": "P4.6 EXECUTION_B1 / PREPARATION AND PREFLIGHT",
+  "status": "BLOCKED",
+  "executionAuthority": "none",
+  "observedAtUtc": "2026-09-29 17:40:07 UTC",
+  "authorizationScope": "Explicit current user instruction: repeat B1 only on VPS. No B2, WorkOrder execution, products, installations, downloads, infrastructure creation, promotion or P4.7.",
+  "stopReason": "Repository integrity passed. Independently measured host resources and offline dependencies do not satisfy required preconditions. No executable package emitted.",
+  "historicalState": {
+    "design": "DESIGN_APPROVED",
+    "implementationA": "IMPLEMENTATION_A_COMPLETED",
+    "implementationB": "IMPLEMENTATION_B_COMPLETED",
+    "oldB1": "BLOCKED on previous host; preserved",
+    "executionB2": "NOT_AUTHORIZED",
+    "p47": "NOT_STARTED",
+    "source": "docs/business-platform/P4_6_VPS_HANDOFF.md"
+  },
+  "repositoryIntegrity": {
+    "status": "PASS",
+    "beforePreflight": "PASS",
+    "finalBeforeReceipt": "PASS",
+    "uniqueVerifiedCount": 574,
+    "transferInventoryCount": 573,
+    "additionalVerifiedHandoff": true,
+    "receiptCanonicalChecks": "stdlib implementation of inventory-json.v1; duplicate keys, unsafe paths, symlinks and hardlinks rejected; no project code imported",
+    "checks": [
+      {
+        "source": "docs/migration/P4_6_ENTRY.json",
+        "map": "hashes",
+        "count": 533,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_ENTRY.json",
+        "map": "hashes",
+        "count": 564,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json",
+        "map": "newArtifactHashes",
+        "count": 30,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json",
+        "map": "entry",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json",
+        "map": "approvedPlan",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json",
+        "map": "checkpoint",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json",
+        "canonicalIntegrity": "PASS"
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "map": "newArtifactHashes",
+        "count": 6,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "map": "entry",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "map": "approvedPlan",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "map": "phaseACheckpoint",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "map": "handoff",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json",
+        "canonicalIntegrity": "PASS"
+      },
+      {
+        "source": "docs/migration/P4_6_EXECUTION_B1_PREFLIGHT.json",
+        "map": "protectedFiles",
+        "count": 571,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_EXECUTION_B1_PREFLIGHT.json",
+        "map": "plan",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_EXECUTION_B1_PREFLIGHT.json",
+        "canonicalIntegrity": "PASS"
+      },
+      {
+        "source": "docs/migration/P4_6_VPS_HANDOFF_RECEIPT.json",
+        "map": "preexistingFiles",
+        "count": 573,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_VPS_HANDOFF_RECEIPT.json",
+        "map": "handoff",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_VPS_HANDOFF_RECEIPT.json",
+        "canonicalIntegrity": "PASS"
+      },
+      {
+        "source": "docs/migration/P4_6_DESIGN_APPROVAL.json",
+        "map": "approvedDocuments",
+        "count": 3,
+        "status": "PASS",
+        "differences": []
+      },
+      {
+        "source": "docs/migration/P4_6_DESIGN_APPROVAL.json",
+        "map": "parentDecision",
+        "count": 1,
+        "status": "PASS",
+        "differences": []
+      }
+    ],
+    "sourceAnchors": {
+      "docs/migration/P4_6_ENTRY.json": "4e50b07da90894d3376f38c7bb435cdef53f986d51d59e46ea030a218f4d9992",
+      "docs/migration/P4_6_IMPLEMENTATION_B_ENTRY.json": "81f724c6208c75f776313f4e36fb51cc8afed65f3ba6667c0a9fa2ac8731089c",
+      "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json": "1df9144d7c40231e4eca8cd1a8cca445068ed1d9356b8ca8905e523baf4a3954",
+      "docs/migration/P4_6_IMPLEMENTATION_B_RECEIPT.json": "269ffd7eda6081e33bd1b544673b6439a55e6782e929e1e100968a5b2b87562b",
+      "docs/migration/P4_6_EXECUTION_B1_PREFLIGHT.json": "a5b4130cb23b547c2b45b675965e239236e9f47e82be7f334c11719864e5d2a5",
+      "docs/migration/P4_6_VPS_HANDOFF_RECEIPT.json": "a4419ad7e51b76e3e305ebf2fddf3f8353af54becec7d48a6f35f14b66cc6b04",
+      "docs/migration/P4_6_DESIGN_APPROVAL.json": "4793d0ff57821255a25c2d7a6e821139440c46b44af7da32d6c7cefc1004a2d2"
+    },
+    "structure": {
+      "factory": {
+        "exists": true,
+        "symlink": false
+      },
+      "scripts": {
+        "exists": true,
+        "symlink": false
+      },
+      "tests": {
+        "exists": true,
+        "symlink": false
+      },
+      "config": {
+        "exists": true,
+        "symlink": false
+      },
+      "schemas": {
+        "exists": true,
+        "symlink": false
+      },
+      "templates": {
+        "exists": true,
+        "symlink": false
+      },
+      "modules": {
+        "exists": true,
+        "symlink": false
+      },
+      "docs": {
+        "exists": true,
+        "symlink": false
+      }
+    },
+    "gitHead": "01765808f08bed6dd7f39936436dbd5d8adf1de5",
+    "initialGitStatus": "",
+    "unexpectedSourcePaths": [],
+    "ignoredPaths": [],
+    "metadataPolicy": "Host UID/GID/device/path differences are not byte changes. Baselines were not regenerated.",
+    "trustLimit": "No independently supplied external transfer signature/hash; internally consistent hashes do not authenticate the sender."
+  },
+  "protectedFiles": {
+    "status": "PASS",
+    "reference": "docs/migration/P4_6_VPS_HANDOFF_RECEIPT.json.preexistingFiles.hashes",
+    "historicalReceiptsUnchanged": true,
+    "launcher": {
+      "path": "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs",
+      "sha256": "4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8",
+      "byteIdentical": true
+    }
+  },
+  "environment": {
+    "identification": "Development VPS; no hostname/IP/credentials recorded",
+    "host": {
+      "os": "Linux",
+      "release": "6.8.0-138-generic",
+      "arch": "x86_64",
+      "osRelease": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+      "uid": 0,
+      "gid": 0,
+      "groups": [
+        0
+      ],
+      "root": "/root/NexoNova/NexoNova-Factory",
+      "memoryKiB": {
+        "MemTotal": 4009260,
+        "MemAvailable": 3163148,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cpuCount": 2,
+      "cpuAffinity": [
+        0,
+        1
+      ],
+      "disk": {
+        "total": 104440000512,
+        "used": 41287450624,
+        "free": 58689134592
+      },
+      "cgroup": {
+        "memory.max": null,
+        "memory.high": null,
+        "memory.current": null,
+        "memory.swap.max": null,
+        "cpu.max": null,
+        "cpuset.cpus.effective": "0-1"
+      },
+      "paths": {
+        "/": {
+          "exists": true,
+          "symlink": false,
+          "device": 2051,
+          "uid": 0,
+          "gid": 0,
+          "mode": "0o755",
+          "readable": true,
+          "writable": false
+        },
+        "/root": {
+          "exists": true,
+          "symlink": false,
+          "device": 2051,
+          "uid": 0,
+          "gid": 0,
+          "mode": "0o700",
+          "readable": true,
+          "writable": false
+        },
+        "/root/NexoNova": {
+          "exists": true,
+          "symlink": false,
+          "device": 2051,
+          "uid": 0,
+          "gid": 0,
+          "mode": "0o755",
+          "readable": true,
+          "writable": false
+        },
+        "/root/NexoNova/NexoNova-Factory": {
+          "exists": true,
+          "symlink": false,
+          "device": 2051,
+          "uid": 0,
+          "gid": 0,
+          "mode": "0o755",
+          "readable": true,
+          "writable": true
+        },
+        "/root/NexoNova/p46-execution-b2-vps": {
+          "exists": false,
+          "symlink": false
+        },
+        "/root/.npm/_cacache": {
+          "exists": true,
+          "symlink": false,
+          "device": 2051,
+          "uid": 0,
+          "gid": 0,
+          "mode": "0o755",
+          "readable": true,
+          "writable": false
+        },
+        "/root/.cache/prisma": {
+          "exists": false,
+          "symlink": false
+        },
+        "/root/.cache/ms-playwright": {
+          "exists": false,
+          "symlink": false
+        },
+        "/root/NexoNova/nexonova-website": {
+          "exists": false,
+          "symlink": false
+        },
+        "/root/NexoNova/synthetic-website": {
+          "exists": false,
+          "symlink": false
+        },
+        "/root/NexoNova/nexonova-prototype": {
+          "exists": false,
+          "symlink": false
+        }
+      },
+      "tools": {
+        "node": "/usr/bin/node",
+        "npm": "/usr/bin/npm",
+        "docker": "/usr/bin/docker",
+        "ss": "/usr/bin/ss",
+        "findmnt": "/usr/bin/findmnt",
+        "chromium": null,
+        "chromium-browser": null,
+        "google-chrome": null,
+        "playwright": null,
+        "python3": "/usr/bin/python3",
+        "openssl": "/usr/bin/openssl"
+      },
+      "nodeVersion": {
+        "exitCode": 0,
+        "stdout": "v20.20.2\n",
+        "stderr": ""
+      },
+      "npmVersion": {
+        "exitCode": 0,
+        "stdout": "10.8.2\n",
+        "stderr": ""
+      },
+      "filesystem": {
+        "exitCode": 0,
+        "stdout": "/root/NexoNova/NexoNova-Factory /dev/sda3[/root/NexoNova/NexoNova-Factory] ext4   rw,nosuid,nodev,relatime\n",
+        "stderr": ""
+      },
+      "ports": {
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": "Cannot open netlink socket: Operation not permitted\n"
+      },
+      "gitHead": {
+        "exitCode": 0,
+        "stdout": "01765808f08bed6dd7f39936436dbd5d8adf1de5\n",
+        "stderr": ""
+      },
+      "npmCache": {
+        "exitCode": 0,
+        "stdout": "/root/.npm\n",
+        "stderr": ""
+      }
+    },
+    "additionalCgroupLimits": {
+      "/sys/fs/cgroup": {
+        "memory.max": null,
+        "memory.high": null,
+        "memory.current": null,
+        "memory.swap.max": null,
+        "cpu.max": null,
+        "cpuset.cpus.effective": "0-1"
+      },
+      "/sys/fs/cgroup/user.slice": {
+        "memory.max": "max",
+        "memory.high": "max",
+        "memory.current": "841191424",
+        "memory.swap.max": "max",
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-1"
+      },
+      "/sys/fs/cgroup/user.slice/user-0.slice": {
+        "memory.max": "max",
+        "memory.high": "max",
+        "memory.current": "841183232",
+        "memory.swap.max": "max",
+        "cpu.max": null,
+        "cpuset.cpus.effective": null
+      },
+      "/sys/fs/cgroup/user.slice/user-0.slice/session-1.scope": {
+        "memory.max": "max",
+        "memory.high": "max",
+        "memory.current": "836210688",
+        "memory.swap.max": "max",
+        "cpu.max": null,
+        "cpuset.cpus.effective": null
+      }
+    },
+    "cpu": {
+      "vendor_id": "AuthenticAMD",
+      "model name": "AMD EPYC 9J45 128-Core Processor",
+      "siblings": "1",
+      "cpu cores": "1"
+    }
+  },
+  "ram": {
+    "status": "BLOCKED",
+    "measurement": "/proc/meminfo KiB multiplied by 1024; corroborated by Docker info MemTotal",
+    "physicalUsableTotalKiB": 4009260,
+    "totalBytes": 4105482240,
+    "totalMiB": 3915.29296875,
+    "availableKiB": 3163148,
+    "availableBytes": 3239063552,
+    "minimumMiB": 4096,
+    "minimumBytes": 4294967296,
+    "shortfallBytes": 189485056,
+    "harnessCriterion": {
+      "source": "scripts/validate_business_generation.py:52",
+      "expression": "wo['resources']['maxContainers'] >= 3 and wo['resources']['maxMemoryMiB'] >= 4096",
+      "meaning": "Checks declared per-product budget, not physical RAM. B1 separately evaluates host capacity. Docker helper limits 2g, app 1g, DB 1g; browser/OS and G18 simultaneous products need additional reviewed aggregate capacity."
+    },
+    "cgroups": "Inspected session and ancestors: memory.max=max; no finite memory cap found there. Does not increase physical capacity.",
+    "swapCountsAsRAM": false
+  },
+  "cpu": {
+    "status": "OBSERVED",
+    "logicalAvailable": 2,
+    "affinity": [
+      0,
+      1
+    ],
+    "model": "AMD EPYC 9J45 128-Core Processor",
+    "assessment": "Historical 3-CPU per-product proposal is not automatically approved on 2-vCPU VPS. CPU quotas can overcommit; no fabricated hard CPU minimum. Aggregate budget/performance and supervision remain pending."
+  },
+  "swap": {
+    "status": "INFORMATION_ONLY",
+    "totalKiB": 0,
+    "freeKiB": 0
+  },
+  "docker": {
+    "status": "PASS_READ_ONLY_ACCESS",
+    "version": "29.8.1",
+    "platform": "linux/amd64",
+    "context": "default",
+    "storageDriver": "overlayfs",
+    "cgroupVersion": 2,
+    "cgroupDriver": "systemd",
+    "permission": "Initial sandbox denied Docker socket/netlink. Authorized escalated read-only queries succeeded; no operational Docker commands.",
+    "observations": [
+      {
+        "argv": [
+          "docker",
+          "version",
+          "--format",
+          "{{.Client.Version}} {{.Server.Version}} {{.Server.Os}} {{.Server.Arch}}"
+        ],
+        "exitCode": 0,
+        "stdout": "29.8.1 29.8.1 linux amd64\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "info",
+          "--format",
+          "{{.Driver}} {{.CgroupDriver}} {{.CgroupVersion}} {{.MemTotal}} {{.NCPU}}"
+        ],
+        "exitCode": 0,
+        "stdout": "overlayfs systemd 2 4105482240 2\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "ps",
+          "-a",
+          "--no-trunc",
+          "--format",
+          "{{.ID}}|{{.Names}}|{{.Image}}|{{.State}}|{{.Ports}}|{{.Label \"nexonova.p46.run\"}}"
+        ],
+        "exitCode": 0,
+        "stdout": "49637ed627be881f2bd8f07a030ed5fa76bec4ea59a2aa71a387759c31e79b09|nexonova-web|nextjs-test-web|running|0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp|\n65e0c315bfb636f84ddd8ebb6558ecdedeaa1e1752aa0198d161b8599fac7f03|uptime-kuma|louislam/uptime-kuma:1|running|0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp|\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "network",
+          "ls",
+          "--no-trunc",
+          "--format",
+          "{{.ID}}|{{.Name}}|{{.Driver}}|{{.Labels}}"
+        ],
+        "exitCode": 0,
+        "stdout": "4355108708a0d32e08e2198da3e3ec5544f2c15975115d71ee5700484fdac6d3|bridge|bridge|\n1d2997917165c52db85af88f8ec4ec77ac47e0239a2d3b5cdba86751747d9e25|host|host|\nf1593e949dc94dc8150faadf97f410127729a98033c1d585d7bc97ef3e50e5f1|nextjs-test_default|bridge|com.docker.compose.config-hash=7c029503523850b4c67dd4aa9789e38a8a074f286cc5b14f2105db6aac108009,com.docker.compose.network=default,com.docker.compose.project=nextjs-test,com.docker.compose.version=5.5.1\n3c3c8e9355ad36137f6b745101d191dd54a0d408cc63bc48b1f2c10fdc6e774b|none|null|\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "volume",
+          "ls",
+          "--format",
+          "{{.Name}}|{{.Driver}}|{{.Labels}}"
+        ],
+        "exitCode": 0,
+        "stdout": "uptime-kuma|local|\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "image",
+          "inspect",
+          "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+          "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67",
+          "--format",
+          "{{.Id}} {{json .RepoDigests}} {{.Architecture}} {{.Os}}"
+        ],
+        "exitCode": 1,
+        "stdout": "\n",
+        "stderr": "Error response from daemon: No such image: nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16\nError response from daemon: No such image: postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67\n"
+      },
+      {
+        "argv": [
+          "ss",
+          "-H",
+          "-ltn"
+        ],
+        "exitCode": 0,
+        "stdout": "LISTEN 0      4096         0.0.0.0:3000  0.0.0.0:*\nLISTEN 0      4096         0.0.0.0:3001  0.0.0.0:*\nLISTEN 0      4096   127.0.0.53%lo:53    0.0.0.0:*\nLISTEN 0      128        127.0.0.1:36691 0.0.0.0:*\nLISTEN 0      128          0.0.0.0:22022 0.0.0.0:*\nLISTEN 0      511                *:443         *:*\nLISTEN 0      511                *:80          *:*\nLISTEN 0      4096            [::]:3000     [::]:*\nLISTEN 0      4096            [::]:3001     [::]:*\nLISTEN 0      128             [::]:22022    [::]:*\n",
+        "stderr": ""
+      }
+    ],
+    "foreignResources": {
+      "containers": [
+        "49637ed627be881f2bd8f07a030ed5fa76bec4ea59a2aa71a387759c31e79b09",
+        "65e0c315bfb636f84ddd8ebb6558ecdedeaa1e1752aa0198d161b8599fac7f03"
+      ],
+      "names": [
+        "nexonova-web",
+        "uptime-kuma"
+      ],
+      "networks": [
+        "bridge",
+        "host",
+        "none",
+        "nextjs-test_default"
+      ],
+      "volumes": [
+        "uptime-kuma"
+      ],
+      "ownership": "All preexisting resources treated as foreign, none adopted or modified.",
+      "finalInventory": "Same IDs, names and running states as first successful inspection; no P4.6 resources observed."
+    }
+  },
+  "images": {
+    "status": "BLOCKED",
+    "node": {
+      "required": "nexonova-p44b-node-openssl@sha256:0d0e3b31790d5b477357d4596d0c4b97f7fe2c7a43d7501821b7de1d90f52c16",
+      "local": "ABSENT"
+    },
+    "postgres": {
+      "required": "postgres@sha256:efedf3595f1d6f415c08568ba171029bf54052e754cc9f030e3f2412b21f3d67",
+      "local": "ABSENT"
+    },
+    "platformVerified": false,
+    "pulled": false,
+    "loaded": false,
+    "built": false
+  },
+  "filesystem": {
+    "type": "ext4",
+    "device": 2051,
+    "freeBytes": 58689134592,
+    "root": "/root/NexoNova/NexoNova-Factory",
+    "paths": {
+      "/": {
+        "exists": true,
+        "symlink": false,
+        "device": 2051,
+        "uid": 0,
+        "gid": 0,
+        "mode": "0o755",
+        "readable": true,
+        "writable": false
+      },
+      "/root": {
+        "exists": true,
+        "symlink": false,
+        "device": 2051,
+        "uid": 0,
+        "gid": 0,
+        "mode": "0o700",
+        "readable": true,
+        "writable": false
+      },
+      "/root/NexoNova": {
+        "exists": true,
+        "symlink": false,
+        "device": 2051,
+        "uid": 0,
+        "gid": 0,
+        "mode": "0o755",
+        "readable": true,
+        "writable": false
+      },
+      "/root/NexoNova/NexoNova-Factory": {
+        "exists": true,
+        "symlink": false,
+        "device": 2051,
+        "uid": 0,
+        "gid": 0,
+        "mode": "0o755",
+        "readable": true,
+        "writable": true
+      },
+      "/root/NexoNova/p46-execution-b2-vps": {
+        "exists": false,
+        "symlink": false
+      },
+      "/root/.npm/_cacache": {
+        "exists": true,
+        "symlink": false,
+        "device": 2051,
+        "uid": 0,
+        "gid": 0,
+        "mode": "0o755",
+        "readable": true,
+        "writable": false
+      },
+      "/root/.cache/prisma": {
+        "exists": false,
+        "symlink": false
+      },
+      "/root/.cache/ms-playwright": {
+        "exists": false,
+        "symlink": false
+      },
+      "/root/NexoNova/nexonova-website": {
+        "exists": false,
+        "symlink": false
+      },
+      "/root/NexoNova/synthetic-website": {
+        "exists": false,
+        "symlink": false
+      },
+      "/root/NexoNova/nexonova-prototype": {
+        "exists": false,
+        "symlink": false
+      }
+    },
+    "noClobber": {
+      "status": "NOT_EXECUTED",
+      "renameat2SymbolPresent": true,
+      "reason": "Required effective RENAME_NOREPLACE fixture deferred after blocking prerequisites. Symbol presence does not prove filesystem operation. No temporary fixture created."
+    },
+    "stagingDestinationDevice": {
+      "status": "NOT_VERIFIED",
+      "existingAncestor": "/root/NexoNova",
+      "ancestorDevice": 2051,
+      "reason": "Proposed destinations absent. Common ancestor alone does not prove future staging/destination devices or safe promotion."
+    },
+    "permissions": {
+      "uid": 0,
+      "gid": 0,
+      "rootOwnedAncestors": true,
+      "controlRootRequiredMode": "0700",
+      "envFilesRequiredMode": "0600",
+      "sandboxScope": "Repository and /tmp writable; proposed sibling execution root outside current writable roots. No creation attempted. Future filesystem authorization must cover concrete destinations."
+    }
+  },
+  "caches": {
+    "npm": {
+      "status": "BLOCKED",
+      "root": "/root/.npm",
+      "lockfile": "templates/business-platform-auth/package-lock.json",
+      "lockfileSha256": "23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4",
+      "entries": 195,
+      "verifiedObjects": 22,
+      "missingObjects": 173,
+      "missingNonOptional": 141,
+      "method": "For each lockfile integrity decode SRI, derive content-v2/<algorithm>/<first2>/<next2>/<rest>, hash existing bytes using stated algorithm. All nonoptional missing entries are blockers regardless of optional foreign-platform packages.",
+      "verifiedPackages": [
+        "node_modules/@emnapi/runtime",
+        "node_modules/@img/colour",
+        "node_modules/@img/sharp-libvips-linux-x64",
+        "node_modules/@img/sharp-linux-x64",
+        "node_modules/@img/sharp-wasm32",
+        "node_modules/@swc/helpers",
+        "node_modules/caniuse-lite",
+        "node_modules/client-only",
+        "node_modules/csstype",
+        "node_modules/detect-libc",
+        "node_modules/picocolors",
+        "node_modules/postcss",
+        "node_modules/react",
+        "node_modules/react-dom",
+        "node_modules/scheduler",
+        "node_modules/semver",
+        "node_modules/sharp",
+        "node_modules/source-map-js",
+        "node_modules/styled-jsx",
+        "node_modules/tslib",
+        "node_modules/typescript",
+        "node_modules/undici-types"
+      ],
+      "missingNonOptionalPackages": [
+        {
+          "package": "node_modules/@better-auth/core",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/drizzle-adapter",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/kysely-adapter",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/memory-adapter",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/mongo-adapter",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/prisma-adapter",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/telemetry",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/@better-auth/utils",
+          "version": "0.4.2"
+        },
+        {
+          "package": "node_modules/@better-fetch/fetch",
+          "version": "1.3.2"
+        },
+        {
+          "package": "node_modules/@chevrotain/cst-dts-gen",
+          "version": "10.5.0"
+        },
+        {
+          "package": "node_modules/@chevrotain/gast",
+          "version": "10.5.0"
+        },
+        {
+          "package": "node_modules/@chevrotain/types",
+          "version": "10.5.0"
+        },
+        {
+          "package": "node_modules/@chevrotain/utils",
+          "version": "10.5.0"
+        },
+        {
+          "package": "node_modules/@electric-sql/pglite",
+          "version": "0.3.15"
+        },
+        {
+          "package": "node_modules/@electric-sql/pglite-socket",
+          "version": "0.0.20"
+        },
+        {
+          "package": "node_modules/@electric-sql/pglite-tools",
+          "version": "0.2.20"
+        },
+        {
+          "package": "node_modules/@hono/node-server",
+          "version": "1.19.9"
+        },
+        {
+          "package": "node_modules/@mrleebo/prisma-ast",
+          "version": "0.13.1"
+        },
+        {
+          "package": "node_modules/@next/env",
+          "version": "15.5.25"
+        },
+        {
+          "package": "node_modules/@noble/ciphers",
+          "version": "2.4.0"
+        },
+        {
+          "package": "node_modules/@noble/hashes",
+          "version": "2.4.0"
+        },
+        {
+          "package": "node_modules/@opentelemetry/semantic-conventions",
+          "version": "1.43.0"
+        },
+        {
+          "package": "node_modules/@prisma/adapter-pg",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/client",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/client-runtime-utils",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/config",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/debug",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/dev",
+          "version": "0.20.0"
+        },
+        {
+          "package": "node_modules/@prisma/driver-adapter-utils",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/engines",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/engines-version",
+          "version": "7.5.0-15.280c870be64f457428992c43c1f6d557fab6e29e"
+        },
+        {
+          "package": "node_modules/@prisma/engines/node_modules/@prisma/get-platform",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/fetch-engine",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/fetch-engine/node_modules/@prisma/get-platform",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/@prisma/get-platform",
+          "version": "7.2.0"
+        },
+        {
+          "package": "node_modules/@prisma/get-platform/node_modules/@prisma/debug",
+          "version": "7.2.0"
+        },
+        {
+          "package": "node_modules/@prisma/query-plan-executor",
+          "version": "7.2.0"
+        },
+        {
+          "package": "node_modules/@prisma/studio-core",
+          "version": "0.21.1"
+        },
+        {
+          "package": "node_modules/@standard-schema/spec",
+          "version": "1.1.0"
+        },
+        {
+          "package": "node_modules/@types/node",
+          "version": "22.20.2"
+        },
+        {
+          "package": "node_modules/@types/pg",
+          "version": "8.11.11"
+        },
+        {
+          "package": "node_modules/@types/react",
+          "version": "19.3.0"
+        },
+        {
+          "package": "node_modules/@types/react-dom",
+          "version": "19.3.0"
+        },
+        {
+          "package": "node_modules/aws-ssl-profiles",
+          "version": "1.1.2"
+        },
+        {
+          "package": "node_modules/better-auth",
+          "version": "1.7.5"
+        },
+        {
+          "package": "node_modules/better-call",
+          "version": "1.4.0"
+        },
+        {
+          "package": "node_modules/better-call/node_modules/@better-auth/utils",
+          "version": "0.5.0"
+        },
+        {
+          "package": "node_modules/c12",
+          "version": "3.1.0"
+        },
+        {
+          "package": "node_modules/chevrotain",
+          "version": "10.5.0"
+        },
+        {
+          "package": "node_modules/chokidar",
+          "version": "4.0.3"
+        },
+        {
+          "package": "node_modules/citty",
+          "version": "0.1.6"
+        },
+        {
+          "package": "node_modules/confbox",
+          "version": "0.2.4"
+        },
+        {
+          "package": "node_modules/consola",
+          "version": "3.4.2"
+        },
+        {
+          "package": "node_modules/cross-spawn",
+          "version": "7.0.6"
+        },
+        {
+          "package": "node_modules/deepmerge-ts",
+          "version": "7.1.5"
+        },
+        {
+          "package": "node_modules/defu",
+          "version": "6.1.7"
+        },
+        {
+          "package": "node_modules/denque",
+          "version": "2.1.0"
+        },
+        {
+          "package": "node_modules/destr",
+          "version": "2.0.5"
+        },
+        {
+          "package": "node_modules/dotenv",
+          "version": "16.6.1"
+        },
+        {
+          "package": "node_modules/effect",
+          "version": "3.18.4"
+        },
+        {
+          "package": "node_modules/empathic",
+          "version": "2.0.0"
+        },
+        {
+          "package": "node_modules/exsolve",
+          "version": "1.1.1"
+        },
+        {
+          "package": "node_modules/fast-check",
+          "version": "3.23.2"
+        },
+        {
+          "package": "node_modules/foreground-child",
+          "version": "3.3.1"
+        },
+        {
+          "package": "node_modules/generate-function",
+          "version": "2.3.1"
+        },
+        {
+          "package": "node_modules/get-port-please",
+          "version": "3.2.0"
+        },
+        {
+          "package": "node_modules/giget",
+          "version": "2.0.0"
+        },
+        {
+          "package": "node_modules/graceful-fs",
+          "version": "4.2.11"
+        },
+        {
+          "package": "node_modules/grammex",
+          "version": "3.1.13"
+        },
+        {
+          "package": "node_modules/graphmatch",
+          "version": "1.1.1"
+        },
+        {
+          "package": "node_modules/hono",
+          "version": "4.11.4"
+        },
+        {
+          "package": "node_modules/http-status-codes",
+          "version": "2.3.0"
+        },
+        {
+          "package": "node_modules/iconv-lite",
+          "version": "0.7.3"
+        },
+        {
+          "package": "node_modules/is-property",
+          "version": "1.0.2"
+        },
+        {
+          "package": "node_modules/isexe",
+          "version": "2.0.0"
+        },
+        {
+          "package": "node_modules/jiti",
+          "version": "2.7.0"
+        },
+        {
+          "package": "node_modules/jose",
+          "version": "6.2.12"
+        },
+        {
+          "package": "node_modules/kysely",
+          "version": "0.29.6"
+        },
+        {
+          "package": "node_modules/lilconfig",
+          "version": "2.1.0"
+        },
+        {
+          "package": "node_modules/lodash",
+          "version": "4.17.21"
+        },
+        {
+          "package": "node_modules/long",
+          "version": "5.3.2"
+        },
+        {
+          "package": "node_modules/lru.min",
+          "version": "1.1.5"
+        },
+        {
+          "package": "node_modules/mysql2",
+          "version": "3.15.3"
+        },
+        {
+          "package": "node_modules/named-placeholders",
+          "version": "1.1.6"
+        },
+        {
+          "package": "node_modules/nanoid",
+          "version": "3.3.19"
+        },
+        {
+          "package": "node_modules/nanostores",
+          "version": "1.5.3"
+        },
+        {
+          "package": "node_modules/next",
+          "version": "15.5.25"
+        },
+        {
+          "package": "node_modules/node-fetch-native",
+          "version": "1.6.7"
+        },
+        {
+          "package": "node_modules/nypm",
+          "version": "0.6.10"
+        },
+        {
+          "package": "node_modules/nypm/node_modules/citty",
+          "version": "0.2.2"
+        },
+        {
+          "package": "node_modules/obuf",
+          "version": "1.1.2"
+        },
+        {
+          "package": "node_modules/ohash",
+          "version": "2.0.12"
+        },
+        {
+          "package": "node_modules/path-key",
+          "version": "3.1.1"
+        },
+        {
+          "package": "node_modules/pathe",
+          "version": "2.0.3"
+        },
+        {
+          "package": "node_modules/perfect-debounce",
+          "version": "1.0.0"
+        },
+        {
+          "package": "node_modules/pg",
+          "version": "8.16.3"
+        },
+        {
+          "package": "node_modules/pg-connection-string",
+          "version": "2.14.0"
+        },
+        {
+          "package": "node_modules/pg-int8",
+          "version": "1.0.1"
+        },
+        {
+          "package": "node_modules/pg-numeric",
+          "version": "1.0.2"
+        },
+        {
+          "package": "node_modules/pg-pool",
+          "version": "3.14.0"
+        },
+        {
+          "package": "node_modules/pg-protocol",
+          "version": "1.16.0"
+        },
+        {
+          "package": "node_modules/pg-types",
+          "version": "4.1.0"
+        },
+        {
+          "package": "node_modules/pg/node_modules/pg-types",
+          "version": "2.2.0"
+        },
+        {
+          "package": "node_modules/pg/node_modules/postgres-array",
+          "version": "2.0.0"
+        },
+        {
+          "package": "node_modules/pg/node_modules/postgres-bytea",
+          "version": "1.0.1"
+        },
+        {
+          "package": "node_modules/pg/node_modules/postgres-date",
+          "version": "1.0.7"
+        },
+        {
+          "package": "node_modules/pg/node_modules/postgres-interval",
+          "version": "1.2.0"
+        },
+        {
+          "package": "node_modules/pgpass",
+          "version": "1.0.5"
+        },
+        {
+          "package": "node_modules/pkg-types",
+          "version": "2.3.3"
+        },
+        {
+          "package": "node_modules/pkg-types/node_modules/confbox",
+          "version": "0.3.1"
+        },
+        {
+          "package": "node_modules/postgres",
+          "version": "3.4.7"
+        },
+        {
+          "package": "node_modules/postgres-array",
+          "version": "3.0.4"
+        },
+        {
+          "package": "node_modules/postgres-bytea",
+          "version": "3.0.0"
+        },
+        {
+          "package": "node_modules/postgres-date",
+          "version": "2.1.0"
+        },
+        {
+          "package": "node_modules/postgres-interval",
+          "version": "3.0.0"
+        },
+        {
+          "package": "node_modules/postgres-range",
+          "version": "1.1.4"
+        },
+        {
+          "package": "node_modules/prisma",
+          "version": "7.5.0"
+        },
+        {
+          "package": "node_modules/proper-lockfile",
+          "version": "4.1.2"
+        },
+        {
+          "package": "node_modules/proper-lockfile/node_modules/signal-exit",
+          "version": "3.0.7"
+        },
+        {
+          "package": "node_modules/pure-rand",
+          "version": "6.1.0"
+        },
+        {
+          "package": "node_modules/rc9",
+          "version": "2.1.2"
+        },
+        {
+          "package": "node_modules/readdirp",
+          "version": "4.1.2"
+        },
+        {
+          "package": "node_modules/regexp-to-ast",
+          "version": "0.5.0"
+        },
+        {
+          "package": "node_modules/remeda",
+          "version": "2.33.4"
+        },
+        {
+          "package": "node_modules/retry",
+          "version": "0.12.0"
+        },
+        {
+          "package": "node_modules/rou3",
+          "version": "0.9.2"
+        },
+        {
+          "package": "node_modules/safer-buffer",
+          "version": "2.1.2"
+        },
+        {
+          "package": "node_modules/seq-queue",
+          "version": "0.0.5"
+        },
+        {
+          "package": "node_modules/set-cookie-parser",
+          "version": "3.1.2"
+        },
+        {
+          "package": "node_modules/shebang-command",
+          "version": "2.0.0"
+        },
+        {
+          "package": "node_modules/shebang-regex",
+          "version": "3.0.0"
+        },
+        {
+          "package": "node_modules/signal-exit",
+          "version": "4.1.0"
+        },
+        {
+          "package": "node_modules/split2",
+          "version": "4.2.0"
+        },
+        {
+          "package": "node_modules/sqlstring",
+          "version": "2.3.3"
+        },
+        {
+          "package": "node_modules/std-env",
+          "version": "3.10.0"
+        },
+        {
+          "package": "node_modules/tinyexec",
+          "version": "1.3.1"
+        },
+        {
+          "package": "node_modules/valibot",
+          "version": "1.2.0"
+        },
+        {
+          "package": "node_modules/which",
+          "version": "2.0.2"
+        },
+        {
+          "package": "node_modules/xtend",
+          "version": "4.0.2"
+        },
+        {
+          "package": "node_modules/zeptomatch",
+          "version": "2.1.0"
+        },
+        {
+          "package": "node_modules/zod",
+          "version": "4.6.5"
+        }
+      ],
+      "platform": "Host amd64/linux. Exact image unavailable. Optional platform selection and npm index/install sufficiency not proven; no npm ci executed.",
+      "mountVisibility": "Future own controlRoot/cache must be visible at /npm-cache; not prepared or adopted."
+    },
+    "prisma": {
+      "status": "BLOCKED",
+      "requiredVersion": "7.5.0",
+      "defaultCache": "/root/.cache/prisma",
+      "defaultCacheExists": false,
+      "enginesVerified": [],
+      "containerVisibility": "NOT_VERIFIED: unchanged harness uses network none, HOME=/tmp and /npm-cache mount; no Prisma cache mount inferred. Cache on host alone would not establish offline engine consumption.",
+      "binaryTarget": "Exact approved image/platform/OpenSSL engines must be verified; no substitute engine accepted."
+    },
+    "searchScope": {
+      "/root/.cache/prisma": false,
+      "/root/.cache/ms-playwright": false,
+      "/ms-playwright": false,
+      "/opt/google/chrome": false,
+      "/usr/lib/chromium": false,
+      "/root/NexoNova/nexonova-website/node_modules/playwright-core/package.json": false,
+      "/root/NexoNova/NexoNova-Factory/node_modules/playwright-core/package.json": false,
+      "/usr/lib/node_modules/playwright-core/package.json": false,
+      "/usr/local/lib/node_modules/playwright-core/package.json": false
+    },
+    "relevantEnvironment": {
+      "npm_config_cache": null,
+      "NPM_CONFIG_CACHE": null,
+      "XDG_CACHE_HOME": null,
+      "PLAYWRIGHT_BROWSERS_PATH": null,
+      "PRISMA_ENGINES_BINARY_TARGETS": null,
+      "PRISMA_SCHEMA_ENGINE_BINARY": null
+    },
+    "downloads": false,
+    "installs": false
+  },
+  "toolchain": {
+    "node": {
+      "path": "/usr/bin/node",
+      "version": "v20.20.2",
+      "scope": "Host only; not substitute for pinned Node/OpenSSL image with historical Node v22.23.2"
+    },
+    "npm": {
+      "path": "/usr/bin/npm",
+      "version": "10.8.2"
+    },
+    "playwright": {
+      "status": "BLOCKED",
+      "requiredDriverVersion": "1.63.0",
+      "versionReference": [
+        {
+          "lock": "templates/corporate-site/package-lock.json",
+          "package": "node_modules/@playwright/test",
+          "version": "1.63.0"
+        },
+        {
+          "lock": "templates/corporate-site/package-lock.json",
+          "package": "node_modules/playwright",
+          "version": "1.63.0"
+        },
+        {
+          "lock": "templates/corporate-site/package-lock.json",
+          "package": "node_modules/playwright-core",
+          "version": "1.63.0"
+        }
+      ],
+      "installedDriverVerified": false,
+      "driverHash": null,
+      "browsersManifestHash": null
+    },
+    "chromium": {
+      "status": "BLOCKED",
+      "requiredRevision": "1243",
+      "requiredVersion": "153.0.8010.12",
+      "requirementProvenance": "Historical B1 driver manifest; expected requirement retained, availability NOT inherited",
+      "defaultCache": "/root/.cache/ms-playwright",
+      "defaultCacheExists": false,
+      "verifiedBinary": null,
+      "binaryHash": null,
+      "libraryCompatibility": "NOT_VERIFIED: no candidate binary",
+      "launched": false
+    }
+  },
+  "ports": {
+    "proposed": {
+      "atlas": {
+        "http": 4161,
+        "https": 4461
+      },
+      "brisa": {
+        "http": 4162,
+        "https": 4462
+      }
+    },
+    "status": "PASS_SNAPSHOT_ONLY",
+    "method": "ss -H -ltn outside sandbox, IPv4/IPv6; no listeners on any proposed port",
+    "reserved": false,
+    "listenersModified": false
+  },
+  "products": {
+    "atlas": {
+      "status": "NOT_MATERIALIZED",
+      "namespace": "p46-b2-vps-20260929-atlas",
+      "namespaceStatus": "NO_CONFLICT_OBSERVED_NOT_RESERVED",
+      "base": "/root/NexoNova/p46-execution-b2-vps/atlas",
+      "destinations": {
+        "staging": "/root/NexoNova/p46-execution-b2-vps/atlas/staging",
+        "validation": "/root/NexoNova/p46-execution-b2-vps/atlas/validation",
+        "output": "/root/NexoNova/p46-execution-b2-vps/atlas/output"
+      },
+      "controlRoot": "/root/NexoNova/p46-execution-b2-vps/atlas/control",
+      "pathsStatus": "ABSENT_NOT_CREATED",
+      "db": "atlas_p46",
+      "network": "p46-b2-vps-20260929-atlas-net",
+      "volume": "p46-b2-vps-20260929-atlas-data",
+      "containers": [
+        "p46-b2-vps-20260929-atlas-db",
+        "p46-b2-vps-20260929-atlas-app"
+      ],
+      "workOrder": null,
+      "workOrderHash": null,
+      "runtimeRecipe": null,
+      "runtimeRecipeHash": null
+    },
+    "brisa": {
+      "status": "NOT_MATERIALIZED",
+      "namespace": "p46-b2-vps-20260929-brisa",
+      "namespaceStatus": "NO_CONFLICT_OBSERVED_NOT_RESERVED",
+      "base": "/root/NexoNova/p46-execution-b2-vps/brisa",
+      "destinations": {
+        "staging": "/root/NexoNova/p46-execution-b2-vps/brisa/staging",
+        "validation": "/root/NexoNova/p46-execution-b2-vps/brisa/validation",
+        "output": "/root/NexoNova/p46-execution-b2-vps/brisa/output"
+      },
+      "controlRoot": "/root/NexoNova/p46-execution-b2-vps/brisa/control",
+      "pathsStatus": "ABSENT_NOT_CREATED",
+      "db": "brisa_p46",
+      "network": "p46-b2-vps-20260929-brisa-net",
+      "volume": "p46-b2-vps-20260929-brisa-data",
+      "containers": [
+        "p46-b2-vps-20260929-brisa-db",
+        "p46-b2-vps-20260929-brisa-app"
+      ],
+      "workOrder": null,
+      "workOrderHash": null,
+      "runtimeRecipe": null,
+      "runtimeRecipeHash": null
+    }
+  },
+  "runtimePackage": {
+    "status": "NOT_PREPARED",
+    "consumptionValidation": "NOT_EXECUTED",
+    "reason": "Required prerequisites fail. No incomplete WorkOrders/recipes or executive hashes fabricated.",
+    "candidateActions": [
+      "stage",
+      "install",
+      "build",
+      "docker",
+      "migrate",
+      "bootstrap-fixtures",
+      "http-browser",
+      "fault-injection",
+      "cleanup"
+    ],
+    "actionsAuthorizedForExecution": [],
+    "doubleGeneration": "Future G07/G08 need separate runs/destinations and independent use reservations; proposal above is not a complete run allocation.",
+    "controlRoots": "Absent. Private env/TLS/cache lifecycle requires concrete operator-provided inputs under future authority.",
+    "lifecycle": "Separate runtime/migrator/bootstrap/postgres env per product; private 0600, technical credentials and auth secrets distinct, bootstrap revoked after fixtures, local TLS with distinct origins and cookie policies, no global truststore changes. Cleanup only own journal/label/ID-bound resources; foreign inputs retained. No secrets or certificates generated."
+  },
+  "budgets": {
+    "status": "PENDING_REVIEW_BLOCKED_BY_CAPACITY",
+    "historicalProposalOnly": {
+      "perProductMaxContainers": 3,
+      "perProductMemoryMiB": 4096,
+      "perProductCPU": 3,
+      "temporaryDiskMiB": 12288,
+      "durationSeconds": 7200,
+      "helperTimeoutSeconds": 600
+    },
+    "newExecutableBudget": null,
+    "aggregate": "G18 requires both products simultaneously. Browser, OS and existing foreign services need headroom. No capacity, quota reservation or aggregate enforcement asserted."
+  },
+  "externalDependencies": {
+    "status": "BLOCKED_FOR_G21",
+    "preservation": {
+      "nexonova-website": {
+        "path": "/root/NexoNova/nexonova-website",
+        "exists": false,
+        "manifest": "docs/migration/P3_5_GENERATION_MANIFEST.json",
+        "entries": 31,
+        "hash": "31f3aaa8a0242a7bbe3952f4117f991485f4266e2be2ad2e5170e96938c6cedb",
+        "status": "BLOCKED"
+      },
+      "synthetic-website": {
+        "path": "/root/NexoNova/synthetic-website",
+        "exists": false,
+        "manifest": "docs/migration/P3_6_GENERATION_MANIFEST.json",
+        "entries": 31,
+        "hash": "2c166d14655f55407b5eb01fd8525ed88fb516c952dd496289c262e8b9d66b67",
+        "status": "BLOCKED"
+      },
+      "nexonova-prototype": {
+        "path": "/root/NexoNova/nexonova-prototype",
+        "exists": false,
+        "manifest": "config/pilots/nexonova/source-manifest.json",
+        "entries": 99,
+        "hash": "a2ed45b2437327db305ce3a479fadaea361d97983a48b901f07c75b7d767a37e",
+        "status": "BLOCKED"
+      }
+    },
+    "corporateTemplate": "Internal baseline files byte-identical; external products/prototype absent at required sibling paths. No substitutes generated.",
+    "privateInputs": "Not provisioned by B1; paths/lifecycle only, future scope required.",
+    "executionApproval": "Absent by design, not an artifact B1 can create."
+  },
+  "matrix": [
+    {
+      "id": "G03",
+      "setupOperation": "Orden P4.2/revocada/hash alterado; ejecutor intenta render",
+      "expectedEvidence": "Rechazo antes de efectos; causa y snapshot Incluir intento de usar G01 como permiso ejecutivo y reserva histórica como ruta.",
+      "contributesTo": "GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G04",
+      "setupOperation": "Catálogo desconocido/incompatible/ciclo/conflicto; planner",
+      "expectedEvidence": "Bloqueo explícito por cada variante, sin fallback Bloquear policy/profile/version desconocidos y convenciones routing no soportadas.",
+      "contributesTo": "CP, GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution",
+      "historicalPureAStatus": "PASS, unchanged; not reexecuted"
+    },
+    {
+      "id": "G05",
+      "setupOperation": "Colisiones archivos/owners/modelos/rutas dinámicas y rutas core resueltas",
+      "expectedEvidence": "Rechazo, ningún overwrite; fixtures negativas y hashes Probar /sign-in y descendientes, catch-all, /login, auth namespace, static/dynamic y page/handler incluso métodos disjuntos.",
+      "contributesTo": "CP, GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G06",
+      "setupOperation": "Traversal/symlink/destino existente/inputs cambiados tras plan",
+      "expectedEvidence": "Fallo seguro, datos ajenos intactos; filesystem real Incluir cambio de dispatcher, next.config o launcher después del plan.",
+      "contributesTo": "GN, CL",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G07",
+      "setupOperation": "Config A; generador materializa dos veces en staging limpio",
+      "expectedEvidence": "Sets y SHA256 idénticos; manifests y comandos Comparar bytes canónicos inventory/adaptation además de output.",
+      "contributesTo": "GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G08",
+      "setupOperation": "Config B; mismo generador, dos staging limpios",
+      "expectedEvidence": "Igual reproducibilidad; sin rama específica por cliente Misma política/serializer que A, sin adaptación por cliente.",
+      "contributesTo": "GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G09",
+      "setupOperation": "A/B; comparación independiente",
+      "expectedEvidence": "Solo diferencias públicas declaradas; ningún secreto/path/asset cruzado Inventory de composición compartido; diferencias públicas fuera de rutas, sin alias.",
+      "contributesTo": "GN, CP",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G10",
+      "setupOperation": "Outputs; consumidor verifica metadata/manifests",
+      "expectedEvidence": "Hashes input/source/output/SQL/launcher coinciden; negativos por alteración Validar mapping /sign-in→reserva, /login real, referencias sin ciclos y estados históricos intactos.",
+      "contributesTo": "GN, CP",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G11",
+      "setupOperation": "Composición; verificadores inspeccionan schema/historial",
+      "expectedEvidence": "Auth intacto, SQL FK conservado, no TechnicalSmoke, launcher D02 requerido Discovery/output exactos de11 rutas; cero /sign-in/aliases; reservas presentes.",
+      "contributesTo": "CP, DB, GN",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G12",
+      "setupOperation": "Dos DB vacías + upgrade sintético; migrator aplica/reaplica",
+      "expectedEvidence": "Historial estable/FK real/grants correctos; SQL/CLI; sin db push/auto-migrate",
+      "contributesTo": "DB",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G13",
+      "setupOperation": "Runtime/bootstrap; intentos fuera de privilegios",
+      "expectedEvidence": "Negativas42501/FK23503, cero efectos; SQL real",
+      "contributesTo": "DB, RA",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G14",
+      "setupOperation": "Dos outputs; CI local instala/genera/compila/typecheck/tests/build",
+      "expectedEvidence": "Versiones/lock/digests fijos y salidas reales; no dependencia nueva Contrastar manifests de routing Next con inventario cerrado; defaults HEAD/OPTIONS verificados.",
+      "contributesTo": "CP, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G15",
+      "setupOperation": "Admin/member/visitante; login/sesión/signup/logout/borde8h",
+      "expectedEvidence": "Regresión P4.4-B aplicable y cookies reales; sin cambios auth /login real; GET /sign-in404 sin alias; allowlist auth conserva sign-in/email.",
+      "contributesTo": "AU, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G16",
+      "setupOperation": "A/B/admin; CRUD/CAS/archivos/IDOR con dos conexiones",
+      "expectedEvidence": "Regresión C01–C40 afectada por transformación; evidencia DB/HTTP",
+      "contributesTo": "RA, MC, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G17",
+      "setupOperation": "Launcher correcto y selección auth-only negativa; HTML/RSC/browser",
+      "expectedEvidence": "Vary unión sin duplicados, no-store, navegación y rutas ajenas preservadas; incorrecto no aceptable Descriptor/metadata/startup obligan start-requests.mjs; negativos auth launcher.",
+      "contributesTo": "GN, CP, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G18",
+      "setupOperation": "Productos simultáneos con DB/red/volumen/secreto/prefijo propios",
+      "expectedEvidence": "Cookie/ID/datos cruzados rechazados, controles positivos por producto",
+      "contributesTo": "DB, AU, RA",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G19",
+      "setupOperation": "Fixture DB indisponible/grants retirados y fallos de proceso",
+      "expectedEvidence": "Fail-closed, receipts parciales veraces, recuperación sin datos falsos",
+      "contributesTo": "DB, AU, MC",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G20",
+      "setupOperation": "Logs/bundle/metadata/receipts/env temporal; scanner",
+      "expectedEvidence": "Sin secretos conocidos/contaminación; observación navegador/red y límites del scan Scans incluyen inventario/vínculo/metadata nuevos.",
+      "contributesTo": "GN, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G21",
+      "setupOperation": "Hashes históricos/productos/prototipo y pruebas P3/P4.2",
+      "expectedEvidence": "Igualdad con baselines previos, sin recalcular; reporte por excepción histórica Incluir contratos P4.2, decisión G01 y artefactos P4.5-B sin reinterpretar estados.",
+      "contributesTo": "CP, BT",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G22",
+      "setupOperation": "Éxito/fallo/timeout/cancelación y centinela ajeno",
+      "expectedEvidence": "Cero recursos propios, ajenos intactos, cierre persistido también al fallar",
+      "contributesTo": "CL",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G23",
+      "setupOperation": "Consumidor recibe falta/hash alterado/FAIL/BLOCKED/NOT_EXECUTED",
+      "expectedEvidence": "Gates afectados bloqueados; no hereda PASS agregado Alterar/omitir reservas, mapping, route/source hashes y referencias debe bloquear gates.",
+      "contributesTo": "GN, BT, CL",
+      "executionStatus": "NOT_EXECUTED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    },
+    {
+      "id": "G24",
+      "setupOperation": "Revisor evalúa outputs/diffs/evidencia y límites",
+      "expectedEvidence": "Aceptación humana separada; ninguna promoción automática a autonomía/readiness Revisión explícita de inventario/rutas y launcher de ambos outputs.",
+      "contributesTo": "GN",
+      "executionStatus": "BLOCKED",
+      "evidenceOrigin": "Inherited planned assertion only; no VPS runtime execution"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "VPS-B1-01",
+      "detail": "Physical usable RAM 4105482240 bytes < 4294967296 bytes (4096 MiB) minimum budget; available RAM lower still. Aggregate G18/browser/OS capacity unproven.",
+      "resolution": "Provide adequate resources and review aggregate budget; do not lower harness minimum."
+    },
+    {
+      "id": "VPS-B1-02",
+      "detail": "Both exact Node/OpenSSL and PostgreSQL Docker images absent.",
+      "resolution": "Separately authorized provision of exact images and verification by digest/platform; no tag substitution."
+    },
+    {
+      "id": "VPS-B1-03",
+      "detail": "Offline npm cache verifies 22/195 objects; 141 nonoptional objects missing.",
+      "resolution": "Separately provision and verify complete platform-applicable offline cache and unchanged harness mount consumption."
+    },
+    {
+      "id": "VPS-B1-04",
+      "detail": "Prisma default cache absent; pinned engines and offline container visibility not verified.",
+      "resolution": "Demonstrate exact engine bytes and consumption with unchanged harness; implementation change requires separate review."
+    },
+    {
+      "id": "VPS-B1-05",
+      "detail": "Playwright 1.63.0 driver and Chromium/headless-shell revision 1243 not verified; default browser cache absent.",
+      "resolution": "Separately provide driver/browser, hashes, architecture and libraries; no launch/download in B1."
+    },
+    {
+      "id": "VPS-B1-06",
+      "detail": "nexonova-website, synthetic-website and nexonova-prototype absent at required sibling paths; full G21 preservation blocked.",
+      "resolution": "Provide authentic external sources matching existing manifests without regenerating products/baselines."
+    },
+    {
+      "id": "VPS-B1-07",
+      "detail": "Effective no-clobber operation, final devices/controlRoot permissions and executable aggregate budget remain unverified after prerequisite stop.",
+      "resolution": "Resume B1 after provision; perform permitted disposable filesystem probe and exact package preparation, then separate human review."
+    }
+  ],
+  "comparisonWithHistoricalB1": {
+    "historicalReceipt": "docs/migration/P4_6_EXECUTION_B1_PREFLIGHT.json",
+    "historicalReceiptSha256": "a5b4130cb23b547c2b45b675965e239236e9f47e82be7f334c11719864e5d2a5",
+    "result": "BLOCKED again based on new measurements, not inherited host status",
+    "ram": {
+      "previousKiB": 3495444,
+      "vpsKiB": 4009260,
+      "stillBelowMinimum": true
+    },
+    "cpu": {
+      "previous": 4,
+      "vps": 2
+    },
+    "npm": {
+      "previousVerified": 0,
+      "vpsVerified": 22,
+      "total": 195
+    },
+    "prisma": "Default cache absent on both independently inspected hosts.",
+    "browser": "Old driver was found; no driver verified on VPS. Default browser cache absent on VPS.",
+    "images": "Previously available; both exact images now absent.",
+    "docker": "Version 29.8.1 independently verified on both; different resources.",
+    "filesystem": "ext4; device2053/UID1000 old versus device2051/UID0 VPS. These are metadata differences, not content drift.",
+    "resources": "Old two stopped hello-world containers and zero volumes versus VPS two running foreign services, extra compose network and uptime-kuma volume.",
+    "paths": {
+      "oldBase": "/home/germanleiks/NexoNova/p46-execution-b2",
+      "proposedVpsBase": "/root/NexoNova/p46-execution-b2-vps",
+      "oldCache": "/home/germanleiks/.npm",
+      "newCache": "/root/.npm"
+    },
+    "resolvedBlockers": [],
+    "newBlockers": [
+      "Exact Docker images absent",
+      "External G21 sources absent at required paths",
+      "Playwright driver not verified"
+    ]
+  },
+  "effects": {
+    "createdFiles": [
+      "docs/migration/P4_6_EXECUTION_B1_VPS_PREFLIGHT.json"
+    ],
+    "modifiedExistingFiles": [],
+    "temporaryResourcesCreated": [],
+    "cleanup": "NOT_APPLICABLE: no temporary fixtures/resources created; no own resources left",
+    "workOrdersExecuted": [],
+    "productsMaterialized": [],
+    "outputsPromoted": [],
+    "downloads": false,
+    "installs": false,
+    "builds": false,
+    "postgresExecuted": false,
+    "migrations": false,
+    "httpServersStarted": false,
+    "browserLaunched": false,
+    "executionB2": false,
+    "p47": false,
+    "foreignResourcesModified": false
+  },
+  "limitations": [
+    "Point-in-time host/resource observations; recheck before any future execution.",
+    "Cache/browser inspection limited to declared environment, defaults, PATH, local/global conventional and historical sibling driver paths; not an exhaustive private-host search.",
+    "Effective renameat2 no-clobber, destination filesystem checks, exact package consumption and runtime G03-G24 remain unexecuted.",
+    "Historical A/B tests and P4.4/P4.5 PASS retained as history, not reexecuted or promoted.",
+    "Preserve accepted provenance, timing, single-instance rate limit, TLS-local, nonexhaustive scans, D02 launcher, trusted Linux host, non-atomic paired promotion and manual crash recovery limitations."
+  ],
+  "gates": {
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED",
+    "readiness": "BLOCKED"
+  },
+  "nextHumanCheckpoint": "Review exact pending prerequisites and separately authorize any provisioning. No B2 authority; stop here.",
+  "finalVerification": {
+    "status": "PASS",
+    "verifiedFiles": 575,
+    "differences": [],
+    "historicalReceiptsUnchanged": true,
+    "gitStatus": "?? docs/migration/P4_6_EXECUTION_B1_VPS_PREFLIGHT.json\n",
+    "onlyNewFile": "docs/migration/P4_6_EXECUTION_B1_VPS_PREFLIGHT.json",
+    "B2Executed": false,
+    "productsMaterialized": false,
+    "temporaryResourcesRemaining": []
+  },
+  "receiptIntegrity": {
+    "algorithm": "sha256",
+    "scope": "inventory-json.v1 canonical object excluding receiptIntegrity",
+    "value": "sha256:80c7c9af2d985d61892e73cec231cd806469062a897fbcec8bfaef9c61c3de42"
+  }
+}
