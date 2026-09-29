@@ -1,0 +1,17 @@
+{
+  "format": "nexonova.public-business-generation.v1",
+  "productId": "brisa",
+  "public": {
+    "name": "Brisa ficticia",
+    "title": "Solicitudes Brisa ficticia",
+    "primaryColor": "#386641"
+  },
+  "profile": "business-auth-internal-requests-0.1.0-d02",
+  "modules": [
+    {
+      "id": "internal-requests",
+      "version": "0.1.0"
+    }
+  ],
+  "executionAuthority": "none"
+}

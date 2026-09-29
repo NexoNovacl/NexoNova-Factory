@@ -1,0 +1,716 @@
+{
+  "format": "nexonova.business-composition.v1",
+  "profile": "business-auth-internal-requests-0.1.0-d02",
+  "files": [
+    {
+      "source": "templates/business-platform-auth/.dockerignore",
+      "destination": ".dockerignore",
+      "owner": "auth-core",
+      "sha256": "sha256:0360671320ca212db145d97b87ddc7774f6cceb659b2ce845706d24985790a37"
+    },
+    {
+      "source": "templates/business-platform-auth/.gitignore",
+      "destination": ".gitignore",
+      "owner": "auth-core",
+      "sha256": "sha256:19303de6ca358d4f5d0d79b26f2d2e4a9766ad8e22e653dd108e000b0003caf2"
+    },
+    {
+      "source": "templates/business-platform-auth/README.md",
+      "destination": "README.md",
+      "owner": "auth-core",
+      "sha256": "sha256:e2761ba2bf5c38225567d10eb2d241ff046a43c0e89a73bba40acf8787d331d5"
+    },
+    {
+      "source": "templates/business-platform-auth/next-env.d.ts",
+      "destination": "next-env.d.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:879741880b6ab48da99dcc06dcc674d381c9826137b0496bf7bb368f302de9fc"
+    },
+    {
+      "source": "templates/business-platform-auth/next.config.ts",
+      "destination": "next.config.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9"
+    },
+    {
+      "source": "templates/business-platform-auth/package-lock.json",
+      "destination": "package-lock.json",
+      "owner": "auth-core",
+      "sha256": "sha256:23576a5ca10a0410b6c0ebf2f28583c2da0635525a2613de920bc3812daeb2f4"
+    },
+    {
+      "source": "templates/business-platform-auth/package.json",
+      "destination": "package.json",
+      "owner": "auth-core",
+      "sha256": "sha256:f8d30c759bca27aaaa2676335c45d3b0578426085f0a23799650ffbf79198345"
+    },
+    {
+      "source": "templates/business-platform-auth/prisma.config.ts",
+      "destination": "prisma.config.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:708ec00e8ec674bee7fc1e0fce84592104bf42175ead99b3297ef5c7357b0fde"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/prisma.requests.config.ts",
+      "destination": "prisma.requests.config.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:2ae8baa76edbc253dcde07937dfa200aa603ac2028dc502dcf1f408a2488d3e6"
+    },
+    {
+      "source": "templates/business-platform-auth/prisma/auth/migrations/00000000000000_auth_initial/migration.sql",
+      "destination": "prisma/auth/migrations/00000000000000_auth_initial/migration.sql",
+      "owner": "auth-core",
+      "sha256": "sha256:e060c8da9cacec4cf00343fef92c045cf35cd1ab6e0017f3b3cd485971a1993e"
+    },
+    {
+      "source": "templates/business-platform-auth/prisma/auth/migrations/migration_lock.toml",
+      "destination": "prisma/auth/migrations/migration_lock.toml",
+      "owner": "auth-core",
+      "sha256": "sha256:1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "source": "templates/business-platform-auth/prisma/auth/schema.prisma",
+      "destination": "prisma/auth/schema.prisma",
+      "owner": "auth-core",
+      "sha256": "sha256:67a53c1fab84d62b08c3d2983664e1af6b4128aa0fbae2256ae46bb2560f5487"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/prisma/modules/internal-requests.prisma",
+      "destination": "prisma/modules/internal-requests.prisma",
+      "owner": "internal-requests",
+      "sha256": "sha256:2944001d0439b7cace356af72cbfdf6593725b5bcebee440ebacd82706eba31e"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/prisma/requests-migrations/00000000000001_internal_requests/migration.sql",
+      "destination": "prisma/requests-migrations/00000000000001_internal_requests/migration.sql",
+      "owner": "internal-requests",
+      "sha256": "sha256:72b45213d68bcdd2b492e49a116b1ba7e0541f877db1a1a4cf634c0b87570396"
+    },
+    {
+      "source": "templates/business-platform-auth/scripts/bootstrap-admin.ts",
+      "destination": "scripts/bootstrap-admin.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:0ddfd114fbbf999484b899cf91907fcb4a4961f37148ba6a3e3cbf49d5eaac25"
+    },
+    {
+      "source": "templates/business-platform-auth/scripts/migrate-check.mjs",
+      "destination": "scripts/migrate-check.mjs",
+      "owner": "auth-core",
+      "sha256": "sha256:b018d70a7733c4c12ad3c656132c84c0abe81443f99bb0083ea5c9f594cbc306"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/scripts/requests-response-boundary.mjs",
+      "destination": "scripts/requests-response-boundary.mjs",
+      "owner": "internal-requests",
+      "sha256": "sha256:de46a42b5bc3084d24de60ca9ae70946a217dbcb4876112b3e8aee0c8fee3b3d"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs",
+      "destination": "scripts/start-requests.mjs",
+      "owner": "internal-requests",
+      "sha256": "sha256:4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8"
+    },
+    {
+      "source": "templates/business-platform-auth/scripts/start.mjs",
+      "destination": "scripts/start.mjs",
+      "owner": "auth-core",
+      "sha256": "sha256:57c2a595c83ac9b6ffcf57f3460fa2008f68bf1e61ab8502d88dbe4bdb8c9b6e"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/admin-check/page.tsx",
+      "destination": "src/app/admin-check/page.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/api/admin-check/route.ts",
+      "destination": "src/app/api/admin-check/route.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/api/auth-check/route.ts",
+      "destination": "src/app/api/auth-check/route.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts",
+      "destination": "src/app/api/auth/[...all]/route.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts",
+      "destination": "src/app/api/requests/[id]/route.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts",
+      "destination": "src/app/api/requests/route.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/auth-check/page.tsx",
+      "destination": "src/app/auth-check/page.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/globals.css",
+      "destination": "src/app/globals.css",
+      "owner": "auth-core",
+      "sha256": "sha256:db0f44fdbab81d12268509b42a46bb622bb8450c8c41688df3f57d26662afc19"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/layout.tsx",
+      "destination": "src/app/layout.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:015b442ab1cf36db0f1d12d5796588fc62de90c30467682ba2b77cd1d3205e35"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/login/login.tsx",
+      "destination": "src/app/login/login.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:de65b77292331bc2faa22dda784a4f8d1d8c4e4cebad2ab8033231cc015fe2d7"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/login/page.tsx",
+      "destination": "src/app/login/page.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/logout.tsx",
+      "destination": "src/app/logout.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:b85343b7203d58b05ebb22171cf23c267f1deae3754d70b202b51680762279ac"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/page.module.css",
+      "destination": "src/app/page.module.css",
+      "owner": "auth-core",
+      "sha256": "sha256:e8a4327e8c514fc3af5a42ce31d957ac0463acc62d2383386c8e1c978a66d9d1"
+    },
+    {
+      "source": "templates/business-platform-auth/src/app/page.tsx",
+      "destination": "src/app/page.tsx",
+      "owner": "auth-core",
+      "sha256": "sha256:74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx",
+      "destination": "src/app/requests/[id]/page.tsx",
+      "owner": "internal-requests",
+      "sha256": "sha256:ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/requests/editor.tsx",
+      "destination": "src/app/requests/editor.tsx",
+      "owner": "internal-requests",
+      "sha256": "sha256:c445515f10e9119668470daf50dd0c469c447059b17b2c95bd865bf6c7678fae"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx",
+      "destination": "src/app/requests/page.tsx",
+      "owner": "internal-requests",
+      "sha256": "sha256:a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/app/requests/requests.module.css",
+      "destination": "src/app/requests/requests.module.css",
+      "owner": "internal-requests",
+      "sha256": "sha256:6fd8a2c6d18334cd3ebacb1428e07e65437654375a97ffc8582cd20d70eb860d"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/middleware.ts",
+      "destination": "src/middleware.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/authorization.ts",
+      "destination": "src/modules/internal-requests/authorization.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:1e5ecc8d138422ffd00418cf897e579306172491cc9e5af5d77df2b73f0492b5"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/db.ts",
+      "destination": "src/modules/internal-requests/db.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:95fc35b0d69bf4f5399d7d3cb9f89672ec333a10ea9a253edde6e76ff587eb24"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/dto.ts",
+      "destination": "src/modules/internal-requests/dto.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:94d8366f7a50e7a6f6e2031e38917693d6eebc4776f5f370af1992a64ff365c0"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts",
+      "destination": "src/modules/internal-requests/http.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/repository.ts",
+      "destination": "src/modules/internal-requests/repository.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:5999868f42f22a3cf7e7362ae19c73f3fd8ba31c7d9d39d02754483056f586bb"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/service.ts",
+      "destination": "src/modules/internal-requests/service.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:29ba07475ac3e228bc8a1d2949a9e46b5e28fe58c7ac0b5d3c1934b78ea1d8a8"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/validation.ts",
+      "destination": "src/modules/internal-requests/validation.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:d07963c0dbe0b5aed57f737510bac45685a13629149e3f852172fc574ee0ab9e"
+    },
+    {
+      "source": "templates/business-platform-auth/src/server/auth.ts",
+      "destination": "src/server/auth.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:e278e0189034f9ec57c25fd73f9ddab34c4fc406b484e78a970c8949ae21c593"
+    },
+    {
+      "source": "templates/business-platform-auth/src/server/http.ts",
+      "destination": "src/server/http.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec"
+    },
+    {
+      "source": "templates/business-platform-auth/src/server/policy.ts",
+      "destination": "src/server/policy.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:2ed84dbee4d02a74e8a03da891f7dc918a80908d1042285fb76046d45b97f4fb"
+    },
+    {
+      "source": "templates/business-platform-auth/tests/policy.test.mjs",
+      "destination": "tests/policy.test.mjs",
+      "owner": "auth-core",
+      "sha256": "sha256:9ccc90f4dfd4c3d645c24e3f3c58aaf6110395fa36e71b0b5a35c353d3992024"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/tests/requests-boundary.test.mjs",
+      "destination": "tests/requests-boundary.test.mjs",
+      "owner": "internal-requests",
+      "sha256": "sha256:7b7987c892600b4dfb85b1e9ed9e71612636956ee59cd3eea17a57ae9149653e"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/tests/requests.test.mjs",
+      "destination": "tests/requests.test.mjs",
+      "owner": "internal-requests",
+      "sha256": "sha256:05e9baec0d727c81e067c4ea2c447904ca9a4e4efdb0ddca69d440d32df62f3f"
+    },
+    {
+      "source": "templates/business-platform-auth/tsconfig.checks.json",
+      "destination": "tsconfig.checks.json",
+      "owner": "auth-core",
+      "sha256": "sha256:017ef57ab0f854aee749893db8460f20071502b7a64a15ef386b2fd167060daf"
+    },
+    {
+      "source": "templates/business-platform-auth/tsconfig.json",
+      "destination": "tsconfig.json",
+      "owner": "auth-core",
+      "sha256": "sha256:2fae16156ba6c1e055fa59d6d813600fdc7b31f9d1bb2a050f6d21fa1def9e61"
+    },
+    {
+      "source": "templates/business-platform-auth/validation/bootstrap-grants.sql",
+      "destination": "validation/bootstrap-grants.sql",
+      "owner": "auth-core",
+      "sha256": "sha256:a2d58daa78e08b996a0bb1df8a95f2d7e7b12a7c06f9e6bb654b86d43886cd58"
+    },
+    {
+      "source": "templates/business-platform-auth/validation/create-member.ts",
+      "destination": "validation/create-member.ts",
+      "owner": "auth-core",
+      "sha256": "sha256:e31d86bff24eece4825c4e30828afee2ef2ecb41544c728ff3b8eb8f935033ea"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/validation/requests-runtime-grants.sql",
+      "destination": "validation/requests-runtime-grants.sql",
+      "owner": "internal-requests",
+      "sha256": "sha256:d10eab47837d9d6d386ac5ed8490de93fd956246b028d1f7b402f6e05dfe3911"
+    },
+    {
+      "source": "modules/internal-requests/0.1.0/files/validation/requests-users.ts",
+      "destination": "validation/requests-users.ts",
+      "owner": "internal-requests",
+      "sha256": "sha256:f69464338a7f8e43f5f346a611ebe39d8a6d0dd9953cc1387f460a214ce02cef"
+    },
+    {
+      "source": "templates/business-platform-auth/validation/runtime-grants.sql",
+      "destination": "validation/runtime-grants.sql",
+      "owner": "auth-core",
+      "sha256": "sha256:5c0c26e09b1946f4e28cebb689ab127bf5a105cc8d5da39dbc773dbbe302fb67"
+    }
+  ],
+  "approvedReferences": [
+    {
+      "path": "docs/migration/P4_2_PLAN.json",
+      "sha256": "sha256:cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2"
+    },
+    {
+      "path": "docs/migration/P4_5_B_FINAL_RECEIPT.json",
+      "sha256": "sha256:81a3f4cb62f1828b582f1f43ff29e554941a443532a2d4579b8ff367c4f3745b"
+    },
+    {
+      "path": "docs/migration/P4_6_DESIGN_APPROVAL.json",
+      "sha256": "sha256:4793d0ff57821255a25c2d7a6e821139440c46b44af7da32d6c7cefc1004a2d2"
+    },
+    {
+      "path": "docs/migration/P4_6_PLANNING_REVIEW.json",
+      "sha256": "sha256:a3a718a5a536b3df97f2bb9c48e4d858684f8a0492e01a4b9d25a469395c2568"
+    },
+    {
+      "path": "schemas/business-plan.v1.json",
+      "sha256": "sha256:9b70aa85f19f22ca994e917246ce6811844b446f5fb78a5f7c828f1420482c30"
+    }
+  ],
+  "inventory": {
+    "format": "nexonova.business-execution-inventory.v1",
+    "adaptationPolicy": "p42-to-approved-runtime.v1",
+    "executionAuthority": "none",
+    "compositionId": "business-auth-internal-requests-0.1.0-d02",
+    "sources": {
+      "legacyPlan": {
+        "path": "docs/migration/P4_2_PLAN.json",
+        "sha256": "sha256:cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2"
+      },
+      "g01Decision": {
+        "path": "docs/migration/P4_6_G01_DECISION.json",
+        "sha256": "sha256:ef9330c7d9140eb8326e878649eabf5a615e2d9a43835c32c04e3d82d3bc9112"
+      },
+      "approvedReceipt": {
+        "path": "docs/migration/P4_5_B_FINAL_RECEIPT.json",
+        "sha256": "sha256:81a3f4cb62f1828b582f1f43ff29e554941a443532a2d4579b8ff367c4f3745b"
+      },
+      "nextConfig": {
+        "path": "templates/business-platform-auth/next.config.ts",
+        "sha256": "sha256:c12defa1b9b367d8f30bb793c50e5b0e5966a15a4717375ab2c41e9f5ba49de9"
+      },
+      "authDispatch": {
+        "path": "templates/business-platform-auth/src/server/http.ts",
+        "sha256": "sha256:f56890f99edf74f946032886b6354056678359c2283fb4e18b9cd4b78d04beec"
+      },
+      "moduleDispatch": {
+        "path": "modules/internal-requests/0.1.0/files/src/modules/internal-requests/http.ts",
+        "sha256": "sha256:d1833953c505c686b3c662d2cf04c7dfb21c9f4be73a569a3d32e1638ed43003"
+      },
+      "middleware": {
+        "path": "modules/internal-requests/0.1.0/files/src/middleware.ts",
+        "sha256": "sha256:6fc29ff315d0b9139c6c0ddddf635c2a549720f98f54d34df97d1da4ebce4a60"
+      }
+    },
+    "launch": {
+      "command": [
+        "node",
+        "scripts/start-requests.mjs"
+      ],
+      "source": {
+        "path": "modules/internal-requests/0.1.0/files/scripts/start-requests.mjs",
+        "sha256": "sha256:4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8"
+      },
+      "boundarySource": {
+        "path": "modules/internal-requests/0.1.0/files/scripts/requests-response-boundary.mjs",
+        "sha256": "sha256:de46a42b5bc3084d24de60ca9ae70946a217dbcb4876112b3e8aee0c8fee3b3d"
+      }
+    },
+    "routes": [
+      {
+        "pattern": "/",
+        "kind": "page",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/page.tsx",
+          "sha256": "sha256:74b63148d0cdab53fb0a571c206d739e17b669ab6e0991e2a9eb25456d453f33"
+        },
+        "outputPath": "src/app/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/admin-check",
+        "kind": "page",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/admin-check/page.tsx",
+          "sha256": "sha256:0f5d76e95da139019b9b90c13bc0ce79cd591a3e7a81c97c200e4bbce5ea55a6"
+        },
+        "outputPath": "src/app/admin-check/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/api/admin-check",
+        "kind": "handler",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/api/admin-check/route.ts",
+          "sha256": "sha256:5ba2a1df5af1fc6fd57333a56b72265387f8a433060fdf224adf61a03c84e139"
+        },
+        "outputPath": "src/app/api/admin-check/route.ts",
+        "exportedMethods": [
+          "GET"
+        ],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/api/auth-check",
+        "kind": "handler",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/api/auth-check/route.ts",
+          "sha256": "sha256:961d30ff77a747986130d82c3864bc53ef01b7bc15dd066a969819bec515c703"
+        },
+        "outputPath": "src/app/api/auth-check/route.ts",
+        "exportedMethods": [
+          "GET"
+        ],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/api/auth/[...all]",
+        "kind": "handler",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/api/auth/[...all]/route.ts",
+          "sha256": "sha256:d5a4b854c6095e9775f2875048bfece08dce1aa99f20087e81bc9442cf784cf0"
+        },
+        "outputPath": "src/app/api/auth/[...all]/route.ts",
+        "exportedMethods": [
+          "GET",
+          "POST"
+        ],
+        "allowedOperationsMethods": [
+          "GET",
+          "POST"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/api/requests",
+        "kind": "handler",
+        "owner": "internal-requests",
+        "source": {
+          "path": "modules/internal-requests/0.1.0/files/src/app/api/requests/route.ts",
+          "sha256": "sha256:2dac8dd41f67d6a2fe5182446f466f455d0560687f42ac2e25dcd594d02a2016"
+        },
+        "outputPath": "src/app/api/requests/route.ts",
+        "exportedMethods": [
+          "DELETE",
+          "GET",
+          "HEAD",
+          "OPTIONS",
+          "PATCH",
+          "POST",
+          "PUT"
+        ],
+        "allowedOperationsMethods": [
+          "GET",
+          "POST"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/api/requests/[id]",
+        "kind": "handler",
+        "owner": "internal-requests",
+        "source": {
+          "path": "modules/internal-requests/0.1.0/files/src/app/api/requests/[id]/route.ts",
+          "sha256": "sha256:2424a0fb9034fb308e83a1c60701a8cd156ca72c84dff2bab5b9b4ea2b2d03eb"
+        },
+        "outputPath": "src/app/api/requests/[id]/route.ts",
+        "exportedMethods": [
+          "DELETE",
+          "GET",
+          "HEAD",
+          "OPTIONS",
+          "PATCH",
+          "POST",
+          "PUT"
+        ],
+        "allowedOperationsMethods": [
+          "GET",
+          "PATCH"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/auth-check",
+        "kind": "page",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/auth-check/page.tsx",
+          "sha256": "sha256:794534a0609c7ee6fd2f3ad2632500f015d1427941bd1f2f818a3e959ca38cea"
+        },
+        "outputPath": "src/app/auth-check/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/login",
+        "kind": "page",
+        "owner": "auth-core",
+        "source": {
+          "path": "templates/business-platform-auth/src/app/login/page.tsx",
+          "sha256": "sha256:1f0e1b16745aa2056a1fd81be307c4df33c35f264d18bfc2a35544f2576b4f10"
+        },
+        "outputPath": "src/app/login/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/requests",
+        "kind": "page",
+        "owner": "internal-requests",
+        "source": {
+          "path": "modules/internal-requests/0.1.0/files/src/app/requests/page.tsx",
+          "sha256": "sha256:a6233e58fc5d1d272c29e59547b467dc9fef4349c4ad08b64327da6ba6359593"
+        },
+        "outputPath": "src/app/requests/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      },
+      {
+        "pattern": "/requests/[id]",
+        "kind": "page",
+        "owner": "internal-requests",
+        "source": {
+          "path": "modules/internal-requests/0.1.0/files/src/app/requests/[id]/page.tsx",
+          "sha256": "sha256:ff758cf0cb597b2eb8d3ed9440091280a588b4a4b5fe76bcaadd932283fcb765"
+        },
+        "outputPath": "src/app/requests/[id]/page.tsx",
+        "exportedMethods": [],
+        "allowedOperationsMethods": [
+          "GET"
+        ],
+        "frameworkMethodPolicy": "verify-next-15.5.25-no-new-operations"
+      }
+    ],
+    "authOperations": [
+      {
+        "path": "/api/auth/get-session",
+        "method": "GET",
+        "handlerPattern": "/api/auth/[...all]"
+      },
+      {
+        "path": "/api/auth/sign-in/email",
+        "method": "POST",
+        "handlerPattern": "/api/auth/[...all]"
+      },
+      {
+        "path": "/api/auth/sign-out",
+        "method": "POST",
+        "handlerPattern": "/api/auth/[...all]"
+      }
+    ],
+    "reservations": [
+      {
+        "pattern": "/_next",
+        "match": "segment-subtree",
+        "owner": "framework",
+        "materialize": false
+      },
+      {
+        "pattern": "/api/auth",
+        "match": "segment-subtree",
+        "owner": "auth-core",
+        "materialize": false
+      },
+      {
+        "pattern": "/sign-in",
+        "match": "segment-subtree",
+        "owner": "historical-p42",
+        "materialize": false
+      }
+    ],
+    "publicAssets": [],
+    "routeAliases": [],
+    "newRedirects": [],
+    "newRewrites": []
+  },
+  "adaptation": {
+    "format": "nexonova.business-route-adaptation.v1",
+    "policy": "p42-to-approved-runtime.v1",
+    "executionAuthority": "none",
+    "legacyPlan": {
+      "path": "docs/migration/P4_2_PLAN.json",
+      "sha256": "sha256:cd65bb8b5f44fcf14881b327544e88b41563e53b995a71790911c53d0bb13db2"
+    },
+    "inventoryCanonicalSha256": "sha256:31bb01135d7d8da52720e112e9b10a6c6bd8bf0f5c7bbc2308724242d5f59eb5",
+    "decision": {
+      "path": "docs/migration/P4_6_G01_DECISION.json",
+      "sha256": "sha256:ef9330c7d9140eb8326e878649eabf5a615e2d9a43835c32c04e3d82d3bc9112"
+    },
+    "mappings": [
+      {
+        "legacyPattern": "/sign-in",
+        "disposition": "reservation-only",
+        "runtimeAuthenticationPage": "/login",
+        "materializeLegacyPath": false
+      },
+      {
+        "legacyPattern": "/api/auth/[...all]",
+        "disposition": "retain-handler-and-reserve-namespace",
+        "runtimePattern": "/api/auth/[...all]"
+      }
+    ],
+    "legacyStateHandling": "preserve-do-not-promote",
+    "runtimeValidation": "NOT_EXECUTED"
+  },
+  "launcher": [
+    "node",
+    "scripts/start-requests.mjs"
+  ],
+  "transforms": [
+    "copy-bytes.v1",
+    "business-schema.v1",
+    "business-migrations.v1",
+    "checks-config.v1",
+    "public-data.v1",
+    "generation-guide.v1"
+  ],
+  "excludedNames": [
+    ".git",
+    ".next",
+    "node_modules",
+    ".env",
+    "build-checks"
+  ],
+  "derivedBuildPaths": [
+    ".next/",
+    "build-checks/",
+    "src/generated/",
+    "node_modules/",
+    "tsconfig.tsbuildinfo"
+  ],
+  "executionAuthority": "none"
+}

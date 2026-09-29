@@ -1,0 +1,7 @@
+{
+  "fixtureOnly": true,
+  "notRuntimeEvidence": true,
+  "invalidStatuses": ["FAIL", "BLOCKED", "NOT_EXECUTED"],
+  "requiredBindings": ["generationManifestHash", "sourceHash", "validatorHash", "productId", "runId"],
+  "receiptFormat": "nexonova.business-generation-validation.v1"
+}

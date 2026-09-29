@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "policy",
+    "executionAuthority",
+    "legacyPlan",
+    "inventoryCanonicalSha256",
+    "decision",
+    "mappings",
+    "legacyStateHandling",
+    "runtimeValidation"
+  ],
+  "properties": {
+    "format": {
+      "const": "nexonova.business-route-adaptation.v1"
+    },
+    "policy": {
+      "const": "p42-to-approved-runtime.v1"
+    },
+    "executionAuthority": {
+      "const": "none"
+    },
+    "legacyPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^[^/\\\\]+(?:/[^/\\\\]+)*$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "inventoryCanonicalSha256": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^[^/\\\\]+(?:/[^/\\\\]+)*$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "mappings": {
+      "const": [
+        {
+          "legacyPattern": "/sign-in",
+          "disposition": "reservation-only",
+          "runtimeAuthenticationPage": "/login",
+          "materializeLegacyPath": false
+        },
+        {
+          "legacyPattern": "/api/auth/[...all]",
+          "disposition": "retain-handler-and-reserve-namespace",
+          "runtimePattern": "/api/auth/[...all]"
+        }
+      ]
+    },
+    "legacyStateHandling": {
+      "const": "preserve-do-not-promote"
+    },
+    "runtimeValidation": {
+      "const": "NOT_EXECUTED"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "invalidJson": ["{\"x\":1,\"x\":2}", "{\"x\":NaN}", "{\"x\":Infinity}", "{\"x\":-Infinity}", "{", "\ufeff{}"],
+  "invalidPaths": ["/absolute", "../outside", "a/../b", "a//b", "a/", "a\\b", "a%2fb", "a?b", "a#b", "C:drive", "a\u0000b", "a b"],
+  "unimplementedSchemaKeywords": ["anyOf", "oneOf", "allOf", "not", "if", "then", "else", "patternProperties", "unevaluatedProperties", "format", "multipleOf", "dependentRequired"]
+}

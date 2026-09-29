@@ -1,0 +1,17 @@
+{
+  "format": "nexonova.public-business-generation.v1",
+  "productId": "atlas",
+  "public": {
+    "name": "Atlas ficticio",
+    "title": "Solicitudes Atlas ficticio",
+    "primaryColor": "#24506a"
+  },
+  "profile": "business-auth-internal-requests-0.1.0-d02",
+  "modules": [
+    {
+      "id": "internal-requests",
+      "version": "0.1.0"
+    }
+  ],
+  "executionAuthority": "none"
+}

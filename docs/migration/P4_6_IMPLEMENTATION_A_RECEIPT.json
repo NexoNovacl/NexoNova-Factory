@@ -1,0 +1,602 @@
+{
+  "format": "nexonova.p46-implementation-a-receipt.v1",
+  "decision": "IMPLEMENTATION_A_COMPLETED",
+  "phase": "P4.6 IMPLEMENTATION_A",
+  "authorizationBasis": "Explicit current human instruction; implementation plan approved, exclusively pure A. No IMPLEMENTATION_B or EXECUTION_B.",
+  "entry": {
+    "path": "docs/migration/P4_6_ENTRY.json",
+    "sha256": "4e50b07da90894d3376f38c7bb435cdef53f986d51d59e46ea030a218f4d9992"
+  },
+  "approvedPlan": {
+    "path": "docs/business-platform/P4_6_IMPLEMENTATION_PLAN.md",
+    "sha256": "95048d6aec6528140cf9c79b23323dc5dc18322cbbe569a106f95fbad5b1c994"
+  },
+  "checkpoint": {
+    "path": "docs/migration/P4_6_IMPLEMENTATION_CHECKPOINT.json",
+    "sha256": "b94fd124850288e769261979890bdf834b17324da7709b7f9fab0f92cfadf0ea"
+  },
+  "createdFiles": [
+    "config/business/compositions/business-auth-internal-requests-0.1.0-d02.json",
+    "config/business/generation-pilots/atlas/spec.json",
+    "config/business/generation-pilots/brisa/spec.json",
+    "docs/business-platform/P4_6_GENERATION_RUNBOOK.md",
+    "docs/migration/P4_6_ENTRY.json",
+    "docs/migration/P4_6_IMPLEMENTATION_CHECKPOINT.json",
+    "factory/business_execution_authority.py",
+    "factory/business_execution_contracts.py",
+    "factory/business_execution_inventory.py",
+    "factory/business_generation.py",
+    "factory/business_generation_evidence.py",
+    "schemas/business-composition.v1.json",
+    "schemas/business-execution-authorization.v1.json",
+    "schemas/business-execution-inventory.v1.json",
+    "schemas/business-execution-work-order.v1.json",
+    "schemas/business-generation-manifest.v1.json",
+    "schemas/business-generation-metadata.v1.json",
+    "schemas/business-generation-plan.v1.json",
+    "schemas/business-generation-validation.v1.json",
+    "schemas/business-route-adaptation.v1.json",
+    "schemas/public-business-generation.v1.json",
+    "scripts/check_business_generation_evidence.py",
+    "scripts/generate_business_product.py",
+    "tests/fixtures/p46/contract-cases.json",
+    "tests/fixtures/p46/evidence-cases.json",
+    "tests/fixtures/p46/route-cases.json",
+    "tests/test_business_execution_contracts.py",
+    "tests/test_business_execution_inventory.py",
+    "tests/test_business_generation.py",
+    "tests/test_business_generation_evidence.py",
+    "docs/migration/P4_6_IMPLEMENTATION_A_RECEIPT.json"
+  ],
+  "modifiedFiles": [],
+  "newArtifactHashes": {
+    "config/business/compositions/business-auth-internal-requests-0.1.0-d02.json": "8d280c90dd2019d77165e77d25bb3f678c4d2d37c44dc6aa06a8bd5f8fc1048d",
+    "config/business/generation-pilots/atlas/spec.json": "9123182e3d1ecd840f79085dea37e313ea49a1077da85f6e94101b1bc5090f1f",
+    "config/business/generation-pilots/brisa/spec.json": "0e139c60b9fa61ab6cfdbe523ef43a4204a228ad4d9af6deb2f66139d0f381e4",
+    "docs/business-platform/P4_6_GENERATION_RUNBOOK.md": "1af4dff9f32425ebddd91ed6be6b53a16fc44e26061b1d8a8a8f8eb5f26445ba",
+    "docs/migration/P4_6_ENTRY.json": "4e50b07da90894d3376f38c7bb435cdef53f986d51d59e46ea030a218f4d9992",
+    "docs/migration/P4_6_IMPLEMENTATION_CHECKPOINT.json": "b94fd124850288e769261979890bdf834b17324da7709b7f9fab0f92cfadf0ea",
+    "factory/business_execution_authority.py": "d1369f99514e0404e89da4b28edba32bf4ff1e8e5e750f99c8dc4855bf036992",
+    "factory/business_execution_contracts.py": "ccba57a52265e63aa195bf44fa11e5089ab866c4d35622d1e62931834d76839d",
+    "factory/business_execution_inventory.py": "f3fe8723d76d714841e53b53b40a16efc5fe9d01c3055371ed17cb12749dab21",
+    "factory/business_generation.py": "b49eb92513edff502fb2f6e0933fe27c83a66aa18973968289b035b8bb1b11c9",
+    "factory/business_generation_evidence.py": "eee8de2614d04151dd4c0c68e1669fdacdf7e20d1acd509d42efa545f19c87bf",
+    "schemas/business-composition.v1.json": "e53838333b2c24b65a3dfe21f31f33380f89b6012b15ff3206daba50eb0cfc7b",
+    "schemas/business-execution-authorization.v1.json": "948899777bc6f44282d015647249ec0c43f14a9151c5959740c7b504cc4716bf",
+    "schemas/business-execution-inventory.v1.json": "248a51aa0e30dbdf229dc1f742f0ad1bc8a696a88ab71559e10fe3a455e6a03b",
+    "schemas/business-execution-work-order.v1.json": "6c85ceb05bc5d6f78f710b420f24b304ed089be73e295ef40cfed2e266727c25",
+    "schemas/business-generation-manifest.v1.json": "7d6cc1d6ab5daf899ce6d99b0e9d02f9f3cdc5ea755bca0aa836135bfce72e1f",
+    "schemas/business-generation-metadata.v1.json": "9b494e3b14ef9399fa3fd18008d302a7c844ea9e5d1c17159ef7678abac96378",
+    "schemas/business-generation-plan.v1.json": "78727426006dec4014aa3df42569deece25ca6abb94a94b1819bbf590cc1e708",
+    "schemas/business-generation-validation.v1.json": "786683db61ca4a290229ca2d89cb17a786c43e80a9a931755bc28d3dd198d440",
+    "schemas/business-route-adaptation.v1.json": "0dbc84c17b71de69c38cdf1d8b1950902a77ef41314d30d953656db717f1937d",
+    "schemas/public-business-generation.v1.json": "b62f8cb60fcd30e008081244eac0248d5152a14afb8bb3bfc6899f1bacc701b5",
+    "scripts/check_business_generation_evidence.py": "f1ef95ff12b96020b0d51efae69324159ee0640bd054f523f4d90a8479b461cf",
+    "scripts/generate_business_product.py": "bff0469ae0aa6577df8da6ab91dda30df55ee81a22a34b6ebefe5f683aa89373",
+    "tests/fixtures/p46/contract-cases.json": "1631499503c990337116c1d3d20aafbbee9d76a9c0943d3634dae94fa4a23066",
+    "tests/fixtures/p46/evidence-cases.json": "e23d091168a75072e16a73a5f10fd7e0aae9d2534ee5dc46d4564a0d0e6e34e3",
+    "tests/fixtures/p46/route-cases.json": "9217ec5e36280102bad5707e491f6f9790d9306ff33ec896df1268fa445f70da",
+    "tests/test_business_execution_contracts.py": "aad9cc96a8d18786c0420e404731998cf94af40649e5e7e02ee4744154a034b7",
+    "tests/test_business_execution_inventory.py": "c4c13f6b1270216ff04e21708963edffdd42192dc68321f2e32e54b7311c2fee",
+    "tests/test_business_generation.py": "8c1da0bec78bd53a8ef5d83c12bd80c0d213dc605748e417c13996cc01220503",
+    "tests/test_business_generation_evidence.py": "02bc56a13036edbaaba371d4d5726d4798205abd6783254b1f7d93198249c784"
+  },
+  "hashScope": "SHA256 original file bytes for every new artifact except this receipt itself; receiptIntegrity separately hashes its canonical content excluding receiptIntegrity.",
+  "protectedFiles": {
+    "status": "PASS",
+    "count": 533,
+    "differences": [],
+    "reference": "P4_6_ENTRY.json hashes; preserves pre-existing untracked planning documents as well as tracked files",
+    "requiredLauncherUnchanged": true,
+    "launcherSha256": "4cde0848456d6b5eb46fb09560602177007213f66c18338cc16d599a6376d9c8"
+  },
+  "historicalExternalPreservation": {
+    "products": {
+      "nexonova-website": {
+        "status": "complete",
+        "sourceFiles": 31,
+        "frameworkManagedChanges": [
+          "next-env.d.ts"
+        ],
+        "derivedDirectoriesOrFiles": [
+          ".next",
+          "node_modules",
+          "test-results",
+          "tsconfig.tsbuildinfo"
+        ],
+        "privatePathsDetected": false,
+        "secretHeuristicMatches": false,
+        "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+      },
+      "synthetic-website": {
+        "status": "complete",
+        "sourceFiles": 31,
+        "frameworkManagedChanges": [
+          "next-env.d.ts"
+        ],
+        "derivedDirectoriesOrFiles": [
+          ".next",
+          "node_modules",
+          "test-results",
+          "tsconfig.tsbuildinfo"
+        ],
+        "privatePathsDetected": false,
+        "secretHeuristicMatches": false,
+        "baselineDefinition": "Exact bytes at generation, before tools. Next 15 regenerates next-env.d.ts; exact known generated form is separately reported, not treated as identical baseline."
+      }
+    },
+    "prototype": {
+      "checked": 99,
+      "differences": []
+    },
+    "note": "Read-only historical validator; no historic runner or regression suite executed; known next-env.d.ts exception retained."
+  },
+  "tests": {
+    "commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_business_execution_*.py'",
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_business_generation*.py'"
+    ],
+    "execution": "Combined unittest loader with same two patterns; TextTestRunner; in-memory result capture",
+    "testsRun": 50,
+    "subtestsObserved": 285,
+    "passedTests": [
+      "test_business_execution_contracts.AuthorityTests.test_authority_has_no_effect_calls",
+      "test_business_execution_contracts.AuthorityTests.test_context_only_no_execution",
+      "test_business_execution_contracts.AuthorityTests.test_design_and_historical_approval_are_not_executive",
+      "test_business_execution_contracts.AuthorityTests.test_destination_and_budget_schema",
+      "test_business_execution_contracts.AuthorityTests.test_external_anchor_revocation_replay_time",
+      "test_business_execution_contracts.AuthorityTests.test_manifest_adaptation_tamper",
+      "test_business_execution_contracts.AuthorityTests.test_missing_contract_properties_all_required",
+      "test_business_execution_contracts.AuthorityTests.test_required_hashes_fail_closed",
+      "test_business_execution_contracts.ContractTests.test_canonical_known_bytes",
+      "test_business_execution_contracts.ContractTests.test_object_and_array_bounds",
+      "test_business_execution_contracts.ContractTests.test_paths",
+      "test_business_execution_contracts.ContractTests.test_refs_siblings_and_depth",
+      "test_business_execution_contracts.ContractTests.test_strict_json",
+      "test_business_execution_contracts.ContractTests.test_string_bounds_and_patterns",
+      "test_business_execution_contracts.ContractTests.test_types_const_and_enum",
+      "test_business_execution_contracts.ContractTests.test_unsupported_schema_keywords",
+      "test_business_execution_inventory.InventoryTests.test_auth_namespace_cannot_be_claimed",
+      "test_business_execution_inventory.InventoryTests.test_descriptor_policy_tamper_rejected_before_adaptation",
+      "test_business_execution_inventory.InventoryTests.test_deterministic_adapter",
+      "test_business_execution_inventory.InventoryTests.test_exact_real_routes",
+      "test_business_execution_inventory.InventoryTests.test_extra_metadata_route_not_silently_ignored",
+      "test_business_execution_inventory.InventoryTests.test_intersections",
+      "test_business_execution_inventory.InventoryTests.test_invalid_conventions",
+      "test_business_execution_inventory.InventoryTests.test_inventory_mutations",
+      "test_business_execution_inventory.InventoryTests.test_mapping_and_auth_allowlist",
+      "test_business_execution_inventory.InventoryTests.test_reservations",
+      "test_business_execution_inventory.InventoryTests.test_same_route_disjoint_methods_not_exception",
+      "test_business_execution_inventory.InventoryTests.test_source_map_contract_fail_closed",
+      "test_business_execution_inventory.InventoryTests.test_source_tamper_in_memory",
+      "test_business_generation.GenerationTests.test_bad_specs",
+      "test_business_generation.GenerationTests.test_cli_stdout_only_and_no_effect_commands",
+      "test_business_generation.GenerationTests.test_closed_catalog_rejects_unknown_incompatible_cycle_conflict",
+      "test_business_generation.GenerationTests.test_determinism_both_specs",
+      "test_business_generation.GenerationTests.test_entire_source_set_matches_manifest",
+      "test_business_generation.GenerationTests.test_no_disk_network_or_subprocess_effects",
+      "test_business_generation.GenerationTests.test_payload_tamper_rejected",
+      "test_business_generation.GenerationTests.test_public_differences_only",
+      "test_business_generation.GenerationTests.test_schema_user_and_sql_preserved",
+      "test_business_generation.GenerationTests.test_self_consistent_forgery_does_not_pass",
+      "test_business_generation.GenerationTests.test_unchanged_launcher_and_configs",
+      "test_business_generation_evidence.EvidenceTests.test_cannot_redefine_coverage",
+      "test_business_generation_evidence.EvidenceTests.test_claimed_cleanup_pass_does_not_hide_live_resources",
+      "test_business_generation_evidence.EvidenceTests.test_cross_product_or_run_even_with_rehashed_artifact",
+      "test_business_generation_evidence.EvidenceTests.test_human_case_requires_external_output_approval",
+      "test_business_generation_evidence.EvidenceTests.test_missing_or_altered_artifacts",
+      "test_business_generation_evidence.EvidenceTests.test_required_assertions_commands",
+      "test_business_generation_evidence.EvidenceTests.test_statuses_preserved",
+      "test_business_generation_evidence.EvidenceTests.test_trust_anchors",
+      "test_business_generation_evidence.EvidenceTests.test_unsafe_evidence_path",
+      "test_business_generation_evidence.EvidenceTests.test_valid_partial_fixture_never_promotes_global_gate"
+    ],
+    "failures": [],
+    "errors": [],
+    "status": "PASS",
+    "output": "test_authority_has_no_effect_calls (test_business_execution_contracts.AuthorityTests.test_authority_has_no_effect_calls) ... ok\ntest_context_only_no_execution (test_business_execution_contracts.AuthorityTests.test_context_only_no_execution) ... ok\ntest_design_and_historical_approval_are_not_executive (test_business_execution_contracts.AuthorityTests.test_design_and_historical_approval_are_not_executive) ... ok\ntest_destination_and_budget_schema (test_business_execution_contracts.AuthorityTests.test_destination_and_budget_schema) ... ok\ntest_external_anchor_revocation_replay_time (test_business_execution_contracts.AuthorityTests.test_external_anchor_revocation_replay_time) ... ok\ntest_manifest_adaptation_tamper (test_business_execution_contracts.AuthorityTests.test_manifest_adaptation_tamper) ... ok\ntest_missing_contract_properties_all_required (test_business_execution_contracts.AuthorityTests.test_missing_contract_properties_all_required) ... ok\ntest_required_hashes_fail_closed (test_business_execution_contracts.AuthorityTests.test_required_hashes_fail_closed) ... ok\ntest_canonical_known_bytes (test_business_execution_contracts.ContractTests.test_canonical_known_bytes) ... ok\ntest_object_and_array_bounds (test_business_execution_contracts.ContractTests.test_object_and_array_bounds) ... ok\ntest_paths (test_business_execution_contracts.ContractTests.test_paths) ... ok\ntest_refs_siblings_and_depth (test_business_execution_contracts.ContractTests.test_refs_siblings_and_depth) ... ok\ntest_strict_json (test_business_execution_contracts.ContractTests.test_strict_json) ... ok\ntest_string_bounds_and_patterns (test_business_execution_contracts.ContractTests.test_string_bounds_and_patterns) ... ok\ntest_types_const_and_enum (test_business_execution_contracts.ContractTests.test_types_const_and_enum) ... ok\ntest_unsupported_schema_keywords (test_business_execution_contracts.ContractTests.test_unsupported_schema_keywords) ... ok\ntest_auth_namespace_cannot_be_claimed (test_business_execution_inventory.InventoryTests.test_auth_namespace_cannot_be_claimed) ... ok\ntest_descriptor_policy_tamper_rejected_before_adaptation (test_business_execution_inventory.InventoryTests.test_descriptor_policy_tamper_rejected_before_adaptation) ... ok\ntest_deterministic_adapter (test_business_execution_inventory.InventoryTests.test_deterministic_adapter) ... ok\ntest_exact_real_routes (test_business_execution_inventory.InventoryTests.test_exact_real_routes) ... ok\ntest_extra_metadata_route_not_silently_ignored (test_business_execution_inventory.InventoryTests.test_extra_metadata_route_not_silently_ignored) ... ok\ntest_intersections (test_business_execution_inventory.InventoryTests.test_intersections) ... ok\ntest_invalid_conventions (test_business_execution_inventory.InventoryTests.test_invalid_conventions) ... ok\ntest_inventory_mutations (test_business_execution_inventory.InventoryTests.test_inventory_mutations) ... ok\ntest_mapping_and_auth_allowlist (test_business_execution_inventory.InventoryTests.test_mapping_and_auth_allowlist) ... ok\ntest_reservations (test_business_execution_inventory.InventoryTests.test_reservations) ... ok\ntest_same_route_disjoint_methods_not_exception (test_business_execution_inventory.InventoryTests.test_same_route_disjoint_methods_not_exception) ... ok\ntest_source_map_contract_fail_closed (test_business_execution_inventory.InventoryTests.test_source_map_contract_fail_closed) ... ok\ntest_source_tamper_in_memory (test_business_execution_inventory.InventoryTests.test_source_tamper_in_memory) ... ok\ntest_bad_specs (test_business_generation.GenerationTests.test_bad_specs) ... ok\ntest_cli_stdout_only_and_no_effect_commands (test_business_generation.GenerationTests.test_cli_stdout_only_and_no_effect_commands) ... ok\ntest_closed_catalog_rejects_unknown_incompatible_cycle_conflict (test_business_generation.GenerationTests.test_closed_catalog_rejects_unknown_incompatible_cycle_conflict) ... ok\ntest_determinism_both_specs (test_business_generation.GenerationTests.test_determinism_both_specs) ... ok\ntest_entire_source_set_matches_manifest (test_business_generation.GenerationTests.test_entire_source_set_matches_manifest) ... ok\ntest_no_disk_network_or_subprocess_effects (test_business_generation.GenerationTests.test_no_disk_network_or_subprocess_effects) ... ok\ntest_payload_tamper_rejected (test_business_generation.GenerationTests.test_payload_tamper_rejected) ... ok\ntest_public_differences_only (test_business_generation.GenerationTests.test_public_differences_only) ... ok\ntest_schema_user_and_sql_preserved (test_business_generation.GenerationTests.test_schema_user_and_sql_preserved) ... ok\ntest_self_consistent_forgery_does_not_pass (test_business_generation.GenerationTests.test_self_consistent_forgery_does_not_pass) ... ok\ntest_unchanged_launcher_and_configs (test_business_generation.GenerationTests.test_unchanged_launcher_and_configs) ... ok\ntest_cannot_redefine_coverage (test_business_generation_evidence.EvidenceTests.test_cannot_redefine_coverage) ... ok\ntest_claimed_cleanup_pass_does_not_hide_live_resources (test_business_generation_evidence.EvidenceTests.test_claimed_cleanup_pass_does_not_hide_live_resources) ... ok\ntest_cross_product_or_run_even_with_rehashed_artifact (test_business_generation_evidence.EvidenceTests.test_cross_product_or_run_even_with_rehashed_artifact) ... ok\ntest_human_case_requires_external_output_approval (test_business_generation_evidence.EvidenceTests.test_human_case_requires_external_output_approval) ... ok\ntest_missing_or_altered_artifacts (test_business_generation_evidence.EvidenceTests.test_missing_or_altered_artifacts) ... ok\ntest_required_assertions_commands (test_business_generation_evidence.EvidenceTests.test_required_assertions_commands) ... ok\ntest_statuses_preserved (test_business_generation_evidence.EvidenceTests.test_statuses_preserved) ... ok\ntest_trust_anchors (test_business_generation_evidence.EvidenceTests.test_trust_anchors) ... ok\ntest_unsafe_evidence_path (test_business_generation_evidence.EvidenceTests.test_unsafe_evidence_path) ... ok\ntest_valid_partial_fixture_never_promotes_global_gate (test_business_generation_evidence.EvidenceTests.test_valid_partial_fixture_never_promotes_global_gate) ... ok\n\n----------------------------------------------------------------------\nRan 50 tests in 0.805s\n\nOK\n"
+  },
+  "components": {
+    "contracts-schemas-parser-hashing": {
+      "status": "PASS",
+      "scope": "Phase A only",
+      "tests": [
+        "test_business_execution_contracts.ContractTests.test_canonical_known_bytes",
+        "test_business_execution_contracts.ContractTests.test_object_and_array_bounds",
+        "test_business_execution_contracts.ContractTests.test_paths",
+        "test_business_execution_contracts.ContractTests.test_refs_siblings_and_depth",
+        "test_business_execution_contracts.ContractTests.test_strict_json",
+        "test_business_execution_contracts.ContractTests.test_string_bounds_and_patterns",
+        "test_business_execution_contracts.ContractTests.test_types_const_and_enum",
+        "test_business_execution_contracts.ContractTests.test_unsupported_schema_keywords"
+      ]
+    },
+    "inventory-adapter-collisions": {
+      "status": "PASS",
+      "scope": "Phase A only",
+      "tests": [
+        "test_business_execution_inventory.InventoryTests.test_auth_namespace_cannot_be_claimed",
+        "test_business_execution_inventory.InventoryTests.test_descriptor_policy_tamper_rejected_before_adaptation",
+        "test_business_execution_inventory.InventoryTests.test_deterministic_adapter",
+        "test_business_execution_inventory.InventoryTests.test_exact_real_routes",
+        "test_business_execution_inventory.InventoryTests.test_extra_metadata_route_not_silently_ignored",
+        "test_business_execution_inventory.InventoryTests.test_intersections",
+        "test_business_execution_inventory.InventoryTests.test_invalid_conventions",
+        "test_business_execution_inventory.InventoryTests.test_inventory_mutations",
+        "test_business_execution_inventory.InventoryTests.test_mapping_and_auth_allowlist",
+        "test_business_execution_inventory.InventoryTests.test_reservations",
+        "test_business_execution_inventory.InventoryTests.test_same_route_disjoint_methods_not_exception",
+        "test_business_execution_inventory.InventoryTests.test_source_map_contract_fail_closed",
+        "test_business_execution_inventory.InventoryTests.test_source_tamper_in_memory"
+      ]
+    },
+    "planner-render-manifest-metadata": {
+      "status": "PASS",
+      "scope": "Phase A only",
+      "tests": [
+        "test_business_generation.GenerationTests.test_bad_specs",
+        "test_business_generation.GenerationTests.test_cli_stdout_only_and_no_effect_commands",
+        "test_business_generation.GenerationTests.test_closed_catalog_rejects_unknown_incompatible_cycle_conflict",
+        "test_business_generation.GenerationTests.test_determinism_both_specs",
+        "test_business_generation.GenerationTests.test_entire_source_set_matches_manifest",
+        "test_business_generation.GenerationTests.test_no_disk_network_or_subprocess_effects",
+        "test_business_generation.GenerationTests.test_payload_tamper_rejected",
+        "test_business_generation.GenerationTests.test_public_differences_only",
+        "test_business_generation.GenerationTests.test_schema_user_and_sql_preserved",
+        "test_business_generation.GenerationTests.test_self_consistent_forgery_does_not_pass",
+        "test_business_generation.GenerationTests.test_unchanged_launcher_and_configs"
+      ]
+    },
+    "authorization-context-only": {
+      "status": "PASS",
+      "scope": "Phase A only",
+      "tests": [
+        "test_business_execution_contracts.AuthorityTests.test_authority_has_no_effect_calls",
+        "test_business_execution_contracts.AuthorityTests.test_context_only_no_execution",
+        "test_business_execution_contracts.AuthorityTests.test_design_and_historical_approval_are_not_executive",
+        "test_business_execution_contracts.AuthorityTests.test_destination_and_budget_schema",
+        "test_business_execution_contracts.AuthorityTests.test_external_anchor_revocation_replay_time",
+        "test_business_execution_contracts.AuthorityTests.test_manifest_adaptation_tamper",
+        "test_business_execution_contracts.AuthorityTests.test_missing_contract_properties_all_required",
+        "test_business_execution_contracts.AuthorityTests.test_required_hashes_fail_closed"
+      ]
+    },
+    "evidence-consumer": {
+      "status": "PASS",
+      "scope": "Phase A only",
+      "tests": [
+        "test_business_generation_evidence.EvidenceTests.test_cannot_redefine_coverage",
+        "test_business_generation_evidence.EvidenceTests.test_claimed_cleanup_pass_does_not_hide_live_resources",
+        "test_business_generation_evidence.EvidenceTests.test_cross_product_or_run_even_with_rehashed_artifact",
+        "test_business_generation_evidence.EvidenceTests.test_human_case_requires_external_output_approval",
+        "test_business_generation_evidence.EvidenceTests.test_missing_or_altered_artifacts",
+        "test_business_generation_evidence.EvidenceTests.test_required_assertions_commands",
+        "test_business_generation_evidence.EvidenceTests.test_statuses_preserved",
+        "test_business_generation_evidence.EvidenceTests.test_trust_anchors",
+        "test_business_generation_evidence.EvidenceTests.test_unsafe_evidence_path",
+        "test_business_generation_evidence.EvidenceTests.test_valid_partial_fixture_never_promotes_global_gate"
+      ]
+    }
+  },
+  "implementedContracts": [
+    {
+      "path": "schemas/business-execution-inventory.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-route-adaptation.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/public-business-generation.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-composition.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-generation-plan.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-generation-manifest.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-generation-metadata.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-generation-validation.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-execution-work-order.v1.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/business-execution-authorization.v1.json",
+      "status": "PASS"
+    }
+  ],
+  "schemaTranscription": {
+    "inventory": "exact JSON object from approved design",
+    "adaptation": "exact JSON object from approved design"
+  },
+  "determinism": {
+    "atlas": {
+      "status": "PASS",
+      "mode": "two pure in-memory renders; not staging/materialization",
+      "planHash": "sha256:fd80c134fa19d83afd6f59272743e5e9831fee6ee5d030a1cb8d18a059b27019",
+      "generationManifestHash": "sha256:addc17850e5aeadc8ad8c605ac7b782e45b7d09568f169d2fd167f52ca093dc0",
+      "metadataHash": "sha256:a088ce712060c41d927c470b4db11a200b57d4c9430a664a7b08e84040c01478",
+      "inventoryHash": "sha256:31bb01135d7d8da52720e112e9b10a6c6bd8bf0f5c7bbc2308724242d5f59eb5",
+      "adaptationHash": "sha256:bac3c32bdfd42f455c64a08bf33caebdaa214ec03b9ba7a161c6813986a4bc6d",
+      "payloadFileCount": 69,
+      "payloadSetHash": "sha256:f1f8909d9f2b2be7203e729cdc6cc3b3590d99efacf4013227246423be5afe8a",
+      "filesWritten": 0
+    },
+    "brisa": {
+      "status": "PASS",
+      "mode": "two pure in-memory renders; not staging/materialization",
+      "planHash": "sha256:eefcffda58b372f99345474258c8b2f06584193a74c712cc347161563ea4ca03",
+      "generationManifestHash": "sha256:191c4e5e2a9a2a408b60d61759751bc7d42a1ff53b44cef9d6237ef3d60ed30c",
+      "metadataHash": "sha256:cfa3562cfbb92daa74d6721add2bbfe22c79416dda2a82b324125a02858d6a75",
+      "inventoryHash": "sha256:31bb01135d7d8da52720e112e9b10a6c6bd8bf0f5c7bbc2308724242d5f59eb5",
+      "adaptationHash": "sha256:bac3c32bdfd42f455c64a08bf33caebdaa214ec03b9ba7a161c6813986a4bc6d",
+      "payloadFileCount": 69,
+      "payloadSetHash": "sha256:0cc3466d0a7d05e24bfe35e879c69bd2dc10af61c130a73d163d54d4e7dabbb9",
+      "filesWritten": 0
+    }
+  },
+  "generalityInMemory": {
+    "status": "PASS",
+    "changedPaths": [
+      "GENERATION.md",
+      "factory-generation/manifest.json",
+      "factory-generation/metadata.json",
+      "product-public.json"
+    ],
+    "notMaterialization": true
+  },
+  "failClosedEvidence": {
+    "status": "PASS",
+    "requiredHashFields": [
+      "workOrderHash",
+      "generationManifestHash",
+      "adaptationHash"
+    ],
+    "authorityResult": "Immutable context only; no effect API; requires atomic use reservation in future B",
+    "negativeTests": [
+      "test_business_execution_contracts.AuthorityTests.test_design_and_historical_approval_are_not_executive",
+      "test_business_execution_contracts.AuthorityTests.test_external_anchor_revocation_replay_time",
+      "test_business_execution_contracts.AuthorityTests.test_manifest_adaptation_tamper",
+      "test_business_execution_contracts.AuthorityTests.test_missing_contract_properties_all_required",
+      "test_business_execution_contracts.AuthorityTests.test_required_hashes_fail_closed",
+      "test_business_execution_contracts.ContractTests.test_unsupported_schema_keywords",
+      "test_business_execution_inventory.InventoryTests.test_auth_namespace_cannot_be_claimed",
+      "test_business_execution_inventory.InventoryTests.test_descriptor_policy_tamper_rejected_before_adaptation",
+      "test_business_execution_inventory.InventoryTests.test_extra_metadata_route_not_silently_ignored",
+      "test_business_execution_inventory.InventoryTests.test_invalid_conventions",
+      "test_business_execution_inventory.InventoryTests.test_reservations",
+      "test_business_execution_inventory.InventoryTests.test_same_route_disjoint_methods_not_exception",
+      "test_business_execution_inventory.InventoryTests.test_source_map_contract_fail_closed",
+      "test_business_execution_inventory.InventoryTests.test_source_tamper_in_memory",
+      "test_business_generation.GenerationTests.test_bad_specs",
+      "test_business_generation.GenerationTests.test_closed_catalog_rejects_unknown_incompatible_cycle_conflict",
+      "test_business_generation.GenerationTests.test_payload_tamper_rejected",
+      "test_business_generation.GenerationTests.test_schema_user_and_sql_preserved",
+      "test_business_generation.GenerationTests.test_self_consistent_forgery_does_not_pass",
+      "test_business_generation_evidence.EvidenceTests.test_cannot_redefine_coverage",
+      "test_business_generation_evidence.EvidenceTests.test_claimed_cleanup_pass_does_not_hide_live_resources",
+      "test_business_generation_evidence.EvidenceTests.test_missing_or_altered_artifacts",
+      "test_business_generation_evidence.EvidenceTests.test_statuses_preserved",
+      "test_business_generation_evidence.EvidenceTests.test_trust_anchors",
+      "test_business_generation_evidence.EvidenceTests.test_unsafe_evidence_path"
+    ]
+  },
+  "G02_G24": {
+    "G02": {
+      "status": "PASS",
+      "phaseAStatus": "PASS",
+      "reason": "Deterministic stdout/in-memory planner; write/process/socket guards; before/after protected hashes; executionAuthority=none.",
+      "gateCanPassFromA": false,
+      "scope": "Only this case is satisfied; the generation/compatibility gate still requires B evidence"
+    },
+    "G03": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Old/design/A authority, hash/expiry/revocation/action negatives PASS in memory; real executor rejection and filesystem snapshot still B.",
+      "gateCanPassFromA": false
+    },
+    "G04": {
+      "status": "PASS",
+      "phaseAStatus": "PASS",
+      "reason": "Closed profile rejects unknown/incompatible/duplicate/self-dependent modules, policy changes and unsupported routing before effects.",
+      "gateCanPassFromA": false,
+      "scope": "Only this case is satisfied; the generation/compatibility gate still requires B evidence"
+    },
+    "G05": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Route/path/owner namespace/closed-profile collision negatives PASS; real overwrite prevention and output ownership deferred.",
+      "gateCanPassFromA": false
+    },
+    "G06": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Path validation and changed-source rejection PASS; real symlink/TOCTOU/destination races deferred.",
+      "gateCanPassFromA": false
+    },
+    "G07": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Atlas in-memory determinism PASS; two real staging materializations NOT_EXECUTED.",
+      "gateCanPassFromA": false
+    },
+    "G08": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Brisa in-memory determinism PASS; two real staging materializations NOT_EXECUTED.",
+      "gateCanPassFromA": false
+    },
+    "G09": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "In-memory independent public diff PASS; materialized cross-product comparison deferred.",
+      "gateCanPassFromA": false
+    },
+    "G10": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Manifest/metadata/hash/limitation/tamper checks PASS in memory; actual output evidence deferred.",
+      "gateCanPassFromA": false
+    },
+    "G11": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Static sources/SQL/User/launcher/eleven routes verified; generated real schema/output inventory deferred.",
+      "gateCanPassFromA": false
+    },
+    "G12": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G13": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G14": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G15": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G16": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G17": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G18": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G19": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G20": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "No credentials used and only public source/fixture outputs in A; required bundles/logs/network/runtime scan deferred.",
+      "gateCanPassFromA": false
+    },
+    "G21": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "533 existing repository files preserved; historical products/prototype checked read-only; required P3/P4.2 regression not executed in this A-only suite.",
+      "gateCanPassFromA": false
+    },
+    "G22": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "Requires real authorized Phase B execution; no mock substituted",
+      "gateCanPassFromA": false
+    },
+    "G23": {
+      "status": "NOT_EXECUTED",
+      "phaseAStatus": "PASS",
+      "reason": "Consumer fixture missing/altered/FAIL/BLOCKED/NOT_EXECUTED negatives PASS; complete real evidence package and cleanup negatives deferred.",
+      "gateCanPassFromA": false
+    },
+    "G24": {
+      "status": "BLOCKED",
+      "phaseAStatus": "NOT_APPLICABLE",
+      "reason": "No materialized outputs exist to accept; separate human acceptance of both exact outputs required after authorized B",
+      "gateCanPassFromA": false
+    }
+  },
+  "gates": {
+    "generation": "NOT_IMPLEMENTED",
+    "autonomy": "NOT_IMPLEMENTED",
+    "readiness": "BLOCKED",
+    "phaseARuntimeGates": "NOT_EXECUTED; historical approved P4.5-B entry gates not reopened or promoted"
+  },
+  "effects": {
+    "phaseBImplemented": false,
+    "productsMaterialized": 0,
+    "productDirectoriesWritten": 0,
+    "npmExecuted": false,
+    "buildsExecuted": false,
+    "dockerInvoked": false,
+    "postgresqlInvoked": false,
+    "migrationsExecuted": false,
+    "httpServersStarted": false,
+    "browserTestsExecuted": false,
+    "p47Started": false,
+    "scopeVerification": "Created path allowlist exact; A tests in memory; planner write/process/socket guards; no infrastructure inspection or effects claimed."
+  },
+  "planDeviations": {
+    "plannedFiles": 32,
+    "createdImplementationConfigTestGuideFiles": 28,
+    "deferredFiles": [
+      "factory/business_materialization.py",
+      "scripts/validate_business_generation.py",
+      "scripts/check_business_generation_browser.mjs",
+      "tests/test_business_materialization.py"
+    ],
+    "reason": "Latest authorization prohibits even implementing B; no dormant materializer/harness/browser. Pure authority tests kept in test_business_execution_contracts.py. Four B files excluded; not a permission request or failure of A.",
+    "newDocumentationReceipts": 3,
+    "actualImplementationLines": 4039,
+    "newDependencies": [],
+    "scopeExpansion": false
+  },
+  "blockers": [],
+  "futureBPreconditions": [
+    "Separate approval to implement materializer/harness/browser and their tests",
+    "Concrete external executive authorization bound to exact WorkOrder, manifest and adaptation hashes",
+    "Atomic use reservation, real staging/ownership/no-clobber/cleanup not implemented in A",
+    "Freeze exact expected next-env derived recipe and resources/digests/browser/ports before execution",
+    "Actual products and real G03-G24 dependent subcases, including human G24 output acceptance"
+  ],
+  "limitations": [
+    "Historical incomplete provenance retained",
+    "No formal timing indistinguishability",
+    "Single-instance rate limiting",
+    "Local TLS only",
+    "Scans non-exhaustive; Phase B logs/bundles/network not available",
+    "Mandatory start-requests.mjs; no automatic Next/standalone/hosting/proxy/CDN guarantee",
+    "Bounded schema validator, not general JSON Schema engine",
+    "Pure authorization validates supplied snapshots but does not reserve a use or prevent concurrent replay atomically",
+    "Evidence consumer checks bindings/coverage; unit envelopes do not prove runtime execution",
+    "G02/G04 satisfaction does not satisfy generation gate; remaining full cases not promoted"
+  ],
+  "nextHumanCheckpoint": "Review IMPLEMENTATION_A_RECEIPT and new files. No automatic continuation. IMPLEMENTATION_B and EXECUTION_B remain unauthorized.",
+  "receiptIntegrity": {
+    "algorithm": "sha256",
+    "scope": "inventory-json.v1 canonical object excluding receiptIntegrity",
+    "value": "sha256:4154f4c20fd6b1c794f9a33817d2152ac7e39350d36e40b013376ac697777861"
+  }
+}

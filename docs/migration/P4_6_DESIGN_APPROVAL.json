@@ -1,0 +1,49 @@
+{
+  "format": "nexonova.planning-design-decision.v1",
+  "phase": "P4.6 planning only",
+  "status": "DESIGN_APPROVED",
+  "decisionId": "G01-CONTRACTUAL-DETAIL",
+  "parentDecision": {
+    "path": "docs/migration/P4_6_G01_DECISION.json",
+    "sha256": "ef9330c7d9140eb8326e878649eabf5a615e2d9a43835c32c04e3d82d3bc9112"
+  },
+  "basis": "Explicit human approval in current user instruction; recorded by assistant, not a cryptographic signature",
+  "approvedDocuments": {
+    "docs/business-platform/P4_6_PROPOSAL.md": "47559f56844f90c0ffdbb51ed1932e38f1ccbb20aa5fd0bd0ced4acfd6b29efd",
+    "docs/business-platform/P4_6_EXECUTION_INVENTORY_DESIGN.md": "26ad6a8676c8d2abfb6f2a944962eba0dc1c9204bb7acb19a917e7d9c595069b",
+    "docs/migration/P4_6_PLANNING_REVIEW.json": "a3a718a5a536b3df97f2bb9c48e4d858684f8a0492e01a4b9d25a469395c2568"
+  },
+  "approvedFormats": [
+    "nexonova.business-execution-inventory.v1",
+    "nexonova.business-route-adaptation.v1"
+  ],
+  "policy": "p42-to-approved-runtime.v1",
+  "profile": "business-auth-internal-requests-0.1.0-d02",
+  "routeCount": 11,
+  "runtimeAuthenticationPage": "/login",
+  "requiredLauncher": "scripts/start-requests.mjs",
+  "signInReservation": {
+    "pattern": "/sign-in",
+    "scope": "segment-subtree",
+    "materializable": false,
+    "pageAliasRedirectRewriteForbidden": true,
+    "authSignInEmailPreserved": true,
+    "origin": "New adapter rule; not retroactive reinterpretation of P4.2"
+  },
+  "approvedDetails": [
+    "documented auth catch-all allowlist",
+    "fail-closed and collision rules",
+    "deterministic serialization, hashes and references",
+    "historical P4.2/P4.4/P4.5 states and bytes preserved"
+  ],
+  "implementationAuthorized": false,
+  "executionAuthorized": false,
+  "materializationAuthorized": false,
+  "G02_G24": "NOT_EXECUTED",
+  "historicalDocumentsUnchanged": true,
+  "precedence": "This separate decision records subsequent approval; pending-review text in the referenced historical documents describes their prior state.",
+  "implementationPlanStatus": "Separate proposal requiring human review; not approved by this decision",
+  "generation": "NOT_IMPLEMENTED",
+  "autonomy": "NOT_IMPLEMENTED",
+  "readiness": "BLOCKED"
+}

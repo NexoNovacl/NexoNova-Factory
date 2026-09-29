@@ -1,0 +1,192 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "runId",
+    "productId",
+    "planHash",
+    "generationManifestHash",
+    "adaptationHash",
+    "metadataHash",
+    "inputHashes",
+    "codeHash",
+    "validatorHash",
+    "destinations",
+    "actions",
+    "resources",
+    "notBefore",
+    "expiresAt",
+    "maxUses",
+    "cleanup",
+    "rollback"
+  ],
+  "properties": {
+    "format": {
+      "const": "nexonova.business-execution-work-order.v1"
+    },
+    "runId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,47}$"
+    },
+    "productId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,47}$"
+    },
+    "planHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "generationManifestHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "adaptationHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "metadataHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "inputHashes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "codeHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "validatorHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "destinations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output",
+        "staging",
+        "validation"
+      ],
+      "properties": {
+        "output": {
+          "type": "string",
+          "minLength": 1
+        },
+        "staging": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "stage",
+          "promote",
+          "install",
+          "build",
+          "docker",
+          "migrate",
+          "bootstrap-fixtures",
+          "http-browser",
+          "fault-injection",
+          "cleanup"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxContainers",
+        "maxMemoryMiB",
+        "maxCpu",
+        "maxDiskMiB",
+        "maxDurationSeconds",
+        "network"
+      ],
+      "properties": {
+        "maxContainers": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "maxMemoryMiB": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8192
+        },
+        "maxCpu": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "maxDiskMiB": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12288
+        },
+        "maxDurationSeconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7200
+        },
+        "network": {
+          "enum": [
+            "none",
+            "loopback-only",
+            "install-allowlist"
+          ]
+        }
+      }
+    },
+    "notBefore": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "expiresAt": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "maxUses": {
+      "const": 1
+    },
+    "cleanup": {
+      "const": "owned-resources-only"
+    },
+    "rollback": {
+      "const": "quarantine-no-overwrite"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

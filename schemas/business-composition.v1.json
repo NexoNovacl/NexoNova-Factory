@@ -1,0 +1,456 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "profile",
+    "files",
+    "approvedReferences",
+    "inventory",
+    "adaptation",
+    "launcher",
+    "transforms",
+    "excludedNames",
+    "derivedBuildPaths",
+    "executionAuthority"
+  ],
+  "properties": {
+    "format": {
+      "const": "nexonova.business-composition.v1"
+    },
+    "profile": {
+      "const": "business-auth-internal-requests-0.1.0-d02"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "destination",
+          "owner",
+          "sha256"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "destination": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "enum": [
+              "auth-core",
+              "internal-requests"
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "approvedReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "inventory": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "adaptationPolicy",
+        "executionAuthority",
+        "compositionId",
+        "sources",
+        "launch",
+        "routes",
+        "authOperations",
+        "reservations",
+        "publicAssets",
+        "routeAliases",
+        "newRedirects",
+        "newRewrites"
+      ],
+      "properties": {
+        "format": {
+          "const": "nexonova.business-execution-inventory.v1"
+        },
+        "adaptationPolicy": {
+          "const": "p42-to-approved-runtime.v1"
+        },
+        "executionAuthority": {
+          "const": "none"
+        },
+        "compositionId": {
+          "const": "business-auth-internal-requests-0.1.0-d02"
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "legacyPlan",
+            "g01Decision",
+            "approvedReceipt",
+            "nextConfig",
+            "authDispatch",
+            "moduleDispatch",
+            "middleware"
+          ],
+          "properties": {
+            "legacyPlan": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "g01Decision": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "approvedReceipt": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "nextConfig": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "authDispatch": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "moduleDispatch": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "middleware": {
+              "$ref": "#/$defs/sourceRef"
+            }
+          }
+        },
+        "launch": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "command",
+            "source",
+            "boundarySource"
+          ],
+          "properties": {
+            "command": {
+              "const": [
+                "node",
+                "scripts/start-requests.mjs"
+              ]
+            },
+            "source": {
+              "$ref": "#/$defs/sourceRef"
+            },
+            "boundarySource": {
+              "$ref": "#/$defs/sourceRef"
+            }
+          }
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 11,
+          "maxItems": 11,
+          "items": {
+            "$ref": "#/$defs/route"
+          }
+        },
+        "authOperations": {
+          "const": [
+            {
+              "path": "/api/auth/get-session",
+              "method": "GET",
+              "handlerPattern": "/api/auth/[...all]"
+            },
+            {
+              "path": "/api/auth/sign-in/email",
+              "method": "POST",
+              "handlerPattern": "/api/auth/[...all]"
+            },
+            {
+              "path": "/api/auth/sign-out",
+              "method": "POST",
+              "handlerPattern": "/api/auth/[...all]"
+            }
+          ]
+        },
+        "reservations": {
+          "const": [
+            {
+              "pattern": "/_next",
+              "match": "segment-subtree",
+              "owner": "framework",
+              "materialize": false
+            },
+            {
+              "pattern": "/api/auth",
+              "match": "segment-subtree",
+              "owner": "auth-core",
+              "materialize": false
+            },
+            {
+              "pattern": "/sign-in",
+              "match": "segment-subtree",
+              "owner": "historical-p42",
+              "materialize": false
+            }
+          ]
+        },
+        "publicAssets": {
+          "const": []
+        },
+        "routeAliases": {
+          "const": []
+        },
+        "newRedirects": {
+          "const": []
+        },
+        "newRewrites": {
+          "const": []
+        }
+      }
+    },
+    "adaptation": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "policy",
+        "executionAuthority",
+        "legacyPlan",
+        "inventoryCanonicalSha256",
+        "decision",
+        "mappings",
+        "legacyStateHandling",
+        "runtimeValidation"
+      ],
+      "properties": {
+        "format": {
+          "const": "nexonova.business-route-adaptation.v1"
+        },
+        "policy": {
+          "const": "p42-to-approved-runtime.v1"
+        },
+        "executionAuthority": {
+          "const": "none"
+        },
+        "legacyPlan": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "pattern": "^[^/\\\\]+(?:/[^/\\\\]+)*$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        },
+        "inventoryCanonicalSha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        },
+        "decision": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "pattern": "^[^/\\\\]+(?:/[^/\\\\]+)*$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$"
+            }
+          }
+        },
+        "mappings": {
+          "const": [
+            {
+              "legacyPattern": "/sign-in",
+              "disposition": "reservation-only",
+              "runtimeAuthenticationPage": "/login",
+              "materializeLegacyPath": false
+            },
+            {
+              "legacyPattern": "/api/auth/[...all]",
+              "disposition": "retain-handler-and-reserve-namespace",
+              "runtimePattern": "/api/auth/[...all]"
+            }
+          ]
+        },
+        "legacyStateHandling": {
+          "const": "preserve-do-not-promote"
+        },
+        "runtimeValidation": {
+          "const": "NOT_EXECUTED"
+        }
+      }
+    },
+    "launcher": {
+      "const": [
+        "node",
+        "scripts/start-requests.mjs"
+      ]
+    },
+    "transforms": {
+      "const": [
+        "copy-bytes.v1",
+        "business-schema.v1",
+        "business-migrations.v1",
+        "checks-config.v1",
+        "public-data.v1",
+        "generation-guide.v1"
+      ]
+    },
+    "excludedNames": {
+      "const": [
+        ".git",
+        ".next",
+        "node_modules",
+        ".env",
+        "build-checks"
+      ]
+    },
+    "derivedBuildPaths": {
+      "const": [
+        ".next/",
+        "build-checks/",
+        "src/generated/",
+        "node_modules/",
+        "tsconfig.tsbuildinfo"
+      ]
+    },
+    "executionAuthority": {
+      "const": "none"
+    }
+  },
+  "$defs": {
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^[^/\\\\]+(?:/[^/\\\\]+)*$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$"
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern",
+        "kind",
+        "owner",
+        "source",
+        "outputPath",
+        "exportedMethods",
+        "allowedOperationsMethods",
+        "frameworkMethodPolicy"
+      ],
+      "properties": {
+        "pattern": {
+          "type": "string",
+          "pattern": "^/(?:[a-z0-9-]+|\\[[a-z][a-z0-9]*\\]|\\[\\.\\.\\.[a-z][a-z0-9]*\\])(?:/(?:[a-z0-9-]+|\\[[a-z][a-z0-9]*\\]|\\[\\.\\.\\.[a-z][a-z0-9]*\\]))*$|^/$"
+        },
+        "kind": {
+          "enum": [
+            "page",
+            "handler"
+          ]
+        },
+        "owner": {
+          "enum": [
+            "auth-core",
+            "internal-requests"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/sourceRef"
+        },
+        "outputPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exportedMethods": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "DELETE",
+              "GET",
+              "HEAD",
+              "OPTIONS",
+              "PATCH",
+              "POST",
+              "PUT"
+            ]
+          }
+        },
+        "allowedOperationsMethods": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "DELETE",
+              "GET",
+              "HEAD",
+              "OPTIONS",
+              "PATCH",
+              "POST",
+              "PUT"
+            ]
+          },
+          "minItems": 1
+        },
+        "frameworkMethodPolicy": {
+          "const": "verify-next-15.5.25-no-new-operations"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

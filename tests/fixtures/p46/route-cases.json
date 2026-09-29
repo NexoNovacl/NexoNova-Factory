@@ -1,0 +1,6 @@
+{
+  "intersect": [["/requests/[id]", "/requests/new"], ["/requests/[id]", "/requests/[slug]"], ["/[...all]", "/sign-in"], ["/sign-in/[...all]", "/sign-in/x"], ["/api/auth/[...all]", "/api/auth/sign-in/email"]],
+  "disjoint": [["/sign-in", "/sign-in-other"], ["/sign-in", "/api/auth/sign-in/email"], ["/requests", "/requests/[id]"], ["/a/[...all]", "/a"], ["/a/[id]", "/b/[id]"]],
+  "invalid": ["/Sign-in", "/requests/", "/requests//x", "/requests/%61", "/requests?x=1", "/(group)/requests", "/@slot", "/[[...all]]", "/[...all]/x", "/a/../b", "https://example.invalid/requests", "/_next"],
+  "reserved": ["/sign-in", "/sign-in/x", "/sign-in/[id]", "/[...all]", "/[id]"]
+}

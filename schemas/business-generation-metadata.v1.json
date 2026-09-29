@@ -1,0 +1,131 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "productId",
+    "public",
+    "profile",
+    "capability",
+    "generationManifestHash",
+    "inventoryHash",
+    "adaptationHash",
+    "versions",
+    "launcher",
+    "prismaConfig",
+    "limitations",
+    "validationState",
+    "executionAuthority"
+  ],
+  "properties": {
+    "format": {
+      "const": "nexonova.business-generation-metadata.v1"
+    },
+    "productId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,47}$"
+    },
+    "public": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "title",
+        "primaryColor"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "primaryColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
+      }
+    },
+    "profile": {
+      "const": "business-auth-internal-requests-0.1.0-d02"
+    },
+    "capability": {
+      "const": "business-platform"
+    },
+    "generationManifestHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "inventoryHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "adaptationHash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "next",
+        "prisma",
+        "betterAuth"
+      ],
+      "properties": {
+        "next": {
+          "const": "15.5.25"
+        },
+        "prisma": {
+          "const": "7.5.0"
+        },
+        "betterAuth": {
+          "const": "1.7.5"
+        }
+      }
+    },
+    "launcher": {
+      "const": [
+        "node",
+        "scripts/start-requests.mjs"
+      ]
+    },
+    "prismaConfig": {
+      "const": "prisma.requests.config.ts"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "validationState": {
+      "const": "NOT_EXECUTED"
+    },
+    "executionAuthority": {
+      "const": "none"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
